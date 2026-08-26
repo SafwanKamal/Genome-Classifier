@@ -1,0 +1,45 @@
+# Vivado generated project directories
+build/
+.Xil/
+*.cache/
+*.gen/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+*.srcs/
+
+# Vivado project and generated artifacts
+*.xpr
+*.dcp
+*.bit
+*.bin
+*.ltx
+*.xsa
+*.hwh
+*.mmi
+*.wdb
+
+# Vivado logs, journals, and temporary files
+*.jou
+*.log
+*.str
+*.pb
+vivado*.jou
+vivado*.log
+webtalk*.jou
+webtalk*.log
+usage_statistics_webtalk.xml
+
+# Python generated files and virtual environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
