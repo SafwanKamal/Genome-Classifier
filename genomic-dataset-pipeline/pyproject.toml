@@ -1,0 +1,25 @@
+[project]
+name = "genomic-dataset-pipeline"
+version = "0.1.0"
+description = "Dataset construction and INT8 preprocessing for the FPGA genomic variant classifier"
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+    "pandas>=2.2,<3",
+    "pyarrow>=17,<22",
+    "pyyaml>=6.0,<7",
+    "requests>=2.32,<3",
+    "pysam>=0.24,<0.25; sys_platform != 'win32'",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8,<10",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

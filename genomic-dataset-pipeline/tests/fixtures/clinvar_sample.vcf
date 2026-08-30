@@ -1,0 +1,9 @@
+##fileformat=VCFv4.2
+##reference=GRCh38
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
+1	100	101	A	G	.	PASS	ALLELEID=101;CLNSIG=Pathogenic;CLNREVSTAT=criteria_provided,_single_submitter;GENEINFO=GENEA:1;MC=SO:0001583|missense_variant
+1	200	102	C	T	.	PASS	ALLELEID=102;CLNSIG=Benign/Likely_benign;CLNREVSTAT=criteria_provided,_multiple_submitters,_no_conflicts;GENEINFO=GENEB:2;MC=SO:0001583|missense_variant
+1	300	103	G	A	.	PASS	ALLELEID=103;CLNSIG=Uncertain_significance;CLNREVSTAT=criteria_provided,_single_submitter;GENEINFO=GENEC:3;MC=SO:0001583|missense_variant
+1	400	104	T	C	.	PASS	ALLELEID=104;CLNSIG=Pathogenic;CLNREVSTAT=no_assertion_criteria_provided;GENEINFO=GENED:4;MC=SO:0001583|missense_variant
+1	500	105	A	C	.	PASS	ALLELEID=105;CLNSIG=Pathogenic;CLNREVSTAT=reviewed_by_expert_panel;GENEINFO=GENEE:5;MC=SO:0001819|synonymous_variant
+

@@ -1,0 +1,12 @@
+data/raw/*
+data/interim/*
+data/processed/*
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+!data/annotation_template.csv
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.venv-wsl/

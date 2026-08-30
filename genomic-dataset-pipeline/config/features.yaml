@@ -1,0 +1,119 @@
+contract_version: "1.0"
+assembly: GRCh38
+scope: single-nucleotide missense variants
+encoding:
+  formula: "clip(round(254*x - 127), -127, 127)"
+  dtype: int8
+
+features:
+  - index: 0
+    id: gnomad_popmax_rarity
+    raw_columns: [gnomad_popmax_af]
+    transform: log_rarity
+    floor: 1.0e-6
+    denominator: 6.0
+    missing: train_median
+
+  - index: 1
+    id: cadd_phred
+    raw_columns: [cadd_phred]
+    transform: clip_scale
+    denominator: 50.0
+    missing: train_median
+
+  - index: 2
+    id: revel_score
+    raw_columns: [revel_score]
+    transform: identity
+    missing: train_median
+
+  - index: 3
+    id: alphamissense_score
+    raw_columns: [alphamissense_score]
+    transform: identity
+    missing: train_median
+
+  - index: 4
+    id: esm1b_deleteriousness
+    raw_columns: [esm1b_rankscore]
+    transform: identity
+    missing: train_median
+
+  - index: 5
+    id: sift_deleterious
+    raw_columns: [sift_score]
+    transform: reverse_identity
+    missing: train_median
+
+  - index: 6
+    id: polyphen2_hvar
+    raw_columns: [polyphen2_hvar_score]
+    transform: identity
+    missing: train_median
+
+  - index: 7
+    id: mpc_score
+    raw_columns: [mpc_score]
+    transform: clip_scale
+    denominator: 5.0
+    missing: train_median
+
+  - index: 8
+    id: phylop_100way
+    raw_columns: [phylop_100way]
+    transform: robust_percentile
+    lower_percentile: 0.01
+    upper_percentile: 0.99
+    missing: train_median
+
+  - index: 9
+    id: phastcons_100way
+    raw_columns: [phastcons_100way]
+    transform: identity
+    missing: train_median
+
+  - index: 10
+    id: gerp_rs
+    raw_columns: [gerp_rs]
+    transform: robust_percentile
+    lower_percentile: 0.01
+    upper_percentile: 0.99
+    missing: train_median
+
+  - index: 11
+    id: grantham_distance
+    raw_columns: [grantham_distance]
+    transform: clip_scale
+    denominator: 215.0
+    missing: train_median
+
+  - index: 12
+    id: blosum62_unfavorability
+    raw_columns: [blosum62_score]
+    transform: reverse_range
+    minimum: -4.0
+    maximum: 11.0
+    missing: train_median
+
+  - index: 13
+    id: gnomad_moeuf_intolerance
+    raw_columns: [gnomad_moeuf]
+    transform: reverse_robust_percentile
+    lower_percentile: 0.01
+    upper_percentile: 0.99
+    missing: train_median
+
+  - index: 14
+    id: gnomad_loeuf_intolerance
+    raw_columns: [gnomad_loeuf]
+    transform: reverse_robust_percentile
+    lower_percentile: 0.01
+    upper_percentile: 0.99
+    missing: train_median
+
+  - index: 15
+    id: interpro_domain_hit
+    raw_columns: [interpro_domain_status]
+    transform: domain_ternary
+    missing: neutral
+
