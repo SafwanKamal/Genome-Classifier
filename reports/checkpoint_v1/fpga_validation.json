@@ -1,0 +1,22 @@
+﻿{
+  "status": "pass",
+  "validation_stage": "physical_fpga_uart",
+  "model": "model_v1_seed_21",
+  "architecture": "16-4-1",
+  "board": "Nexys A7-100T",
+  "test_variants": 27477,
+  "bit_exact_matches": 27477,
+  "bit_exact_mismatches": 0,
+  "classification_rule": "folded_score >= 0",
+  "original_threshold": 75,
+  "folded_output_bias": -73,
+  "qshift": 4,
+  "accuracy": 0.9505404520144121,
+  "confusion_matrix": {
+    "true_negative": 18400,
+    "false_positive": 756,
+    "false_negative": 603,
+    "true_positive": 7718
+  },
+  "test_set_policy": "Final evaluation only; not used for model tuning."
+}

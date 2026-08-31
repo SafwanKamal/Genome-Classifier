@@ -9,6 +9,8 @@ module variant_triage_top #(
     output logic tx
 );
 
+    `include "model_parameters.svh"
+
     logic [7:0] packet [0:FEATURE_NUMBER - 1];
     logic       packet_valid;
 
@@ -60,21 +62,36 @@ module variant_triage_top #(
 //        .score  (neuron_score)
 //    );
     
+    // dense_layer #(
+    //     .FEATURE_NUMBER(FEATURE_NUMBER)
+    // ) dense_layer_inst (
+    //     .clk    (clk),
+    //     .reset  (reset),
+    //     .start  (packet_valid),
+    //     .feature(packet),
+    //     .busy   (layer_busy),
+    //     .done   (layer_done),
+    //     .layer_output  (layer_score)
+    // );
     dense_layer #(
-        .FEATURE_NUMBER(FEATURE_NUMBER)
+        .FEATURE_NUMBER(FEATURE_NUMBER),
+        .BIAS_0        (MODEL_BIAS_0),
+        .BIAS_1        (MODEL_BIAS_1),
+        .BIAS_2        (MODEL_BIAS_2),
+        .BIAS_3        (MODEL_BIAS_3)
     ) dense_layer_inst (
-        .clk    (clk),
-        .reset  (reset),
-        .start  (packet_valid),
-        .feature(packet),
-        .busy   (layer_busy),
-        .done   (layer_done),
-        .layer_output  (layer_score)
+        .clk         (clk),
+        .reset       (reset),
+        .start       (packet_valid),
+        .feature     (packet),
+        .layer_output(layer_score),
+        .busy        (layer_busy),
+        .done        (layer_done)
     );
 
     ReLU_quantizer #(
         .DATA_NUMBER(4),
-        .QSHIFT(4)
+        .QSHIFT     (MODEL_QSHIFT)
     ) ReLU_quantizer_inst (
         .clk(clk),
         .reset(reset),
@@ -86,7 +103,7 @@ module variant_triage_top #(
 
     dense_neuron #(
         .FEATURE_NUMBER(4),
-        .BIAS          (32'sd25),
+        .BIAS          (MODEL_OUTPUT_BIAS),
         .WEIGHT_FILE("output_neuron_weights.mem")
     ) output_neuron_inst (
         .clk    (clk),

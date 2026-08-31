@@ -1,0 +1,1 @@
+"""Hardware-aware training and FPGA model export."""

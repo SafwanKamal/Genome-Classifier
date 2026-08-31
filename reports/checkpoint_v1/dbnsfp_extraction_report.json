@@ -1,0 +1,30 @@
+{
+  "variant_count": 184186,
+  "matched_variant_count": 183069,
+  "matched_fraction": 0.9939354782665349,
+  "transcript_selection_counts": {
+    "MANE Select": 175368,
+    "first transcript": 7033,
+    "APPRIS principal": 363,
+    "Ensembl canonical": 305
+  },
+  "feature_nonmissing_counts": {
+    "gnomad_popmax_af": 133163,
+    "cadd_phred": 183069,
+    "revel_score": 150349,
+    "alphamissense_score": 161782,
+    "esm1b_rankscore": 180813,
+    "sift_score": 147817,
+    "polyphen2_hvar_score": 153675,
+    "mpc_score": 115386,
+    "phylop_100way": 183067,
+    "phastcons_100way": 183067,
+    "gerp_rs": 182151,
+    "grantham_distance": 182382,
+    "blosum62_score": 182382
+  },
+  "matched_gene_count": 13942,
+  "gene_count": 13989,
+  "workers": 8,
+  "chunk_size": 1000
+}

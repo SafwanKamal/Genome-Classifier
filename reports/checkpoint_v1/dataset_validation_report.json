@@ -1,0 +1,48 @@
+{
+  "errors": [],
+  "feature_order": [
+    "gnomad_popmax_rarity",
+    "cadd_phred",
+    "revel_score",
+    "alphamissense_score",
+    "esm1b_deleteriousness",
+    "sift_deleterious",
+    "polyphen2_hvar",
+    "mpc_score",
+    "phylop_100way",
+    "phastcons_100way",
+    "gerp_rs",
+    "grantham_distance",
+    "blosum62_unfavorability",
+    "gnomad_moeuf_intolerance",
+    "gnomad_loeuf_intolerance",
+    "interpro_domain_hit"
+  ],
+  "input_sha256": "b4318b4c61544204b3157f217258ca2fe2695aff753bf133553a1a41502c3633",
+  "rows": 184186,
+  "splits": {
+    "test": {
+      "genes": 2099,
+      "negative": 19156,
+      "positive": 8321,
+      "positive_fraction": 0.302835098445973,
+      "variants": 27477
+    },
+    "train": {
+      "genes": 9789,
+      "negative": 89909,
+      "positive": 38507,
+      "positive_fraction": 0.2998613879890356,
+      "variants": 128416
+    },
+    "validation": {
+      "genes": 2101,
+      "negative": 21355,
+      "positive": 6938,
+      "positive_fraction": 0.24521966564167816,
+      "variants": 28293
+    }
+  },
+  "status": "pass",
+  "unique_genes": 13989
+}

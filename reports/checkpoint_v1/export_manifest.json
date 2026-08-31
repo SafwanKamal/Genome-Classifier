@@ -1,0 +1,132 @@
+{
+  "format_version": 1,
+  "source_model": "artifacts/model_v1_seed_21/model_qat.pt",
+  "source_model_sha256": "efcefe5d1a1a5f6f172628353646bda9a477a26c5d0d301af850a4daf5472e43",
+  "architecture": "16-4-1",
+  "feature_order": [
+    "gnomad_popmax_rarity",
+    "cadd_phred",
+    "revel_score",
+    "alphamissense_score",
+    "esm1b_deleteriousness",
+    "sift_deleterious",
+    "polyphen2_hvar",
+    "mpc_score",
+    "phylop_100way",
+    "phastcons_100way",
+    "gerp_rs",
+    "grantham_distance",
+    "blosum62_unfavorability",
+    "gnomad_moeuf_intolerance",
+    "gnomad_loeuf_intolerance",
+    "interpro_domain_hit"
+  ],
+  "qshift": 4,
+  "classification_rule": "folded_score >= 0",
+  "original_validation_threshold": 75,
+  "hidden_weights": [
+    [
+      2,
+      10,
+      -1,
+      -4,
+      3,
+      0,
+      0,
+      -1,
+      1,
+      0,
+      1,
+      0,
+      -3,
+      2,
+      -5,
+      -1
+    ],
+    [
+      1,
+      -11,
+      -7,
+      -2,
+      -1,
+      -2,
+      0,
+      3,
+      0,
+      0,
+      1,
+      1,
+      -3,
+      -3,
+      3,
+      0
+    ],
+    [
+      -18,
+      -2,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      -1,
+      1,
+      0
+    ],
+    [
+      0,
+      -3,
+      5,
+      5,
+      2,
+      1,
+      0,
+      -1,
+      -1,
+      0,
+      2,
+      0,
+      3,
+      4,
+      -5,
+      1
+    ]
+  ],
+  "hidden_biases": [
+    -6,
+    3,
+    6,
+    17
+  ],
+  "output_weights": [
+    3,
+    -3,
+    -5,
+    3
+  ],
+  "original_output_bias": 2,
+  "folded_output_bias": -73,
+  "accumulator_bounds": {
+    "hidden_worst_case_absolute_accumulator": [
+      4324,
+      4829,
+      3308,
+      4208
+    ],
+    "output_worst_case_absolute_accumulator": 1851
+  },
+  "files": {
+    "memory/neuron_0_weights.mem": "61378011a88de921bd553f86516f83c6b41aad2d2df75030cf70afe0183f35c2",
+    "memory/neuron_1_weights.mem": "4c68947764eea15e86dbaf7f610dcefe1ca00653680a7c6548f9c54f4f53ae70",
+    "memory/neuron_2_weights.mem": "951631095b46b79f3aaafb1b6ad68c3b9c06b4e4527c8abef8ce28ba90613d0d",
+    "memory/neuron_3_weights.mem": "3745e4427204e551cbb01e27cfd263e3c33df47479fa4464ac274062599e9d8b",
+    "memory/output_neuron_weights.mem": "88acaf0c63790b3134aef01c8094137e1d4d7a710415e91636affc368f969eef",
+    "model_parameters.svh": "f09ceeaaae8361379d5b77a60b81a9be41f12e97cdb095b749c1be1199bb9f45"
+  }
+}

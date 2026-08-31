@@ -1,0 +1,69 @@
+{
+  "variant_count": 184186,
+  "raw_feature_coverage": {
+    "alphamissense_score": {
+      "nonmissing_count": 161782,
+      "nonmissing_fraction": 0.8783620904954774
+    },
+    "blosum62_score": {
+      "nonmissing_count": 182382,
+      "nonmissing_fraction": 0.9902055530822104
+    },
+    "cadd_phred": {
+      "nonmissing_count": 183069,
+      "nonmissing_fraction": 0.9939354782665349
+    },
+    "esm1b_rankscore": {
+      "nonmissing_count": 180813,
+      "nonmissing_fraction": 0.9816869903249975
+    },
+    "gerp_rs": {
+      "nonmissing_count": 182151,
+      "nonmissing_fraction": 0.9889513860988349
+    },
+    "gnomad_loeuf": {
+      "nonmissing_count": 158993,
+      "nonmissing_fraction": 0.8632197886918659
+    },
+    "gnomad_moeuf": {
+      "nonmissing_count": 158993,
+      "nonmissing_fraction": 0.8632197886918659
+    },
+    "gnomad_popmax_af": {
+      "nonmissing_count": 133163,
+      "nonmissing_fraction": 0.7229811169144235
+    },
+    "grantham_distance": {
+      "nonmissing_count": 182382,
+      "nonmissing_fraction": 0.9902055530822104
+    },
+    "interpro_domain_status": {
+      "nonmissing_count": 183069,
+      "nonmissing_fraction": 0.9939354782665349
+    },
+    "mpc_score": {
+      "nonmissing_count": 115386,
+      "nonmissing_fraction": 0.6264645521375132
+    },
+    "phastcons_100way": {
+      "nonmissing_count": 183067,
+      "nonmissing_fraction": 0.9939246196779342
+    },
+    "phylop_100way": {
+      "nonmissing_count": 183067,
+      "nonmissing_fraction": 0.9939246196779342
+    },
+    "polyphen2_hvar_score": {
+      "nonmissing_count": 153675,
+      "nonmissing_fraction": 0.8343468016027277
+    },
+    "revel_score": {
+      "nonmissing_count": 150349,
+      "nonmissing_fraction": 0.8162889687598406
+    },
+    "sift_score": {
+      "nonmissing_count": 147817,
+      "nonmissing_fraction": 0.802541995591413
+    }
+  }
+}
