@@ -2,13 +2,17 @@
 `ifndef GENOME_CLASSIFIER_MODEL_PARAMETERS_SVH
 `define GENOME_CLASSIFIER_MODEL_PARAMETERS_SVH
 
-localparam logic signed [31:0] MODEL_BIAS_0 = -32'sd6;
-localparam logic signed [31:0] MODEL_BIAS_1 = 32'sd3;
-localparam logic signed [31:0] MODEL_BIAS_2 = 32'sd6;
-localparam logic signed [31:0] MODEL_BIAS_3 = 32'sd17;
-localparam logic signed [31:0] MODEL_OUTPUT_BIAS_ORIGINAL = 32'sd2;
-localparam logic signed [31:0] MODEL_OUTPUT_BIAS = -32'sd73;
+localparam logic signed [31:0] MODEL_BIAS_0 = 32'sd5;
+localparam logic signed [31:0] MODEL_BIAS_1 = 32'sd5;
+localparam logic signed [31:0] MODEL_BIAS_2 = -32'sd9;
+localparam logic signed [31:0] MODEL_BIAS_3 = -32'sd9;
+localparam logic signed [31:0] MODEL_BIAS_4 = -32'sd12;
+localparam logic signed [31:0] MODEL_BIAS_5 = 32'sd9;
+localparam logic signed [31:0] MODEL_BIAS_6 = 32'sd19;
+localparam logic signed [31:0] MODEL_BIAS_7 = 32'sd3;
+localparam logic signed [31:0] MODEL_OUTPUT_BIAS_ORIGINAL = 32'sd3;
+localparam logic signed [31:0] MODEL_OUTPUT_BIAS = -32'sd52;
 localparam integer MODEL_QSHIFT = 4;
-localparam integer MODEL_ORIGINAL_THRESHOLD = 75;
+localparam integer MODEL_ORIGINAL_THRESHOLD = 55;
 
 `endif

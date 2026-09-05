@@ -1,0 +1,32 @@
+{
+  "input": "data\\processed\\variants_model_int8.parquet",
+  "input_sha256": "b4318b4c61544204b3157f217258ca2fe2695aff753bf133553a1a41502c3633",
+  "contract": "config\\features.yaml",
+  "device": "cpu",
+  "seed": 7,
+  "architecture": "16-8-1",
+  "input_features": 16,
+  "hidden_features": 8,
+  "epochs_completed": 97,
+  "best_epoch": 77,
+  "positive_weight": 2.334874178720752,
+  "validation_metrics": {
+    "threshold": 55,
+    "roc_auc": 0.9864044881179588,
+    "average_precision": 0.9627553115038958,
+    "precision": 0.9157262201377693,
+    "recall": 0.9005477082732776,
+    "f1": 0.9080735411670664,
+    "balanced_accuracy": 0.9368109648835365,
+    "matthews_correlation": 0.8785910097255877,
+    "confusion_matrix": {
+      "true_negative": 20780,
+      "false_positive": 575,
+      "false_negative": 690,
+      "true_positive": 6248
+    },
+    "best_epoch": 77,
+    "hidden_active_fraction": 0.42190206058035556,
+    "hidden_saturation_fraction": 0.0032914501820238222
+  }
+}

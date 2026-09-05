@@ -1,7 +1,9 @@
 module variant_triage_top #(
     parameter integer CLOCK_HZ      = 100_000_000,
     parameter integer BAUD_RATE     = 115_200,
-    parameter integer FEATURE_NUMBER = 16
+    parameter integer FEATURE_NUMBER = 16,
+    parameter integer HIDDEN_NUMBER = 8,
+    parameter integer HIDDEN_MAC_LANES = 4
 ) (
     input  logic clk,
     input  logic reset,
@@ -14,27 +16,12 @@ module variant_triage_top #(
     logic [7:0] packet [0:FEATURE_NUMBER - 1];
     logic       packet_valid;
 
-//    logic signed [31:0] neuron_score;
-    logic signed [31:0] layer_score [0:3];
-    logic signed [7:0]  normal_score [0:3];
-    logic        [7:0]  output_neuron_input [0:3];
-    logic signed [31:0] output_neuron_score;
+    logic               core_busy, core_done;
+    logic signed [31:0] core_score;
+    logic               response_busy;
     logic signed [31:0] response [0:0];
-    logic               neuron_busy;
-    logic               neuron_done;
-    logic               layer_busy, layer_done;
-    logic               normal_done;
-    logic               output_neuron_busy, output_neuron_done;
 
-    logic response_busy;
-
-    assign response[0] = output_neuron_score;
-
-    always_comb begin
-        for (int i = 0; i < 4; i++) begin
-            output_neuron_input[i] = {normal_score[i]};
-        end
-    end
+    assign response[0] = core_score;
 
     UART_packet_RX #(
         .CLOCK_HZ          (CLOCK_HZ),
@@ -48,71 +35,35 @@ module variant_triage_top #(
         .packet_valid(packet_valid)
     );
 
-
-//    dense_neuron #(
-//        .FEATURE_NUMBER(FEATURE_NUMBER),
-//        .BIAS          (32'sd25)
-//    ) dense_neuron_inst (
-//        .clk    (clk),
-//        .reset  (reset),
-//        .start  (packet_valid),
-//        .feature(packet),
-//        .busy   (neuron_busy),
-//        .done   (neuron_done),
-//        .score  (neuron_score)
-//    );
-    
-    // dense_layer #(
-    //     .FEATURE_NUMBER(FEATURE_NUMBER)
-    // ) dense_layer_inst (
-    //     .clk    (clk),
-    //     .reset  (reset),
-    //     .start  (packet_valid),
-    //     .feature(packet),
-    //     .busy   (layer_busy),
-    //     .done   (layer_done),
-    //     .layer_output  (layer_score)
-    // );
-    dense_layer #(
+    variant_triage_core #(
         .FEATURE_NUMBER(FEATURE_NUMBER),
-        .BIAS_0        (MODEL_BIAS_0),
-        .BIAS_1        (MODEL_BIAS_1),
-        .BIAS_2        (MODEL_BIAS_2),
-        .BIAS_3        (MODEL_BIAS_3)
-    ) dense_layer_inst (
-        .clk         (clk),
-        .reset       (reset),
-        .start       (packet_valid),
-        .feature     (packet),
-        .layer_output(layer_score),
-        .busy        (layer_busy),
-        .done        (layer_done)
-    );
+        .REQUANT_SHIFT (MODEL_QSHIFT),
+        .HIDDEN_NUMBER (HIDDEN_NUMBER),
+        .HIDDEN_MAC_LANES (HIDDEN_MAC_LANES),
 
-    ReLU_quantizer #(
-        .DATA_NUMBER(4),
-        .QSHIFT     (MODEL_QSHIFT)
-    ) ReLU_quantizer_inst (
-        .clk(clk),
-        .reset(reset),
-        .start(layer_done),
-        .data32(layer_score),
-        .data8(normal_score),
-        .done(normal_done)
-    );
+        .HIDDEN_WEIGHT_FILE(
+            "dense_hidden_weights.mem"
+        ),
 
-    dense_neuron #(
-        .FEATURE_NUMBER(4),
-        .BIAS          (MODEL_OUTPUT_BIAS),
-        .WEIGHT_FILE("output_neuron_weights.mem")
-    ) output_neuron_inst (
+        .HIDDEN_BIAS_FILE(
+            "dense_hidden_biases.mem"
+        ),
+
+        .OUTPUT_WEIGHT_FILE(
+            "dense_output_weights.mem"
+        ),
+
+        .OUTPUT_BIAS_FILE(
+            "dense_output_biases.mem"
+        )
+    ) variant_triage_core_inst (
         .clk    (clk),
         .reset  (reset),
-        .start  (normal_done),
-        .feature(output_neuron_input),
-        .busy   (output_neuron_busy),
-        .done   (output_neuron_done),
-        .score  (output_neuron_score)
+        .start  (packet_valid),
+        .feature(packet),
+        .busy   (core_busy),
+        .done   (core_done),
+        .score  (core_score)
     );
 
     UART_response_TX #(
@@ -124,7 +75,7 @@ module variant_triage_top #(
         .reset (reset),
         .tx    (tx),
         .data32(response), // We need to still pass an array even if the array has only 1 element
-        .send  (output_neuron_done),
+        .send  (core_done),
         .busy  (response_busy)
     );
 
