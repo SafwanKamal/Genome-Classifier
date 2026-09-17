@@ -1,0 +1,35 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_pubmed_esummary",
+  "pmid": "28072465",
+  "retrieved_at": "2026-09-06T18:49:20.023716+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id=40751879%2C32221959%2C31268420%2C42474733%2C35948834%2C28027327%2C32328026%2C38322629%2C24040338%2C34433720%2C24343233%2C28072465%2C29478601%2C22205389%2C27364156%2C32271162%2C36609795%2C36308527%2C28937031%2C33390901&retmode=json&tool=variantgate",
+  "raw_summary_sha256": "3d26effb3a35fc095e9f299d0b4ae09ba0a0d80a29e5f4ee306566938e7d1190",
+  "cache_hit": false,
+  "article": {
+    "status": "found",
+    "pmid": "28072465",
+    "title": "Splicing regulation and dysregulation of cholinergic genes expressed at the neuromuscular junction.",
+    "authors": [
+      "Ohno K",
+      "Rahman MA",
+      "Nazim M",
+      "Nasrin F",
+      "Lin Y",
+      "Takeda JI",
+      "Masuda A"
+    ],
+    "last_author": "Masuda A",
+    "journal": "Journal of neurochemistry",
+    "publication_date": "2017 Aug",
+    "electronic_publication_date": "2017 Mar 21",
+    "publication_types": [
+      "Journal Article",
+      "Review",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "doi": "10.1111/jnc.13954",
+    "pmc_id": null,
+    "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/28072465/"
+  }
+}

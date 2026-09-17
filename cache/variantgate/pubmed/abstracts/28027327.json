@@ -1,0 +1,39 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_pubmed_efetch",
+  "pmid": "28027327",
+  "retrieved_at": "2026-09-06T18:49:20.891272+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=40751879%2C32221959%2C31268420%2C42474733%2C35948834%2C28027327%2C32328026%2C38322629%2C24040338%2C34433720%2C24343233%2C28072465%2C29478601%2C22205389%2C27364156%2C32271162%2C36609795%2C36308527%2C28937031%2C33390901&retmode=xml&tool=variantgate",
+  "raw_record_sha256": "264e512babd37a0826509e4e7042bbd00bed908da555678fb414b5abeabe6a27",
+  "cache_hit": false,
+  "content": {
+    "status": "found",
+    "pmid": "28027327",
+    "abstract": "BACKGROUND: Major advances have been achieved in the characterization of early breast cancer (eBC) genomic profiles. Metastatic breast cancer (mBC) is associated with poor outcomes, yet limited information is available on the genomic profile of this disease. This study aims to decipher mutational profiles of mBC using next-generation sequencing.\nMETHODS AND FINDINGS: Whole-exome sequencing was performed on 216 tumor-blood pairs from mBC patients who underwent a biopsy in the context of the SAFIR01, SAFIR02, SHIVA, or Molecular Screening for Cancer Treatment Optimization (MOSCATO) prospective trials. Mutational profiles from 772 primary breast tumors from The Cancer Genome Atlas (TCGA) were used as a reference for comparing primary and mBC mutational profiles. Twelve genes (TP53, PIK3CA, GATA3, ESR1, MAP3K1, CDH1, AKT1, MAP2K4, RB1, PTEN, CBFB, and CDKN2A) were identified as significantly mutated in mBC (false discovery rate [FDR] < 0.1). Eight genes (ESR1, FSIP2, FRAS1, OSBPL3, EDC4, PALB2, IGFN1, and AGRN) were more frequently mutated in mBC as compared to eBC (FDR < 0.01). ESR1 was identified both as a driver and as a metastatic gene (n = 22, odds ratio = 29, 95% CI [9-155], p = 1.2e-12) and also presented with focal amplification (n = 9) for a total of 31 mBCs with either ESR1 mutation or amplification, including 27 hormone receptor positive (HR+) and HER2 negative (HER2-) mBCs (19%). HR+/HER2- mBC presented a high prevalence of mutations on genes located on the mechanistic target of rapamycin (mTOR) pathway (TSC1 and TSC2) as compared to HR+/HER2- eBC (respectively 6% and 0.7%, p = 0.0004). Other actionable genes were more frequently mutated in HR+ mBC, including ERBB4 (n = 8), NOTCH3 (n = 7), and ALK (n = 7). Analysis of mutational signatures revealed a significant increase in APOBEC-mediated mutagenesis in HR+/HER2- metastatic tumors as compared to primary TCGA samples (p < 2e-16). The main limitations of this study include the absence of bone metastases and the size of the cohort, which might not have allowed the identification of rare mutations and their effect on survival.\nCONCLUSIONS: This work reports the results of the analysis of the first large-scale study on mutation profiles of mBC. This study revealed genomic alterations and mutational signatures involved in the resistance to therapies, including actionable mutations.",
+    "abstract_sections": [
+      {
+        "label": "BACKGROUND",
+        "text": "Major advances have been achieved in the characterization of early breast cancer (eBC) genomic profiles. Metastatic breast cancer (mBC) is associated with poor outcomes, yet limited information is available on the genomic profile of this disease. This study aims to decipher mutational profiles of mBC using next-generation sequencing."
+      },
+      {
+        "label": "METHODS AND FINDINGS",
+        "text": "Whole-exome sequencing was performed on 216 tumor-blood pairs from mBC patients who underwent a biopsy in the context of the SAFIR01, SAFIR02, SHIVA, or Molecular Screening for Cancer Treatment Optimization (MOSCATO) prospective trials. Mutational profiles from 772 primary breast tumors from The Cancer Genome Atlas (TCGA) were used as a reference for comparing primary and mBC mutational profiles. Twelve genes (TP53, PIK3CA, GATA3, ESR1, MAP3K1, CDH1, AKT1, MAP2K4, RB1, PTEN, CBFB, and CDKN2A) were identified as significantly mutated in mBC (false discovery rate [FDR] < 0.1). Eight genes (ESR1, FSIP2, FRAS1, OSBPL3, EDC4, PALB2, IGFN1, and AGRN) were more frequently mutated in mBC as compared to eBC (FDR < 0.01). ESR1 was identified both as a driver and as a metastatic gene (n = 22, odds ratio = 29, 95% CI [9-155], p = 1.2e-12) and also presented with focal amplification (n = 9) for a total of 31 mBCs with either ESR1 mutation or amplification, including 27 hormone receptor positive (HR+) and HER2 negative (HER2-) mBCs (19%). HR+/HER2- mBC presented a high prevalence of mutations on genes located on the mechanistic target of rapamycin (mTOR) pathway (TSC1 and TSC2) as compared to HR+/HER2- eBC (respectively 6% and 0.7%, p = 0.0004). Other actionable genes were more frequently mutated in HR+ mBC, including ERBB4 (n = 8), NOTCH3 (n = 7), and ALK (n = 7). Analysis of mutational signatures revealed a significant increase in APOBEC-mediated mutagenesis in HR+/HER2- metastatic tumors as compared to primary TCGA samples (p < 2e-16). The main limitations of this study include the absence of bone metastases and the size of the cohort, which might not have allowed the identification of rare mutations and their effect on survival."
+      },
+      {
+        "label": "CONCLUSIONS",
+        "text": "This work reports the results of the analysis of the first large-scale study on mutation profiles of mBC. This study revealed genomic alterations and mutational signatures involved in the resistance to therapies, including actionable mutations."
+      }
+    ],
+    "mesh_terms": [
+      "Breast Neoplasms",
+      "Exome",
+      "Female",
+      "Humans",
+      "Mutation",
+      "Neoplasm Metastasis",
+      "Retrospective Studies",
+      "Sequence Analysis, DNA"
+    ],
+    "keywords": []
+  }
+}

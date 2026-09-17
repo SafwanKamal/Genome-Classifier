@@ -1,0 +1,148 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_clinvar_esummary",
+  "variation_id": 2671964,
+  "retrieved_at": "2026-09-06T06:37:27.032449+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=clinvar&id=4233276%2C731516%2C1454283%2C244113%2C608899%2C1109245%2C623584%2C3683654%2C2671964%2C2202680&retmode=json&tool=variantgate",
+  "raw_summary_sha256": "7aabc8d48496331e2d19875382e6bb3b72b08fe296b19e2b85777bf5a1402fb6",
+  "raw_summary": {
+    "uid": "2671964",
+    "obj_type": "Duplication",
+    "accession": "VCV002671964",
+    "accession_version": "VCV002671964.1",
+    "title": "NM_014921.5(ADGRL1):c.371_372dup (p.Gln125fs)",
+    "variation_set": [
+      {
+        "measure_id": "2839491",
+        "variation_xrefs": [
+          {
+            "db_source": "ClinGen",
+            "db_id": "CA2695198154"
+          },
+          {
+            "db_source": "dbSNP",
+            "db_id": "2513043216"
+          }
+        ],
+        "variation_name": "NM_014921.5(ADGRL1):c.371_372dup (p.Gln125fs)",
+        "cdna_change": "c.371_372dup",
+        "aliases": [],
+        "variation_loc": [
+          {
+            "status": "current",
+            "assembly_name": "GRCh38",
+            "chr": "19",
+            "band": "19p13.12",
+            "start": "14170703",
+            "stop": "14170704",
+            "inner_start": "",
+            "inner_stop": "",
+            "outer_start": "",
+            "outer_stop": "",
+            "display_start": "14170703",
+            "display_stop": "14170704",
+            "assembly_acc_ver": "GCF_000001405.38",
+            "annotation_release": "",
+            "alt": "",
+            "ref": ""
+          },
+          {
+            "status": "previous",
+            "assembly_name": "GRCh37",
+            "chr": "19",
+            "band": "19p13.12",
+            "start": "14281515",
+            "stop": "14281516",
+            "inner_start": "",
+            "inner_stop": "",
+            "outer_start": "",
+            "outer_stop": "",
+            "display_start": "14281515",
+            "display_stop": "14281516",
+            "assembly_acc_ver": "GCF_000001405.25",
+            "annotation_release": "",
+            "alt": "",
+            "ref": ""
+          }
+        ],
+        "allele_freq_set": [],
+        "variant_type": "Duplication",
+        "canonical_spdi": "NC_000019.10:14170703:CAC:CACAC",
+        "common_name": ""
+      }
+    ],
+    "supporting_submissions": {
+      "scv": [
+        "SCV004183544"
+      ],
+      "rcv": [
+        "RCV003458951"
+      ]
+    },
+    "germline_classification": {
+      "description": "Likely pathogenic",
+      "last_evaluated": "2023/11/09 00:00",
+      "review_status": "criteria provided, single submitter",
+      "fda_recognized_database": "",
+      "trait_set": [
+        {
+          "trait_xrefs": [
+            {
+              "db_source": "MedGen",
+              "db_id": "C5774224"
+            },
+            {
+              "db_source": "MONDO",
+              "db_id": "MONDO:0859292"
+            },
+            {
+              "db_source": "OMIM",
+              "db_id": "620065"
+            }
+          ],
+          "trait_name": "Developmental delay, behavioral abnormalities, and neuropsychiatric disorders"
+        }
+      ]
+    },
+    "clinical_impact_classification": {
+      "description": "",
+      "last_evaluated": "1/01/01 00:00",
+      "review_status": "",
+      "fda_recognized_database": "",
+      "trait_set": []
+    },
+    "oncogenicity_classification": {
+      "description": "",
+      "last_evaluated": "1/01/01 00:00",
+      "review_status": "",
+      "fda_recognized_database": "",
+      "trait_set": []
+    },
+    "record_status": "",
+    "gene_sort": "ADGRL1",
+    "chr_sort": "19",
+    "location_sort": "00000000000014170703",
+    "variation_set_name": "",
+    "variation_set_id": "",
+    "genes": [
+      {
+        "symbol": "ADGRL1",
+        "geneid": "22859",
+        "strand": "-",
+        "source": "submitted"
+      },
+      {
+        "symbol": "ADGRL1-AS1",
+        "geneid": "100507373",
+        "strand": "+",
+        "source": "submitted"
+      }
+    ],
+    "molecular_consequence_list": [
+      "non-coding transcript variant",
+      "frameshift variant"
+    ],
+    "protein_change": "Q125fs",
+    "fda_recognized_database": ""
+  }
+}

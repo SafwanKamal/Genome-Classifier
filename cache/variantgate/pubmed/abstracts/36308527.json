@@ -1,0 +1,47 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_pubmed_efetch",
+  "pmid": "36308527",
+  "retrieved_at": "2026-09-06T18:49:20.891272+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=40751879%2C32221959%2C31268420%2C42474733%2C35948834%2C28027327%2C32328026%2C38322629%2C24040338%2C34433720%2C24343233%2C28072465%2C29478601%2C22205389%2C27364156%2C32271162%2C36609795%2C36308527%2C28937031%2C33390901&retmode=xml&tool=variantgate",
+  "raw_record_sha256": "ffb617ae402e79bcafcae5fe2f0da98cf41fb8364ec35388f695f5257d9e026e",
+  "cache_hit": false,
+  "content": {
+    "status": "found",
+    "pmid": "36308527",
+    "abstract": "BACKGROUND: Congenital myasthenic syndromes (CMS) are a heterogeneous group of disorders caused by genetic defects resulting in impaired neuromuscular transmission. Although effective treatments are available, CMS is probably underdiagnosed, and systematic clinico-genetic investigations are warranted.\nMETHODS: We used a nationwide approach to collect Austrian patients with genetically confirmed CMS. We provide a clinical and molecular characterization of this cohort and aimed to ascertain the current frequency of CMS in Austria.\nRESULTS: Twenty-eight cases with genetically confirmed CMS were identified, corresponding to an overall prevalence of 3.1 per million (95% CI 2.0-4.3) in Austria. The most frequent genetic etiology was CHRNE (n\u2009=\u200913), accounting for 46.4% of the cohort. Within this subgroup, the variant c.1327del, p.(Glu443Lysfs*64) was detected in nine individuals. Moreover, causative variants were found in DOK7 (n\u2009=\u20094), RAPSN (n\u2009=\u20093), COLQ (n\u2009=\u20092), GMPPB (n\u2009=\u20092), CHAT (n\u2009=\u20091), COL13A1 (n\u2009=\u20091), MUSK (n\u2009=\u20091) and AGRN (n\u2009=\u20091). Clinical onset within the first year of life was reported in one half of the patients. Across all subtypes, the most common symptoms were ptosis (85.7%), lower limb (67.9%), upper limb (60.7%) and facial weakness (60.7%). The majority of patients (96.4%) received specific treatment, including acetylcholinesterase inhibitors in 20, adrenergic agonists in 11 and 3,4-diaminopyridine in nine patients.\nCONCLUSIONS: Our study presents the first systematic characterization of individuals with CMS in Austria, providing prevalence estimates and genotype-phenotype correlations that may help to improve the diagnostic approach and patient management.",
+    "abstract_sections": [
+      {
+        "label": "BACKGROUND",
+        "text": "Congenital myasthenic syndromes (CMS) are a heterogeneous group of disorders caused by genetic defects resulting in impaired neuromuscular transmission. Although effective treatments are available, CMS is probably underdiagnosed, and systematic clinico-genetic investigations are warranted."
+      },
+      {
+        "label": "METHODS",
+        "text": "We used a nationwide approach to collect Austrian patients with genetically confirmed CMS. We provide a clinical and molecular characterization of this cohort and aimed to ascertain the current frequency of CMS in Austria."
+      },
+      {
+        "label": "RESULTS",
+        "text": "Twenty-eight cases with genetically confirmed CMS were identified, corresponding to an overall prevalence of 3.1 per million (95% CI 2.0-4.3) in Austria. The most frequent genetic etiology was CHRNE (n\u2009=\u200913), accounting for 46.4% of the cohort. Within this subgroup, the variant c.1327del, p.(Glu443Lysfs*64) was detected in nine individuals. Moreover, causative variants were found in DOK7 (n\u2009=\u20094), RAPSN (n\u2009=\u20093), COLQ (n\u2009=\u20092), GMPPB (n\u2009=\u20092), CHAT (n\u2009=\u20091), COL13A1 (n\u2009=\u20091), MUSK (n\u2009=\u20091) and AGRN (n\u2009=\u20091). Clinical onset within the first year of life was reported in one half of the patients. Across all subtypes, the most common symptoms were ptosis (85.7%), lower limb (67.9%), upper limb (60.7%) and facial weakness (60.7%). The majority of patients (96.4%) received specific treatment, including acetylcholinesterase inhibitors in 20, adrenergic agonists in 11 and 3,4-diaminopyridine in nine patients."
+      },
+      {
+        "label": "CONCLUSIONS",
+        "text": "Our study presents the first systematic characterization of individuals with CMS in Austria, providing prevalence estimates and genotype-phenotype correlations that may help to improve the diagnostic approach and patient management."
+      }
+    ],
+    "mesh_terms": [
+      "Humans",
+      "Myasthenic Syndromes, Congenital",
+      "Austria",
+      "Acetylcholinesterase",
+      "Treatment Outcome",
+      "Prevalence",
+      "Mutation"
+    ],
+    "keywords": [
+      "Austria",
+      "CHRNE",
+      "Congenital myasthenic syndrome",
+      "Myasthenia"
+    ]
+  }
+}

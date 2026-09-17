@@ -1,0 +1,35 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_pubmed_esummary",
+  "pmid": "25311215",
+  "retrieved_at": "2026-09-06T17:37:37.125021+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id=28492532%2C31152969%2C20301532%2C20301550%2C30813707%2C29355391%2C25311215%2C24846033%2C24827857%2C23667368%2C23649446%2C23562183%2C25741868%2C20301648&retmode=json&tool=variantgate",
+  "raw_summary_sha256": "94cf2f2db499aefaf70b5dfd10e863d81f93aaff824c2afec94df7de0c8f534a",
+  "cache_hit": false,
+  "article": {
+    "status": "found",
+    "pmid": "25311215",
+    "title": "Molecular testing for selection of patients with lung cancer for epidermal growth factor receptor and anaplastic lymphoma kinase tyrosine kinase inhibitors: American Society of Clinical Oncology endorsement of the College of American Pathologists/International Association for the study of lung cancer/association for molecular pathology guideline.",
+    "authors": [
+      "Leighl NB",
+      "Rekhtman N",
+      "Biermann WA",
+      "Huang J",
+      "Mino-Kenudson M",
+      "Ramalingam SS",
+      "West H",
+      "Whitlock S",
+      "Somerfield MR"
+    ],
+    "last_author": "Somerfield MR",
+    "journal": "Journal of clinical oncology : official journal of the American Society of Clinical Oncology",
+    "publication_date": "2014 Nov 10",
+    "electronic_publication_date": "2014 Oct 13",
+    "publication_types": [
+      "Journal Article"
+    ],
+    "doi": "10.1200/JCO.2014.57.3055",
+    "pmc_id": "PMC5321089",
+    "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/25311215/"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "status": "pass",
+  "variant_number": 1000,
+  "backend": "numpy",
+  "architecture": "16-8-1",
+  "classification_rule": "folded_score >= 0",
+  "score_min": -1318,
+  "score_max": 430,
+  "prediction_counts": {
+    "0": 597,
+    "1": 403
+  },
+  "total_backend_latency_seconds": 0.0132196,
+  "mean_backend_latency_us": 13.2196,
+  "complete_run_time_seconds": 0.0171669,
+  "bit_exact_comparison": false,
+  "bit_exact_mismatches": null
+}

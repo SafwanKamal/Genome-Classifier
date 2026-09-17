@@ -1,0 +1,40 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_pubmed_esummary",
+  "pmid": "32271162",
+  "retrieved_at": "2026-09-06T18:49:20.023716+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id=40751879%2C32221959%2C31268420%2C42474733%2C35948834%2C28027327%2C32328026%2C38322629%2C24040338%2C34433720%2C24343233%2C28072465%2C29478601%2C22205389%2C27364156%2C32271162%2C36609795%2C36308527%2C28937031%2C33390901&retmode=json&tool=variantgate",
+  "raw_summary_sha256": "1e2daaacafcf404fc28e90bf91f82b05563e5cca30a882649f2bc1543ec5c4f7",
+  "cache_hit": false,
+  "article": {
+    "status": "found",
+    "pmid": "32271162",
+    "title": "Congenital myasthenic syndrome-associated agrin variants affect clustering of acetylcholine receptors in a domain-specific manner.",
+    "authors": [
+      "Ohkawara B",
+      "Shen X",
+      "Selcen D",
+      "Nazim M",
+      "Bril V",
+      "Tarnopolsky MA",
+      "Brady L",
+      "Fukami S",
+      "Amato AA",
+      "Yis U",
+      "Ohno K",
+      "Engel AG"
+    ],
+    "last_author": "Engel AG",
+    "journal": "JCI insight",
+    "publication_date": "2020 Apr 9",
+    "electronic_publication_date": "2020 Apr 9",
+    "publication_types": [
+      "Journal Article",
+      "Research Support, N.I.H., Extramural",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "doi": "10.1172/jci.insight.132023",
+    "pmc_id": "PMC7205260",
+    "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/32271162/"
+  }
+}

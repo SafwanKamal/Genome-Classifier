@@ -1,0 +1,35 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_pubmed_efetch",
+  "pmid": "34433720",
+  "retrieved_at": "2026-09-06T18:49:20.891272+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=40751879%2C32221959%2C31268420%2C42474733%2C35948834%2C28027327%2C32328026%2C38322629%2C24040338%2C34433720%2C24343233%2C28072465%2C29478601%2C22205389%2C27364156%2C32271162%2C36609795%2C36308527%2C28937031%2C33390901&retmode=xml&tool=variantgate",
+  "raw_record_sha256": "806c51b7fef4f5385be5e7dbcc00b4384239caad3759c5bd7fabf87fe4335fd2",
+  "cache_hit": false,
+  "content": {
+    "status": "found",
+    "pmid": "34433720",
+    "abstract": "The patient had suffered from both proximal and distal limb weakness since her early childhood, without the involvement of ocular or respiratory muscles. Repetitive nerve stimulation (RNS) at 3 Hz showed significant decrement in the area and amplitude of the compound muscle action potential (CMAP) on the right abductor digiti minimi (26%) and trapezius (17%). Whole-exon sequencing revealed two novel heterozygous mutations (p.Q1406Rfs*29 and p.R1521H) in the LG1 domain of agrin, which were deemed likely pathogenic for congenital myasthenic syndromes (CMS) according to a bioinformatics analysis. The patient showed remarkable improvement after treatment with salbutamol. This case expanded the mutation spectrum of AGRN.",
+    "abstract_sections": [
+      {
+        "label": null,
+        "text": "The patient had suffered from both proximal and distal limb weakness since her early childhood, without the involvement of ocular or respiratory muscles. Repetitive nerve stimulation (RNS) at 3 Hz showed significant decrement in the area and amplitude of the compound muscle action potential (CMAP) on the right abductor digiti minimi (26%) and trapezius (17%). Whole-exon sequencing revealed two novel heterozygous mutations (p.Q1406Rfs*29 and p.R1521H) in the LG1 domain of agrin, which were deemed likely pathogenic for congenital myasthenic syndromes (CMS) according to a bioinformatics analysis. The patient showed remarkable improvement after treatment with salbutamol. This case expanded the mutation spectrum of AGRN."
+      }
+    ],
+    "mesh_terms": [
+      "Agrin",
+      "Child, Preschool",
+      "Exons",
+      "Female",
+      "Humans",
+      "Muscle Weakness",
+      "Mutation",
+      "Myasthenic Syndromes, Congenital"
+    ],
+    "keywords": [
+      "AGRN",
+      "compound heterozygous mutation",
+      "congenital myasthenic syndromes"
+    ]
+  }
+}

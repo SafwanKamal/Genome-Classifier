@@ -1,0 +1,29 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_pubmed_efetch",
+  "pmid": "32221959",
+  "retrieved_at": "2026-09-06T18:49:20.891272+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=40751879%2C32221959%2C31268420%2C42474733%2C35948834%2C28027327%2C32328026%2C38322629%2C24040338%2C34433720%2C24343233%2C28072465%2C29478601%2C22205389%2C27364156%2C32271162%2C36609795%2C36308527%2C28937031%2C33390901&retmode=xml&tool=variantgate",
+  "raw_record_sha256": "4e21faefaaf9ea51517326c8300d82d253b6d046054c80e7e8de0c78d60a890f",
+  "cache_hit": false,
+  "content": {
+    "status": "found",
+    "pmid": "32221959",
+    "abstract": "The congenital myasthenia syndromes (CMS) are a group of autosomal recessive or autosomal dominant diseases that affect neuromuscular junctions. CMS caused by AGRN mutations is very uncommon typically characterized by ptosis, mild weakness, and proximal limb weakness. We report the case of an 8-year-old female who exhibited the onset of motor development retardation from infancy and slow progression to proximal muscle weakness. Repeated nerve stimulation at 3\u2009Hz showed a clear decrement with 17%. Whole exon sequencing showed an AGRN gene compound heterozygous mutation (c.5009C >T and c.5078T\u2009>\u2009C). She was treated with salbutamol but without improvement. Then pseudoephedrine was adapted as a treatment choice and obtained remarkable curative effect. We have summarized and analyzed 12 patients who have been reported in the literature. An early age of onset and muscle weakness in the lower limbs are the main feature of an early AGRN gene mutation. Both types of AGRN-related CMS respond favorably to ephedrine. This is the first report showing that pseudoephedrine is effective as a choice for the treatment of AGRN-related CMS.",
+    "abstract_sections": [
+      {
+        "label": null,
+        "text": "The congenital myasthenia syndromes (CMS) are a group of autosomal recessive or autosomal dominant diseases that affect neuromuscular junctions. CMS caused by AGRN mutations is very uncommon typically characterized by ptosis, mild weakness, and proximal limb weakness. We report the case of an 8-year-old female who exhibited the onset of motor development retardation from infancy and slow progression to proximal muscle weakness. Repeated nerve stimulation at 3\u2009Hz showed a clear decrement with 17%. Whole exon sequencing showed an AGRN gene compound heterozygous mutation (c.5009C >T and c.5078T\u2009>\u2009C). She was treated with salbutamol but without improvement. Then pseudoephedrine was adapted as a treatment choice and obtained remarkable curative effect. We have summarized and analyzed 12 patients who have been reported in the literature. An early age of onset and muscle weakness in the lower limbs are the main feature of an early AGRN gene mutation. Both types of AGRN-related CMS respond favorably to ephedrine. This is the first report showing that pseudoephedrine is effective as a choice for the treatment of AGRN-related CMS."
+      }
+    ],
+    "mesh_terms": [
+      "Bronchodilator Agents",
+      "Child",
+      "Female",
+      "Humans",
+      "Myasthenic Syndromes, Congenital",
+      "Pseudoephedrine"
+    ],
+    "keywords": []
+  }
+}

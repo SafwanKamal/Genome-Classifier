@@ -1,0 +1,37 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_pubmed_esummary",
+  "pmid": "24827857",
+  "retrieved_at": "2026-09-06T17:37:37.125021+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id=28492532%2C31152969%2C20301532%2C20301550%2C30813707%2C29355391%2C25311215%2C24846033%2C24827857%2C23667368%2C23649446%2C23562183%2C25741868%2C20301648&retmode=json&tool=variantgate",
+  "raw_summary_sha256": "d5202859646ae7f9f9c66efcdfdc6863ec7ce69abba7051c8b68abd133751bf6",
+  "cache_hit": false,
+  "article": {
+    "status": "found",
+    "pmid": "24827857",
+    "title": "Epidermal growth factor receptor tyrosine kinase (EGFR-TK) mutation testing in adults with locally advanced or metastatic non-small cell lung cancer: a systematic review and cost-effectiveness analysis.",
+    "authors": [
+      "Westwood M",
+      "Joore M",
+      "Whiting P",
+      "van Asselt T",
+      "Ramaekers B",
+      "Armstrong N",
+      "Misso K",
+      "Severens J",
+      "Kleijnen J"
+    ],
+    "last_author": "Kleijnen J",
+    "journal": "Health technology assessment (Winchester, England)",
+    "publication_date": "2014 May",
+    "electronic_publication_date": "",
+    "publication_types": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't",
+      "Systematic Review"
+    ],
+    "doi": "10.3310/hta18320",
+    "pmc_id": "PMC4781337",
+    "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/24827857/"
+  }
+}

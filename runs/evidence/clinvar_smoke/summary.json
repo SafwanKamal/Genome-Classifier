@@ -1,0 +1,11 @@
+{
+  "status": "pass",
+  "provider": "ncbi_clinvar_esummary",
+  "route": "deep_review",
+  "requested_variant_number": 10,
+  "found_number": 10,
+  "not_found_number": 0,
+  "cache_hit_number": 0,
+  "network_retrieval_number": 10,
+  "variation_id_source": "variation_id"
+}

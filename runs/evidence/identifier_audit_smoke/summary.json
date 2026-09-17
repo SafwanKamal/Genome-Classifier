@@ -1,0 +1,21 @@
+{
+  "status": "pass",
+  "variant_number": 10,
+  "searchable_variant_number": 10,
+  "unsearchable_variant_number": 0,
+  "variants_with_exact_identifier": 7,
+  "variants_with_rsid": 0,
+  "variants_with_hgvs": 7,
+  "variants_with_protein_change": 3,
+  "variants_with_canonical_spdi": 7,
+  "variants_with_known_assembly": 0,
+  "coordinate_hgvs_generated_number": 0,
+  "search_strategy_counts": {
+    "gene_trait_context": 4,
+    "gene_variant_context": 3,
+    "hgvs_exact": 11,
+    "protein_change_exact": 4,
+    "spdi_exact": 6
+  },
+  "interpretation": "Identifier availability audit only. Coordinates are not converted to HGVS without an explicit assembly and transcript."
+}

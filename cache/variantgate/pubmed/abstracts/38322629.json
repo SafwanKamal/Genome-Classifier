@@ -1,0 +1,38 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_pubmed_efetch",
+  "pmid": "38322629",
+  "retrieved_at": "2026-09-06T18:49:20.891272+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=40751879%2C32221959%2C31268420%2C42474733%2C35948834%2C28027327%2C32328026%2C38322629%2C24040338%2C34433720%2C24343233%2C28072465%2C29478601%2C22205389%2C27364156%2C32271162%2C36609795%2C36308527%2C28937031%2C33390901&retmode=xml&tool=variantgate",
+  "raw_record_sha256": "67fe84ad6f1f155efc684e7b8f94c38568847b9ebb405af0a847012ba895c878",
+  "cache_hit": false,
+  "content": {
+    "status": "found",
+    "pmid": "38322629",
+    "abstract": "INTRODUCTION: Steroid-resistant nephrotic syndrome (SRNS) is the second most common cause of end-stage kidney disease in children, mostly associated with focal segmental glomerulosclerosis (FSGS). Advances in genomic science have enabled the identification of causative variants in 20-30% of SRNS patients.\nMETHODS: We used whole exome sequencing to explore the genetic causes of SRNS in children. Totally, 101 patients with SRNS and 13 patients with nephrotic proteinuria and FSGS were retrospectively enrolled in our hospital between 2018 and 2022. For the known monogenic causes analysis, we generated a known SRNS gene list of 71 genes through reviewing the OMIM database and literature.\nRESULTS: Causative variants were identified in 23.68% of our cohort, and the most frequently mutated genes in our cohort were WT1 (7/27), NPHS1 (3/27), ADCK4 (3/27), and ANLN (2/27). Five patients carried variants in phenocopy genes, including MYH9, MAFB, TTC21B, AGRN, and FAT4. The variant detection rate was the highest in the two subtype groups with congenital nephrotic syndrome and syndromic SRNS. In total, 68.75% of variants we identified were novel and have not been previously reported in the literature.\nCONCLUSION: Comprehensive genetic analysis is key to realizing the clinical benefits of a genetic diagnosis. We suggest that all children with SRNS undergo genetic testing, especially those with early-onset and extrarenal phenotypes.",
+    "abstract_sections": [
+      {
+        "label": "INTRODUCTION",
+        "text": "Steroid-resistant nephrotic syndrome (SRNS) is the second most common cause of end-stage kidney disease in children, mostly associated with focal segmental glomerulosclerosis (FSGS). Advances in genomic science have enabled the identification of causative variants in 20-30% of SRNS patients."
+      },
+      {
+        "label": "METHODS",
+        "text": "We used whole exome sequencing to explore the genetic causes of SRNS in children. Totally, 101 patients with SRNS and 13 patients with nephrotic proteinuria and FSGS were retrospectively enrolled in our hospital between 2018 and 2022. For the known monogenic causes analysis, we generated a known SRNS gene list of 71 genes through reviewing the OMIM database and literature."
+      },
+      {
+        "label": "RESULTS",
+        "text": "Causative variants were identified in 23.68% of our cohort, and the most frequently mutated genes in our cohort were WT1 (7/27), NPHS1 (3/27), ADCK4 (3/27), and ANLN (2/27). Five patients carried variants in phenocopy genes, including MYH9, MAFB, TTC21B, AGRN, and FAT4. The variant detection rate was the highest in the two subtype groups with congenital nephrotic syndrome and syndromic SRNS. In total, 68.75% of variants we identified were novel and have not been previously reported in the literature."
+      },
+      {
+        "label": "CONCLUSION",
+        "text": "Comprehensive genetic analysis is key to realizing the clinical benefits of a genetic diagnosis. We suggest that all children with SRNS undergo genetic testing, especially those with early-onset and extrarenal phenotypes."
+      }
+    ],
+    "mesh_terms": [],
+    "keywords": [
+      "Focal segmental glomerulosclerosis",
+      "Monogenic causes",
+      "Steroid-resistant nephrotic syndrome"
+    ]
+  }
+}

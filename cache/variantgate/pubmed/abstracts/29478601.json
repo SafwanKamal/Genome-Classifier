@@ -1,0 +1,37 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_pubmed_efetch",
+  "pmid": "29478601",
+  "retrieved_at": "2026-09-06T18:49:20.891272+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=40751879%2C32221959%2C31268420%2C42474733%2C35948834%2C28027327%2C32328026%2C38322629%2C24040338%2C34433720%2C24343233%2C28072465%2C29478601%2C22205389%2C27364156%2C32271162%2C36609795%2C36308527%2C28937031%2C33390901&retmode=xml&tool=variantgate",
+  "raw_record_sha256": "8ef53f616895ad86e3079444ed07beb042c67af8f2c7fc3b60e63e783b1d6da6",
+  "cache_hit": false,
+  "content": {
+    "status": "found",
+    "pmid": "29478601",
+    "abstract": "The congenital myasthenic syndromes (CMS) are heterogeneous disorders in which the safety margin of neuromuscular transmission is compromised by one or more specific mechanisms. The disease proteins reside in the nerve terminal, the synaptic basal lamina, or in the postsynaptic region, or at multiple sites at the neuromuscular junction as well as in other tissues. Targeted mutation analysis by Sanger or exome sequencing has been facilitated by characteristic phenotypic features of some CMS. No fewer than 20 disease genes have been recognized to date. In one-half of the currently identified probands, the disease stems from mutations in genes encoding subunits of the muscle form of the acetylcholine receptor (CHRNA1, CHRNB, CHRNAD1, and CHRNE). In 10-14% of the probands the disease is caused by mutations in RAPSN, DOK 7, or COLQ, and in 5% by mutations in CHAT. Other less frequently identified disease genes include LAMB2, AGRN, LRP4, MUSK, GFPT1, DPAGT1, ALG2, and ALG 14 as well as SCN4A, PREPL, PLEC1, DNM2, and MTM1. Identification of the genetic basis of each CMS is important not only for genetic counseling and disease prevention but also for therapy, because therapeutic agents that benefit one type of CMS can be harmful in another.",
+    "abstract_sections": [
+      {
+        "label": null,
+        "text": "The congenital myasthenic syndromes (CMS) are heterogeneous disorders in which the safety margin of neuromuscular transmission is compromised by one or more specific mechanisms. The disease proteins reside in the nerve terminal, the synaptic basal lamina, or in the postsynaptic region, or at multiple sites at the neuromuscular junction as well as in other tissues. Targeted mutation analysis by Sanger or exome sequencing has been facilitated by characteristic phenotypic features of some CMS. No fewer than 20 disease genes have been recognized to date. In one-half of the currently identified probands, the disease stems from mutations in genes encoding subunits of the muscle form of the acetylcholine receptor (CHRNA1, CHRNB, CHRNAD1, and CHRNE). In 10-14% of the probands the disease is caused by mutations in RAPSN, DOK 7, or COLQ, and in 5% by mutations in CHAT. Other less frequently identified disease genes include LAMB2, AGRN, LRP4, MUSK, GFPT1, DPAGT1, ALG2, and ALG 14 as well as SCN4A, PREPL, PLEC1, DNM2, and MTM1. Identification of the genetic basis of each CMS is important not only for genetic counseling and disease prevention but also for therapy, because therapeutic agents that benefit one type of CMS can be harmful in another."
+      }
+    ],
+    "mesh_terms": [
+      "Humans",
+      "Myasthenic Syndromes, Congenital",
+      "Nerve Tissue Proteins",
+      "Phenotype",
+      "Receptors, Cholinergic"
+    ],
+    "keywords": [
+      "EMG",
+      "congenital myasthenic syndromes",
+      "exome sequencing",
+      "mutation analysis",
+      "neuromuscular junction",
+      "neuromuscular transmission",
+      "phenotypic clues",
+      "therapy"
+    ]
+  }
+}

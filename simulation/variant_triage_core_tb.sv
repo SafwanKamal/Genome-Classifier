@@ -2,16 +2,18 @@
 
 module variant_triage_core_tb;
 
-    localparam integer FEATURE_NUMBER = 16;
-    localparam integer TEST_NUMBER    = 1000;
+    localparam integer FEATURE_NUMBER   = 16;
+    localparam integer HIDDEN_NUMBER    = 8;
+    localparam integer HIDDEN_MAC_LANES = 4;
+    localparam integer TEST_NUMBER      = 1000;
 
     localparam integer VECTOR_WIDTH =
         FEATURE_NUMBER * 8 + 32;
 
-    localparam integer MAXIMUM_CYCLES = 100;
+    localparam integer MAXIMUM_CYCLES = 200;
 
     parameter string VECTOR_FILE =
-        "model_v1_core_vectors.mem";
+        "model_v2_h8_core_vectors.mem";
 
 
     `include "model_parameters.svh"
@@ -33,6 +35,7 @@ module variant_triage_core_tb;
         test_vector_ROM [0:TEST_NUMBER - 1];
 
     integer passed_test_number;
+    integer maximum_observed_cycles;
 
 
     /*
@@ -45,34 +48,25 @@ module variant_triage_core_tb;
 
 
     variant_triage_core #(
-        .FEATURE_NUMBER(FEATURE_NUMBER),
+        .FEATURE_NUMBER   (FEATURE_NUMBER),
+        .REQUANT_SHIFT    (MODEL_QSHIFT),
+        .HIDDEN_NUMBER    (HIDDEN_NUMBER),
+        .HIDDEN_MAC_LANES (HIDDEN_MAC_LANES),
 
-        .HIDDEN_BIAS_0(MODEL_BIAS_0),
-        .HIDDEN_BIAS_1(MODEL_BIAS_1),
-        .HIDDEN_BIAS_2(MODEL_BIAS_2),
-        .HIDDEN_BIAS_3(MODEL_BIAS_3),
-
-        .OUTPUT_BIAS  (MODEL_OUTPUT_BIAS),
-        .REQUANT_SHIFT(MODEL_QSHIFT),
-
-        .HIDDEN_WEIGHT_FILE_0(
-            "neuron_0_weights.mem"
+        .HIDDEN_WEIGHT_FILE(
+            "dense_hidden_weights.mem"
         ),
 
-        .HIDDEN_WEIGHT_FILE_1(
-            "neuron_1_weights.mem"
-        ),
-
-        .HIDDEN_WEIGHT_FILE_2(
-            "neuron_2_weights.mem"
-        ),
-
-        .HIDDEN_WEIGHT_FILE_3(
-            "neuron_3_weights.mem"
+        .HIDDEN_BIAS_FILE(
+            "dense_hidden_biases.mem"
         ),
 
         .OUTPUT_WEIGHT_FILE(
-            "output_neuron_weights.mem"
+            "dense_output_weights.mem"
+        ),
+
+        .OUTPUT_BIAS_FILE(
+            "dense_output_biases.mem"
         )
     ) DUT (
         .clk    (clk),
@@ -104,8 +98,8 @@ module variant_triage_core_tb;
             /*
              * Extract the 16 feature bytes.
              *
-             * "-: 8" means select eight bits
-             * downward from the specified bit.
+             * Feature zero occupies the most-significant
+             * byte of the test-vector memory word.
              */
             for (
                 int feature_index = 0;
@@ -122,6 +116,10 @@ module variant_triage_core_tb;
             end
 
 
+            /*
+             * The expected signed INT32 score occupies
+             * the least-significant 32 bits.
+             */
             expected_score = $signed(
                 test_vector_ROM[test_index][31:0]
             );
@@ -130,7 +128,7 @@ module variant_triage_core_tb;
             /*
              * Assert start for one clock cycle.
              *
-             * Signals are changed on falling edges
+             * Testbench signals change on falling edges
              * so they are stable before rising edges.
              */
             @(negedge clk);
@@ -141,8 +139,7 @@ module variant_triage_core_tb;
 
 
             /*
-             * Wait for completion, with a timeout
-             * in case the core FSM becomes stuck.
+             * Wait for completion with a timeout.
              */
             cycle_number = 0;
 
@@ -165,6 +162,15 @@ module variant_triage_core_tb;
             end
 
 
+            if (
+                cycle_number
+                > maximum_observed_cycles
+            ) begin
+                maximum_observed_cycles =
+                    cycle_number;
+            end
+
+
             /*
              * Case inequality also detects X and Z.
              */
@@ -184,6 +190,11 @@ module variant_triage_core_tb;
                     score
                 );
 
+                $display(
+                    "Inference cycles: %0d",
+                    cycle_number
+                );
+
                 for (
                     int feature_index = 0;
                     feature_index < FEATURE_NUMBER;
@@ -198,7 +209,7 @@ module variant_triage_core_tb;
 
                 $fatal(
                     1,
-                    "Bit-exact score mismatch"
+                    "Bit-exact V2 score mismatch"
                 );
             end
 
@@ -210,9 +221,10 @@ module variant_triage_core_tb;
                 || passed_test_number % 100 == 0
             ) begin
                 $display(
-                    "Passed %0d/%0d tests",
+                    "Passed %0d/%0d tests; current cycles = %0d",
                     passed_test_number,
-                    TEST_NUMBER
+                    TEST_NUMBER,
+                    cycle_number
                 );
             end
 
@@ -228,10 +240,11 @@ module variant_triage_core_tb;
 
 
     initial begin
-        clk                = 1'b0;
-        reset              = 1'b1;
-        start              = 1'b0;
-        passed_test_number = 0;
+        clk                     = 1'b0;
+        reset                   = 1'b1;
+        start                   = 1'b0;
+        passed_test_number      = 0;
+        maximum_observed_cycles = 0;
 
         for (
             int feature_index = 0;
@@ -277,8 +290,13 @@ module variant_triage_core_tb;
 
 
         $display(
-            "PASS: all %0d core tests matched",
+            "PASS: all %0d V2 core tests matched",
             passed_test_number
+        );
+
+        $display(
+            "Maximum observed inference latency: %0d cycles",
+            maximum_observed_cycles
         );
 
         $finish;

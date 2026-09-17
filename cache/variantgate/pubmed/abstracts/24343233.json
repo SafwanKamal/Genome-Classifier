@@ -1,0 +1,60 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_pubmed_efetch",
+  "pmid": "24343233",
+  "retrieved_at": "2026-09-06T18:49:20.891272+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=40751879%2C32221959%2C31268420%2C42474733%2C35948834%2C28027327%2C32328026%2C38322629%2C24040338%2C34433720%2C24343233%2C28072465%2C29478601%2C22205389%2C27364156%2C32271162%2C36609795%2C36308527%2C28937031%2C33390901&retmode=xml&tool=variantgate",
+  "raw_record_sha256": "263f2106d72440a30e4ed375c30bf99de5b663eadda5b7e5edf2d3fb9eee147c",
+  "cache_hit": false,
+  "content": {
+    "status": "found",
+    "pmid": "24343233",
+    "abstract": "IMPORTANCE: Granulin (GRN) mutations represent one of the most frequent genetic causes of inherited frontotemporal dementia. The study of asymptomatic carriers of GRN Thr272fs mutation (aGRN+) provides a unique opportunity to study the natural history of the disease and the role of modulating factors on disease onset. It has been demonstrated that the TMEM106B polymorphism is associated with GRN-related frontotemporal dementia and affects age at onset in GRN mutation carriers.\nOBJECTIVE: To ascertain whether TMEM106B genetic status modulates GRN disease by evaluating resting-state functional connectivity in aGRN+ individuals according to TMEM106 genetic variation.\nDESIGN, SETTING, AND PARTICIPANTS: Academic tertiary referral center for neurodegenerative disorders in 17 asymptomatic carriers of aGRN+ and 14 healthy controls.\nMAIN OUTCOMES AND MEASURES: Changes in resting-state functional connectivity, focusing on the default mode network, ventral and dorsal salience networks, executive network, frontoparietal networks, and attentive network and the effect of TMEM106B genotypes in aGRN+ participants and healthy controls (statistical nonparametric mapping).\nRESULTS: aGRN+ participants showed decreased brain connectivity within the left frontoparietal network and increased connectivity in the executive network compared with healthy controls. The TMEM106B at-risk polymorphism (T/T) was associated with decreased connectivity within the ventral salience network (ie, middle frontal gyrus) and the left frontoparietal network (ie, left precuneus).\nCONCLUSIONS AND RELEVANCE: This study suggests that the TMEM106B polymorphism modulates brain connectivity in aGRN+ individuals, with additional damage of the ventral salience network and left frontoparietal network observed. Genotyping TMEM106B is of importance in aGRN+ individuals for prognostic purposes and to assess early brain damage.",
+    "abstract_sections": [
+      {
+        "label": "IMPORTANCE",
+        "text": "Granulin (GRN) mutations represent one of the most frequent genetic causes of inherited frontotemporal dementia. The study of asymptomatic carriers of GRN Thr272fs mutation (aGRN+) provides a unique opportunity to study the natural history of the disease and the role of modulating factors on disease onset. It has been demonstrated that the TMEM106B polymorphism is associated with GRN-related frontotemporal dementia and affects age at onset in GRN mutation carriers."
+      },
+      {
+        "label": "OBJECTIVE",
+        "text": "To ascertain whether TMEM106B genetic status modulates GRN disease by evaluating resting-state functional connectivity in aGRN+ individuals according to TMEM106 genetic variation."
+      },
+      {
+        "label": "DESIGN, SETTING, AND PARTICIPANTS",
+        "text": "Academic tertiary referral center for neurodegenerative disorders in 17 asymptomatic carriers of aGRN+ and 14 healthy controls."
+      },
+      {
+        "label": "MAIN OUTCOMES AND MEASURES",
+        "text": "Changes in resting-state functional connectivity, focusing on the default mode network, ventral and dorsal salience networks, executive network, frontoparietal networks, and attentive network and the effect of TMEM106B genotypes in aGRN+ participants and healthy controls (statistical nonparametric mapping)."
+      },
+      {
+        "label": "RESULTS",
+        "text": "aGRN+ participants showed decreased brain connectivity within the left frontoparietal network and increased connectivity in the executive network compared with healthy controls. The TMEM106B at-risk polymorphism (T/T) was associated with decreased connectivity within the ventral salience network (ie, middle frontal gyrus) and the left frontoparietal network (ie, left precuneus)."
+      },
+      {
+        "label": "CONCLUSIONS AND RELEVANCE",
+        "text": "This study suggests that the TMEM106B polymorphism modulates brain connectivity in aGRN+ individuals, with additional damage of the ventral salience network and left frontoparietal network observed. Genotyping TMEM106B is of importance in aGRN+ individuals for prognostic purposes and to assess early brain damage."
+      }
+    ],
+    "mesh_terms": [
+      "Adult",
+      "Asymptomatic Diseases",
+      "Brain",
+      "Female",
+      "Frontotemporal Dementia",
+      "Heterozygote",
+      "Humans",
+      "Intercellular Signaling Peptides and Proteins",
+      "Male",
+      "Membrane Proteins",
+      "Middle Aged",
+      "Mutation",
+      "Nerve Net",
+      "Nerve Tissue Proteins",
+      "Polymorphism, Genetic",
+      "Progranulins",
+      "Young Adult"
+    ],
+    "keywords": []
+  }
+}

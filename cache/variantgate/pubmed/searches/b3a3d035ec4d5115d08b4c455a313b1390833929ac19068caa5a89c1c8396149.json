@@ -1,0 +1,13 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_pubmed_esearch",
+  "query": "\"Q125fs\"[Title/Abstract] AND \"INTS11\"[Title/Abstract]",
+  "retmax": 20,
+  "retrieved_at": "2026-09-06T18:49:16.532586+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Q125fs%22%5BTitle%2FAbstract%5D+AND+%22INTS11%22%5BTitle%2FAbstract%5D&retmax=20&sort=relevance&retmode=json&tool=variantgate",
+  "raw_response_sha256": "2987d973ded28df061ee1328fd87a9cbe4b4f3f427b4eebfd6fdc1dcc84d49c6",
+  "cache_hit": false,
+  "count": 0,
+  "pmids": [],
+  "query_translation": "\"Q125fs\"[Title/Abstract] AND \"INTS11\"[Title/Abstract]"
+}

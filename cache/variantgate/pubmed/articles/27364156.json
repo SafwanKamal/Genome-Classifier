@@ -1,0 +1,32 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_pubmed_esummary",
+  "pmid": "27364156",
+  "retrieved_at": "2026-09-06T18:49:20.023716+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id=40751879%2C32221959%2C31268420%2C42474733%2C35948834%2C28027327%2C32328026%2C38322629%2C24040338%2C34433720%2C24343233%2C28072465%2C29478601%2C22205389%2C27364156%2C32271162%2C36609795%2C36308527%2C28937031%2C33390901&retmode=json&tool=variantgate",
+  "raw_summary_sha256": "f4d71bcdcd27691b4233c524b961b86aeafa7e8681f66878834b63925e71d577",
+  "cache_hit": false,
+  "article": {
+    "status": "found",
+    "pmid": "27364156",
+    "title": "A CHRNB1 frameshift mutation is associated with familial arthrogryposis multiplex congenita in Red dairy cattle.",
+    "authors": [
+      "Agerholm JS",
+      "McEvoy FJ",
+      "Menzi F",
+      "Jagannathan V",
+      "Dr\u00f6gem\u00fcller C"
+    ],
+    "last_author": "Dr\u00f6gem\u00fcller C",
+    "journal": "BMC genomics",
+    "publication_date": "2016 Jun 30",
+    "electronic_publication_date": "2016 Jun 30",
+    "publication_types": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "doi": "10.1186/s12864-016-2832-x",
+    "pmc_id": "PMC4929742",
+    "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/27364156/"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_pubmed_esummary",
+  "pmid": "32221959",
+  "retrieved_at": "2026-09-06T18:49:20.023716+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id=40751879%2C32221959%2C31268420%2C42474733%2C35948834%2C28027327%2C32328026%2C38322629%2C24040338%2C34433720%2C24343233%2C28072465%2C29478601%2C22205389%2C27364156%2C32271162%2C36609795%2C36308527%2C28937031%2C33390901&retmode=json&tool=variantgate",
+  "raw_summary_sha256": "399cc3c178a14f0b78705eccc5611c690c40eea629fc85950d8e4ac1c9c9c206",
+  "cache_hit": false,
+  "article": {
+    "status": "found",
+    "pmid": "32221959",
+    "title": "AGRN Gene Mutation Leads to Congenital Myasthenia Syndromes: A Pediatric Case Report and Literature Review.",
+    "authors": [
+      "Gan S",
+      "Yang H",
+      "Xiao T",
+      "Pan Z",
+      "Wu L"
+    ],
+    "last_author": "Wu L",
+    "journal": "Neuropediatrics",
+    "publication_date": "2020 Oct",
+    "electronic_publication_date": "2020 Mar 28",
+    "publication_types": [
+      "Case Reports",
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't",
+      "Review"
+    ],
+    "doi": "10.1055/s-0040-1708534",
+    "pmc_id": null,
+    "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/32221959/"
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_clinvar_esummary",
+  "variation_id": 3683654,
+  "retrieved_at": "2026-09-06T06:37:27.032449+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=clinvar&id=4233276%2C731516%2C1454283%2C244113%2C608899%2C1109245%2C623584%2C3683654%2C2671964%2C2202680&retmode=json&tool=variantgate",
+  "raw_summary_sha256": "e13635f3986bece681dba32181e06f05e372078f1d7197661afb98978078cf71",
+  "raw_summary": {
+    "uid": "3683654",
+    "obj_type": "single nucleotide variant",
+    "accession": "VCV003683654",
+    "accession_version": "VCV003683654.2",
+    "title": "NM_005228.5(EGFR):c.3163-15C>T",
+    "variation_set": [
+      {
+        "measure_id": "3808503",
+        "variation_xrefs": [],
+        "variation_name": "NM_005228.5(EGFR):c.3163-15C>T",
+        "cdna_change": "NM_005228.5(EGFR):c.3163-15C>T",
+        "aliases": [],
+        "variation_loc": [
+          {
+            "status": "current",
+            "assembly_name": "GRCh38",
+            "chr": "7",
+            "band": "7p11.2",
+            "start": "55202502",
+            "stop": "55202502",
+            "inner_start": "",
+            "inner_stop": "",
+            "outer_start": "",
+            "outer_stop": "",
+            "display_start": "55202502",
+            "display_stop": "55202502",
+            "assembly_acc_ver": "GCF_000001405.38",
+            "annotation_release": "",
+            "alt": "",
+            "ref": ""
+          },
+          {
+            "status": "previous",
+            "assembly_name": "GRCh37",
+            "chr": "7",
+            "band": "7p11.2",
+            "start": "55270195",
+            "stop": "55270195",
+            "inner_start": "",
+            "inner_stop": "",
+            "outer_start": "",
+            "outer_stop": "",
+            "display_start": "55270195",
+            "display_stop": "55270195",
+            "assembly_acc_ver": "GCF_000001405.25",
+            "annotation_release": "",
+            "alt": "",
+            "ref": ""
+          }
+        ],
+        "allele_freq_set": [],
+        "variant_type": "single nucleotide variant",
+        "canonical_spdi": "NC_000007.14:55202501:C:T",
+        "common_name": ""
+      }
+    ],
+    "supporting_submissions": {
+      "scv": [
+        "SCV005788964"
+      ],
+      "rcv": [
+        "RCV005156017"
+      ]
+    },
+    "germline_classification": {
+      "description": "Likely benign",
+      "last_evaluated": "2025/10/15 00:00",
+      "review_status": "criteria provided, single submitter",
+      "fda_recognized_database": "",
+      "trait_set": [
+        {
+          "trait_xrefs": [
+            {
+              "db_source": "MedGen",
+              "db_id": "CN130014"
+            }
+          ],
+          "trait_name": "EGFR-related lung cancer"
+        }
+      ]
+    },
+    "clinical_impact_classification": {
+      "description": "",
+      "last_evaluated": "1/01/01 00:00",
+      "review_status": "",
+      "fda_recognized_database": "",
+      "trait_set": []
+    },
+    "oncogenicity_classification": {
+      "description": "",
+      "last_evaluated": "1/01/01 00:00",
+      "review_status": "",
+      "fda_recognized_database": "",
+      "trait_set": []
+    },
+    "record_status": "",
+    "gene_sort": "EGFR",
+    "chr_sort": "07",
+    "location_sort": "00000000000055202502",
+    "variation_set_name": "",
+    "variation_set_id": "",
+    "genes": [
+      {
+        "symbol": "EGFR",
+        "geneid": "1956",
+        "strand": "+",
+        "source": "submitted"
+      }
+    ],
+    "molecular_consequence_list": [
+      "intron variant"
+    ],
+    "protein_change": "",
+    "fda_recognized_database": ""
+  }
+}

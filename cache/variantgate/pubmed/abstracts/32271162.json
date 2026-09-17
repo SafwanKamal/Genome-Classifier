@@ -1,0 +1,37 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_pubmed_efetch",
+  "pmid": "32271162",
+  "retrieved_at": "2026-09-06T18:49:20.891272+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=40751879%2C32221959%2C31268420%2C42474733%2C35948834%2C28027327%2C32328026%2C38322629%2C24040338%2C34433720%2C24343233%2C28072465%2C29478601%2C22205389%2C27364156%2C32271162%2C36609795%2C36308527%2C28937031%2C33390901&retmode=xml&tool=variantgate",
+  "raw_record_sha256": "ffad51d01206e0c693cb524505db785a8d39905531014547740840c3c6eee2c3",
+  "cache_hit": false,
+  "content": {
+    "status": "found",
+    "pmid": "32271162",
+    "abstract": "Congenital myasthenic syndromes (CMS) are caused by mutations in molecules expressed at the neuromuscular junction. We report clinical, structural, ultrastructural, and electrophysiologic features of 4 CMS patients with 6 heteroallelic variants in AGRN, encoding agrin. One was a 7.9-kb deletion involving the N-terminal laminin-binding domain. Another, c.4744G>A - at the last nucleotide of exon 26 - caused skipping of exon 26. Four missense mutations (p.S1180L, p.R1509W, p.G1675S, and p.Y1877D) expressed in conditioned media decreased AChR clusters in C2C12 myotubes. The agrin-enhanced phosphorylation of MuSK was markedly attenuated by p.Y1877D in the LG3 domain and moderately attenuated by p.R1509W in the LG1 domain but not by the other 2 mutations. The p.S1180L mutation in the SEA domain facilitated degradation of secreted agrin. The p.G1675S mutation in the LG2 domain attenuated anchoring of agrin to the sarcolemma by compromising its binding to heparin. Anchoring of agrin with p.R1509W in the LG1 domain was similarly attenuated. Mutations of agrin affect AChR clustering by enhancing agrin degradation or by suppressing MuSK phosphorylation and/or by compromising anchoring of agrin to the sarcolemma of the neuromuscular junction.",
+    "abstract_sections": [
+      {
+        "label": null,
+        "text": "Congenital myasthenic syndromes (CMS) are caused by mutations in molecules expressed at the neuromuscular junction. We report clinical, structural, ultrastructural, and electrophysiologic features of 4 CMS patients with 6 heteroallelic variants in AGRN, encoding agrin. One was a 7.9-kb deletion involving the N-terminal laminin-binding domain. Another, c.4744G>A - at the last nucleotide of exon 26 - caused skipping of exon 26. Four missense mutations (p.S1180L, p.R1509W, p.G1675S, and p.Y1877D) expressed in conditioned media decreased AChR clusters in C2C12 myotubes. The agrin-enhanced phosphorylation of MuSK was markedly attenuated by p.Y1877D in the LG3 domain and moderately attenuated by p.R1509W in the LG1 domain but not by the other 2 mutations. The p.S1180L mutation in the SEA domain facilitated degradation of secreted agrin. The p.G1675S mutation in the LG2 domain attenuated anchoring of agrin to the sarcolemma by compromising its binding to heparin. Anchoring of agrin with p.R1509W in the LG1 domain was similarly attenuated. Mutations of agrin affect AChR clustering by enhancing agrin degradation or by suppressing MuSK phosphorylation and/or by compromising anchoring of agrin to the sarcolemma of the neuromuscular junction."
+      }
+    ],
+    "mesh_terms": [
+      "Agrin",
+      "Amino Acid Substitution",
+      "Animals",
+      "HEK293 Cells",
+      "Humans",
+      "Mice",
+      "Mutation, Missense",
+      "Myasthenic Syndromes, Congenital",
+      "Neuromuscular Junction",
+      "Receptors, Nicotinic",
+      "Sarcolemma"
+    ],
+    "keywords": [
+      "Genetics",
+      "Neuromuscular disease"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_pubmed_esearch",
+  "query": "\"c.371_372dup\"[Title/Abstract] AND \"INTS11\"[Title/Abstract]",
+  "retmax": 20,
+  "retrieved_at": "2026-09-06T18:49:15.415097+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22c.371_372dup%22%5BTitle%2FAbstract%5D+AND+%22INTS11%22%5BTitle%2FAbstract%5D&retmax=20&sort=relevance&retmode=json&tool=variantgate",
+  "raw_response_sha256": "3a798e52e0abad114dcd2089634e40a397f1eb020c5af3a7c39168f91c1c35b9",
+  "cache_hit": false,
+  "count": 0,
+  "pmids": [],
+  "query_translation": "\"c.371_372dup\"[Title/Abstract] AND \"INTS11\"[Title/Abstract]"
+}

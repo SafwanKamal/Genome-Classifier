@@ -1,0 +1,13 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_pubmed_esearch",
+  "query": "\"NC_000007.14:55202501:C:T\"[Title/Abstract]",
+  "retmax": 20,
+  "retrieved_at": "2026-09-06T18:49:14.323542+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22NC_000007.14%3A55202501%3AC%3AT%22%5BTitle%2FAbstract%5D&retmax=20&sort=relevance&retmode=json&tool=variantgate",
+  "raw_response_sha256": "267a29536807fb7124f95cc17ec604f9a891281f1b12f89481531ebc7ad10787",
+  "cache_hit": false,
+  "count": 0,
+  "pmids": [],
+  "query_translation": "\"NC_000007.14:55202501:C:T\"[Title/Abstract]"
+}

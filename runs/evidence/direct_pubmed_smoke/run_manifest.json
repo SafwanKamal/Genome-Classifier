@@ -1,0 +1,47 @@
+{
+  "format_version": 1,
+  "tool": "variantgate_direct_pubmed",
+  "created_at": "2026-09-06T18:49:20.937013+00:00",
+  "inputs": {
+    "clinvar_evidence": {
+      "path": "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\runs\\evidence\\clinvar_smoke\\clinvar_evidence.jsonl",
+      "sha256": "47cb95a98edbb65a78f5fb8fb6fe807add1b77bf33dbb776b4c697747cc2a7e7"
+    },
+    "clinvar_manifest": {
+      "path": "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\runs\\evidence\\clinvar_smoke\\run_manifest.json",
+      "sha256": "171c7d61117d6936f92978b8396865a61c7260547b774fe662df404359a6016b"
+    },
+    "linked_pubmed_evidence": {
+      "path": "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\runs\\evidence\\pubmed_smoke\\pubmed_evidence.jsonl",
+      "sha256": "8d74ba8b97516303f119ba8e70332addd0469eac75844f5b99da89c8dae70fd4"
+    },
+    "linked_pubmed_manifest": {
+      "path": "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\runs\\evidence\\pubmed_smoke\\run_manifest.json",
+      "sha256": "376d4ac66de075146606a2e4eb79fb6ed25993d80f2679799b1e79bc23242523"
+    }
+  },
+  "configuration": {
+    "limit": null,
+    "max_queries_per_variant": 4,
+    "max_results_per_query": 20,
+    "include_context_query": true,
+    "refresh": false
+  },
+  "provider": {
+    "name": "ncbi_pubmed_direct_search",
+    "api_key_used": false,
+    "cache_directory": "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\cache\\variantgate\\pubmed",
+    "request_attempt_number": 28,
+    "successful_request_number": 28
+  },
+  "outputs": {
+    "evidence": {
+      "path": "direct_pubmed_evidence.jsonl",
+      "sha256": "6199e40b755a9a295708d2497a47fcb3880715ee5f93cbecafadc81e06d9f68a"
+    },
+    "summary": {
+      "path": "summary.json",
+      "sha256": "8e69c67fdb11ee2bec4d3626d6e8a257bbc07dae8eed15248865e235d28b5f26"
+    }
+  }
+}

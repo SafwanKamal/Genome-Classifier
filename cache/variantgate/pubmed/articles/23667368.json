@@ -1,0 +1,34 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_pubmed_esummary",
+  "pmid": "23667368",
+  "retrieved_at": "2026-09-06T17:37:37.125021+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id=28492532%2C31152969%2C20301532%2C20301550%2C30813707%2C29355391%2C25311215%2C24846033%2C24827857%2C23667368%2C23649446%2C23562183%2C25741868%2C20301648&retmode=json&tool=variantgate",
+  "raw_summary_sha256": "b1314a5d4f1128223b3368d8fc236722a93bdf05d400499ab3ec701fb6d452eb",
+  "cache_hit": false,
+  "article": {
+    "status": "found",
+    "pmid": "23667368",
+    "title": "Guideline Recommendations for EGFR Mutation Testing in Lung Cancer: Proposal of the Korean Cardiopulmonary Pathology Study Group.",
+    "authors": [
+      "Shim HS",
+      "Chung JH",
+      "Kim L",
+      "Chang S",
+      "Kim WS",
+      "Lee GK",
+      "Jung SH",
+      "Jang SJ"
+    ],
+    "last_author": "Jang SJ",
+    "journal": "Korean journal of pathology",
+    "publication_date": "2013 Apr",
+    "electronic_publication_date": "2013 Apr 24",
+    "publication_types": [
+      "Journal Article"
+    ],
+    "doi": "10.4132/KoreanJPathol.2013.47.2.100",
+    "pmc_id": "PMC3647121",
+    "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/23667368/"
+  }
+}

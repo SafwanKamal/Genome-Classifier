@@ -1,0 +1,10 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_elink_clinvar_pubmed",
+  "variation_id": 608899,
+  "pmids": [],
+  "retrieved_at": "2026-09-06T17:37:36.468588+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/elink.fcgi?dbfrom=clinvar&db=pubmed&retmode=json&tool=variantgate&id=4233276&id=731516&id=1454283&id=244113&id=608899&id=1109245&id=623584&id=3683654&id=2671964&id=2202680",
+  "raw_response_sha256": "f6cbbf2a6d07c311b2ce4e9b50a1b3f67ed30f4310cd53281180a29c6d6cde8d",
+  "cache_hit": false
+}

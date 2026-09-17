@@ -1,0 +1,49 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_pubmed_esummary",
+  "pmid": "29355391",
+  "retrieved_at": "2026-09-06T17:37:37.125021+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id=28492532%2C31152969%2C20301532%2C20301550%2C30813707%2C29355391%2C25311215%2C24846033%2C24827857%2C23667368%2C23649446%2C23562183%2C25741868%2C20301648&retmode=json&tool=variantgate",
+  "raw_summary_sha256": "886eb96faff353b3ac3191fe36fd4e3bb235d5fc6693a71debc7c2c6f921231e",
+  "cache_hit": false,
+  "article": {
+    "status": "found",
+    "pmid": "29355391",
+    "title": "Updated Molecular Testing Guideline for the Selection of Lung Cancer Patients for Treatment With Targeted Tyrosine Kinase Inhibitors: Guideline From the College of American Pathologists, the International Association for the Study of Lung Cancer, and the Association for Molecular Pathology.",
+    "authors": [
+      "Lindeman NI",
+      "Cagle PT",
+      "Aisner DL",
+      "Arcila ME",
+      "Beasley MB",
+      "Bernicker EH",
+      "Colasacco C",
+      "Dacic S",
+      "Hirsch FR",
+      "Kerr K",
+      "Kwiatkowski DJ",
+      "Ladanyi M",
+      "Nowak JA",
+      "Sholl L",
+      "Temple-Smolkin R",
+      "Solomon B",
+      "Souter LH",
+      "Thunnissen E",
+      "Tsao MS",
+      "Ventura CB",
+      "Wynes MW",
+      "Yatabe Y"
+    ],
+    "last_author": "Yatabe Y",
+    "journal": "Archives of pathology & laboratory medicine",
+    "publication_date": "2018 Mar",
+    "electronic_publication_date": "2018 Jan 22",
+    "publication_types": [
+      "Journal Article",
+      "Practice Guideline"
+    ],
+    "doi": "10.5858/arpa.2017-0388-CP",
+    "pmc_id": null,
+    "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/29355391/"
+  }
+}

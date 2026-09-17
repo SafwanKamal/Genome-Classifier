@@ -1,0 +1,40 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_pubmed_efetch",
+  "pmid": "40751879",
+  "retrieved_at": "2026-09-06T18:49:20.891272+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=40751879%2C32221959%2C31268420%2C42474733%2C35948834%2C28027327%2C32328026%2C38322629%2C24040338%2C34433720%2C24343233%2C28072465%2C29478601%2C22205389%2C27364156%2C32271162%2C36609795%2C36308527%2C28937031%2C33390901&retmode=xml&tool=variantgate",
+  "raw_record_sha256": "f30774dcca4b740c1ccc184ae748b38dca9065d3fe39f2751a26586f4223cb8c",
+  "cache_hit": false,
+  "content": {
+    "status": "found",
+    "pmid": "40751879",
+    "abstract": "Recent evidence suggests that the basement membrane (BM) plays an important role in the progression of colorectal cancer (CRC). Here, we investigate the prognostic value of CRC based on BM-associated genes. BM-related differentially expressed genes (DEGs) in CRC were obtained through analysis of The Cancer Genome Atlas public database and literature. The DEGs were used to cluster tumor samples and perform survival analysis. A prognostic model was constructed based on the DEGs in CRC through regression analysis, and its predictive effect was evaluated and validated using the GEO dataset. The correlation between riskscore and tumor progression was evaluated, and Cox regression was used to verify the independence of riskscore by combining it with different clinical factors. A nomogram was drawn to predict the prognosis of CRC individuals. The differences in immune microenvironment between high-risk (H) and low-risk (L) groups were analyzed by ssGSEA and ESTIMATE. The tumor mutation burden (TMB) was calculated for the two groups. Drug sensitivity prediction was performed for the two groups. Finally, the expression levels of prognostic feature genes were validated through qPCR.\u00a0Based on BM-related DEGs, CRC samples were classified into 2 clusters, with cluster 1 having significantly lower survival rates. A prognostic model was developed based on 7 genes (AGRN, TIMP1, UNC5A, SPARCL1, ADAMTS6, MMP1, and UNC5C). The model exhibited high predictive accuracy and demonstrated the potential to serve as an independent prognostic factor for predicting the prognosis of CRC individuals. A higher riskscore indicated a higher degree of tumor progression. Group H demonstrated higher levels of immune infiltration and TMB, suggesting that individuals in this group might be more suitable for immune therapy. Two first-line anti-tumor drugs, Gemcitabine and Cisplatin, with higher sensitivity to individuals in group L were obtained. The q-PCR results of the feature genes were consistent with the results of gene expression in the database.\u00a0This study established a 7-gene BM-related prognostic model that could be used to analyze the immune landscape of CRC individuals and predict their sensitivity to immunotherapy and chemotherapy. This research provided a reference for the prognosis prediction and immunotherapy of CRC individuals.",
+    "abstract_sections": [
+      {
+        "label": null,
+        "text": "Recent evidence suggests that the basement membrane (BM) plays an important role in the progression of colorectal cancer (CRC). Here, we investigate the prognostic value of CRC based on BM-associated genes. BM-related differentially expressed genes (DEGs) in CRC were obtained through analysis of The Cancer Genome Atlas public database and literature. The DEGs were used to cluster tumor samples and perform survival analysis. A prognostic model was constructed based on the DEGs in CRC through regression analysis, and its predictive effect was evaluated and validated using the GEO dataset. The correlation between riskscore and tumor progression was evaluated, and Cox regression was used to verify the independence of riskscore by combining it with different clinical factors. A nomogram was drawn to predict the prognosis of CRC individuals. The differences in immune microenvironment between high-risk (H) and low-risk (L) groups were analyzed by ssGSEA and ESTIMATE. The tumor mutation burden (TMB) was calculated for the two groups. Drug sensitivity prediction was performed for the two groups. Finally, the expression levels of prognostic feature genes were validated through qPCR.\u00a0Based on BM-related DEGs, CRC samples were classified into 2 clusters, with cluster 1 having significantly lower survival rates. A prognostic model was developed based on 7 genes (AGRN, TIMP1, UNC5A, SPARCL1, ADAMTS6, MMP1, and UNC5C). The model exhibited high predictive accuracy and demonstrated the potential to serve as an independent prognostic factor for predicting the prognosis of CRC individuals. A higher riskscore indicated a higher degree of tumor progression. Group H demonstrated higher levels of immune infiltration and TMB, suggesting that individuals in this group might be more suitable for immune therapy. Two first-line anti-tumor drugs, Gemcitabine and Cisplatin, with higher sensitivity to individuals in group L were obtained. The q-PCR results of the feature genes were consistent with the results of gene expression in the database.\u00a0This study established a 7-gene BM-related prognostic model that could be used to analyze the immune landscape of CRC individuals and predict their sensitivity to immunotherapy and chemotherapy. This research provided a reference for the prognosis prediction and immunotherapy of CRC individuals."
+      }
+    ],
+    "mesh_terms": [
+      "Humans",
+      "Colorectal Neoplasms",
+      "Prognosis",
+      "Basement Membrane",
+      "Gene Expression Regulation, Neoplastic",
+      "Biomarkers, Tumor",
+      "Gene Expression Profiling",
+      "Tumor Microenvironment",
+      "Nomograms",
+      "Survival Analysis",
+      "Mutation"
+    ],
+    "keywords": [
+      "Basement membrane",
+      "Colorectal cancer",
+      "Drug",
+      "Immune",
+      "Prognosis"
+    ]
+  }
+}

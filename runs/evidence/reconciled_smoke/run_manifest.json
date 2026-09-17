@@ -1,0 +1,33 @@
+{
+  "format_version": 1,
+  "tool": "variantgate_reconcile",
+  "created_at": "2026-09-06T17:37:46.460649+00:00",
+  "inputs": {
+    "clinvar_evidence": {
+      "path": "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\runs\\evidence\\clinvar_smoke\\clinvar_evidence.jsonl",
+      "sha256": "47cb95a98edbb65a78f5fb8fb6fe807add1b77bf33dbb776b4c697747cc2a7e7"
+    },
+    "clinvar_manifest": {
+      "path": "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\runs\\evidence\\clinvar_smoke\\run_manifest.json",
+      "sha256": "171c7d61117d6936f92978b8396865a61c7260547b774fe662df404359a6016b"
+    },
+    "pubmed_evidence": {
+      "path": "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\runs\\evidence\\pubmed_smoke\\pubmed_evidence.jsonl",
+      "sha256": "8d74ba8b97516303f119ba8e70332addd0469eac75844f5b99da89c8dae70fd4"
+    },
+    "pubmed_manifest": {
+      "path": "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\runs\\evidence\\pubmed_smoke\\run_manifest.json",
+      "sha256": "376d4ac66de075146606a2e4eb79fb6ed25993d80f2679799b1e79bc23242523"
+    }
+  },
+  "outputs": {
+    "evidence": {
+      "path": "reconciled_evidence.jsonl",
+      "sha256": "78c633b2f28eec1dc48e2b10cd6c4d092c1bf025b22e5f927430046272a0c3d0"
+    },
+    "summary": {
+      "path": "summary.json",
+      "sha256": "98247acafe424800cfe29e64546746692fb5c3d6e4daf78ab63969fa450fd2f9"
+    }
+  }
+}

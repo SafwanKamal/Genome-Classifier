@@ -1,0 +1,27 @@
+{
+  "status": "pass",
+  "variant_number": 10,
+  "unique_gene_number": 4,
+  "evidence_status_counts": {
+    "found": 10
+  },
+  "route_counts": {
+    "deep_review": 10
+  },
+  "classification_group_counts": {
+    "benign": 3,
+    "missing": 3,
+    "pathogenic": 2,
+    "uncertain": 2
+  },
+  "comparison_counts": {
+    "not_binary_comparable": 5,
+    "same_binary_direction": 5
+  },
+  "review_status_counts": {
+    "criteria provided, multiple submitters, no conflicts": 1,
+    "criteria provided, single submitter": 6,
+    "missing": 3
+  },
+  "interpretation_boundary": "Direction-only audit comparison; not independent model validation and not a clinical diagnosis."
+}

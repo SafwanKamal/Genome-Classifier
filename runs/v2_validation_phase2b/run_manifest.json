@@ -1,0 +1,58 @@
+{
+  "format_version": 1,
+  "tool": "variantgate",
+  "started_at": "2026-09-06T05:51:51.457184+00:00",
+  "completed_at": "2026-09-06T05:51:51.829789+00:00",
+  "input": {
+    "path": "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\genomic-dataset-pipeline\\data\\processed\\variants_model_int8.parquet",
+    "sha256": "b4318b4c61544204b3157f217258ca2fe2695aff753bf133553a1a41502c3633",
+    "split": "validation",
+    "limit": null,
+    "variant_number": 28293
+  },
+  "model": {
+    "export_manifest_path": "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\genomic-dataset-pipeline\\artifacts\\model_v2_h8_seed_7\\fpga_export\\export_manifest.json",
+    "export_manifest_sha256": "617cb98a99fc3b64e8e9aafa33311df989664db2fd893d29cf9a405587963077",
+    "source_model_sha256": "713cd5a02b98adab5e94cbf265e690eb204412d1998d4e9435c404a9957cb29a",
+    "architecture": "16-8-1",
+    "feature_order": [
+      "gnomad_popmax_rarity",
+      "cadd_phred",
+      "revel_score",
+      "alphamissense_score",
+      "esm1b_deleteriousness",
+      "sift_deleterious",
+      "polyphen2_hvar",
+      "mpc_score",
+      "phylop_100way",
+      "phastcons_100way",
+      "gerp_rs",
+      "grantham_distance",
+      "blosum62_unfavorability",
+      "gnomad_moeuf_intolerance",
+      "gnomad_loeuf_intolerance",
+      "interpro_domain_hit"
+    ],
+    "qshift": 4,
+    "folded_output_bias": -52,
+    "original_validation_threshold": 55,
+    "classification_rule": "folded_score >= 0"
+  },
+  "backend": {
+    "name": "numpy",
+    "serial_port": null,
+    "baud_rate": null,
+    "timeout_seconds": null
+  },
+  "routing_policy": null,
+  "outputs": {
+    "scores": {
+      "path": "scores.parquet",
+      "sha256": "cbc6e8284da8d5d9116c845aa0afbc5169918db7994d9085588e401caf3643b0"
+    },
+    "summary": {
+      "path": "summary.json",
+      "sha256": "8d9eebe8483139fa04f3b0d4169071768348e9115c4cc72e2d951ae74ed264b0"
+    }
+  }
+}

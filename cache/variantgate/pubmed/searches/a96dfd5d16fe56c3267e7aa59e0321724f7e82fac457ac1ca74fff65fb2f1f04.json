@@ -1,0 +1,13 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_pubmed_esearch",
+  "query": "\"CPTP\"[Title/Abstract] AND \"Symmetrical dyschromatosis of extremities\"[Title/Abstract] AND (variant[Title/Abstract] OR mutation[Title/Abstract])",
+  "retmax": 20,
+  "retrieved_at": "2026-09-06T18:49:19.271273+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22CPTP%22%5BTitle%2FAbstract%5D+AND+%22Symmetrical+dyschromatosis+of+extremities%22%5BTitle%2FAbstract%5D+AND+%28variant%5BTitle%2FAbstract%5D+OR+mutation%5BTitle%2FAbstract%5D%29&retmax=20&sort=relevance&retmode=json&tool=variantgate",
+  "raw_response_sha256": "0cdd485a1008e3cc6fe956e812d2e2177600769b7bb23d996cf24d673de072d5",
+  "cache_hit": false,
+  "count": 0,
+  "pmids": [],
+  "query_translation": "\"CPTP\"[Title/Abstract] AND \"Symmetrical dyschromatosis of extremities\"[Title/Abstract] AND (variant[Title/Abstract] OR mutation[Title/Abstract])"
+}

@@ -1,0 +1,13 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_pubmed_esearch",
+  "query": "\"p.Gln87=\"[Title/Abstract] AND \"CPTP\"[Title/Abstract]",
+  "retmax": 20,
+  "retrieved_at": "2026-09-06T18:49:18.175540+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22p.Gln87%3D%22%5BTitle%2FAbstract%5D+AND+%22CPTP%22%5BTitle%2FAbstract%5D&retmax=20&sort=relevance&retmode=json&tool=variantgate",
+  "raw_response_sha256": "4bd4fa85b4d7112fbc1a0d2184240c124a4048ed01dc69e040cf4c121b513180",
+  "cache_hit": false,
+  "count": 0,
+  "pmids": [],
+  "query_translation": "\"p.Gln87=\"[Title/Abstract] AND \"CPTP\"[Title/Abstract]"
+}

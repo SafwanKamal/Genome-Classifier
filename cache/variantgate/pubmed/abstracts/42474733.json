@@ -1,0 +1,51 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_pubmed_efetch",
+  "pmid": "42474733",
+  "retrieved_at": "2026-09-06T18:49:20.891272+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=40751879%2C32221959%2C31268420%2C42474733%2C35948834%2C28027327%2C32328026%2C38322629%2C24040338%2C34433720%2C24343233%2C28072465%2C29478601%2C22205389%2C27364156%2C32271162%2C36609795%2C36308527%2C28937031%2C33390901&retmode=xml&tool=variantgate",
+  "raw_record_sha256": "1a7bdc9f9caf287c95af58563c7e0d5f9771a128655851ba05bfa231cb9897bd",
+  "cache_hit": false,
+  "content": {
+    "status": "found",
+    "pmid": "42474733",
+    "abstract": "BACKGROUND: Neuromuscular disorders (NMDs) affect approximately 1 in 1,000 individuals and are clinically and genetically heterogeneous. Despite advances in genomic diagnostics, many cases remain unsolved after initial sequencing. Bioinformatic reanalysis approaches provide opportunities to identify missed variants and establish novel disease genes.\nMETHODS: Preexisting next-generation sequencing datasets from 101 undiagnosed NMD families were reanalyzed using the RD-Connect Genome-Phenome Analysis Platform. The data comprised clinical exome sequencing (45 families), whole exome sequencing (31 families), and whole genome sequencing (25 families). Variant prioritization incorporated population frequency, Human Phenotype Ontology terms, in silico predictions, and genotype-phenotype correlation.\nRESULTS: Reanalysis identified causative variants in 17 out of 101 previously unsolved families (16.83% diagnostic yield). Eight cases harbored coding variants in known NMD genes (RYR1, AGRN, SCN4A, TTN, MYH2, GOLGA2) consistent with the observed phenotype. In five cases, intronic variants in known NMD genes (COL6A3, SGCA, DOK7, DYSF, CHRND) were considered causative following in silico predictions and careful correlation with the phenotype. One case had an extended phenotype (PTPN11), and one case had a dual diagnosis (MYH2, KIF21A). A novel ATP2A2 missense variant was identified in two unrelated families, establishing ATP2A2 as a new NMD gene.\nCONCLUSION: Research-based reanalysis of preexisting NGS data improved diagnostic yield of previously unsolved cases consistent with previous literature, reinforcing the utility of in-depth, phenotype-driven reanalysis with expert review. Our study provided 17 families with unsolved NMDs with a diagnosis after having waited for a decade. This supports the routine reanalysis of unsolved NGS data, highlighting its potential to reclassify variants of unknown significance and reveal novel genes and pathomechanisms in NMDs.",
+    "abstract_sections": [
+      {
+        "label": "BACKGROUND",
+        "text": "Neuromuscular disorders (NMDs) affect approximately 1 in 1,000 individuals and are clinically and genetically heterogeneous. Despite advances in genomic diagnostics, many cases remain unsolved after initial sequencing. Bioinformatic reanalysis approaches provide opportunities to identify missed variants and establish novel disease genes."
+      },
+      {
+        "label": "METHODS",
+        "text": "Preexisting next-generation sequencing datasets from 101 undiagnosed NMD families were reanalyzed using the RD-Connect Genome-Phenome Analysis Platform. The data comprised clinical exome sequencing (45 families), whole exome sequencing (31 families), and whole genome sequencing (25 families). Variant prioritization incorporated population frequency, Human Phenotype Ontology terms, in silico predictions, and genotype-phenotype correlation."
+      },
+      {
+        "label": "RESULTS",
+        "text": "Reanalysis identified causative variants in 17 out of 101 previously unsolved families (16.83% diagnostic yield). Eight cases harbored coding variants in known NMD genes (RYR1, AGRN, SCN4A, TTN, MYH2, GOLGA2) consistent with the observed phenotype. In five cases, intronic variants in known NMD genes (COL6A3, SGCA, DOK7, DYSF, CHRND) were considered causative following in silico predictions and careful correlation with the phenotype. One case had an extended phenotype (PTPN11), and one case had a dual diagnosis (MYH2, KIF21A). A novel ATP2A2 missense variant was identified in two unrelated families, establishing ATP2A2 as a new NMD gene."
+      },
+      {
+        "label": "CONCLUSION",
+        "text": "Research-based reanalysis of preexisting NGS data improved diagnostic yield of previously unsolved cases consistent with previous literature, reinforcing the utility of in-depth, phenotype-driven reanalysis with expert review. Our study provided 17 families with unsolved NMDs with a diagnosis after having waited for a decade. This supports the routine reanalysis of unsolved NGS data, highlighting its potential to reclassify variants of unknown significance and reveal novel genes and pathomechanisms in NMDs."
+      }
+    ],
+    "mesh_terms": [
+      "Humans",
+      "Neuromuscular Diseases",
+      "High-Throughput Nucleotide Sequencing",
+      "Female",
+      "Male",
+      "Introns",
+      "Secondary Data Analysis",
+      "Genetic Association Studies",
+      "Exome Sequencing",
+      "Genetic Predisposition to Disease"
+    ],
+    "keywords": [
+      "Diagnostics",
+      "Gene discovery",
+      "NGS",
+      "Neuromuscular disorders",
+      "Reanalysis"
+    ]
+  }
+}

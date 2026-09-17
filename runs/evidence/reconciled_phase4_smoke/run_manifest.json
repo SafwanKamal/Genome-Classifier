@@ -1,0 +1,41 @@
+{
+  "format_version": 1,
+  "tool": "variantgate_reconcile",
+  "created_at": "2026-09-06T18:57:27.306039+00:00",
+  "inputs": {
+    "clinvar_evidence": {
+      "path": "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\runs\\evidence\\clinvar_smoke\\clinvar_evidence.jsonl",
+      "sha256": "47cb95a98edbb65a78f5fb8fb6fe807add1b77bf33dbb776b4c697747cc2a7e7"
+    },
+    "clinvar_manifest": {
+      "path": "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\runs\\evidence\\clinvar_smoke\\run_manifest.json",
+      "sha256": "171c7d61117d6936f92978b8396865a61c7260547b774fe662df404359a6016b"
+    },
+    "pubmed_evidence": {
+      "path": "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\runs\\evidence\\pubmed_smoke\\pubmed_evidence.jsonl",
+      "sha256": "8d74ba8b97516303f119ba8e70332addd0469eac75844f5b99da89c8dae70fd4"
+    },
+    "pubmed_manifest": {
+      "path": "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\runs\\evidence\\pubmed_smoke\\run_manifest.json",
+      "sha256": "376d4ac66de075146606a2e4eb79fb6ed25993d80f2679799b1e79bc23242523"
+    },
+    "direct_pubmed_evidence": {
+      "path": "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\runs\\evidence\\direct_pubmed_smoke\\direct_pubmed_evidence.jsonl",
+      "sha256": "6199e40b755a9a295708d2497a47fcb3880715ee5f93cbecafadc81e06d9f68a"
+    },
+    "direct_pubmed_manifest": {
+      "path": "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\runs\\evidence\\direct_pubmed_smoke\\run_manifest.json",
+      "sha256": "1c4be19a28b3022744ee99e6935f70342fb5f4b1aef9e37d8e93c86093b01f3a"
+    }
+  },
+  "outputs": {
+    "evidence": {
+      "path": "reconciled_evidence.jsonl",
+      "sha256": "91c7ef8265ee1e0edf256cd081347657e4834cad7b98fbfb9f2dfaecda34a4fa"
+    },
+    "summary": {
+      "path": "summary.json",
+      "sha256": "725c4bc5bcc0e3c1f19c9df5a5eeeeb106d1f490400aaa1dc3f1ab74453f3b10"
+    }
+  }
+}

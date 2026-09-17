@@ -1,0 +1,141 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_clinvar_esummary",
+  "variation_id": 1454283,
+  "retrieved_at": "2026-09-06T06:37:27.032449+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=clinvar&id=4233276%2C731516%2C1454283%2C244113%2C608899%2C1109245%2C623584%2C3683654%2C2671964%2C2202680&retmode=json&tool=variantgate",
+  "raw_summary_sha256": "fcac55006295ae47e9d6ad226581a77a1602fdedcec9d16d93e7276505fc4e3d",
+  "raw_summary": {
+    "uid": "1454283",
+    "obj_type": "Deletion",
+    "accession": "VCV001454283",
+    "accession_version": "VCV001454283.8",
+    "title": "NM_001370298.3(FGD4):c.2583_2586del (p.Ser861fs)",
+    "variation_set": [
+      {
+        "measure_id": "1366888",
+        "variation_xrefs": [
+          {
+            "db_source": "ClinGen",
+            "db_id": "CA2026264815"
+          },
+          {
+            "db_source": "dbSNP",
+            "db_id": "1951100155"
+          }
+        ],
+        "variation_name": "NM_001370298.3(FGD4):c.2583_2586del (p.Ser861fs)",
+        "cdna_change": "c.2583_2586del",
+        "aliases": [],
+        "variation_loc": [
+          {
+            "status": "current",
+            "assembly_name": "GRCh38",
+            "chr": "12",
+            "band": "12p11.21",
+            "start": "32640402",
+            "stop": "32640405",
+            "inner_start": "",
+            "inner_stop": "",
+            "outer_start": "",
+            "outer_stop": "",
+            "display_start": "32640402",
+            "display_stop": "32640405",
+            "assembly_acc_ver": "GCF_000001405.38",
+            "annotation_release": "",
+            "alt": "",
+            "ref": ""
+          },
+          {
+            "status": "previous",
+            "assembly_name": "GRCh37",
+            "chr": "12",
+            "band": "12p11.21",
+            "start": "32793336",
+            "stop": "32793339",
+            "inner_start": "",
+            "inner_stop": "",
+            "outer_start": "",
+            "outer_stop": "",
+            "display_start": "32793336",
+            "display_stop": "32793339",
+            "assembly_acc_ver": "GCF_000001405.25",
+            "annotation_release": "",
+            "alt": "",
+            "ref": ""
+          }
+        ],
+        "allele_freq_set": [],
+        "variant_type": "Deletion",
+        "canonical_spdi": "NC_000012.12:32640401:AGTGAG:AG",
+        "common_name": ""
+      }
+    ],
+    "supporting_submissions": {
+      "scv": [
+        "SCV002231300"
+      ],
+      "rcv": [
+        "RCV001960633"
+      ]
+    },
+    "germline_classification": {
+      "description": "Pathogenic",
+      "last_evaluated": "2021/05/30 00:00",
+      "review_status": "criteria provided, single submitter",
+      "fda_recognized_database": "",
+      "trait_set": [
+        {
+          "trait_xrefs": [
+            {
+              "db_source": "Orphanet",
+              "db_id": "64749"
+            },
+            {
+              "db_source": "MedGen",
+              "db_id": "C4082197"
+            },
+            {
+              "db_source": "MONDO",
+              "db_id": "MONDO:0018995"
+            }
+          ],
+          "trait_name": "Charcot-Marie-Tooth disease type 4"
+        }
+      ]
+    },
+    "clinical_impact_classification": {
+      "description": "",
+      "last_evaluated": "1/01/01 00:00",
+      "review_status": "",
+      "fda_recognized_database": "",
+      "trait_set": []
+    },
+    "oncogenicity_classification": {
+      "description": "",
+      "last_evaluated": "1/01/01 00:00",
+      "review_status": "",
+      "fda_recognized_database": "",
+      "trait_set": []
+    },
+    "record_status": "",
+    "gene_sort": "FGD4",
+    "chr_sort": "12",
+    "location_sort": "00000000000032640402",
+    "variation_set_name": "",
+    "variation_set_id": "",
+    "genes": [
+      {
+        "symbol": "FGD4",
+        "geneid": "121512",
+        "strand": "+",
+        "source": "submitted"
+      }
+    ],
+    "molecular_consequence_list": [
+      "frameshift variant"
+    ],
+    "protein_change": "S631fs, S809fs, S861fs, S380fs, S540fs, S724fs",
+    "fda_recognized_database": ""
+  }
+}

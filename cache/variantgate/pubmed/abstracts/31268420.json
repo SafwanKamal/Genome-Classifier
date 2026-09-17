@@ -1,0 +1,40 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_pubmed_efetch",
+  "pmid": "31268420",
+  "retrieved_at": "2026-09-06T18:49:20.891272+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=40751879%2C32221959%2C31268420%2C42474733%2C35948834%2C28027327%2C32328026%2C38322629%2C24040338%2C34433720%2C24343233%2C28072465%2C29478601%2C22205389%2C27364156%2C32271162%2C36609795%2C36308527%2C28937031%2C33390901&retmode=xml&tool=variantgate",
+  "raw_record_sha256": "ebba209b8951901baf2264fe487d71325782739becc3007d3cb39f05928b0570",
+  "cache_hit": false,
+  "content": {
+    "status": "found",
+    "pmid": "31268420",
+    "abstract": "Adult neurogenesis in the hippocampus may represent a form of plasticity in brain functions including mood, learning and memory. However, mechanisms underlying neural stem/progenitor cells (NSPCs) proliferation are not well understood. We found that Agrin, a factor critical for neuromuscular junction formation, is elevated in the hippocampus of mice that are stimulated by enriched environment (EE). Genetic deletion of the Agrn gene in excitatory neurons decreases NSPCs proliferation and increases depressive-like behavior. Low-density lipoprotein receptor-related protein 4 (Lrp4), a receptor for Agrin, is expressed in hippocampal NSPCs and its mutation blocked basal as well as EE-induced NSPCs proliferation and maturation of newborn neurons. Finally, we show that Lrp4 interacts with and activates receptor tyrosine kinase-like orphan receptor 2 (Ror2); and Ror2 mutation impairs NSPCs proliferation. Together, these observations identify a role of Agrin-Lrp4-Ror2 signaling for adult neurogenesis, uncovering previously unexpected functions of Agrin and Lrp4 in the brain.",
+    "abstract_sections": [
+      {
+        "label": null,
+        "text": "Adult neurogenesis in the hippocampus may represent a form of plasticity in brain functions including mood, learning and memory. However, mechanisms underlying neural stem/progenitor cells (NSPCs) proliferation are not well understood. We found that Agrin, a factor critical for neuromuscular junction formation, is elevated in the hippocampus of mice that are stimulated by enriched environment (EE). Genetic deletion of the Agrn gene in excitatory neurons decreases NSPCs proliferation and increases depressive-like behavior. Low-density lipoprotein receptor-related protein 4 (Lrp4), a receptor for Agrin, is expressed in hippocampal NSPCs and its mutation blocked basal as well as EE-induced NSPCs proliferation and maturation of newborn neurons. Finally, we show that Lrp4 interacts with and activates receptor tyrosine kinase-like orphan receptor 2 (Ror2); and Ror2 mutation impairs NSPCs proliferation. Together, these observations identify a role of Agrin-Lrp4-Ror2 signaling for adult neurogenesis, uncovering previously unexpected functions of Agrin and Lrp4 in the brain."
+      }
+    ],
+    "mesh_terms": [
+      "Agrin",
+      "Animals",
+      "Cell Proliferation",
+      "Gene Knockout Techniques",
+      "Hippocampus",
+      "LDL-Receptor Related Proteins",
+      "Mice",
+      "Neural Stem Cells",
+      "Neurogenesis",
+      "Receptor Tyrosine Kinase-like Orphan Receptors",
+      "Signal Transduction"
+    ],
+    "keywords": [
+      "adult neurogenesis",
+      "depressive-like behavior",
+      "enriched environment",
+      "mouse",
+      "neuroscience"
+    ]
+  }
+}

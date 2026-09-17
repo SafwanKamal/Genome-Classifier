@@ -1,0 +1,13 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_pubmed_esearch",
+  "query": "\"p.Ser861fs\"[Title/Abstract] AND \"AGRN\"[Title/Abstract]",
+  "retmax": 20,
+  "retrieved_at": "2026-09-06T18:49:09.464188+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22p.Ser861fs%22%5BTitle%2FAbstract%5D+AND+%22AGRN%22%5BTitle%2FAbstract%5D&retmax=20&sort=relevance&retmode=json&tool=variantgate",
+  "raw_response_sha256": "d73e34eca3c5fc00da25149eea17fcc21cc877e44433e8382fa4badd90e9e9fe",
+  "cache_hit": false,
+  "count": 0,
+  "pmids": [],
+  "query_translation": "\"p.Ser861fs\"[Title/Abstract] AND \"AGRN\"[Title/Abstract]"
+}

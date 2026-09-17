@@ -1,0 +1,27 @@
+{
+  "status": "pass",
+  "variant_number": 28293,
+  "backend": "numpy",
+  "architecture": "16-8-1",
+  "classification_rule": "folded_score >= 0",
+  "score_min": -1320,
+  "score_max": 624,
+  "prediction_counts": {
+    "0": 21470,
+    "1": 6823
+  },
+  "total_backend_latency_seconds": 0.320003,
+  "mean_backend_latency_us": 11.310324108436715,
+  "complete_run_time_seconds": 0.4328399,
+  "bit_exact_comparison": false,
+  "bit_exact_mismatches": null,
+  "routing": {
+    "policy_name": "validation_pathogenic_recall_gate",
+    "threshold": -276,
+    "route_counts": {
+      "light_review": 14818,
+      "deep_review": 13475
+    },
+    "deep_review_fraction": 0.4762662142579437
+  }
+}

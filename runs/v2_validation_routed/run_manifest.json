@@ -1,0 +1,66 @@
+{
+  "format_version": 1,
+  "tool": "variantgate",
+  "started_at": "2026-09-06T06:36:54.873661+00:00",
+  "completed_at": "2026-09-06T06:36:55.307315+00:00",
+  "input": {
+    "path": "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\genomic-dataset-pipeline\\data\\processed\\variants_model_int8.parquet",
+    "sha256": "b4318b4c61544204b3157f217258ca2fe2695aff753bf133553a1a41502c3633",
+    "split": "validation",
+    "limit": null,
+    "variant_number": 28293
+  },
+  "model": {
+    "export_manifest_path": "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\genomic-dataset-pipeline\\artifacts\\model_v2_h8_seed_7\\fpga_export\\export_manifest.json",
+    "export_manifest_sha256": "617cb98a99fc3b64e8e9aafa33311df989664db2fd893d29cf9a405587963077",
+    "source_model_sha256": "713cd5a02b98adab5e94cbf265e690eb204412d1998d4e9435c404a9957cb29a",
+    "architecture": "16-8-1",
+    "feature_order": [
+      "gnomad_popmax_rarity",
+      "cadd_phred",
+      "revel_score",
+      "alphamissense_score",
+      "esm1b_deleteriousness",
+      "sift_deleterious",
+      "polyphen2_hvar",
+      "mpc_score",
+      "phylop_100way",
+      "phastcons_100way",
+      "gerp_rs",
+      "grantham_distance",
+      "blosum62_unfavorability",
+      "gnomad_moeuf_intolerance",
+      "gnomad_loeuf_intolerance",
+      "interpro_domain_hit"
+    ],
+    "qshift": 4,
+    "folded_output_bias": -52,
+    "original_validation_threshold": 55,
+    "classification_rule": "folded_score >= 0"
+  },
+  "backend": {
+    "name": "numpy",
+    "serial_port": null,
+    "baud_rate": null,
+    "timeout_seconds": null
+  },
+  "routing_policy": {
+    "path": "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\reports\\checkpoint_v2\\routing_policy.json",
+    "sha256": "2236171690678885a2f4c9c83216f1aedcdc64a3afc91e5da5ca5e470580a55b",
+    "policy_name": "validation_pathogenic_recall_gate",
+    "threshold": -276,
+    "selection_split": "validation",
+    "target_pathogenic_recall": 0.995,
+    "achieved_pathogenic_recall": 0.9950994522917267
+  },
+  "outputs": {
+    "scores": {
+      "path": "scores.parquet",
+      "sha256": "91b72471683d5b91e93f4465d586229376d6648fc491b4acf661527671c4f6ed"
+    },
+    "summary": {
+      "path": "summary.json",
+      "sha256": "1152e0f445b7bbf7cd0932f30f26b2cdc2b9bf7dca009014c9d56f96f2d87796"
+    }
+  }
+}

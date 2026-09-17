@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "provider": "ncbi_clinvar_pubmed",
+  "variant_number": 10,
+  "variants_with_linked_articles": 6,
+  "variants_without_linked_articles": 4,
+  "unique_linked_article_number": 14,
+  "linked_article_instance_number": 18,
+  "link_cache_hit_record_number": 0,
+  "article_cache_hit_number": 0,
+  "network_request_attempt_number": 2,
+  "successful_network_request_number": 2
+}

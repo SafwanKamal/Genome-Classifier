@@ -1,0 +1,36 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_pubmed_esummary",
+  "pmid": "36609795",
+  "retrieved_at": "2026-09-06T18:49:20.023716+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id=40751879%2C32221959%2C31268420%2C42474733%2C35948834%2C28027327%2C32328026%2C38322629%2C24040338%2C34433720%2C24343233%2C28072465%2C29478601%2C22205389%2C27364156%2C32271162%2C36609795%2C36308527%2C28937031%2C33390901&retmode=json&tool=variantgate",
+  "raw_summary_sha256": "0483d60bc8908ea57cd75a3b1d45db08b810d8d1dbadd981fbc5df96e5aa6f55",
+  "cache_hit": false,
+  "article": {
+    "status": "found",
+    "pmid": "36609795",
+    "title": "Genes encoding agrin (AGRN) and neurotrypsin (PRSS12) are associated with muscle mass, strength and plasma C-terminal agrin fragment concentration.",
+    "authors": [
+      "Pratt J",
+      "Whitton L",
+      "Ryan A",
+      "Juliusdottir T",
+      "Dolan J",
+      "Conroy J",
+      "Narici M",
+      "De Vito G",
+      "Boreham C"
+    ],
+    "last_author": "Boreham C",
+    "journal": "GeroScience",
+    "publication_date": "2023 Jun",
+    "electronic_publication_date": "2023 Jan 7",
+    "publication_types": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "doi": "10.1007/s11357-022-00721-1",
+    "pmc_id": "PMC10400504",
+    "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/36609795/"
+  }
+}

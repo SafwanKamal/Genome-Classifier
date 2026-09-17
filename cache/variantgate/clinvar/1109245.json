@@ -1,0 +1,151 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_clinvar_esummary",
+  "variation_id": 1109245,
+  "retrieved_at": "2026-09-06T06:37:27.032449+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=clinvar&id=4233276%2C731516%2C1454283%2C244113%2C608899%2C1109245%2C623584%2C3683654%2C2671964%2C2202680&retmode=json&tool=variantgate",
+  "raw_summary_sha256": "e5f810b91962d0016b903cecfb1d71fff045c3aedd6ed2d0c10bfcd9fe095ad2",
+  "raw_summary": {
+    "uid": "1109245",
+    "obj_type": "single nucleotide variant",
+    "accession": "VCV001109245",
+    "accession_version": "VCV001109245.9",
+    "title": "NM_014140.4(SMARCAL1):c.2070+9A>T",
+    "variation_set": [
+      {
+        "measure_id": "1090724",
+        "variation_xrefs": [
+          {
+            "db_source": "ClinGen",
+            "db_id": "CA2499215653"
+          },
+          {
+            "db_source": "dbSNP",
+            "db_id": "2106055533"
+          }
+        ],
+        "variation_name": "NM_014140.4(SMARCAL1):c.2070+9A>T",
+        "cdna_change": "NM_014140.4(SMARCAL1):c.2070+9A>T",
+        "aliases": [],
+        "variation_loc": [
+          {
+            "status": "current",
+            "assembly_name": "GRCh38",
+            "chr": "2",
+            "band": "2q35",
+            "start": "216451073",
+            "stop": "216451073",
+            "inner_start": "",
+            "inner_stop": "",
+            "outer_start": "",
+            "outer_stop": "",
+            "display_start": "216451073",
+            "display_stop": "216451073",
+            "assembly_acc_ver": "GCF_000001405.38",
+            "annotation_release": "",
+            "alt": "",
+            "ref": ""
+          },
+          {
+            "status": "previous",
+            "assembly_name": "GRCh37",
+            "chr": "2",
+            "band": "2q35",
+            "start": "217315796",
+            "stop": "217315796",
+            "inner_start": "",
+            "inner_stop": "",
+            "outer_start": "",
+            "outer_stop": "",
+            "display_start": "217315796",
+            "display_stop": "217315796",
+            "assembly_acc_ver": "GCF_000001405.25",
+            "annotation_release": "",
+            "alt": "",
+            "ref": ""
+          }
+        ],
+        "allele_freq_set": [
+          {
+            "source": "The Genome Aggregation Database (gnomAD), exomes",
+            "value": "0.00001",
+            "minor_allele": ""
+          }
+        ],
+        "variant_type": "single nucleotide variant",
+        "canonical_spdi": "NC_000002.12:216451072:A:T",
+        "common_name": ""
+      }
+    ],
+    "supporting_submissions": {
+      "scv": [
+        "SCV001637885"
+      ],
+      "rcv": [
+        "RCV001435067"
+      ]
+    },
+    "germline_classification": {
+      "description": "Likely benign",
+      "last_evaluated": "2025/01/06 00:00",
+      "review_status": "criteria provided, single submitter",
+      "fda_recognized_database": "",
+      "trait_set": [
+        {
+          "trait_xrefs": [
+            {
+              "db_source": "Orphanet",
+              "db_id": "1830"
+            },
+            {
+              "db_source": "MedGen",
+              "db_id": "C0877024"
+            },
+            {
+              "db_source": "MONDO",
+              "db_id": "MONDO:0009458"
+            },
+            {
+              "db_source": "OMIM",
+              "db_id": "242900"
+            }
+          ],
+          "trait_name": "Schimke immuno-osseous dysplasia"
+        }
+      ]
+    },
+    "clinical_impact_classification": {
+      "description": "",
+      "last_evaluated": "1/01/01 00:00",
+      "review_status": "",
+      "fda_recognized_database": "",
+      "trait_set": []
+    },
+    "oncogenicity_classification": {
+      "description": "",
+      "last_evaluated": "1/01/01 00:00",
+      "review_status": "",
+      "fda_recognized_database": "",
+      "trait_set": []
+    },
+    "record_status": "",
+    "gene_sort": "SMARCAL1",
+    "chr_sort": "02",
+    "location_sort": "00000000000216451073",
+    "variation_set_name": "",
+    "variation_set_id": "",
+    "genes": [
+      {
+        "symbol": "SMARCAL1",
+        "geneid": "50485",
+        "strand": "+",
+        "source": "submitted"
+      }
+    ],
+    "molecular_consequence_list": [
+      "intron variant"
+    ],
+    "protein_change": "",
+    "fda_recognized_database": ""
+  }
+}

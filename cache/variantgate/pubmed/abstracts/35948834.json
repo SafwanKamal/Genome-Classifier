@@ -1,0 +1,29 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_pubmed_efetch",
+  "pmid": "35948834",
+  "retrieved_at": "2026-09-06T18:49:20.891272+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=40751879%2C32221959%2C31268420%2C42474733%2C35948834%2C28027327%2C32328026%2C38322629%2C24040338%2C34433720%2C24343233%2C28072465%2C29478601%2C22205389%2C27364156%2C32271162%2C36609795%2C36308527%2C28937031%2C33390901&retmode=xml&tool=variantgate",
+  "raw_record_sha256": "4caad03cc82f68f914d6080f0197547e488b6603361d124f51629150ab4ce251",
+  "cache_hit": false,
+  "content": {
+    "status": "found",
+    "pmid": "35948834",
+    "abstract": "Congenital myasthenic syndromes (CMS) are predominantly characterized by muscle weakness and fatigability and can be caused by a variety of mutations in genes required for neuromuscular junction formation and maintenance. Among them, AGRN encodes agrin, an essential synaptic protein secreted by motoneurons. We have identified severe CMS patients with uncharacterized p.R1671Q, p.R1698P and p.L1664P mutations in the LG2 domain of agrin. Overexpression in primary motoneurons cultures in vitro and in chick spinal motoneurons in vivo revealed that the mutations modified agrin trafficking, leading to its accumulation in the soma and/or in the axon. Expression of mutant agrins in cultured cells demonstrated accumulation of agrin in the endoplasmic reticulum associated with induction of unfolded protein response (UPR) and impaired secretion in the culture medium. Interestingly, evaluation of the specific activity of individual agrins on AChR cluster formation indicated that when secreted, mutant agrins retained a normal capacity to trigger the formation of AChR clusters. To confirm agrin accumulation and secretion defect, iPS cells were derived from a patient and differentiated into motoneurons. Patient iPS-derived motoneurons accumulated mutant agrin in the soma and increased XBP1 mRNA splicing, suggesting UPR activation. Moreover, co-cultures of patient iPS-derived motoneurons with myotubes confirmed the deficit in agrin secretion and revealed a reduction in motoneuron survival. Altogether, we report the first mutations in AGRN gene that specifically affect agrin secretion by motoneurons. Interestingly, the three patients carrying these mutations were initially suspected of spinal muscular atrophy (SMA). Therefore, in the presence of patients with a clinical presentation of SMA but without mutation in the SMN1 gene, it can be worth to look for mutations in AGRN.",
+    "abstract_sections": [
+      {
+        "label": null,
+        "text": "Congenital myasthenic syndromes (CMS) are predominantly characterized by muscle weakness and fatigability and can be caused by a variety of mutations in genes required for neuromuscular junction formation and maintenance. Among them, AGRN encodes agrin, an essential synaptic protein secreted by motoneurons. We have identified severe CMS patients with uncharacterized p.R1671Q, p.R1698P and p.L1664P mutations in the LG2 domain of agrin. Overexpression in primary motoneurons cultures in vitro and in chick spinal motoneurons in vivo revealed that the mutations modified agrin trafficking, leading to its accumulation in the soma and/or in the axon. Expression of mutant agrins in cultured cells demonstrated accumulation of agrin in the endoplasmic reticulum associated with induction of unfolded protein response (UPR) and impaired secretion in the culture medium. Interestingly, evaluation of the specific activity of individual agrins on AChR cluster formation indicated that when secreted, mutant agrins retained a normal capacity to trigger the formation of AChR clusters. To confirm agrin accumulation and secretion defect, iPS cells were derived from a patient and differentiated into motoneurons. Patient iPS-derived motoneurons accumulated mutant agrin in the soma and increased XBP1 mRNA splicing, suggesting UPR activation. Moreover, co-cultures of patient iPS-derived motoneurons with myotubes confirmed the deficit in agrin secretion and revealed a reduction in motoneuron survival. Altogether, we report the first mutations in AGRN gene that specifically affect agrin secretion by motoneurons. Interestingly, the three patients carrying these mutations were initially suspected of spinal muscular atrophy (SMA). Therefore, in the presence of patients with a clinical presentation of SMA but without mutation in the SMN1 gene, it can be worth to look for mutations in AGRN."
+      }
+    ],
+    "mesh_terms": [
+      "Agrin",
+      "Humans",
+      "Motor Neurons",
+      "Mutation",
+      "Myasthenic Syndromes, Congenital",
+      "Neuromuscular Junction"
+    ],
+    "keywords": []
+  }
+}

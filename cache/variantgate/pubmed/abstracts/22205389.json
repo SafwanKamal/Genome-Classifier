@@ -1,0 +1,43 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_pubmed_efetch",
+  "pmid": "22205389",
+  "retrieved_at": "2026-09-06T18:49:20.891272+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=40751879%2C32221959%2C31268420%2C42474733%2C35948834%2C28027327%2C32328026%2C38322629%2C24040338%2C34433720%2C24343233%2C28072465%2C29478601%2C22205389%2C27364156%2C32271162%2C36609795%2C36308527%2C28937031%2C33390901&retmode=xml&tool=variantgate",
+  "raw_record_sha256": "cc594d187d5744025454e70dbf069abdeeb7446d1f5c1509cb35d388f53227e4",
+  "cache_hit": false,
+  "content": {
+    "status": "found",
+    "pmid": "22205389",
+    "abstract": "We describe a severe form of congenital myasthenic syndrome (CMS) caused by two heteroallelic mutations: a nonsense and a missense mutation in the gene encoding agrin (AGRN). The identified mutations, Q353X and V1727F, are located at the N-terminal and at the second laminin G-like (LG2) domain of agrin, respectively. A motor-point muscle biopsy demonstrated severe disruption of the architecture of the neuromuscular junction (NMJ), including: dispersion and fragmentation of endplate areas with normal expression of acetylcholinesterase; simplification of postsynaptic membranes; pronounced reduction of the axon terminal size; widening of the primary synaptic cleft; and, collection of membranous debris material in the primary synaptic cleft and in the subsynaptic cytoplasm. Expression studies in heterologous cells revealed that the Q353X mutation abolished expression of full-length agrin. Moreover, the V1727F mutation decreased agrin-induced clustering of the acetylcholine receptor (AChR) in cultured C2 muscle cells by >100-fold, and phosphorylation of the MuSK receptor and AChR beta subunit by ~tenfold. Surprisingly, the V1727F mutant also displayed increased binding to \u03b1-dystroglycan but decreased binding to a neural (z+) agrin-specific antibody. Our findings demonstrate that agrin mutations can associate with a severe form of CMS and cause profound distortion of the architecture and function of the NMJ. The impaired ability of V1727F agrin to activate MuSK and cluster AChRs, together with its increased affinity to \u03b1-dystroglycan, mimics non-neural (z-) agrin and are important determinants of the pathogenesis of the disease.",
+    "abstract_sections": [
+      {
+        "label": null,
+        "text": "We describe a severe form of congenital myasthenic syndrome (CMS) caused by two heteroallelic mutations: a nonsense and a missense mutation in the gene encoding agrin (AGRN). The identified mutations, Q353X and V1727F, are located at the N-terminal and at the second laminin G-like (LG2) domain of agrin, respectively. A motor-point muscle biopsy demonstrated severe disruption of the architecture of the neuromuscular junction (NMJ), including: dispersion and fragmentation of endplate areas with normal expression of acetylcholinesterase; simplification of postsynaptic membranes; pronounced reduction of the axon terminal size; widening of the primary synaptic cleft; and, collection of membranous debris material in the primary synaptic cleft and in the subsynaptic cytoplasm. Expression studies in heterologous cells revealed that the Q353X mutation abolished expression of full-length agrin. Moreover, the V1727F mutation decreased agrin-induced clustering of the acetylcholine receptor (AChR) in cultured C2 muscle cells by >100-fold, and phosphorylation of the MuSK receptor and AChR beta subunit by ~tenfold. Surprisingly, the V1727F mutant also displayed increased binding to \u03b1-dystroglycan but decreased binding to a neural (z+) agrin-specific antibody. Our findings demonstrate that agrin mutations can associate with a severe form of CMS and cause profound distortion of the architecture and function of the NMJ. The impaired ability of V1727F agrin to activate MuSK and cluster AChRs, together with its increased affinity to \u03b1-dystroglycan, mimics non-neural (z-) agrin and are important determinants of the pathogenesis of the disease."
+      }
+    ],
+    "mesh_terms": [
+      "Acetylcholinesterase",
+      "Adult",
+      "Agrin",
+      "Base Sequence",
+      "Cell Line",
+      "Codon, Nonsense",
+      "Dystroglycans",
+      "Female",
+      "HEK293 Cells",
+      "Humans",
+      "Male",
+      "Models, Molecular",
+      "Muscle Fibers, Skeletal",
+      "Muscle, Skeletal",
+      "Mutation, Missense",
+      "Myasthenic Syndromes, Congenital",
+      "Neuromuscular Junction",
+      "Pedigree",
+      "Receptors, Cholinergic",
+      "Sequence Analysis, DNA"
+    ],
+    "keywords": []
+  }
+}

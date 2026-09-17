@@ -1,0 +1,41 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_pubmed_esummary",
+  "pmid": "31268420",
+  "retrieved_at": "2026-09-06T18:49:20.023716+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id=40751879%2C32221959%2C31268420%2C42474733%2C35948834%2C28027327%2C32328026%2C38322629%2C24040338%2C34433720%2C24343233%2C28072465%2C29478601%2C22205389%2C27364156%2C32271162%2C36609795%2C36308527%2C28937031%2C33390901&retmode=json&tool=variantgate",
+  "raw_summary_sha256": "680fec49b4ab45a64022be9986df5e4376dc418dfd6df1a9481039552c0a73c5",
+  "cache_hit": false,
+  "article": {
+    "status": "found",
+    "pmid": "31268420",
+    "title": "Agrin-Lrp4-Ror2 signaling regulates adult hippocampal neurogenesis in mice.",
+    "authors": [
+      "Zhang H",
+      "Sathyamurthy A",
+      "Liu F",
+      "Li L",
+      "Zhang L",
+      "Dong Z",
+      "Cui W",
+      "Sun X",
+      "Zhao K",
+      "Wang H",
+      "Ho HH",
+      "Xiong WC",
+      "Mei L"
+    ],
+    "last_author": "Mei L",
+    "journal": "eLife",
+    "publication_date": "2019 Jul 3",
+    "electronic_publication_date": "2019 Jul 3",
+    "publication_types": [
+      "Journal Article",
+      "Research Support, N.I.H., Extramural",
+      "Research Support, U.S. Gov't, Non-P.H.S."
+    ],
+    "doi": "10.7554/eLife.45303",
+    "pmc_id": "PMC6650252",
+    "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/31268420/"
+  }
+}

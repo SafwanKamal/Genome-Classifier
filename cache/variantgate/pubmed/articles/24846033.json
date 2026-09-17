@@ -1,0 +1,29 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_pubmed_esummary",
+  "pmid": "24846033",
+  "retrieved_at": "2026-09-06T17:37:37.125021+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id=28492532%2C31152969%2C20301532%2C20301550%2C30813707%2C29355391%2C25311215%2C24846033%2C24827857%2C23667368%2C23649446%2C23562183%2C25741868%2C20301648&retmode=json&tool=variantgate",
+  "raw_summary_sha256": "930b857f50753dffa21e60e8e39ecfeb25f6584bf0114b2a19fed437049eb082",
+  "cache_hit": false,
+  "article": {
+    "status": "found",
+    "pmid": "24846033",
+    "title": "Non-small cell lung cancer and precision medicine: a model for the incorporation of genomic features into clinical trial design.",
+    "authors": [
+      "Pasche B",
+      "Grant SC"
+    ],
+    "last_author": "Grant SC",
+    "journal": "JAMA",
+    "publication_date": "2014 May 21",
+    "electronic_publication_date": "",
+    "publication_types": [
+      "Editorial",
+      "Comment"
+    ],
+    "doi": "10.1001/jama.2014.3742",
+    "pmc_id": null,
+    "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/24846033/"
+  }
+}

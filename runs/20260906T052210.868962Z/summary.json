@@ -1,0 +1,18 @@
+{
+  "status": "pass",
+  "variant_number": 100,
+  "backend": "compare:fpga_uart:numpy",
+  "architecture": "16-8-1",
+  "classification_rule": "folded_score >= 0",
+  "score_min": -1318,
+  "score_max": 153,
+  "prediction_counts": {
+    "0": 98,
+    "1": 2
+  },
+  "total_backend_latency_seconds": 1.5732548,
+  "mean_backend_latency_us": 15732.547999999999,
+  "complete_run_time_seconds": 2.000028,
+  "bit_exact_comparison": true,
+  "bit_exact_mismatches": 0
+}

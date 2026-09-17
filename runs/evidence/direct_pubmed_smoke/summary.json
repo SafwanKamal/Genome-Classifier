@@ -1,0 +1,21 @@
+{
+  "status": "pass",
+  "provider": "ncbi_pubmed_direct_search",
+  "variant_number": 10,
+  "searchable_variant_number": 10,
+  "variants_with_direct_articles": 3,
+  "variants_without_direct_articles": 7,
+  "unique_direct_article_number": 20,
+  "direct_article_instance_number": 60,
+  "clinvar_link_overlap_instance_number": 0,
+  "direct_only_article_instance_number": 60,
+  "retrieval_relevance_tier_counts": {
+    "gene_variant_context": 60
+  },
+  "search_cache_hit_query_number": 2,
+  "article_cache_hit_number": 0,
+  "abstract_cache_hit_number": 0,
+  "network_request_attempt_number": 28,
+  "successful_network_request_number": 28,
+  "interpretation_boundary": "Direct literature discovery; not independent model validation and not clinical interpretation."
+}

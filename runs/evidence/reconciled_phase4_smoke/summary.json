@@ -1,0 +1,19 @@
+{
+  "status": "pass",
+  "variant_number": 10,
+  "provider_number": 3,
+  "variants_with_linked_literature": 6,
+  "variants_without_linked_literature": 4,
+  "linked_article_instance_number": 18,
+  "variants_with_direct_literature": 3,
+  "variants_without_direct_literature": 7,
+  "direct_article_instance_number": 60,
+  "direct_only_article_instance_number": 60,
+  "issue_counts": {
+    "clinvar_germline_classification_missing": 3,
+    "no_clinvar_linked_pubmed_articles": 4,
+    "no_direct_pubmed_articles": 7
+  },
+  "requires_human_review": true,
+  "interpretation_boundary": "Evidence reconciliation only; not a clinical interpretation."
+}

@@ -1,0 +1,30 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_pubmed_efetch",
+  "pmid": "33390901",
+  "retrieved_at": "2026-09-06T18:49:20.891272+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=40751879%2C32221959%2C31268420%2C42474733%2C35948834%2C28027327%2C32328026%2C38322629%2C24040338%2C34433720%2C24343233%2C28072465%2C29478601%2C22205389%2C27364156%2C32271162%2C36609795%2C36308527%2C28937031%2C33390901&retmode=xml&tool=variantgate",
+  "raw_record_sha256": "1514c935006dd2d5a3cbab3b0a884bb205bfc7dead1d231593f88b1ca7a6d8fd",
+  "cache_hit": false,
+  "content": {
+    "status": "found",
+    "pmid": "33390901",
+    "abstract": "Introduction: Congenital myasthenic syndromes (CMS) are a diverse group of inherited neuromuscular disorders characterized by a failure of synaptic transmission at the neuromuscular junction (NMJ). CMS often present early with fatigable weakness and can be fatal through respiratory complications. The AGRN gene is one of over 30 genes known to harbor mutations causative for CMS. In this study, we aimed to determine if a compound (NT1654), developed to stimulate the acetylcholine receptor (AChR) clustering pathway, would benefit a mouse model of CMS caused by a loss-of-function mutation in Agrn (Agrn nmf380 mouse). Methods: Agrn nmf380 mice received an injection of either NT1654 or vehicle compound daily, with wild-type litter mates used for comparison. Animals were weighed daily and underwent grip strength assessments. After 30 days of treatment animals were sacrificed, and muscles collected. Investigations into NMJ and muscle morphology were performed on collected tissue. Results: While minimal improvements in NMJ ultrastructure were observed with electron microscopy, gross NMJ structure analysis using fluorescent labelling and confocal microscopy revealed extensive postsynaptic improvements in Agrn nmf380 mice with NT1654 administration, with variables frequently returning to wild type levels. An improvement in muscle weight and myofiber characteristics helped increase forelimb grip strength and body weight. Conclusions: We conclude that NT1654 restores NMJ postsynaptic structure and improves muscle strength through normalization of muscle fiber composition and the prevention of atrophy. We hypothesize this occurs through the AChR clustering pathway in Agrn nmf380 mice. Future studies should investigate if this may represent a viable treatment option for patients with CMS, especially those with mutations in proteins of the AChR clustering pathway.",
+    "abstract_sections": [
+      {
+        "label": null,
+        "text": "Introduction: Congenital myasthenic syndromes (CMS) are a diverse group of inherited neuromuscular disorders characterized by a failure of synaptic transmission at the neuromuscular junction (NMJ). CMS often present early with fatigable weakness and can be fatal through respiratory complications. The AGRN gene is one of over 30 genes known to harbor mutations causative for CMS. In this study, we aimed to determine if a compound (NT1654), developed to stimulate the acetylcholine receptor (AChR) clustering pathway, would benefit a mouse model of CMS caused by a loss-of-function mutation in Agrn (Agrn nmf380 mouse). Methods: Agrn nmf380 mice received an injection of either NT1654 or vehicle compound daily, with wild-type litter mates used for comparison. Animals were weighed daily and underwent grip strength assessments. After 30 days of treatment animals were sacrificed, and muscles collected. Investigations into NMJ and muscle morphology were performed on collected tissue. Results: While minimal improvements in NMJ ultrastructure were observed with electron microscopy, gross NMJ structure analysis using fluorescent labelling and confocal microscopy revealed extensive postsynaptic improvements in Agrn nmf380 mice with NT1654 administration, with variables frequently returning to wild type levels. An improvement in muscle weight and myofiber characteristics helped increase forelimb grip strength and body weight. Conclusions: We conclude that NT1654 restores NMJ postsynaptic structure and improves muscle strength through normalization of muscle fiber composition and the prevention of atrophy. We hypothesize this occurs through the AChR clustering pathway in Agrn nmf380 mice. Future studies should investigate if this may represent a viable treatment option for patients with CMS, especially those with mutations in proteins of the AChR clustering pathway."
+      }
+    ],
+    "mesh_terms": [],
+    "keywords": [
+      "animal model",
+      "congenital myasthenia syndromes (CMS)",
+      "neuromuscular disease (NMD)",
+      "neuromuscular disorders",
+      "neuromuscular junction",
+      "preclinical \u201cin vivo\u201d study",
+      "therapies"
+    ]
+  }
+}

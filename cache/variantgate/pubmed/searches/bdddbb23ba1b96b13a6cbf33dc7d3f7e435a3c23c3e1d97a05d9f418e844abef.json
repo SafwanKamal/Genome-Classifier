@@ -1,0 +1,13 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_pubmed_esearch",
+  "query": "\"NC_000019.10:14170703:CAC:CACAC\"[Title/Abstract]",
+  "retmax": 20,
+  "retrieved_at": "2026-09-06T18:49:17.073074+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22NC_000019.10%3A14170703%3ACAC%3ACACAC%22%5BTitle%2FAbstract%5D&retmax=20&sort=relevance&retmode=json&tool=variantgate",
+  "raw_response_sha256": "dd4dd0074a4c4859a3a0963f0e8aa79054175f58e75a6c3c26e564c43a94d9de",
+  "cache_hit": false,
+  "count": 0,
+  "pmids": [],
+  "query_translation": "\"NC_000019.10:14170703:CAC:CACAC\"[Title/Abstract]"
+}

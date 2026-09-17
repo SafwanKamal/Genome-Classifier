@@ -1,0 +1,184 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_clinvar_esummary",
+  "variation_id": 2202680,
+  "retrieved_at": "2026-09-06T06:37:27.032449+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=clinvar&id=4233276%2C731516%2C1454283%2C244113%2C608899%2C1109245%2C623584%2C3683654%2C2671964%2C2202680&retmode=json&tool=variantgate",
+  "raw_summary_sha256": "0d7fc573fdad18d136db917de933e16a8896328aac7cc9847433c1d0be5fb8fc",
+  "raw_summary": {
+    "uid": "2202680",
+    "obj_type": "single nucleotide variant",
+    "accession": "VCV002202680",
+    "accession_version": "VCV002202680.4",
+    "title": "NM_001111.5(ADAR):c.261A>G (p.Gln87=)",
+    "variation_set": [
+      {
+        "measure_id": "1928331",
+        "variation_xrefs": [
+          {
+            "db_source": "ClinGen",
+            "db_id": "CA421225984"
+          },
+          {
+            "db_source": "dbSNP",
+            "db_id": "1287865106"
+          }
+        ],
+        "variation_name": "NM_001111.5(ADAR):c.261A>G (p.Gln87=)",
+        "cdna_change": "c.261A>G",
+        "aliases": [],
+        "variation_loc": [
+          {
+            "status": "current",
+            "assembly_name": "GRCh38",
+            "chr": "1",
+            "band": "1q21.3",
+            "start": "154602381",
+            "stop": "154602381",
+            "inner_start": "",
+            "inner_stop": "",
+            "outer_start": "",
+            "outer_stop": "",
+            "display_start": "154602381",
+            "display_stop": "154602381",
+            "assembly_acc_ver": "GCF_000001405.38",
+            "annotation_release": "",
+            "alt": "",
+            "ref": ""
+          },
+          {
+            "status": "previous",
+            "assembly_name": "GRCh37",
+            "chr": "1",
+            "band": "1q21.3",
+            "start": "154574857",
+            "stop": "154574857",
+            "inner_start": "",
+            "inner_stop": "",
+            "outer_start": "",
+            "outer_stop": "",
+            "display_start": "154574857",
+            "display_stop": "154574857",
+            "assembly_acc_ver": "GCF_000001405.25",
+            "annotation_release": "",
+            "alt": "",
+            "ref": ""
+          }
+        ],
+        "allele_freq_set": [
+          {
+            "source": "The Genome Aggregation Database (gnomAD), exomes",
+            "value": "0.00000",
+            "minor_allele": ""
+          },
+          {
+            "source": "Trans-Omics for Precision Medicine (TOPMed)",
+            "value": "0.00000",
+            "minor_allele": ""
+          },
+          {
+            "source": "The Genome Aggregation Database (gnomAD)",
+            "value": "0.00001",
+            "minor_allele": ""
+          }
+        ],
+        "variant_type": "single nucleotide variant",
+        "canonical_spdi": "NC_000001.11:154602380:T:C",
+        "common_name": ""
+      }
+    ],
+    "supporting_submissions": {
+      "scv": [
+        "SCV003522708"
+      ],
+      "rcv": [
+        "RCV002648116"
+      ]
+    },
+    "germline_classification": {
+      "description": "Uncertain significance",
+      "last_evaluated": "2022/04/04 00:00",
+      "review_status": "criteria provided, single submitter",
+      "fda_recognized_database": "",
+      "trait_set": [
+        {
+          "trait_xrefs": [
+            {
+              "db_source": "Orphanet",
+              "db_id": "41"
+            },
+            {
+              "db_source": "MedGen",
+              "db_id": "C0406775"
+            },
+            {
+              "db_source": "MONDO",
+              "db_id": "MONDO:0007483"
+            },
+            {
+              "db_source": "OMIM",
+              "db_id": "127400"
+            }
+          ],
+          "trait_name": "Symmetrical dyschromatosis of extremities"
+        },
+        {
+          "trait_xrefs": [
+            {
+              "db_source": "Orphanet",
+              "db_id": "51"
+            },
+            {
+              "db_source": "MedGen",
+              "db_id": "C3539013"
+            },
+            {
+              "db_source": "MONDO",
+              "db_id": "MONDO:0014007"
+            },
+            {
+              "db_source": "OMIM",
+              "db_id": "615010"
+            }
+          ],
+          "trait_name": "Aicardi-Goutieres syndrome 6"
+        }
+      ]
+    },
+    "clinical_impact_classification": {
+      "description": "",
+      "last_evaluated": "1/01/01 00:00",
+      "review_status": "",
+      "fda_recognized_database": "",
+      "trait_set": []
+    },
+    "oncogenicity_classification": {
+      "description": "",
+      "last_evaluated": "1/01/01 00:00",
+      "review_status": "",
+      "fda_recognized_database": "",
+      "trait_set": []
+    },
+    "record_status": "",
+    "gene_sort": "ADAR",
+    "chr_sort": "01",
+    "location_sort": "00000000000154602381",
+    "variation_set_name": "",
+    "variation_set_id": "",
+    "genes": [
+      {
+        "symbol": "ADAR",
+        "geneid": "103",
+        "strand": "-",
+        "source": "submitted"
+      }
+    ],
+    "molecular_consequence_list": [
+      "5 prime UTR variant",
+      "synonymous variant",
+      "intron variant"
+    ],
+    "protein_change": "",
+    "fda_recognized_database": ""
+  }
+}

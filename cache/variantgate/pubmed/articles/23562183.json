@@ -1,0 +1,40 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_pubmed_esummary",
+  "pmid": "23562183",
+  "retrieved_at": "2026-09-06T17:37:37.125021+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id=28492532%2C31152969%2C20301532%2C20301550%2C30813707%2C29355391%2C25311215%2C24846033%2C24827857%2C23667368%2C23649446%2C23562183%2C25741868%2C20301648&retmode=json&tool=variantgate",
+  "raw_summary_sha256": "fc0939a4573971583cfa39d600ea080bb4cf1e1fcff9a57011425465db15a2b8",
+  "cache_hit": false,
+  "article": {
+    "status": "found",
+    "pmid": "23562183",
+    "title": "Molecular testing guideline for selection of lung cancer patients for EGFR and ALK tyrosine kinase inhibitors: guideline from the College of American Pathologists, International Association for the Study of Lung Cancer, and Association for Molecular Pathology.",
+    "authors": [
+      "Lindeman NI",
+      "Cagle PT",
+      "Beasley MB",
+      "Chitale DA",
+      "Dacic S",
+      "Giaccone G",
+      "Jenkins RB",
+      "Kwiatkowski DJ",
+      "Saldivar JS",
+      "Squire J",
+      "Thunnissen E",
+      "Ladanyi M",
+      "College of American Pathologists International Association for the Study of Lung Cancer and Association for Molecular Pathology"
+    ],
+    "last_author": "College of American Pathologists International Association for the Study of Lung Cancer and Association for Molecular Pathology",
+    "journal": "The Journal of molecular diagnostics : JMD",
+    "publication_date": "2013 Jul",
+    "electronic_publication_date": "2013 Apr 4",
+    "publication_types": [
+      "Journal Article",
+      "Practice Guideline"
+    ],
+    "doi": "10.1016/j.jmoldx.2013.03.001",
+    "pmc_id": null,
+    "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/23562183/"
+  }
+}

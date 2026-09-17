@@ -1,0 +1,13 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_pubmed_esearch",
+  "query": "\"c.2583_2586del\"[Title/Abstract] AND \"AGRN\"[Title/Abstract]",
+  "retmax": 20,
+  "retrieved_at": "2026-09-06T18:49:08.900891+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22c.2583_2586del%22%5BTitle%2FAbstract%5D+AND+%22AGRN%22%5BTitle%2FAbstract%5D&retmax=20&sort=relevance&retmode=json&tool=variantgate",
+  "raw_response_sha256": "22bbfc00b31d5a1a3ae49684b13b0546d779e04b59a2afe7736c51d1fce17dd5",
+  "cache_hit": false,
+  "count": 0,
+  "pmids": [],
+  "query_translation": "\"c.2583_2586del\"[Title/Abstract] AND \"AGRN\"[Title/Abstract]"
+}

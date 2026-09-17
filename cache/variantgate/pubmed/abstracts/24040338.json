@@ -1,0 +1,54 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_pubmed_efetch",
+  "pmid": "24040338",
+  "retrieved_at": "2026-09-06T18:49:20.891272+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=40751879%2C32221959%2C31268420%2C42474733%2C35948834%2C28027327%2C32328026%2C38322629%2C24040338%2C34433720%2C24343233%2C28072465%2C29478601%2C22205389%2C27364156%2C32271162%2C36609795%2C36308527%2C28937031%2C33390901&retmode=xml&tool=variantgate",
+  "raw_record_sha256": "cd25467b5c88f5998e61f365d0046e5cab87be04195ab9a270e97557e0807b96",
+  "cache_hit": false,
+  "content": {
+    "status": "found",
+    "pmid": "24040338",
+    "abstract": "OBJECTIVE: Consistent with the cognitive reserve hypothesis, higher education and occupation attainments may help persons with neurodegenerative dementias to better withstand neuropathology before developing cognitive impairment. We tested here the cognitive reserve hypothesis in patients with frontotemporal dementia (FTD), with or without pathogenetic granulin mutations (GRN+ and GRN-), and in presymptomatic GRN mutation carriers (aGRN+).\nMETHODS: Education and occupation attainments were assessed and combined to define Reserve Index (RI) in 32 FTD patients, i.e. 12 GRN+ and 20 GRN-, and in 17 aGRN+. Changes in functional connectivity were estimated by resting state fMRI, focusing on the salience network (SN), executive network (EN) and bilateral frontoparietal networks (FPNs). Cognitive status was measured by FTD-modified Clinical Dementia Rating Scale.\nRESULTS: In FTD patients higher level of premorbid cognitive reserve was associated with reduced connectivity within the SN and the EN. EN was more involved in FTD patients without GRN mutations, while SN was more affected in GRN pathology. In aGRN+, cognitive reserve was associated with reduced SN.\nCONCLUSIONS: This study suggests that cognitive reserve modulates functional connectivity in patients with FTD, even in monogenic disease. In GRN inherited FTD, cognitive reserve mechanisms operate even in presymptomatic to clinical stages.",
+    "abstract_sections": [
+      {
+        "label": "OBJECTIVE",
+        "text": "Consistent with the cognitive reserve hypothesis, higher education and occupation attainments may help persons with neurodegenerative dementias to better withstand neuropathology before developing cognitive impairment. We tested here the cognitive reserve hypothesis in patients with frontotemporal dementia (FTD), with or without pathogenetic granulin mutations (GRN+ and GRN-), and in presymptomatic GRN mutation carriers (aGRN+)."
+      },
+      {
+        "label": "METHODS",
+        "text": "Education and occupation attainments were assessed and combined to define Reserve Index (RI) in 32 FTD patients, i.e. 12 GRN+ and 20 GRN-, and in 17 aGRN+. Changes in functional connectivity were estimated by resting state fMRI, focusing on the salience network (SN), executive network (EN) and bilateral frontoparietal networks (FPNs). Cognitive status was measured by FTD-modified Clinical Dementia Rating Scale."
+      },
+      {
+        "label": "RESULTS",
+        "text": "In FTD patients higher level of premorbid cognitive reserve was associated with reduced connectivity within the SN and the EN. EN was more involved in FTD patients without GRN mutations, while SN was more affected in GRN pathology. In aGRN+, cognitive reserve was associated with reduced SN."
+      },
+      {
+        "label": "CONCLUSIONS",
+        "text": "This study suggests that cognitive reserve modulates functional connectivity in patients with FTD, even in monogenic disease. In GRN inherited FTD, cognitive reserve mechanisms operate even in presymptomatic to clinical stages."
+      }
+    ],
+    "mesh_terms": [
+      "Adult",
+      "Age of Onset",
+      "Aged",
+      "Brain",
+      "Brain Mapping",
+      "Cognition Disorders",
+      "Cognitive Reserve",
+      "Female",
+      "Frontotemporal Dementia",
+      "Heterozygote",
+      "Humans",
+      "Intercellular Signaling Peptides and Proteins",
+      "Magnetic Resonance Imaging",
+      "Male",
+      "Middle Aged",
+      "Mutation",
+      "Neuropsychological Tests",
+      "Progranulins",
+      "Severity of Illness Index"
+    ],
+    "keywords": []
+  }
+}

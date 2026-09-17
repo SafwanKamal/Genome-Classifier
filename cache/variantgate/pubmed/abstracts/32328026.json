@@ -1,0 +1,28 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_pubmed_efetch",
+  "pmid": "32328026",
+  "retrieved_at": "2026-09-06T18:49:20.891272+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=40751879%2C32221959%2C31268420%2C42474733%2C35948834%2C28027327%2C32328026%2C38322629%2C24040338%2C34433720%2C24343233%2C28072465%2C29478601%2C22205389%2C27364156%2C32271162%2C36609795%2C36308527%2C28937031%2C33390901&retmode=xml&tool=variantgate",
+  "raw_record_sha256": "6243eb6f49a8c7a7da4baecfe3735a7c8a95e81c694c8223dcb1afacac5e6918",
+  "cache_hit": false,
+  "content": {
+    "status": "found",
+    "pmid": "32328026",
+    "abstract": "Congenital myasthenic syndrome (CMS) is a group of genetic disorders of neuromuscular transmission that is characterized by muscle weakness. A mutation in the gene encoding agrin (AGRN) is a rare cause of CMS, and only a few families or isolated cases have been reported. We reported a pediatric proband exhibiting muscle weakness in the trunk and limbs with skeletal malformation and intellectual disability and performed whole-exome sequencing (WES) of the proband parent-offspring trio. Results revealed a new compound heterozygous mutation in AGRN: c.125A>C (p.Glu42Ala) in the N-terminal agrin domain (NtA) and c.4516G>A (p.Ala1506Thr) in the laminin G1 domain (LG1). Bioinformatic analysis predicted the mutation as possibly pathogenic. The new compound heterozygous mutation in AGRN may disrupt agrin's known function of bridging laminin and \u03b1-dystroglycan and undermine the formation and maintenance of the neuromuscular junction (NMJ) via both muscular and neural agrin pathways. It may also induce secondary peripheral neuropathy and skeletal malformation.",
+    "abstract_sections": [
+      {
+        "label": null,
+        "text": "Congenital myasthenic syndrome (CMS) is a group of genetic disorders of neuromuscular transmission that is characterized by muscle weakness. A mutation in the gene encoding agrin (AGRN) is a rare cause of CMS, and only a few families or isolated cases have been reported. We reported a pediatric proband exhibiting muscle weakness in the trunk and limbs with skeletal malformation and intellectual disability and performed whole-exome sequencing (WES) of the proband parent-offspring trio. Results revealed a new compound heterozygous mutation in AGRN: c.125A>C (p.Glu42Ala) in the N-terminal agrin domain (NtA) and c.4516G>A (p.Ala1506Thr) in the laminin G1 domain (LG1). Bioinformatic analysis predicted the mutation as possibly pathogenic. The new compound heterozygous mutation in AGRN may disrupt agrin's known function of bridging laminin and \u03b1-dystroglycan and undermine the formation and maintenance of the neuromuscular junction (NMJ) via both muscular and neural agrin pathways. It may also induce secondary peripheral neuropathy and skeletal malformation."
+      }
+    ],
+    "mesh_terms": [],
+    "keywords": [
+      "AGRN",
+      "agrin",
+      "congenital myasthenic syndrome",
+      "missense mutation",
+      "whole-exome sequencing"
+    ]
+  }
+}

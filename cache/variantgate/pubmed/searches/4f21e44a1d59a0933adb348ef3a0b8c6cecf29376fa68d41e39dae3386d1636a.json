@@ -1,0 +1,13 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_pubmed_esearch",
+  "query": "\"c.3163-15C>T\"[Title/Abstract] AND \"INTS11\"[Title/Abstract]",
+  "retmax": 20,
+  "retrieved_at": "2026-09-06T18:49:13.778982+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22c.3163-15C%3ET%22%5BTitle%2FAbstract%5D+AND+%22INTS11%22%5BTitle%2FAbstract%5D&retmax=20&sort=relevance&retmode=json&tool=variantgate",
+  "raw_response_sha256": "ad3f8f0d926effbd6b87b8913430905b9d988db9e7206b6741eeb1c9d8d3341f",
+  "cache_hit": false,
+  "count": 0,
+  "pmids": [],
+  "query_translation": "\"c.3163-15C>T\"[Title/Abstract] AND \"INTS11\"[Title/Abstract]"
+}

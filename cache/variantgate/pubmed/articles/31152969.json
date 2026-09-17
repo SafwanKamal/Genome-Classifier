@@ -1,0 +1,37 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_pubmed_esummary",
+  "pmid": "31152969",
+  "retrieved_at": "2026-09-06T17:37:37.125021+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id=28492532%2C31152969%2C20301532%2C20301550%2C30813707%2C29355391%2C25311215%2C24846033%2C24827857%2C23667368%2C23649446%2C23562183%2C25741868%2C20301648&retmode=json&tool=variantgate",
+  "raw_summary_sha256": "bb88e45545a79ad05d589a817b8dae8e906e4cadbb6addc0cf79b59c0eca44d9",
+  "cache_hit": false,
+  "article": {
+    "status": "found",
+    "pmid": "31152969",
+    "title": "A very mild phenotype of Charcot-Marie-Tooth disease type 4H caused by two novel mutations in FGD4.",
+    "authors": [
+      "Argente-Escrig H",
+      "S\u00e1nchez-Monteagudo A",
+      "Frasquet M",
+      "Millet-Sancho E",
+      "Mart\u00ednez-Rubio MD",
+      "Pitarch I",
+      "Tom\u00e1s M",
+      "Espin\u00f3s C",
+      "Lupo V",
+      "Sevilla T"
+    ],
+    "last_author": "Sevilla T",
+    "journal": "Journal of the neurological sciences",
+    "publication_date": "2019 Jul 15",
+    "electronic_publication_date": "2019 May 15",
+    "publication_types": [
+      "Case Reports",
+      "Journal Article"
+    ],
+    "doi": "10.1016/j.jns.2019.05.015",
+    "pmc_id": null,
+    "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/31152969/"
+  }
+}

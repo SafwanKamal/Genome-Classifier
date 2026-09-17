@@ -1,0 +1,35 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_pubmed_esummary",
+  "pmid": "23649446",
+  "retrieved_at": "2026-09-06T17:37:37.125021+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id=28492532%2C31152969%2C20301532%2C20301550%2C30813707%2C29355391%2C25311215%2C24846033%2C24827857%2C23667368%2C23649446%2C23562183%2C25741868%2C20301648&retmode=json&tool=variantgate",
+  "raw_summary_sha256": "cdc190b3f4557463c7381cf1ebeac2548da81eead803d9f74eaca47b930a04cd",
+  "cache_hit": false,
+  "article": {
+    "status": "found",
+    "pmid": "23649446",
+    "title": "Treatment of stage IV non-small cell lung cancer: Diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians evidence-based clinical practice guidelines.",
+    "authors": [
+      "Socinski MA",
+      "Evans T",
+      "Gettinger S",
+      "Hensing TA",
+      "VanDam Sequist L",
+      "Ireland B",
+      "Stinchcombe TE"
+    ],
+    "last_author": "Stinchcombe TE",
+    "journal": "Chest",
+    "publication_date": "2013 May",
+    "electronic_publication_date": "",
+    "publication_types": [
+      "Journal Article",
+      "Practice Guideline",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "doi": "10.1378/chest.12-2361",
+    "pmc_id": "PMC4694611",
+    "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/23649446/"
+  }
+}

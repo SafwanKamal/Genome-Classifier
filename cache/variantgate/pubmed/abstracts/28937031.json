@@ -1,0 +1,43 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_pubmed_efetch",
+  "pmid": "28937031",
+  "retrieved_at": "2026-09-06T18:49:20.891272+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=40751879%2C32221959%2C31268420%2C42474733%2C35948834%2C28027327%2C32328026%2C38322629%2C24040338%2C34433720%2C24343233%2C28072465%2C29478601%2C22205389%2C27364156%2C32271162%2C36609795%2C36308527%2C28937031%2C33390901&retmode=xml&tool=variantgate",
+  "raw_record_sha256": "c66e183861f0628e24463d10546d81fccaa1b3fb416565dd74a7c8c427379e71",
+  "cache_hit": false,
+  "content": {
+    "status": "found",
+    "pmid": "28937031",
+    "abstract": "BACKGROUND: Congenital myasthenic syndromes (CMSs) are a group of clinically and genetically heterogeneous disorders caused by impaired neuromuscular transmission. The defect of AGRN was one of the causes of CMS through influencing the development and maintenance of neuromuscular transmission. However, CMS reports about this gene mutation were rare. Here, we report a novel homozygous missense mutation (c.5302G>C) of AGRN in a Chinese CMS pedigree.\nMETHODS: We performed a detailed clinical assessment of a Chinese family with three affected members. We screened for pathogenic mutations using a disease-related gene panel containing 519 genes associated with genetic myopathy (including 17 CMS genes).\nRESULTS: In the family, the proband showed limb-girdle pattern of weakness with sparing of ocular, facial, bulbar, and respiratory muscles. Repetitive nerve stimulation showed a clear decrement of the compound muscle action potentials at 3 Hz only. Pathological analysis of the left tibialis anterior muscle showed predominance of type I fiber and the presence of scattered small angular fibers. The proband's two elder sisters shared a similar but more severe phenotype. By gene analysis, the same novel homozygous mutation (c.5302G>C, p. A1768P) of AGRN was identified in all three affected members, whereas the same heterozygous mutation was found in both parents, revealing an autosomal recessive transmission pattern. All patients showed beneficial responses to adrenergic agonists.\nCONCLUSIONS: This study reports a Chinese pedigree in which all three children carried the same novel AGRN mutation have CMS only affecting limb-girdle muscle. These findings might expand the spectrum of mutation in AGRN and enrich the phenotype of CMS.",
+    "abstract_sections": [
+      {
+        "label": "BACKGROUND",
+        "text": "Congenital myasthenic syndromes (CMSs) are a group of clinically and genetically heterogeneous disorders caused by impaired neuromuscular transmission. The defect of AGRN was one of the causes of CMS through influencing the development and maintenance of neuromuscular transmission. However, CMS reports about this gene mutation were rare. Here, we report a novel homozygous missense mutation (c.5302G>C) of AGRN in a Chinese CMS pedigree."
+      },
+      {
+        "label": "METHODS",
+        "text": "We performed a detailed clinical assessment of a Chinese family with three affected members. We screened for pathogenic mutations using a disease-related gene panel containing 519 genes associated with genetic myopathy (including 17 CMS genes)."
+      },
+      {
+        "label": "RESULTS",
+        "text": "In the family, the proband showed limb-girdle pattern of weakness with sparing of ocular, facial, bulbar, and respiratory muscles. Repetitive nerve stimulation showed a clear decrement of the compound muscle action potentials at 3 Hz only. Pathological analysis of the left tibialis anterior muscle showed predominance of type I fiber and the presence of scattered small angular fibers. The proband's two elder sisters shared a similar but more severe phenotype. By gene analysis, the same novel homozygous mutation (c.5302G>C, p. A1768P) of AGRN was identified in all three affected members, whereas the same heterozygous mutation was found in both parents, revealing an autosomal recessive transmission pattern. All patients showed beneficial responses to adrenergic agonists."
+      },
+      {
+        "label": "CONCLUSIONS",
+        "text": "This study reports a Chinese pedigree in which all three children carried the same novel AGRN mutation have CMS only affecting limb-girdle muscle. These findings might expand the spectrum of mutation in AGRN and enrich the phenotype of CMS."
+      }
+    ],
+    "mesh_terms": [
+      "Female",
+      "Humans",
+      "Male",
+      "Mutation",
+      "Myasthenic Syndromes, Congenital",
+      "Pedigree",
+      "Receptors, Cholinergic",
+      "Synapses"
+    ],
+    "keywords": []
+  }
+}

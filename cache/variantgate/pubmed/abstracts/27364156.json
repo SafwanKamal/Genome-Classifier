@@ -1,0 +1,56 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_pubmed_efetch",
+  "pmid": "27364156",
+  "retrieved_at": "2026-09-06T18:49:20.891272+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=40751879%2C32221959%2C31268420%2C42474733%2C35948834%2C28027327%2C32328026%2C38322629%2C24040338%2C34433720%2C24343233%2C28072465%2C29478601%2C22205389%2C27364156%2C32271162%2C36609795%2C36308527%2C28937031%2C33390901&retmode=xml&tool=variantgate",
+  "raw_record_sha256": "f651ca91501adaadf8314026fb187ce184e21ca952bacf51645b37c2c3b7041f",
+  "cache_hit": false,
+  "content": {
+    "status": "found",
+    "pmid": "27364156",
+    "abstract": "BACKGROUND: Bovine arthrogryposis multiplex congenita (AMC) is a syndromic term for a congenital condition characterized by multiple joint contractures. Rare inherited forms of bovine AMC have been reported in different breeds. For AMC in Angus cattle a causative genomic deletion encompassing the agrin (AGRN) gene, encoding an essential neural regulator that induces the aggregation of acetylcholine receptors (AChRs), is known. In 2015, three genetically related cases of generalized AMC affecting Red dairy calves were diagnosed in Denmark.\nRESULTS: The family history of three affected calves suggested an autosomal recessive inheritance. Single nucleotide polymorphism (SNP) genotyping showed a single genomic region of extended homozygosity of 21.5\u00a0Mb on chromosome 19. Linkage analysis revealed a maximal parametric LOD score of 1.8 at this region. By whole genome re-sequencing of the three cases, two private homozygous non-synonymous variants were detected in the critical interval. Both variants, located in the myosin phosphatase Rho interacting protein (MPRIP) and the cholinergic receptor nicotinic beta 1 subunit gene (CHRNB1), were perfectly associated with the AMC phenotype. Previously described CHRNB1 variants in humans lead to a congenital myasthenic syndrome with impaired neuromuscular transmission. The cattle variant represents a single base deletion in the first exon of CHRNB1 (c.55delG) introducing a premature stop codon (p.Ala19Profs47*) in the second exon, truncating 96\u00a0% of the protein.\nCONCLUSIONS: This study provides the first phenotypically and genetically characterized example of a bovine AMC phenotype that represents an inherited neuromuscular disorder corresponding to human congenital myasthenic syndrome. The identified CHRNB1 loss of function variant is predicted to have a deleterious effect on fetal AChR function, which could explain the lethal phenotype reported in this study. The identification of this candidate causative mutation thus widens the known phenotypic spectrum of CHRNB1 mutations and enables selection against this pathogenic variant in Red dairy cattle.",
+    "abstract_sections": [
+      {
+        "label": "BACKGROUND",
+        "text": "Bovine arthrogryposis multiplex congenita (AMC) is a syndromic term for a congenital condition characterized by multiple joint contractures. Rare inherited forms of bovine AMC have been reported in different breeds. For AMC in Angus cattle a causative genomic deletion encompassing the agrin (AGRN) gene, encoding an essential neural regulator that induces the aggregation of acetylcholine receptors (AChRs), is known. In 2015, three genetically related cases of generalized AMC affecting Red dairy calves were diagnosed in Denmark."
+      },
+      {
+        "label": "RESULTS",
+        "text": "The family history of three affected calves suggested an autosomal recessive inheritance. Single nucleotide polymorphism (SNP) genotyping showed a single genomic region of extended homozygosity of 21.5\u00a0Mb on chromosome 19. Linkage analysis revealed a maximal parametric LOD score of 1.8 at this region. By whole genome re-sequencing of the three cases, two private homozygous non-synonymous variants were detected in the critical interval. Both variants, located in the myosin phosphatase Rho interacting protein (MPRIP) and the cholinergic receptor nicotinic beta 1 subunit gene (CHRNB1), were perfectly associated with the AMC phenotype. Previously described CHRNB1 variants in humans lead to a congenital myasthenic syndrome with impaired neuromuscular transmission. The cattle variant represents a single base deletion in the first exon of CHRNB1 (c.55delG) introducing a premature stop codon (p.Ala19Profs47*) in the second exon, truncating 96\u00a0% of the protein."
+      },
+      {
+        "label": "CONCLUSIONS",
+        "text": "This study provides the first phenotypically and genetically characterized example of a bovine AMC phenotype that represents an inherited neuromuscular disorder corresponding to human congenital myasthenic syndrome. The identified CHRNB1 loss of function variant is predicted to have a deleterious effect on fetal AChR function, which could explain the lethal phenotype reported in this study. The identification of this candidate causative mutation thus widens the known phenotypic spectrum of CHRNB1 mutations and enables selection against this pathogenic variant in Red dairy cattle."
+      }
+    ],
+    "mesh_terms": [
+      "Animals",
+      "Arthrogryposis",
+      "Autopsy",
+      "Cattle",
+      "Cattle Diseases",
+      "Chromosome Mapping",
+      "DNA Mutational Analysis",
+      "Diagnosis",
+      "Female",
+      "Frameshift Mutation",
+      "Genetic Association Studies",
+      "Imaging, Three-Dimensional",
+      "Male",
+      "Pedigree",
+      "Receptors, Nicotinic",
+      "Tomography, X-Ray Computed"
+    ],
+    "keywords": [
+      "Cattle",
+      "Congenital",
+      "Gene test",
+      "Linkage mapping",
+      "Malformation",
+      "Myasthenic syndrome",
+      "Neuromuscular disorder",
+      "Rare disease"
+    ]
+  }
+}

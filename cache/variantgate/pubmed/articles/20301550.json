@@ -1,0 +1,36 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_pubmed_esummary",
+  "pmid": "20301550",
+  "retrieved_at": "2026-09-06T17:37:37.125021+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id=28492532%2C31152969%2C20301532%2C20301550%2C30813707%2C29355391%2C25311215%2C24846033%2C24827857%2C23667368%2C23649446%2C23562183%2C25741868%2C20301648&retmode=json&tool=variantgate",
+  "raw_summary_sha256": "7f765b0d5d93f41b0e1a905c4df7f8ee62516955eb2793cf7b88b09eb37d91e9",
+  "cache_hit": false,
+  "article": {
+    "status": "found",
+    "pmid": "20301550",
+    "title": "Schimke Immunoosseous Dysplasia.",
+    "authors": [
+      "Adam MP",
+      "Bick S",
+      "Mirzaa GM",
+      "Wallace SE",
+      "Amemiya A",
+      "Lippner E",
+      "L\u00fccke T",
+      "Salgado C",
+      "Boerkoel C",
+      "Lewis DB"
+    ],
+    "last_author": "Lewis DB",
+    "journal": "",
+    "publication_date": "1993",
+    "electronic_publication_date": "",
+    "publication_types": [
+      "Review"
+    ],
+    "doi": null,
+    "pmc_id": null,
+    "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/20301550/"
+  }
+}

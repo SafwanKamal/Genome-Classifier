@@ -1,0 +1,50 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_pubmed_esummary",
+  "pmid": "36308527",
+  "retrieved_at": "2026-09-06T18:49:20.023716+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id=40751879%2C32221959%2C31268420%2C42474733%2C35948834%2C28027327%2C32328026%2C38322629%2C24040338%2C34433720%2C24343233%2C28072465%2C29478601%2C22205389%2C27364156%2C32271162%2C36609795%2C36308527%2C28937031%2C33390901&retmode=json&tool=variantgate",
+  "raw_summary_sha256": "5ed744f48ca2ae491335815cd3fb3bacf9040b940c65dd3e40ab5311a5a72dbe",
+  "cache_hit": false,
+  "article": {
+    "status": "found",
+    "pmid": "36308527",
+    "title": "The clinical and molecular landscape of congenital myasthenic syndromes in Austria: a nationwide study.",
+    "authors": [
+      "Krenn M",
+      "Sener M",
+      "Rath J",
+      "Zulehner G",
+      "Keritam O",
+      "Wagner M",
+      "Laccone F",
+      "Iglseder S",
+      "Marte S",
+      "Baumgartner M",
+      "Eisenk\u00f6lbl A",
+      "Liechtenstein C",
+      "Rudnik S",
+      "Quasthoff S",
+      "Grinzinger S",
+      "Spenger J",
+      "Wortmann SB",
+      "L\u00f6scher WN",
+      "Zimprich F",
+      "Kellersmann A",
+      "Rappold M",
+      "Bernert G",
+      "Freilinger M",
+      "Cetin H"
+    ],
+    "last_author": "Cetin H",
+    "journal": "Journal of neurology",
+    "publication_date": "2023 Feb",
+    "electronic_publication_date": "2022 Oct 29",
+    "publication_types": [
+      "Journal Article"
+    ],
+    "doi": "10.1007/s00415-022-11440-0",
+    "pmc_id": "PMC9886627",
+    "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/36308527/"
+  }
+}

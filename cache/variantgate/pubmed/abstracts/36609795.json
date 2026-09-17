@@ -1,0 +1,36 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_pubmed_efetch",
+  "pmid": "36609795",
+  "retrieved_at": "2026-09-06T18:49:20.891272+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=40751879%2C32221959%2C31268420%2C42474733%2C35948834%2C28027327%2C32328026%2C38322629%2C24040338%2C34433720%2C24343233%2C28072465%2C29478601%2C22205389%2C27364156%2C32271162%2C36609795%2C36308527%2C28937031%2C33390901&retmode=xml&tool=variantgate",
+  "raw_record_sha256": "64bf9d8e6c42e53727d2db533cb44faa2e4202ac33b3ac73c8c7c1cdff829e51",
+  "cache_hit": false,
+  "content": {
+    "status": "found",
+    "pmid": "36609795",
+    "abstract": "Although physiological data suggest that neuromuscular junction (NMJ) dysfunction is a principal mechanism underpinning sarcopenia, genetic studies have implicated few genes involved in NMJ function. Accordingly, we explored whether genes encoding agrin (AGRN) and neurotrypsin (PRSS12) were associated with sarcopenia phenotypes: muscle mass, strength and plasma C-terminal agrin fragment (CAF). PhenoScanner was used to determine if AGRN and/or PRSS12 variants had previously been implicated with sarcopenia phenotypes. For replication, we combined genotype from whole genome sequencing with phenotypic data from 6715 GenoFit participants aged 18-83\u00a0years. Dual energy X-ray absorptiometry assessed whole body lean mass (WBLM) and appendicular lean mass (ALM), hand dynamometry determined grip strength and ELISA measured plasma CAF in a subgroup (n\u2009=\u2009260). Follow-up analyses included eQTL analyses, carrier analyses, single-variant and gene-burden tests. rs2710873 (AGRN) and rs71608359 (PRSS12) associate with muscle mass and strength phenotypes, respectively, in the UKBB (p\u2009=\u20098.9\u2009\u00d7\u200910-6 and p\u2009=\u20098.4\u2009\u00d7\u200910-6) and GenoFit cohort (p\u2009=\u20090.019 and p\u2009=\u20090.014). rs2710873 and rs71608359 are eQTLs for AGRN and PRSS12, respectively, in\u2009\u2265\u2009three tissues. Compared to non-carriers, carriers of rs2710873 had 4.0% higher WBLM and ALM (both p\u2009<\u20090.001), and 9.5% lower CAF concentrations (p\u2009<\u20090.001), while carriers of rs71608359 had 2.3% lower grip strength (p\u2009=\u20090.034). AGRN and PRSS12 are associated with muscle strength and mass in single-variant analyses, while PRSS12 has further associations with muscle strength in gene-burden tests. Our findings provide novel evidence of the relevance of AGRN and PRSS12 to sarcopenia phenotypes and support existing physiological data illustrating the importance of the NMJ in maintaining muscle health during ageing.",
+    "abstract_sections": [
+      {
+        "label": null,
+        "text": "Although physiological data suggest that neuromuscular junction (NMJ) dysfunction is a principal mechanism underpinning sarcopenia, genetic studies have implicated few genes involved in NMJ function. Accordingly, we explored whether genes encoding agrin (AGRN) and neurotrypsin (PRSS12) were associated with sarcopenia phenotypes: muscle mass, strength and plasma C-terminal agrin fragment (CAF). PhenoScanner was used to determine if AGRN and/or PRSS12 variants had previously been implicated with sarcopenia phenotypes. For replication, we combined genotype from whole genome sequencing with phenotypic data from 6715 GenoFit participants aged 18-83\u00a0years. Dual energy X-ray absorptiometry assessed whole body lean mass (WBLM) and appendicular lean mass (ALM), hand dynamometry determined grip strength and ELISA measured plasma CAF in a subgroup (n\u2009=\u2009260). Follow-up analyses included eQTL analyses, carrier analyses, single-variant and gene-burden tests. rs2710873 (AGRN) and rs71608359 (PRSS12) associate with muscle mass and strength phenotypes, respectively, in the UKBB (p\u2009=\u20098.9\u2009\u00d7\u200910-6 and p\u2009=\u20098.4\u2009\u00d7\u200910-6) and GenoFit cohort (p\u2009=\u20090.019 and p\u2009=\u20090.014). rs2710873 and rs71608359 are eQTLs for AGRN and PRSS12, respectively, in\u2009\u2265\u2009three tissues. Compared to non-carriers, carriers of rs2710873 had 4.0% higher WBLM and ALM (both p\u2009<\u20090.001), and 9.5% lower CAF concentrations (p\u2009<\u20090.001), while carriers of rs71608359 had 2.3% lower grip strength (p\u2009=\u20090.034). AGRN and PRSS12 are associated with muscle strength and mass in single-variant analyses, while PRSS12 has further associations with muscle strength in gene-burden tests. Our findings provide novel evidence of the relevance of AGRN and PRSS12 to sarcopenia phenotypes and support existing physiological data illustrating the importance of the NMJ in maintaining muscle health during ageing."
+      }
+    ],
+    "mesh_terms": [
+      "Humans",
+      "Sarcopenia",
+      "Agrin",
+      "Muscles",
+      "Peptide Fragments",
+      "Serine Endopeptidases"
+    ],
+    "keywords": [
+      "Agrin",
+      "Genes",
+      "Muscle mass",
+      "Muscle strength",
+      "Neuromuscular junction",
+      "Sarcopenia"
+    ]
+  }
+}

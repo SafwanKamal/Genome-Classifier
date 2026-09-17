@@ -1,0 +1,12 @@
+{
+  "format_version": 1,
+  "provider": "ncbi_clinvar_esummary",
+  "variation_id": 623584,
+  "retrieved_at": "2026-09-06T06:37:27.032449+00:00",
+  "request_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=clinvar&id=4233276%2C731516%2C1454283%2C244113%2C608899%2C1109245%2C623584%2C3683654%2C2671964%2C2202680&retmode=json&tool=variantgate",
+  "raw_summary_sha256": "b825be432d114a5fa93a5335c7fee7af19ef18ffe5371607b424c64d3fe56f01",
+  "raw_summary": {
+    "uid": "623584",
+    "error": "cannot get document summary"
+  }
+}
