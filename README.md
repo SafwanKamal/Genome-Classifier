@@ -1,147 +1,185 @@
 # Genome Classifier FPGA
 
-An FPGA-assisted system for **genomic missense-variant triage**. The project couples a reproducible, quantized machine-learning pipeline with a deterministic SystemVerilog accelerator on the **Digilent Nexys 4 DDR (Artix-7 / Nexys A7-100T)**.
+An end-to-end research prototype for **genomic missense-variant triage**. The project turns a reproducible ClinVar/dbNSFP data pipeline into a small quantized neural network, deploys that model as deterministic SystemVerilog on a Nexys 4 DDR (Artix-7 / Nexys A7-100T), and uses the resulting score to prioritize evidence review.
 
-The FPGA produces a fast integer score for each variant. That score is intended to prioritize variants for deeper evidence review—not to make a clinical diagnosis. The broader project direction is an agentic, source-linked interpretation workflow in which the FPGA provides a low-latency first-pass triage stage.
+The intended role is **triage**, not clinical diagnosis: a fast FPGA score ranks variants for lightweight or deep review, while the software pipeline gathers, reconciles, and reports source-linked evidence. Any real interpretation must remain subject to expert review and validated clinical workflows.
 
-## Current status
+## Why this project
 
-| Area | Status |
+Missense-variant interpretation has two complementary bottlenecks:
+
+1. A large number of variants need an inexpensive, reproducible first pass.
+2. The smaller set worth deeper attention needs evidence that is traceable back to its sources.
+
+This repository explores both sides. The FPGA supplies deterministic low-latency scoring, while the **VariantGate** software layer provides a provenance-aware path from model score to ClinVar and literature evidence, reconciliation, and human-readable reports.
+
+## System overview
+
+| Layer | Responsibility |
 |---|---|
-| Quantized V2 model (`16 → 8 → 1`) | Implemented and simulated bit-exactly |
-| FPGA inference over UART | Verified on hardware |
-| Ethernet RMII transmit path | Verified on hardware with Wireshark |
-| Ethernet receive / ARP / IPv4 / UDP endpoint | Planned |
-| Ethernet transport of classifier results | Planned |
+| Dataset pipeline | Build a labeled missense-variant dataset and an explicit 16-feature INT8 contract |
+| Quantized model | Train and evaluate a hardware-matched `16 → 8 → 1` network |
+| FPGA RTL | Execute exported fixed-point parameters with deterministic integer arithmetic |
+| Host backends | Run NumPy, UART-FPGA, or comparison inference through a common interface |
+| Routing | Allocate variants to deep or light review using a recall-constrained threshold |
+| Evidence pipeline | Retrieve ClinVar and PubMed evidence, reconcile sources, and generate auditable reports |
+| Ethernet work | Develop a reusable FPGA result-transport interface, beginning with raw RMII transmit |
 
-## FPGA triage accelerator
+## Reproducible genomic dataset
 
-The deployed accelerator evaluates a small quantized dense neural network using deterministic fixed-point arithmetic.
+The dataset pipeline starts from ClinVar GRCh38 records and keeps only an initial cohort of unambiguous missense variants with supported pathogenic/benign labels and review-status filtering. It joins dbNSFP-derived annotations, selects transcripts with a defined preference order (MANE Select, then fallbacks), derives amino-acid substitution features, builds quantized features, and validates the final contract.
 
-- **Inputs:** 16 ordered signed INT8 genomic features
-- **V2 model:** `16 → 8 → 1`
-- **Weights:** signed INT8, exported into memory files
-- **Biases and accumulation:** signed INT32
-- **Hidden activation:** ReLU, quantization shift, and INT8 saturation
-- **Output:** signed INT32 triage score
-- **Decision convention:** score `>= 0` is the model's pathogenic-side prediction
+The V1 validation manifest records:
 
-The RTL is designed as a scalable dense-engine path with packed weight/bias memories, synchronous ROM sequencing, and reused arithmetic rather than a separately hand-written datapath for every neuron.
+- **184,186** labeled variants across **13,989** genes
+- Gene-disjoint train/validation/test split
+- Train: 128,416 variants, 9,789 genes
+- Validation: 28,293 variants, 2,101 genes
+- Locked test: 27,477 variants, 2,099 genes
+- dbNSFP match rate: **99.39%**
 
-### Verification results
+The model always uses the ordered 16-feature contract recorded in the export manifest. This ordering is part of the hardware/software interface—not an informal preprocessing detail.
 
-- V2 behavioral simulation: **1,000 bit-exact vectors passed**
-- Latency: **122 cycles per inference**
-- Hardware UART smoke test: **100 / 100 FPGA–NumPy comparisons matched**
-- Full held-out V1 UART verification: **27,477 / 27,477 bit-exact matches**, **0 mismatches**
+For the detailed pipeline, schema, inputs, and commands, see [`genomic-dataset-pipeline/README.md`](genomic-dataset-pipeline/README.md) and [`ANNOTATION_SCHEMA.md`](genomic-dataset-pipeline/ANNOTATION_SCHEMA.md).
 
-The hardware checks validate feature ordering and signed representation, exported memories, MAC arithmetic, activation/quantization behavior, threshold handling, UART packet framing, CRC, and response byte order.
+## Quantized FPGA model
 
-### Routing policy
+The current model is a quantization-aware `16 → 8 → 1` dense network.
 
-The current routing policy uses the FPGA score to decide whether a variant should receive deep evidence review.
+- Inputs and weights: signed INT8
+- Biases and accumulators: signed INT32
+- Hidden activation: ReLU, round-half-up requantization with `QSHIFT = 4`, then INT8 saturation
+- Output: signed INT32 folded score
+- Classification convention: `score >= 0`
 
-- Frozen routing threshold: **-276**
-- Pathogenic recall on validation: **99.5099%**
-- Deep-review fraction: **47.63%** (13,475 of 28,293 validation variants)
-- Light-review fraction: **52.37%** (14,818 variants)
+The exported parameter manifest includes SHA-256 hashes, feature order, accumulator bounds, packed-memory layout, and the folded output bias. The hardware-oriented model in Python and the RTL are tested against the same integer arithmetic rules.
 
-This is a prioritization policy: it deliberately keeps recall high while reducing the number of variants that need the most expensive downstream analysis.
+The scalable `dense_engine` uses packed weight memories and reusable MAC lanes:
 
-## Ethernet bring-up
+- Hidden layer: four MAC lanes
+- Output layer: one MAC lane
+- Packed ordering: output group, input, lane
+- Lane 0 occupies the most-significant packed bits
 
-The project is adding a reusable, custom 100 Mb/s Ethernet transmit path instead of relying on vendor MAC IP. This interface is meant to become a reusable transport layer for classifier results and later FPGA projects.
+This keeps the architecture extensible without duplicating hand-written neuron datapaths.
 
-### Hardware-verified milestone
+## Model results
 
-The Nexys 4 DDR's LAN8720A PHY has negotiated a stable **100 Mb/s** Ethernet link, and the FPGA now sends an accepted raw Ethernet broadcast once per second.
+### V2 locked-test evaluation
 
-Wireshark observed:
+| Metric | Result |
+|---|---:|
+| Architecture | `16 → 8 → 1` |
+| Locked test variants | 27,477 |
+| Unique test genes | 2,099 |
+| PyTorch–NumPy score matches | 27,477 / 27,477 |
+| ROC-AUC | 0.98823 |
+| Average precision | 0.97555 |
+| Accuracy | 95.46% |
+| Precision | 93.22% |
+| Recall | 91.67% |
+| F1 | 0.92438 |
 
+The locked test set was not used to select the model, classification threshold, or routing threshold.
+
+### Physical FPGA verification
+
+The prior `16 → 4 → 1` hardware deployment completed a full locked-test UART validation:
+
+- Board: Nexys A7-100T
+- Clock: 100 MHz
+- UART: 115,200 baud
+- Variants sent: 27,477
+- Bit-exact matches: **27,477**
+- Bit-exact mismatches: **0**
+
+V2 behavioral simulation also passed 1,000 bit-exact vectors at **122 cycles per inference**; the V2 FPGA smoke test matched NumPy on 100/100 comparisons.
+
+These checks cover signed encoding, memory export, multiply-accumulate arithmetic, quantization, folded threshold behavior, UART packet framing, CRC, and response byte order.
+
+## Recall-first routing policy
+
+The classifier score is also used as a resource-allocation signal. The frozen V2 policy sends a variant to deep review when `score >= -276`.
+
+| Validation-policy measure | Result |
+|---|---:|
+| Target pathogenic recall | 99.5% |
+| Achieved pathogenic recall | 99.5099% |
+| Deep review | 13,475 variants (47.63%) |
+| Light review | 14,818 variants (52.37%) |
+| Pathogenic variants routed to light review | 34 of 6,938 |
+
+The routing threshold is separate from the classifier's `score >= 0` decision convention. Its purpose is to preserve very high pathogenic recall while concentrating the costlier evidence workflow on the most relevant portion of the cohort.
+
+## VariantGate evidence workflow
+
+`software/variantgate/` provides a modular, test-covered evidence layer:
+
+- common inference interface with NumPy, UART-FPGA, and comparison backends;
+- ClinVar summary retrieval with identifier normalization and caching;
+- linked PubMed retrieval through NCBI E-utilities;
+- direct, bounded PubMed search built from variant/gene/HGVS context;
+- explicit relevance and identity checks to avoid treating weak search hits as verified evidence;
+- reconciliation of model output, ClinVar, linked literature, and direct-search literature;
+- JSON/JSONL outputs, manifests, and Markdown report generation.
+
+The evidence workflow is designed to preserve provenance and disagreement. It reports missing, uncertain, or conflicting evidence rather than silently converting it into a definitive answer.
+
+## FPGA implementation
+
+The main RTL is under `rtl/`.
+
+| Component | Purpose |
+|---|---|
+| `variant_triage_core.sv` | Core inference control and model integration |
+| `dense_engine.sv` | Parameterized packed-memory dense-layer engine |
+| `dense_layer.sv`, `dense_neuron.sv` | Earlier dense-layer/neuron implementation path |
+| `ReLU_quantizer.sv` | Hardware-matched ReLU and requantization |
+| `UART_Packet_RX.sv`, `UART_Response_TX.sv` | Request/response protocol around FPGA inference |
+| `FIFO*.sv`, `parameterized_reg_file.sv` | Supporting storage/control blocks |
+| `simulation/` | RTL testbenches and generated bit-exact vectors |
+
+The Vivado recreation script currently targets the classifier build. Board constraints for the normal design are in `constraints/nexys_4_DDR.xdc`.
+
+## Ethernet transport bring-up
+
+Ethernet is an active extension of the FPGA interface, not the primary project itself. The custom RMII transmit stack is deliberately vendor-IP-free and consists of a serializer, Ethernet CRC-32 unit, framing/padding/FCS controller, complete-frame buffer, and raw test top.
+
+The first on-board milestone is verified:
+
+- LAN8720A PHY link negotiated at **100 Mb/s**
+- FPGA broadcasts one raw Ethernet frame per second
 - Source MAC: `02:00:00:00:00:01`
-- Destination MAC: `FF:FF:FF:FF:FF:FF` (broadcast)
 - EtherType: `0x88B5` (local experimental)
-- Ethernet frame length before FCS: 60 bytes
-- Cadence: 1 frame/s
+- Wireshark accepts the 60-byte frames
 
-A useful capture filter is:
+Useful capture filter:
 
 ```
 eth.type == 0x88b5 && eth.src == 02:00:00:00:00:01
 ```
 
-### TX architecture
+The known-good clocking arrangement sends a direct 50 MHz reference clock to the PHY and uses a related 180° 50 MHz clock for MAC transmit logic, so RMII data updates occur between PHY sampling edges. Ethernet receive, ARP, IPv4, UDP, and classifier-result packets are future work.
 
-The transmit path is intentionally split into independent blocks.
+## Repository layout
 
-- `rmii_TX.sv` serializes each byte into four 2-bit RMII dibits at 50 MHz.
-- `ethernet_CRC32.sv` computes the Ethernet CRC-32 over the MAC frame and padding.
-- `ethernet_TX.sv` adds the seven-byte preamble, SFD, minimum-frame padding, four-byte FCS, and minimum 96-bit inter-frame gap.
-- `ethernet_TX_buffer.sv` stores a complete frame before transmission, supports ready/valid flow control, provides an overflow/discard path, and is structured to infer block RAM.
-- `ethernet_test_top_100M_config.sv` is the current raw-frame hardware test top.
-- `phy_mdio_config.sv` is retained for PHY-management experiments; the successful raw-TX configuration leaves the PHY in its board-default auto-negotiation mode.
-
-The test frame contains broadcast destination, local source MAC `02:00:00:00:00:01`, EtherType `0x88B5`, and payload bytes `00` through `2D`.
-
-### Timing and board lessons
-
-The LAN8720A uses RMII and needs a continuous **50 MHz reference clock**. The known-good hardware arrangement is:
-
-- Clocking Wizard generates a 50 MHz PHY-reference output and a related 180° 50 MHz MAC clock.
-- The PHY reference clock is driven **directly** to the PHY.
-- MAC transmit data changes on the phase-shifted clock, halfway between PHY sampling edges.
-- PHY reset remains asserted for 50 ms while the reference clock is already running, then releases synchronously.
-- The PHY's default auto-negotiation was sufficient for the verified 100 Mb/s link; MDIO configuration is not required for the raw-TX test.
-- The XDC disables default pulls on unused FPGA inputs so they do not disturb PHY mode straps.
-
-This direct-clock, two-phase approach replaced a forwarded-clock experiment that produced periodic link instability. It provides a clean phase relationship between RMII data updates and the PHY sampling clock.
-
-### Debug indicators
-
-For the raw Ethernet test top, the four LEDs are:
-
-| LED | Meaning |
-|---|---|
-| LD0 | Clocking Wizard locked |
-| LD1 | PHY reset released |
-| LD2 | Toggles after each completed frame transmission |
-| LD3 | Sticky TX underflow or buffer-overflow error |
-
-On the LAN8720A itself, the link/activity LED indicates a valid link; the speed LED being asserted indicates the 100 Mb/s negotiated mode.
-
-## Repository structure
-
-- `rtl/` — synthesizable SystemVerilog: classifier, UART, Ethernet TX, FIFO, and support modules
+- `genomic-dataset-pipeline/` — data download, parsing, annotation, feature build, QAT training, evaluation, and FPGA export
+- `rtl/` — synthesizable SystemVerilog for the triage accelerator, UART, and Ethernet TX
+- `simulation/` — SystemVerilog testbenches and vector files
 - `memory/` — exported quantized model parameters
-- `constraints/` — board constraints, including the standalone Ethernet test XDC
-- `simulation/` — SystemVerilog testbenches
-- `software/` — UART interface, model verification, and host utilities
-- `genomic-dataset-pipeline/` — dataset construction, training, evaluation, quantization, and parameter export
-- `reports/` — model manifests, routing policy, and evaluation outputs
-- `scripts/` — Vivado project-recreation scripts
+- `software/` — FPGA validation utilities and VariantGate orchestration/evidence tools
+- `reports/` — tracked data-quality, training, export, test, FPGA-validation, and routing-policy manifests
+- `constraints/` — Nexys board and standalone Ethernet constraints
+- `scripts/` — Vivado project-recreation script
+- `runs/` — generated scoring/evidence outputs when retained for reproducibility
 
-Generated datasets, raw databases, PyTorch checkpoints, Vivado build directories, and bitstreams are excluded from normal Git history.
-
-## Building the Ethernet test
-
-In Vivado, select `ethernet_test_top_100M_config` as the synthesis top and use only `constraints/ethernet_test_top.xdc` for the standalone Ethernet design. The project-recreation script currently targets the classifier top, so the Ethernet test is best created as a separate Vivado project or configured explicitly before synthesis.
-
-Create the Clocking Wizard IP as documented in the Ethernet top-level comments:
-
-- Input: 100 MHz
-- Output 1: 50 MHz, 0° phase, PHY reference clock
-- Output 2: 50 MHz, 180° phase, MAC/transmit clock
-
-Program the board, connect it through a switch, and capture on a host connected to the same network segment. The raw experimental broadcasts do not require an IP address or a host-side application.
+Raw databases, large generated datasets, trained checkpoints, Vivado build outputs, and bitstreams are excluded from normal Git history.
 
 ## Next steps
 
-1. Commit the known-good direct-PHY-clock two-output Clocking Wizard top-level and matching timing constraints.
-2. Remove the remaining duplicate procedural/continuous driver of `last_out` in `ethernet_TX_buffer.sv`.
-3. Define a compact Ethernet payload for classifier inputs/results while keeping EtherType `0x88B5` during validation.
-4. Add a host decoder and round-trip tests.
-5. Add RMII receive, ARP, static IPv4, and UDP only after the raw result protocol is stable.
-
-## Scope and research boundary
-
-This repository is an engineering/research prototype. It performs reproducible computational triage from ClinVar-derived labels; it is not a validated clinical decision system. Any final interpretation should remain evidence-based, source-linked, and subject to qualified human review.
+1. Finish the V2 full-set FPGA validation and preserve the same bit-exact evidence chain as V1.
+2. Integrate the classifier, routing policy, and VariantGate workflow into a single reproducible end-to-end run.
+3. Commit the known-good Ethernet clock/top-level revision and resolve the remaining `last_out` multiple-driver cleanup in the TX buffer.
+4. Define a compact raw-Ethernet result payload and host decoder.
+5. Add receive, ARP, static IPv4, and UDP only after the raw result protocol is stable.
+6. Expand evidence-source coverage while preserving source identity, provenance, and disagreement reporting.
