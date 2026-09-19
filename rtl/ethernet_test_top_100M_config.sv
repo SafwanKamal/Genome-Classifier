@@ -106,7 +106,7 @@ module ethernet_test_top_100M_config (
     //   12..15: reserved, zero
     function automatic logic [7:0] frame_byte(
         input logic [5:0] index,
-        input logic [31:0] sequence
+        input logic [31:0] sequence_number
     );
         case (index)
             0, 1, 2, 3, 4, 5: frame_byte = 8'hFF;
@@ -118,10 +118,10 @@ module ethernet_test_top_100M_config (
 
             14:               frame_byte = PROTOCOL_VERSION;
             15:               frame_byte = MESSAGE_RESULT;
-            16:               frame_byte = sequence[31:24];
-            17:               frame_byte = sequence[23:16];
-            18:               frame_byte = sequence[15:8];
-            19:               frame_byte = sequence[7:0];
+            16:               frame_byte = sequence_number[31:24];
+            17:               frame_byte = sequence_number[23:16];
+            18:               frame_byte = sequence_number[15:8];
+            19:               frame_byte = sequence_number[7:0];
             20:               frame_byte = TEST_SCORE[31:24];
             21:               frame_byte = TEST_SCORE[23:16];
             22:               frame_byte = TEST_SCORE[15:8];
