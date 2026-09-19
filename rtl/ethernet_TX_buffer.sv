@@ -77,7 +77,7 @@ module ethernet_TX_buffer #(
 
         ready_out = 1'b0;
         valid_out = 1'b0;
-        last_out = 1'b0;
+        // last_out = 1'b0;
 
         memory_write_enable = 1'b0;
         memory_read_enable = 1'b0;
@@ -163,7 +163,7 @@ module ethernet_TX_buffer #(
         if (tx_underflow_in &&
             ((state_reg == transmit) || (state_reg == wait_result))) begin
             valid_out = 1'b0;
-            last_out = 1'b0;
+            // last_out = 1'b0;
             memory_read_enable = 1'b0;
             byte_count_next = 0;
             read_address_next = 0;
@@ -174,7 +174,7 @@ module ethernet_TX_buffer #(
         if (reset) begin
             ready_out = 1'b0;
             valid_out = 1'b0;
-            last_out = 1'b0;
+            // last_out = 1'b0;
             memory_write_enable = 1'b0;
             memory_read_enable = 1'b0;
         end
@@ -183,7 +183,8 @@ module ethernet_TX_buffer #(
     assign data_out = memory_data_reg;
     assign busy_out = (state_reg != collect) || (byte_count_reg != 0);
     assign overflow_out = overflow_reg;
-    assign last_out = ({1'b0, read_address_reg} == byte_count_reg - 1'b1);
+    // assign last_out = ({1'b0, read_address_reg} == byte_count_reg - 1'b1);
+    assign last_out = (state_reg == transmit) && ({1'b0, read_address_reg} == byte_count_reg - 1'b1);
 
     // synthesis translate_off
     initial begin

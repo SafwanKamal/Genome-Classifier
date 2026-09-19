@@ -17,9 +17,10 @@ set_property -dict {PACKAGE_PIN N14 IOSTANDARD LVCMOS33} [get_ports {LED[3]}]
 # do not let unused fpga inputs pull down the phy's mode straps
 set_property BITSTREAM.CONFIG.UNUSEDPIN Pullnone [current_design]
 
-# d1=0, d2=1 forwards an inverted 50 mhz clock
-create_generated_clock -name PHY_clk -source [get_pins PHY_clock_forward/C] \
-    -divide_by 1 -invert [get_ports PHY_ref_clk]
+# clk_out1 directly drives PHY_ref_clk.
+# clk_out2 is a related 180-degree MAC clock.
+create_generated_clock -name PHY_clk -source [get_pins clock_generator/clk_out1] \
+    -divide_by 1 [get_ports PHY_ref_clk]
 
 # lan8720a ref_clk IN: setup 4 ns, hold 1.5 ns
 # add a provisional 1 ns allowance for pcb clock/data skew
