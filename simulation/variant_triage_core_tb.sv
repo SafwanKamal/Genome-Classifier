@@ -15,6 +15,9 @@ module variant_triage_core_tb;
     parameter string VECTOR_FILE =
         "model_v2_h8_core_vectors.mem";
 
+    // Run with -GPIPELINED=1 to test the pipelined dense_engine schedule.
+    parameter integer PIPELINED = 0;
+
 
     `include "model_parameters.svh"
 
@@ -67,7 +70,9 @@ module variant_triage_core_tb;
 
         .OUTPUT_BIAS_FILE(
             "dense_output_biases.mem"
-        )
+        ),
+
+        .PIPELINED(PIPELINED)
     ) DUT (
         .clk    (clk),
         .reset  (reset),

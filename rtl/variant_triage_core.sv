@@ -13,7 +13,10 @@ module variant_triage_core #(
         "dense_output_weights.mem",
 
     parameter string OUTPUT_BIAS_FILE =
-        "dense_output_biases.mem"
+        "dense_output_biases.mem",
+
+    // Passed to both dense engines. 0 keeps the original 3-clocks-per-input schedule.
+    parameter integer PIPELINED = 0
 ) (
     input logic clk,
     input logic reset,
@@ -68,7 +71,9 @@ module variant_triage_core #(
 
         .BIAS_FILE(
             HIDDEN_BIAS_FILE
-        )
+        ),
+
+        .PIPELINED(PIPELINED)
     ) hidden_dense_engine_inst (
         .clk        (clk),
         .reset      (reset),
@@ -108,7 +113,9 @@ module variant_triage_core #(
 
         .BIAS_FILE(
             OUTPUT_BIAS_FILE
-        )
+        ),
+
+        .PIPELINED(PIPELINED)
     ) output_dense_engine_inst (
         .clk        (clk),
         .reset      (reset),

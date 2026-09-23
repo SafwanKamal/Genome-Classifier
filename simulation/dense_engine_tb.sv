@@ -12,6 +12,9 @@ module dense_engine_tb;
 
     localparam integer MAXIMUM_CYCLES = 100;
 
+    // Run with -GPIPELINED=1 (or the simulator's equivalent) to test the pipelined schedule.
+    parameter integer PIPELINED = 0;
+
     logic clk;
     logic reset;
     logic start;
@@ -44,7 +47,9 @@ module dense_engine_tb;
 
         .BIAS_FILE(
             "dense_engine_test_biases.mem"
-        )
+        ),
+
+        .PIPELINED(PIPELINED)
     ) dense_engine_inst (
         .clk        (clk),
         .reset      (reset),
