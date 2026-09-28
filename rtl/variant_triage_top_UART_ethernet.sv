@@ -71,27 +71,28 @@ module variant_triage_top_UART_ethernet #(
         .score  (core_score)
     );
 
-    // UART_response_TX #(
-    //     .CLOCK_HZ (CLOCK_HZ),
-    //     .BAUD_RATE(BAUD_RATE),
-    //     .DATA_NUMBER(1)
-    // ) UART_response_TX_inst (
-    //     .clk   (clk),
-    //     .reset (reset),
-    //     .tx    (tx),
-    //     .data32(response), // We need to still pass an array even if the array has only 1 element
-    //     .send  (core_done),
-    //     .busy  (response_busy)
-    // );
+    UART_response_TX #(
+        .CLOCK_HZ (CLOCK_HZ),
+        .BAUD_RATE(BAUD_RATE),
+        .DATA_NUMBER(1)
+    ) UART_response_TX_inst (
+        .clk   (clk),
+        .reset (reset),
+        .tx    (tx),
+        .data32(response), // We need to still pass an array even if the array has only 1 element
+        .send  (core_done),
+        .busy  (response_busy)
+    );
 
+    // Ethernet being verified, compared to our tested UART implementation.
     score_clock_domain_crosser score_crosser_inst (
         .clk_100MHz(clk),
         .reset(reset),
         .score(core_score),
         .score_done(core_done),
-        .score_extracted(response_busy),
+        .score_extracted(clk_domain_crosser_extracted),
         .stable_score(clk_domain_crosser_stable_score),
-        .stable_score_store(clk_domain_crosser_stable_score_store)
+        .stable_score_stored(clk_domain_crosser_stable_score_store)
     );
 
 
