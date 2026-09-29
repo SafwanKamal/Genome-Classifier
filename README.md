@@ -23,7 +23,7 @@ This repository explores both sides. The FPGA supplies deterministic low-latency
 | Host backends | Run NumPy, UART-FPGA, or comparison inference through a common interface |
 | Routing | Allocate variants to deep or light review using a recall-constrained threshold |
 | Evidence pipeline | Retrieve ClinVar and PubMed evidence, reconcile sources, and generate auditable reports |
-| Ethernet work | Develop a reusable FPGA result-transport interface, beginning with raw RMII transmit |
+| Ethernet work | Develop the raw RMII transmit and receive interfaces for FPGA requests and results |
 
 ## Reproducible genomic dataset
 
@@ -159,12 +159,12 @@ Useful capture filter:
 eth.type == 0x88b5 && eth.src == 02:00:00:00:00:01
 ```
 
-The known-good clocking arrangement sends a direct 50 MHz reference clock to the PHY and uses a related 180° 50 MHz clock for MAC transmit logic, so RMII data updates occur between PHY sampling edges. Ethernet receive, ARP, IPv4, UDP, and classifier-result packets are future work.
+The known-good clocking arrangement sends a direct 50 MHz reference clock to the PHY and uses a related 180° 50 MHz clock for MAC transmit logic, so RMII data updates occur between PHY sampling edges. Raw Ethernet RX and its simulation are implemented; the board receive test is next. See [`docs/ethernet_RX.md`](docs/ethernet_RX.md) for the setup and test plan. ARP, IPv4, UDP, and classifier requests over Ethernet remain future work.
 
 ## Repository layout
 
 - `genomic-dataset-pipeline/` — data download, parsing, annotation, feature build, QAT training, evaluation, and FPGA export
-- `rtl/` — synthesizable SystemVerilog for the triage accelerator, UART, and Ethernet TX
+- `rtl/` — synthesizable SystemVerilog for the triage accelerator, UART, and Ethernet TX/RX
 - `simulation/` — SystemVerilog testbenches and vector files
 - `memory/` — exported quantized model parameters
 - `software/` — FPGA validation utilities and VariantGate orchestration/evidence tools
@@ -179,7 +179,7 @@ Raw databases, large generated datasets, trained checkpoints, Vivado build outpu
 
 1. Finish the V2 full-set FPGA validation and preserve the same bit-exact evidence chain as V1.
 2. Integrate the classifier, routing policy, and VariantGate workflow into a single reproducible end-to-end run.
-3. Commit the known-good Ethernet clock/top-level revision and resolve the remaining `last_out` multiple-driver cleanup in the TX buffer.
-4. Define a compact raw-Ethernet result payload and host decoder.
-5. Add receive, ARP, static IPv4, and UDP only after the raw result protocol is stable.
+3. Verify Ethernet RX timing and accepted frame bytes on the Nexys 4 DDR using a known `0x88B5` frame and ILA.
+4. Parse a complete 16-feature raw-Ethernet request, cross to the classifier clock, and return the result through TX. Compare the same vectors through UART.
+5. Add ARP, static IPv4, and UDP after the raw request/response path is verified.
 6. Expand evidence-source coverage while preserving source identity, provenance, and disagreement reporting.
