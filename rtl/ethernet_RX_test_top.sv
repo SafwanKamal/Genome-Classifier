@@ -18,9 +18,10 @@ module ethernet_RX_test_top (
     logic reset_request, rx_reset;
     (* ASYNC_REG = "TRUE" *) logic [1:0] reset_sync_reg = 2'b11;
     logic [21:0] reset_timer_reg;
-    logic [7:0] data_out;
-    logic valid_out, last_out;
-    logic good_frame, bad_frame, overflow;
+    // Vivado Set Up Debug can attach an ILA to these nets after synthesis.
+    (* mark_debug = "true" *) logic [7:0] data_out;
+    (* mark_debug = "true" *) logic valid_out, last_out;
+    (* mark_debug = "true" *) logic good_frame, bad_frame, overflow;
     logic good_seen_reg, bad_seen_reg, overflow_seen_reg;
 
     clk_wiz_ethernet clock_generator (
