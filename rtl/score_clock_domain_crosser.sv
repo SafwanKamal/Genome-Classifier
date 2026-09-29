@@ -1,4 +1,4 @@
-module clock_domain_mailbox #(
+module score_clock_domain_crosser #(
     parameter integer DATA_WIDTH = 32
 ) (
     // Source clock domain
