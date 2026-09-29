@@ -1,0 +1,30 @@
+name: Ethernet RX simulation
+on:
+  push:
+    paths:
+      - 'rtl/rmii_RX.sv'
+      - 'rtl/ethernet_RX.sv'
+      - 'rtl/ethernet_CRC32.sv'
+      - 'simulation/ethernet_RX_tb.sv'
+      - '.github/workflows/ethernet-rx.yml'
+  pull_request:
+    paths:
+      - 'rtl/rmii_RX.sv'
+      - 'rtl/ethernet_RX.sv'
+      - 'rtl/ethernet_CRC32.sv'
+      - 'simulation/ethernet_RX_tb.sv'
+      - '.github/workflows/ethernet-rx.yml'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Icarus Verilog
+        run: sudo apt-get update && sudo apt-get install -y iverilog
+      - name: Simulate raw Ethernet RX
+        run: |
+          iverilog -g2012 -s ethernet_RX_tb -o /tmp/ethernet_RX_tb.vvp \
+            rtl/rmii_RX.sv rtl/ethernet_CRC32.sv rtl/ethernet_RX.sv \
+            simulation/ethernet_RX_tb.sv
+          vvp /tmp/ethernet_RX_tb.vvp
