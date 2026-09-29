@@ -16,6 +16,7 @@ The Nexys 4 DDR can now receive raw Ethernet frames through its LAN8720A PHY. Th
 | `rtl/ethernet_RX_test_top.sv` | Standalone board test with LED indicators |
 | `constraints/ethernet_RX_test_top.xdc` | Nexys 4 DDR PHY pins and RX timing constraints |
 | `simulation/ethernet_RX_tb.sv` | Receive simulation |
+| `software/send_ethernet_RX_test.py` | Known PC-to-FPGA test frame |
 
 The RX path uses the 50 MHz clock sent to the PHY (`clk_out1`). The existing TX path uses the related 180-degree 50 MHz clock (`clk_out2`). Data sent to the 100 MHz classifier will need a clock-domain crossing.
 
@@ -60,8 +61,33 @@ vvp ethernet_RX_tb.vvp
 
 The testbench covers valid minimum and maximum frames, a bad FCS, a short frame, a PHY error, an invalid preamble, a temporary low `CRS_DV`, output backpressure, and a frame dropped while the buffer is occupied.
 
-## Next milestone
+## Capture a known frame on the board
 
-First, run the standalone RX top on the board and record the LEDs and timing result. Then give the receiver a way to show exactly which bytes it accepted. An ILA capture of `data_out`, `valid_out`, `last_out`, and the status pulses is the quickest board check. Send a known `0x88B5` frame from the PC and compare its captured header and payload with the bytes in the ILA.
+The RX test top now marks `data_out`, `valid_out`, `last_out`, `good_frame`, `bad_frame`, and `overflow` for Vivado debug. After synthesis, open the synthesized design and use **Set Up Debug** to connect those nets to an ILA clocked by `clk_phy_50MHz`. Use at least 1024 samples. Trigger when `good_frame` is high and leave at least 128 samples after the trigger. Generate a new bitstream with the ILA and program the FPGA.
 
-Once that works, add a small parser for our own frame format: destination MAC, EtherType `0x88B5`, protocol version, message type, and the 16 signed INT8 features. Pass a complete validated request across to the 100 MHz classifier, and use the existing Ethernet TX path to return the score. Keep UART working during this integration so we can compare both paths for the same feature vectors.
+On the Windows PC, install Npcap if it is not already available, then install Scapy:
+
+```powershell
+py -m pip install scapy
+py software/send_ethernet_RX_test.py --list-interfaces
+```
+
+Arm the ILA, then send one frame from the wired network adapter listed by Scapy:
+
+```powershell
+py software/send_ethernet_RX_test.py --iface "Ethernet"
+```
+
+Use the exact adapter name or ID returned by `--list-interfaces`. The script prints the 60 bytes expected at the FPGA output and sends a broadcast frame with EtherType `0x88B5`. Its payload starts with `RX01`, a 32-bit sequence number, and 16 sample INT8 values (`-8` through `7`), followed by zeros. The PC's Ethernet adapter supplies the FCS on the wire. `ethernet_RX` removes that FCS before output, so the ILA should show exactly the 60 printed bytes, in order, on cycles where `valid_out` is high. `last_out` should be high with byte 59.
+
+For a preview without sending, supply a source MAC explicitly:
+
+```powershell
+py software/send_ethernet_RX_test.py --dry-run --source-mac 02:00:00:00:00:02
+```
+
+Ambient LAN traffic can trigger the ILA first. If that happens, rearm it and send the test frame again. Compare the captured destination MAC (`FF` six times), EtherType (`88 B5`), and `RX01` payload before comparing all 60 bytes. Record the timing report and whether any `bad_frame` or `overflow` pulses appear.
+
+## After the board check
+
+Add a parser for the project request format: destination MAC, EtherType `0x88B5`, protocol version, message type, and 16 signed INT8 features. Pass one complete validated request across to the 100 MHz classifier, and use the existing Ethernet TX path to return the score. Keep UART working so both paths can be compared on the same feature vectors.

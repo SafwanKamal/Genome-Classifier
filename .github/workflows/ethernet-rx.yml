@@ -6,6 +6,8 @@ on:
       - 'rtl/ethernet_RX.sv'
       - 'rtl/ethernet_CRC32.sv'
       - 'simulation/ethernet_RX_tb.sv'
+      - 'rtl/ethernet_RX_test_top.sv'
+      - 'software/send_ethernet_RX_test.py'
       - '.github/workflows/ethernet-rx.yml'
   pull_request:
     paths:
@@ -13,6 +15,8 @@ on:
       - 'rtl/ethernet_RX.sv'
       - 'rtl/ethernet_CRC32.sv'
       - 'simulation/ethernet_RX_tb.sv'
+      - 'rtl/ethernet_RX_test_top.sv'
+      - 'software/send_ethernet_RX_test.py'
       - '.github/workflows/ethernet-rx.yml'
 
 jobs:
@@ -28,3 +32,7 @@ jobs:
             rtl/rmii_RX.sv rtl/ethernet_CRC32.sv rtl/ethernet_RX.sv \
             simulation/ethernet_RX_tb.sv
           vvp /tmp/ethernet_RX_tb.vvp
+      - name: Check known test-frame bytes
+        run: |
+          python software/send_ethernet_RX_test.py \
+            --dry-run --source-mac 02:00:00:00:00:02
