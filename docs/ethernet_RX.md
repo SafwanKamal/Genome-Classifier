@@ -1,58 +1,67 @@
-# Raw Ethernet receive bring-up
+# Ethernet RX
 
-The RX path complements the existing 100 Mb/s RMII transmit path. It runs on
-the 50 MHz clock forwarded to the PHY (`clk_out1` of `clk_wiz_ethernet`). The
-transmitter still runs on the related 180-degree clock (`clk_out2`). Keep the
-receive logic and its consumer on the RX clock, or add a clock-domain crossing
-before using the data in the 100 MHz classifier domain.
+The Nexys 4 DDR can now receive raw Ethernet frames through its LAN8720A PHY. The RX modules are separate from the UART classifier path for now. This page covers the receive path, how to test it on the board, and what we should build next.
 
-| Module | Job |
+## Receive path
+
+1. The PHY places two bits on `rmii_rxd[1:0]` for each 50 MHz clock cycle.
+2. `rmii_RX.sv` assembles four dibits into a byte, checks the preamble and `D5` start delimiter, and reports the end of the frame.
+3. `ethernet_RX.sv` stores the frame, checks its length, PHY error flag, and Ethernet CRC-32.
+4. If those checks pass, the module streams the frame bytes to the next block. The preamble and FCS are removed; Ethernet padding remains.
+
+| File | Purpose |
 |---|---|
-| `rtl/rmii_RX.sv` | Reassemble four little-endian dibits into a byte; recognize `55` preamble and `D5` delimiter; report frame end and PHY error. A single low `CRS_DV` cycle during an active frame does not terminate it. |
-| `rtl/ethernet_RX.sv` | Hold up to 1518 frame bytes including FCS, check size, PHY error and Ethernet CRC-32 residue, then stream accepted bytes without FCS. |
-| `rtl/ethernet_RX_test_top.sv` | Standalone board bring-up with four sticky LEDs. |
+| `rtl/rmii_RX.sv` | RMII dibit-to-byte conversion and frame boundaries |
+| `rtl/ethernet_RX.sv` | Frame buffer, length and CRC checks, byte output |
+| `rtl/ethernet_RX_test_top.sv` | Standalone board test with LED indicators |
+| `constraints/ethernet_RX_test_top.xdc` | Nexys 4 DDR PHY pins and RX timing constraints |
+| `simulation/ethernet_RX_tb.sv` | Receive simulation |
 
-`ethernet_RX` is a raw frame interface. It does not filter destination MACs or
-EtherTypes, answer ARP, parse IP/UDP, or submit feature vectors to the
-classifier. `valid_out && ready_in` accepts a byte, and `last_out` marks the
-final accepted byte. The first output byte is destination MAC byte 0. The
-output includes any Ethernet padding, and excludes the 8 preamble/SFD bytes
-and 4 FCS bytes. `good_frame_out`, `bad_frame_out`, and `overflow_out` are
-one-clock pulses. A second arrival while an accepted frame is being drained
-is discarded and raises `overflow_out`. There is no RMII backpressure.
+The RX path uses the 50 MHz clock sent to the PHY (`clk_out1`). The existing TX path uses the related 180-degree 50 MHz clock (`clk_out2`). Data sent to the 100 MHz classifier will need a clock-domain crossing.
 
-For a Nexys 4 DDR / Nexys A7-100T standalone test, add
-`rtl/rmii_RX.sv`, `rtl/ethernet_CRC32.sv`, `rtl/ethernet_RX.sv`, and
-`rtl/ethernet_RX_test_top.sv` as SystemVerilog sources. Generate the existing
-`clk_wiz_ethernet` IP with 50 MHz 0-degree and 50 MHz 180-degree outputs.
-Select `ethernet_RX_test_top` as top and use only
-`constraints/ethernet_RX_test_top.xdc` as the constraints file. The board
-requires a 100 Mb/s negotiated link. The top holds PHY reset for 50 ms and
-then enables receive.
+## Output interface
 
-| LED | Meaning |
+`valid_out && ready_in` transfers one byte. `last_out` is asserted on the final byte of the accepted frame. Byte 0 is the first byte of the destination MAC address. A received frame is held until its CRC and size pass, so the next block never sees a partial frame that later fails the FCS check.
+
+`good_frame_out`, `bad_frame_out`, and `overflow_out` are one-clock pulses. The buffer holds one frame at a time. If another frame arrives while the first is being read, the new frame is dropped and `overflow_out` pulses. The PHY cannot be paused by `ready_in`.
+
+The current implementation accepts raw Ethernet frames of 64 to 1518 bytes including FCS. It does not yet select a destination MAC or EtherType. ARP, IP/UDP, and classifier requests are later stages.
+
+## Test on the Nexys 4 DDR
+
+1. Pull the latest `main` branch.
+2. In Vivado, add `rtl/rmii_RX.sv`, `rtl/ethernet_CRC32.sv`, `rtl/ethernet_RX.sv`, and `rtl/ethernet_RX_test_top.sv` as SystemVerilog design sources.
+3. Use the existing `clk_wiz_ethernet` IP with `clk_out1 = 50 MHz, 0°` and `clk_out2 = 50 MHz, 180°`. Regenerate its output products if Vivado asks.
+4. Set `ethernet_RX_test_top` as the top module. Enable `constraints/ethernet_RX_test_top.xdc` and disable the TX test and classifier XDC files for this build.
+5. Run synthesis and implementation. Check the timing report, especially paths from `rmii_rxd`, `rmii_crs_dv`, and `rmii_rx_er`.
+6. Generate the bitstream, program the FPGA, and connect the board to a network with a 100 Mb/s link.
+
+| LED | What it shows |
 |---|---|
-| 0 | PHY reset released |
-| 1 | At least one valid frame received |
-| 2 | At least one malformed/CRC-error frame received |
-| 3 | At least one frame dropped while the previous frame was draining |
+| `LED[0]` | PHY reset has been released |
+| `LED[1]` | At least one frame passed the receive checks |
+| `LED[2]` | At least one frame failed the length, CRC, or PHY-error checks |
+| `LED[3]` | A frame arrived while the previous frame was being read |
 
-All event LEDs stay lit until reset. Regular traffic on a LAN, including ARP
-and broadcasts, will light LED 1; this test does not display packet contents.
-The PHY pin assignments follow Digilent's Nexys A7 master XDC. Check input
-timing after place and route using the supplied provisional input delays;
-the exact board skew must be verified on hardware.
+The LEDs stay on after an event until you reset the FPGA. Ordinary LAN traffic, such as ARP broadcasts, can light `LED[1]`. That confirms the RX chain can accept a frame, but it does not prove that our intended payload was received. A malformed preamble is ignored before a frame starts, so it does not light `LED[2]`.
 
-Run the RTL testbench with Icarus Verilog:
+The XDC uses Digilent's Nexys 4 DDR/Nexys A7 pin mapping. Its input delays include a provisional board-skew allowance. Review timing after implementation and verify receive behavior on the physical board.
+
+## Simulation
+
+The GitHub Actions workflow runs the RX testbench on pushes that change the receive RTL. To run it locally with Icarus Verilog from the repository root:
 
 ```sh
-iverilog -g2012 -s ethernet_RX_tb -o /tmp/ethernet_RX_tb.vvp \
+iverilog -g2012 -s ethernet_RX_tb -o ethernet_RX_tb.vvp \
   rtl/rmii_RX.sv rtl/ethernet_CRC32.sv rtl/ethernet_RX.sv \
   simulation/ethernet_RX_tb.sv
-vvp /tmp/ethernet_RX_tb.vvp
+vvp ethernet_RX_tb.vvp
 ```
 
-The test covers minimum and maximum untagged frames, FCS corruption, short
-frames, PHY receive error, malformed preamble, `CRS_DV` toggling, output
-backpressure, and a dropped overlapping frame. This does not substitute for
-on-board timing and packet-capture verification.
+The testbench covers valid minimum and maximum frames, a bad FCS, a short frame, a PHY error, an invalid preamble, a temporary low `CRS_DV`, output backpressure, and a frame dropped while the buffer is occupied.
+
+## Next milestone
+
+First, run the standalone RX top on the board and record the LEDs and timing result. Then give the receiver a way to show exactly which bytes it accepted. An ILA capture of `data_out`, `valid_out`, `last_out`, and the status pulses is the quickest board check. Send a known `0x88B5` frame from the PC and compare its captured header and payload with the bytes in the ILA.
+
+Once that works, add a small parser for our own frame format: destination MAC, EtherType `0x88B5`, protocol version, message type, and the 16 signed INT8 features. Pass a complete validated request across to the 100 MHz classifier, and use the existing Ethernet TX path to return the score. Keep UART working during this integration so we can compare both paths for the same feature vectors.
