@@ -1,0 +1,77 @@
+{
+  "architecture": "16-256-256-1",
+  "split": "test",
+  "count": 64,
+  "manifest": "genomic-dataset-pipeline\\artifacts\\model_v4_batch_seed_7\\export_manifest.json",
+  "manifest_sha256": "58e6a8c63be6dc7421931bb3d2460476e2148e47ac9b2e8e804c354eeef8e9ad",
+  "feature_sha256": "37fabf4af187f7ddd42b52fccd62165354693cfe5806079627cdbbb7194df4f4",
+  "scores_sha256": "5892e897696cbe907d8debc8b1fb2d8ecf7a9b561ccb498ca4f905b6722c9d84",
+  "machine": {
+    "hostname": "SafwanLenovo",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD",
+    "logical_processors": 16,
+    "python": "3.12.13",
+    "numpy": "2.5.3"
+  },
+  "preparation_seconds": 0.8258577999658883,
+  "integer_reference_seconds": 0.03502230002777651,
+  "repetitions": 2,
+  "warmups_per_configuration": 1,
+  "all_scores_exact": true,
+  "results": [
+    {
+      "batch_size": 32,
+      "threads": 1,
+      "seconds": [
+        0.00022680003894492984,
+        0.00025260000256821513
+      ],
+      "median_seconds": 0.00023970002075657248,
+      "completed_variants_per_second": 267000.3940675301,
+      "all_scores_exact": true,
+      "threadpools": [
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "C:\\Users\\user\\AppData\\Local\\uv\\cache\\archive-v0\\avHitKs2GHuAPCDe\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-ed4f167a5330424524f45258e7ca2c8d.dll",
+          "version": "0.3.34.106.0",
+          "threading_layer": "pthreads",
+          "architecture": "SkylakeX"
+        }
+      ]
+    },
+    {
+      "batch_size": 64,
+      "threads": 1,
+      "seconds": [
+        0.00013339996803551912,
+        0.00012320000678300858
+      ],
+      "median_seconds": 0.00012829998740926385,
+      "completed_variants_per_second": 498830.91411261435,
+      "all_scores_exact": true,
+      "threadpools": [
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "C:\\Users\\user\\AppData\\Local\\uv\\cache\\archive-v0\\avHitKs2GHuAPCDe\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-ed4f167a5330424524f45258e7ca2c8d.dll",
+          "version": "0.3.34.106.0",
+          "threading_layer": "pthreads",
+          "architecture": "SkylakeX"
+        }
+      ]
+    }
+  ],
+  "best_configuration": {
+    "batch_size": 64,
+    "threads": 1,
+    "median_seconds": 0.00012829998740926385,
+    "completed_variants_per_second": 498830.91411261435
+  },
+  "timing_scope": "Prepared float32 features to all integer scores, including batch orchestration; excludes file loading, feature conversion, integer reference, warmup and score validation. Rates use median warmed time, not fastest repetition. No Ethernet or FPGA calls."
+}

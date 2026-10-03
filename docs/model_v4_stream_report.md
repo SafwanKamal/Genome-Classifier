@@ -209,6 +209,39 @@ settings were changed. The next useful separation is send-to-native-capture
 timing paired per batch, or physical inference-start spacing under load;
 the capture-delivery measurement alone cannot explain the throughput gap.
 
+### Second desktop comparison — October 3
+
+The user supplied a report from a separate desktop, saved without overwriting
+the original as `reports/model_v4_capture_precise_desktop.json`. It passes
+27,477/27,477 with zero missing, duplicate or mismatched results, using the
+same V4 manifest, batch size 32 and window 2.
+
+| Measure | Original host | Second desktop |
+|---|---:|---:|
+| Completed variants/s | 58,605 | 127,499 |
+| Full-set time | 468.85 ms | 215.51 ms |
+| Median send-to-reply | 979.4 us | 487.1 us |
+| Median capture-to-callback | 123.5 us | 42.2 us |
+| Median reply-to-refill | 109.3 us | 14.2 us |
+| Median send call | 81.2 us | 57.4 us |
+
+Throughput improves 2.176× (117.6%); elapsed time falls 54.0%. Both capture
+measurements have no negative or missing timestamps. Assuming the same FPGA
+bitstream and link configuration, this demonstrates a substantial limitation
+in the original host/interface path. It does not isolate the USB adapter,
+driver, CPU or scheduler individually because the whole desktop changed.
+The second result is about 80.1% of simulated queued capacity (159,236/s).
+The 434,605/s CPU baseline was measured on the original host; a fair desktop
+comparison needs that desktop's own CPU benchmark. Current 128-DSP/100 MHz
+queued FPGA capacity still falls below the original CPU baseline, so host
+improvements alone cannot establish parity. Repeat desktop runs, benchmark
+its CPU, then consider increasing useful DSP throughput/core clock.
+
+The standalone CPU benchmark for the second desktop is now available as
+`software/benchmark_v4_cpu.py`; see [CPU benchmark commands and timing scope](benchmark_v4_cpu.md).
+It needs only the synced manifest and feature Parquet file, and can compare
+its median host throughput directly with that desktop's FPGA JSON.
+
 | Check | Result |
 |---|---|
 | New core XSim | 1,000 real V4 golden vectors match exactly; 617 clocks per inference |
