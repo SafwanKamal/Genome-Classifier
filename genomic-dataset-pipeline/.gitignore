@@ -10,8 +10,14 @@ __pycache__/
 .pytest_cache/
 .venv/
 .venv-wsl/
-artifacts/
+artifacts/*
 /data/raw/
 /data/interim/
-/data/processed/
-/artifacts/
+/data/processed/*
+/artifacts/*
+
+# Frozen V4 inputs required to validate Ethernet on another host.
+!data/processed/variants_model_int8.parquet
+!artifacts/model_v4_batch_seed_7/
+artifacts/model_v4_batch_seed_7/*
+!artifacts/model_v4_batch_seed_7/export_manifest.json
