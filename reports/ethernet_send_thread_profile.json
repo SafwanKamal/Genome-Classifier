@@ -1,0 +1,20 @@
+{
+  "requested": 1000,
+  "received_unique": 1000,
+  "correct_unique": 1000,
+  "missing_sequences": [],
+  "duplicates": 0,
+  "out_of_order": 0,
+  "unrelated_replies": 0,
+  "mismatches": [],
+  "captured_at_utc": "2026-10-01T06:45:14.271578+00:00",
+  "interface": "Ethernet",
+  "vectors": "simulation\\model_v2_h8_core_vectors.mem",
+  "first_sequence": 1200000,
+  "interval_seconds": 0.0,
+  "capture_tail_seconds": 2.0,
+  "send_call_seconds": 1.1132701000315137,
+  "send_profile": "reports\\ethernet_send_thread_profile.prof",
+  "send_profiler": "profile.Profile; sending thread",
+  "host_send_call_requests_per_second": 898.2546104235555
+}

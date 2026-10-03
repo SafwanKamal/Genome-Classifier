@@ -6,7 +6,9 @@ import time
 from pathlib import Path
 
 import serial
-from scapy.all import AsyncSniffer
+from scapy.all import AsyncSniffer, Ether, get_if_hwaddr, sendp
+from send_ethernet_RX_test import build_frame
+from model_vectors import load_vectors
 
 from decode_ethernet_result import (
     DEFAULT_ROUTING_THRESHOLD,
@@ -20,7 +22,6 @@ from decode_ethernet_result import (
 REQUEST_HEADER = 0x5A
 RESPONSE_HEADER = 0xA5
 FEATURE_NUMBER = 16
-VECTOR_BYTES = FEATURE_NUMBER + 4
 
 
 def crc16_ccitt(data: bytes) -> int:
@@ -112,75 +113,21 @@ def read_UART_score(
     return score, response
 
 
-def load_vectors(
-    vector_path: Path,
-    count: int,
-) -> list[tuple[bytes, int]]:
-    vectors: list[tuple[bytes, int]] = []
-
-    for line_number, line in enumerate(
-        vector_path.read_text(
-            encoding="utf-8"
-        ).splitlines(),
-        start=1,
-    ):
-        line = line.strip()
-
-        if not line:
-            continue
-
-        try:
-            vector = bytes.fromhex(line)
-        except ValueError as error:
-            raise ValueError(
-                f"Invalid hexadecimal vector on line "
-                f"{line_number}"
-            ) from error
-
-        if len(vector) != VECTOR_BYTES:
-            raise ValueError(
-                f"Vector line {line_number} contains "
-                f"{len(vector)} bytes; expected {VECTOR_BYTES}"
-            )
-
-        features = vector[:FEATURE_NUMBER]
-        expected_score = int.from_bytes(
-            vector[FEATURE_NUMBER:],
-            byteorder="big",
-            signed=True,
-        )
-
-        vectors.append((features, expected_score))
-
-        if len(vectors) == count:
-            break
-
-    if len(vectors) != count:
-        raise ValueError(
-            f"Requested {count} vectors, but "
-            f"{vector_path} contains only {len(vectors)}"
-        )
-
-    return vectors
-
-
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description=(
-            "Drive saved V2 vectors through FPGA UART and "
-            "verify the matching raw-Ethernet result packets."
+            "Drive saved V2 vectors through UART and/or Ethernet requests "
+            "and verify both response scores against golden values."
         )
     )
 
     parser.add_argument(
         "--port",
-        required=True,
         help="FPGA USB-UART port, for example COM4.",
     )
 
     parser.add_argument(
         "--interface",
-        required=True,
         help="Scapy/Npcap Ethernet capture interface name.",
     )
 
@@ -216,166 +163,96 @@ def parse_args() -> argparse.Namespace:
         default=DEFAULT_ROUTING_THRESHOLD,
     )
 
-    return parser.parse_args()
+    parser.add_argument("--request-path", choices=("uart", "ethernet", "both"),
+                        default="uart", help="Request transport; both compares the same vectors through both inputs.")
+    parser.add_argument("--sequence", type=int, default=1000,
+                        help="First Ethernet request sequence number.")
+    parser.add_argument("--dry-run", action="store_true",
+                        help="Preview feature vectors, golden scores, and request bytes without hardware access.")
+    args = parser.parse_args()
+    if not args.dry_run and (not args.port or not args.interface):
+        parser.error("--port and --interface are required for a physical test")
+    if not 0 <= args.sequence <= 0xFFFFFFFF or args.sequence + args.count - 1 > 0xFFFFFFFF:
+        parser.error("Ethernet request sequences must fit in 32 bits")
+    return args
 
 
 def main() -> None:
     args = parse_args()
+    if args.count <= 0 or args.timeout <= 0:
+        raise ValueError("count and timeout must be positive")
+    vectors = load_vectors(args.vectors, args.count)
+    paths = ("uart", "ethernet") if args.request_path == "both" else (args.request_path,)
 
-    if args.count <= 0:
-        raise ValueError("--count must be greater than zero")
-
-    vectors = load_vectors(
-        args.vectors,
-        args.count,
-    )
+    if args.dry_run:
+        for index, (features, score) in enumerate(vectors):
+            frame = build_frame("02:00:00:00:00:02", args.sequence + index, features)
+            print(f"{index + 1:3d}: features={list(int.from_bytes(bytes([b]), signed=True) for b in features)} "
+                  f"expected={score} classification={int(score >= 0)} "
+                  f"deep_review={int(score >= args.routing_threshold)}")
+            print(f"     UART={build_request(features).hex(' ')}")
+            print(f"     Ethernet={frame.hex(' ')}")
+        return
 
     result_queue: queue.Queue[ResultPacket] = queue.Queue()
-
     def capture_packet(packet) -> None:
-        result = decode_result_packet(
-            packet,
-            args.routing_threshold,
-        )
-
+        result = decode_result_packet(packet, args.routing_threshold)
         if result is not None:
             result_queue.put(result)
 
-    capture_filter = (
-        f"ether proto 0x{ETHERTYPE:04x} "
-        f"and ether src {EXPECTED_SOURCE_MAC}"
-    )
-
     sniffer = AsyncSniffer(
         iface=args.interface,
-        filter=capture_filter,
-        prn=capture_packet,
-        store=False,
+        filter=f"ether proto 0x{ETHERTYPE:04x} and ether src {EXPECTED_SOURCE_MAC}",
+        prn=capture_packet, store=False,
     )
-
-    previous_sequence: int | None = None
+    source_mac = get_if_hwaddr(args.interface) if "ethernet" in paths else None
+    previous_uart_sequence = None
     passed = 0
-
-    print(f"UART port: {args.port}")
-    print(f"Ethernet interface: {args.interface}")
-    print(f"Vectors: {args.vectors}")
-    print(f"Tests: {args.count}")
-
+    print(f"UART port: {args.port}; Ethernet interface: {args.interface}")
+    print(f"Vectors: {args.vectors}; tests: {args.count}; request paths: {', '.join(paths)}")
     sniffer.start()
-
     try:
-        # Give Npcap time to install the capture filter.
-        time.sleep(0.5)
-
-        with serial.Serial(
-            port=args.port,
-            baudrate=args.baud_rate,
-            timeout=0.05,
-        ) as serial_port:
+        time.sleep(0.5)  # Allow Npcap to install the capture filter.
+        with serial.Serial(args.port, args.baud_rate, timeout=0.05) as serial_port:
             time.sleep(0.25)
             serial_port.reset_input_buffer()
+            for index, (features, expected_score) in enumerate(vectors):
+                for path in paths:
+                    serial_port.reset_input_buffer()
+                    if path == "uart":
+                        serial_port.write(build_request(features))
+                        serial_port.flush()
+                    else:
+                        frame = build_frame(source_mac, args.sequence + index, features)
+                        sendp(Ether(frame), iface=args.interface, verbose=False)
 
-            for test_index, (
-                features,
-                expected_score,
-            ) in enumerate(vectors, start=1):
-                request = build_request(features)
-
-                serial_port.reset_input_buffer()
-                serial_port.write(request)
-                serial_port.flush()
-
-                UART_score, _ = read_UART_score(
-                    serial_port,
-                    args.timeout,
-                )
-
-                try:
-                    ethernet_result = result_queue.get(
-                        timeout=args.timeout
-                    )
-                except queue.Empty as error:
-                    raise TimeoutError(
-                        f"Test {test_index}: no matching "
-                        "Ethernet result was captured"
-                    ) from error
-
-                if UART_score != expected_score:
-                    raise RuntimeError(
-                        f"Test {test_index}: UART score "
-                        f"{UART_score} does not match expected "
-                        f"score {expected_score}"
-                    )
-
-                if ethernet_result.score != expected_score:
-                    raise RuntimeError(
-                        f"Test {test_index}: Ethernet score "
-                        f"{ethernet_result.score} does not match "
-                        f"expected score {expected_score}"
-                    )
-
-                expected_classification = int(
-                    expected_score >= 0
-                )
-                expected_deep_review = int(
-                    expected_score >= args.routing_threshold
-                )
-
-                if (
-                    ethernet_result.classification
-                    != expected_classification
-                ):
-                    raise RuntimeError(
-                        f"Test {test_index}: incorrect "
-                        "Ethernet classification"
-                    )
-
-                if (
-                    ethernet_result.deep_review
-                    != expected_deep_review
-                ):
-                    raise RuntimeError(
-                        f"Test {test_index}: incorrect "
-                        "Ethernet routing decision"
-                    )
-
-                if previous_sequence is not None:
-                    expected_sequence = (
-                        previous_sequence + 1
-                    ) & 0xFFFFFFFF
-
-                    if (
-                        ethernet_result.sequence_number
-                        != expected_sequence
-                    ):
-                        raise RuntimeError(
-                            f"Test {test_index}: expected "
-                            f"Ethernet sequence {expected_sequence}, "
-                            f"received "
-                            f"{ethernet_result.sequence_number}"
-                        )
-
-                previous_sequence = (
-                    ethernet_result.sequence_number
-                )
-                passed += 1
-
-                print(
-                    f"{test_index:3d}: "
-                    f"sequence="
-                    f"{ethernet_result.sequence_number:10d}  "
-                    f"expected={expected_score:6d}  "
-                    f"UART={UART_score:6d}  "
-                    f"Ethernet={ethernet_result.score:6d}  "
-                    "PASS"
-                )
+                    uart_score, _ = read_UART_score(serial_port, args.timeout)
+                    try:
+                        result = result_queue.get(timeout=args.timeout)
+                    except queue.Empty as error:
+                        raise TimeoutError(f"Vector {index + 1}, {path}: no Ethernet response") from error
+                    if uart_score != expected_score or result.score != expected_score:
+                        raise RuntimeError(f"Vector {index + 1}, {path}: expected={expected_score}, "
+                                           f"UART={uart_score}, Ethernet={result.score}")
+                    if result.classification != int(expected_score >= 0) or \
+                            result.deep_review != int(expected_score >= args.routing_threshold):
+                        raise RuntimeError(f"Vector {index + 1}, {path}: incorrect result flags")
+                    if path == "ethernet":
+                        if result.sequence_number != args.sequence + index:
+                            raise RuntimeError(f"Vector {index + 1}: Ethernet request sequence was not echoed")
+                    else:
+                        if previous_uart_sequence is not None and \
+                                result.sequence_number != (previous_uart_sequence + 1) & 0xFFFFFFFF:
+                            raise RuntimeError(f"Vector {index + 1}: non-continuous UART result sequence")
+                        previous_uart_sequence = result.sequence_number
+                    passed += 1
+                    print(f"{index + 1:3d} {path:8s}: sequence={result.sequence_number:10d} "
+                          f"expected={expected_score:6d} UART={uart_score:6d} "
+                          f"Ethernet={result.score:6d} PASS", flush=True)
     finally:
-        sniffer.stop()
-
-    print(
-        f"\nPASS: {passed}/{args.count} UART and Ethernet "
-        "results matched the committed V2 vectors"
-    )
+        if sniffer.running:
+            sniffer.stop()
+    print(f"\nPASS: {passed}/{args.count * len(paths)} requests matched the committed V2 vectors")
 
 
 if __name__ == "__main__":

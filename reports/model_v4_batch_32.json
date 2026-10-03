@@ -1,0 +1,5017 @@
+{
+  "requested": 1000,
+  "received": 1000,
+  "correct": 0,
+  "missing": 0,
+  "mismatches": [
+    {
+      "sequence": 4100000,
+      "expected": -3206,
+      "score": 0
+    },
+    {
+      "sequence": 4100001,
+      "expected": -3523,
+      "score": 0
+    },
+    {
+      "sequence": 4100002,
+      "expected": -3468,
+      "score": 0
+    },
+    {
+      "sequence": 4100003,
+      "expected": -2559,
+      "score": 0
+    },
+    {
+      "sequence": 4100004,
+      "expected": 242,
+      "score": 0
+    },
+    {
+      "sequence": 4100005,
+      "expected": -1975,
+      "score": 0
+    },
+    {
+      "sequence": 4100006,
+      "expected": 829,
+      "score": 0
+    },
+    {
+      "sequence": 4100007,
+      "expected": -2951,
+      "score": 0
+    },
+    {
+      "sequence": 4100008,
+      "expected": -3062,
+      "score": 0
+    },
+    {
+      "sequence": 4100009,
+      "expected": -2600,
+      "score": 0
+    },
+    {
+      "sequence": 4100010,
+      "expected": -3731,
+      "score": 0
+    },
+    {
+      "sequence": 4100011,
+      "expected": -993,
+      "score": 0
+    },
+    {
+      "sequence": 4100012,
+      "expected": -2937,
+      "score": 0
+    },
+    {
+      "sequence": 4100013,
+      "expected": -3586,
+      "score": 0
+    },
+    {
+      "sequence": 4100014,
+      "expected": -3193,
+      "score": 0
+    },
+    {
+      "sequence": 4100015,
+      "expected": -3641,
+      "score": 0
+    },
+    {
+      "sequence": 4100016,
+      "expected": -3334,
+      "score": 0
+    },
+    {
+      "sequence": 4100017,
+      "expected": -1396,
+      "score": 0
+    },
+    {
+      "sequence": 4100018,
+      "expected": -2557,
+      "score": 0
+    },
+    {
+      "sequence": 4100019,
+      "expected": -736,
+      "score": 0
+    },
+    {
+      "sequence": 4100020,
+      "expected": -2314,
+      "score": 0
+    },
+    {
+      "sequence": 4100021,
+      "expected": -3027,
+      "score": 0
+    },
+    {
+      "sequence": 4100022,
+      "expected": -1661,
+      "score": 0
+    },
+    {
+      "sequence": 4100023,
+      "expected": -2219,
+      "score": 0
+    },
+    {
+      "sequence": 4100024,
+      "expected": -1908,
+      "score": 0
+    },
+    {
+      "sequence": 4100025,
+      "expected": -2747,
+      "score": 0
+    },
+    {
+      "sequence": 4100026,
+      "expected": -3770,
+      "score": 0
+    },
+    {
+      "sequence": 4100027,
+      "expected": -2782,
+      "score": 0
+    },
+    {
+      "sequence": 4100028,
+      "expected": -1738,
+      "score": 0
+    },
+    {
+      "sequence": 4100029,
+      "expected": -2912,
+      "score": 0
+    },
+    {
+      "sequence": 4100030,
+      "expected": -2268,
+      "score": 0
+    },
+    {
+      "sequence": 4100031,
+      "expected": -2226,
+      "score": 0
+    },
+    {
+      "sequence": 4100032,
+      "expected": -2822,
+      "score": 0
+    },
+    {
+      "sequence": 4100033,
+      "expected": -3263,
+      "score": 0
+    },
+    {
+      "sequence": 4100034,
+      "expected": -3000,
+      "score": 0
+    },
+    {
+      "sequence": 4100035,
+      "expected": -3434,
+      "score": 0
+    },
+    {
+      "sequence": 4100036,
+      "expected": -2261,
+      "score": 0
+    },
+    {
+      "sequence": 4100037,
+      "expected": -2719,
+      "score": 0
+    },
+    {
+      "sequence": 4100038,
+      "expected": -1395,
+      "score": 0
+    },
+    {
+      "sequence": 4100039,
+      "expected": -2758,
+      "score": 0
+    },
+    {
+      "sequence": 4100040,
+      "expected": -2660,
+      "score": 0
+    },
+    {
+      "sequence": 4100041,
+      "expected": -3332,
+      "score": 0
+    },
+    {
+      "sequence": 4100042,
+      "expected": -3041,
+      "score": 0
+    },
+    {
+      "sequence": 4100043,
+      "expected": -4554,
+      "score": 0
+    },
+    {
+      "sequence": 4100044,
+      "expected": -2829,
+      "score": 0
+    },
+    {
+      "sequence": 4100045,
+      "expected": -3060,
+      "score": 0
+    },
+    {
+      "sequence": 4100046,
+      "expected": -3363,
+      "score": 0
+    },
+    {
+      "sequence": 4100047,
+      "expected": -2728,
+      "score": 0
+    },
+    {
+      "sequence": 4100048,
+      "expected": -3027,
+      "score": 0
+    },
+    {
+      "sequence": 4100049,
+      "expected": -2720,
+      "score": 0
+    },
+    {
+      "sequence": 4100050,
+      "expected": -1853,
+      "score": 0
+    },
+    {
+      "sequence": 4100051,
+      "expected": -3173,
+      "score": 0
+    },
+    {
+      "sequence": 4100052,
+      "expected": -542,
+      "score": 0
+    },
+    {
+      "sequence": 4100053,
+      "expected": -1343,
+      "score": 0
+    },
+    {
+      "sequence": 4100054,
+      "expected": -1969,
+      "score": 0
+    },
+    {
+      "sequence": 4100055,
+      "expected": -3387,
+      "score": 0
+    },
+    {
+      "sequence": 4100056,
+      "expected": -3714,
+      "score": 0
+    },
+    {
+      "sequence": 4100057,
+      "expected": -2575,
+      "score": 0
+    },
+    {
+      "sequence": 4100058,
+      "expected": -1987,
+      "score": 0
+    },
+    {
+      "sequence": 4100059,
+      "expected": -2127,
+      "score": 0
+    },
+    {
+      "sequence": 4100060,
+      "expected": -2469,
+      "score": 0
+    },
+    {
+      "sequence": 4100061,
+      "expected": -2504,
+      "score": 0
+    },
+    {
+      "sequence": 4100062,
+      "expected": -2224,
+      "score": 0
+    },
+    {
+      "sequence": 4100063,
+      "expected": -1418,
+      "score": 0
+    },
+    {
+      "sequence": 4100064,
+      "expected": -2541,
+      "score": 0
+    },
+    {
+      "sequence": 4100065,
+      "expected": -2144,
+      "score": 0
+    },
+    {
+      "sequence": 4100066,
+      "expected": -1713,
+      "score": 0
+    },
+    {
+      "sequence": 4100067,
+      "expected": -3077,
+      "score": 0
+    },
+    {
+      "sequence": 4100068,
+      "expected": -2726,
+      "score": 0
+    },
+    {
+      "sequence": 4100069,
+      "expected": -1459,
+      "score": 0
+    },
+    {
+      "sequence": 4100070,
+      "expected": -2678,
+      "score": 0
+    },
+    {
+      "sequence": 4100071,
+      "expected": -3188,
+      "score": 0
+    },
+    {
+      "sequence": 4100072,
+      "expected": -3357,
+      "score": 0
+    },
+    {
+      "sequence": 4100073,
+      "expected": -3544,
+      "score": 0
+    },
+    {
+      "sequence": 4100074,
+      "expected": -2921,
+      "score": 0
+    },
+    {
+      "sequence": 4100075,
+      "expected": -3789,
+      "score": 0
+    },
+    {
+      "sequence": 4100076,
+      "expected": -2661,
+      "score": 0
+    },
+    {
+      "sequence": 4100077,
+      "expected": -1812,
+      "score": 0
+    },
+    {
+      "sequence": 4100078,
+      "expected": -5820,
+      "score": 0
+    },
+    {
+      "sequence": 4100079,
+      "expected": -4170,
+      "score": 0
+    },
+    {
+      "sequence": 4100080,
+      "expected": -2276,
+      "score": 0
+    },
+    {
+      "sequence": 4100081,
+      "expected": -2726,
+      "score": 0
+    },
+    {
+      "sequence": 4100082,
+      "expected": -4738,
+      "score": 0
+    },
+    {
+      "sequence": 4100083,
+      "expected": -4264,
+      "score": 0
+    },
+    {
+      "sequence": 4100084,
+      "expected": -2413,
+      "score": 0
+    },
+    {
+      "sequence": 4100085,
+      "expected": -2367,
+      "score": 0
+    },
+    {
+      "sequence": 4100086,
+      "expected": -2923,
+      "score": 0
+    },
+    {
+      "sequence": 4100087,
+      "expected": -3223,
+      "score": 0
+    },
+    {
+      "sequence": 4100088,
+      "expected": -2979,
+      "score": 0
+    },
+    {
+      "sequence": 4100089,
+      "expected": -3288,
+      "score": 0
+    },
+    {
+      "sequence": 4100090,
+      "expected": -288,
+      "score": 0
+    },
+    {
+      "sequence": 4100091,
+      "expected": -5386,
+      "score": 0
+    },
+    {
+      "sequence": 4100092,
+      "expected": -3194,
+      "score": 0
+    },
+    {
+      "sequence": 4100093,
+      "expected": -3148,
+      "score": 0
+    },
+    {
+      "sequence": 4100094,
+      "expected": -3457,
+      "score": 0
+    },
+    {
+      "sequence": 4100095,
+      "expected": -2719,
+      "score": 0
+    },
+    {
+      "sequence": 4100096,
+      "expected": -2966,
+      "score": 0
+    },
+    {
+      "sequence": 4100097,
+      "expected": -2048,
+      "score": 0
+    },
+    {
+      "sequence": 4100098,
+      "expected": -2803,
+      "score": 0
+    },
+    {
+      "sequence": 4100099,
+      "expected": -2289,
+      "score": 0
+    },
+    {
+      "sequence": 4100100,
+      "expected": -2562,
+      "score": 0
+    },
+    {
+      "sequence": 4100101,
+      "expected": -3030,
+      "score": 0
+    },
+    {
+      "sequence": 4100102,
+      "expected": -2484,
+      "score": 0
+    },
+    {
+      "sequence": 4100103,
+      "expected": -4490,
+      "score": 0
+    },
+    {
+      "sequence": 4100104,
+      "expected": -3278,
+      "score": 0
+    },
+    {
+      "sequence": 4100105,
+      "expected": -3534,
+      "score": 0
+    },
+    {
+      "sequence": 4100106,
+      "expected": -3161,
+      "score": 0
+    },
+    {
+      "sequence": 4100107,
+      "expected": -3862,
+      "score": 0
+    },
+    {
+      "sequence": 4100108,
+      "expected": -3875,
+      "score": 0
+    },
+    {
+      "sequence": 4100109,
+      "expected": -2266,
+      "score": 0
+    },
+    {
+      "sequence": 4100110,
+      "expected": 1409,
+      "score": 0
+    },
+    {
+      "sequence": 4100111,
+      "expected": -992,
+      "score": 0
+    },
+    {
+      "sequence": 4100112,
+      "expected": -2984,
+      "score": 0
+    },
+    {
+      "sequence": 4100113,
+      "expected": -3351,
+      "score": 0
+    },
+    {
+      "sequence": 4100114,
+      "expected": -3249,
+      "score": 0
+    },
+    {
+      "sequence": 4100115,
+      "expected": -4865,
+      "score": 0
+    },
+    {
+      "sequence": 4100116,
+      "expected": -4212,
+      "score": 0
+    },
+    {
+      "sequence": 4100117,
+      "expected": -2741,
+      "score": 0
+    },
+    {
+      "sequence": 4100118,
+      "expected": -3549,
+      "score": 0
+    },
+    {
+      "sequence": 4100119,
+      "expected": -2853,
+      "score": 0
+    },
+    {
+      "sequence": 4100120,
+      "expected": -5536,
+      "score": 0
+    },
+    {
+      "sequence": 4100121,
+      "expected": -3052,
+      "score": 0
+    },
+    {
+      "sequence": 4100122,
+      "expected": -2841,
+      "score": 0
+    },
+    {
+      "sequence": 4100123,
+      "expected": -3230,
+      "score": 0
+    },
+    {
+      "sequence": 4100124,
+      "expected": -2538,
+      "score": 0
+    },
+    {
+      "sequence": 4100125,
+      "expected": -2923,
+      "score": 0
+    },
+    {
+      "sequence": 4100126,
+      "expected": -2951,
+      "score": 0
+    },
+    {
+      "sequence": 4100127,
+      "expected": -892,
+      "score": 0
+    },
+    {
+      "sequence": 4100128,
+      "expected": -2453,
+      "score": 0
+    },
+    {
+      "sequence": 4100129,
+      "expected": -2966,
+      "score": 0
+    },
+    {
+      "sequence": 4100130,
+      "expected": -4054,
+      "score": 0
+    },
+    {
+      "sequence": 4100131,
+      "expected": -3244,
+      "score": 0
+    },
+    {
+      "sequence": 4100132,
+      "expected": -2493,
+      "score": 0
+    },
+    {
+      "sequence": 4100133,
+      "expected": -2412,
+      "score": 0
+    },
+    {
+      "sequence": 4100134,
+      "expected": -4104,
+      "score": 0
+    },
+    {
+      "sequence": 4100135,
+      "expected": -2038,
+      "score": 0
+    },
+    {
+      "sequence": 4100136,
+      "expected": 1514,
+      "score": 0
+    },
+    {
+      "sequence": 4100137,
+      "expected": 1290,
+      "score": 0
+    },
+    {
+      "sequence": 4100138,
+      "expected": 1536,
+      "score": 0
+    },
+    {
+      "sequence": 4100139,
+      "expected": 1548,
+      "score": 0
+    },
+    {
+      "sequence": 4100140,
+      "expected": -2358,
+      "score": 0
+    },
+    {
+      "sequence": 4100141,
+      "expected": -2818,
+      "score": 0
+    },
+    {
+      "sequence": 4100142,
+      "expected": -3249,
+      "score": 0
+    },
+    {
+      "sequence": 4100143,
+      "expected": -764,
+      "score": 0
+    },
+    {
+      "sequence": 4100144,
+      "expected": -3982,
+      "score": 0
+    },
+    {
+      "sequence": 4100145,
+      "expected": -1661,
+      "score": 0
+    },
+    {
+      "sequence": 4100146,
+      "expected": -2031,
+      "score": 0
+    },
+    {
+      "sequence": 4100147,
+      "expected": -1705,
+      "score": 0
+    },
+    {
+      "sequence": 4100148,
+      "expected": -2684,
+      "score": 0
+    },
+    {
+      "sequence": 4100149,
+      "expected": -1351,
+      "score": 0
+    },
+    {
+      "sequence": 4100150,
+      "expected": -1590,
+      "score": 0
+    },
+    {
+      "sequence": 4100151,
+      "expected": -1502,
+      "score": 0
+    },
+    {
+      "sequence": 4100152,
+      "expected": -2460,
+      "score": 0
+    },
+    {
+      "sequence": 4100153,
+      "expected": -3783,
+      "score": 0
+    },
+    {
+      "sequence": 4100154,
+      "expected": -1922,
+      "score": 0
+    },
+    {
+      "sequence": 4100155,
+      "expected": -2900,
+      "score": 0
+    },
+    {
+      "sequence": 4100156,
+      "expected": -2614,
+      "score": 0
+    },
+    {
+      "sequence": 4100157,
+      "expected": -2422,
+      "score": 0
+    },
+    {
+      "sequence": 4100158,
+      "expected": -2948,
+      "score": 0
+    },
+    {
+      "sequence": 4100159,
+      "expected": -3792,
+      "score": 0
+    },
+    {
+      "sequence": 4100160,
+      "expected": -2991,
+      "score": 0
+    },
+    {
+      "sequence": 4100161,
+      "expected": -3511,
+      "score": 0
+    },
+    {
+      "sequence": 4100162,
+      "expected": -3403,
+      "score": 0
+    },
+    {
+      "sequence": 4100163,
+      "expected": -3879,
+      "score": 0
+    },
+    {
+      "sequence": 4100164,
+      "expected": -3066,
+      "score": 0
+    },
+    {
+      "sequence": 4100165,
+      "expected": -2530,
+      "score": 0
+    },
+    {
+      "sequence": 4100166,
+      "expected": -3252,
+      "score": 0
+    },
+    {
+      "sequence": 4100167,
+      "expected": -2269,
+      "score": 0
+    },
+    {
+      "sequence": 4100168,
+      "expected": -872,
+      "score": 0
+    },
+    {
+      "sequence": 4100169,
+      "expected": -782,
+      "score": 0
+    },
+    {
+      "sequence": 4100170,
+      "expected": -3011,
+      "score": 0
+    },
+    {
+      "sequence": 4100171,
+      "expected": -1836,
+      "score": 0
+    },
+    {
+      "sequence": 4100172,
+      "expected": -3235,
+      "score": 0
+    },
+    {
+      "sequence": 4100173,
+      "expected": 1250,
+      "score": 0
+    },
+    {
+      "sequence": 4100174,
+      "expected": 1230,
+      "score": 0
+    },
+    {
+      "sequence": 4100175,
+      "expected": -307,
+      "score": 0
+    },
+    {
+      "sequence": 4100176,
+      "expected": 762,
+      "score": 0
+    },
+    {
+      "sequence": 4100177,
+      "expected": -2460,
+      "score": 0
+    },
+    {
+      "sequence": 4100178,
+      "expected": -3118,
+      "score": 0
+    },
+    {
+      "sequence": 4100179,
+      "expected": -2560,
+      "score": 0
+    },
+    {
+      "sequence": 4100180,
+      "expected": -3016,
+      "score": 0
+    },
+    {
+      "sequence": 4100181,
+      "expected": -1236,
+      "score": 0
+    },
+    {
+      "sequence": 4100182,
+      "expected": 62,
+      "score": 0
+    },
+    {
+      "sequence": 4100183,
+      "expected": -3938,
+      "score": 0
+    },
+    {
+      "sequence": 4100184,
+      "expected": -1873,
+      "score": 0
+    },
+    {
+      "sequence": 4100185,
+      "expected": -3215,
+      "score": 0
+    },
+    {
+      "sequence": 4100186,
+      "expected": -4283,
+      "score": 0
+    },
+    {
+      "sequence": 4100187,
+      "expected": -5208,
+      "score": 0
+    },
+    {
+      "sequence": 4100188,
+      "expected": -2512,
+      "score": 0
+    },
+    {
+      "sequence": 4100189,
+      "expected": -3932,
+      "score": 0
+    },
+    {
+      "sequence": 4100190,
+      "expected": -3714,
+      "score": 0
+    },
+    {
+      "sequence": 4100191,
+      "expected": -3779,
+      "score": 0
+    },
+    {
+      "sequence": 4100192,
+      "expected": -1436,
+      "score": 0
+    },
+    {
+      "sequence": 4100193,
+      "expected": -3068,
+      "score": 0
+    },
+    {
+      "sequence": 4100194,
+      "expected": -2701,
+      "score": 0
+    },
+    {
+      "sequence": 4100195,
+      "expected": -1165,
+      "score": 0
+    },
+    {
+      "sequence": 4100196,
+      "expected": -560,
+      "score": 0
+    },
+    {
+      "sequence": 4100197,
+      "expected": -1842,
+      "score": 0
+    },
+    {
+      "sequence": 4100198,
+      "expected": -3036,
+      "score": 0
+    },
+    {
+      "sequence": 4100199,
+      "expected": -3225,
+      "score": 0
+    },
+    {
+      "sequence": 4100200,
+      "expected": -3202,
+      "score": 0
+    },
+    {
+      "sequence": 4100201,
+      "expected": -1327,
+      "score": 0
+    },
+    {
+      "sequence": 4100202,
+      "expected": -895,
+      "score": 0
+    },
+    {
+      "sequence": 4100203,
+      "expected": -442,
+      "score": 0
+    },
+    {
+      "sequence": 4100204,
+      "expected": -649,
+      "score": 0
+    },
+    {
+      "sequence": 4100205,
+      "expected": -1136,
+      "score": 0
+    },
+    {
+      "sequence": 4100206,
+      "expected": -1103,
+      "score": 0
+    },
+    {
+      "sequence": 4100207,
+      "expected": 22,
+      "score": 0
+    },
+    {
+      "sequence": 4100208,
+      "expected": -1232,
+      "score": 0
+    },
+    {
+      "sequence": 4100209,
+      "expected": 300,
+      "score": 0
+    },
+    {
+      "sequence": 4100210,
+      "expected": -940,
+      "score": 0
+    },
+    {
+      "sequence": 4100211,
+      "expected": -1726,
+      "score": 0
+    },
+    {
+      "sequence": 4100212,
+      "expected": -3769,
+      "score": 0
+    },
+    {
+      "sequence": 4100213,
+      "expected": -3529,
+      "score": 0
+    },
+    {
+      "sequence": 4100214,
+      "expected": -1784,
+      "score": 0
+    },
+    {
+      "sequence": 4100215,
+      "expected": -1507,
+      "score": 0
+    },
+    {
+      "sequence": 4100216,
+      "expected": -1267,
+      "score": 0
+    },
+    {
+      "sequence": 4100217,
+      "expected": -3945,
+      "score": 0
+    },
+    {
+      "sequence": 4100218,
+      "expected": -2932,
+      "score": 0
+    },
+    {
+      "sequence": 4100219,
+      "expected": -657,
+      "score": 0
+    },
+    {
+      "sequence": 4100220,
+      "expected": -3473,
+      "score": 0
+    },
+    {
+      "sequence": 4100221,
+      "expected": -1550,
+      "score": 0
+    },
+    {
+      "sequence": 4100222,
+      "expected": -1194,
+      "score": 0
+    },
+    {
+      "sequence": 4100223,
+      "expected": -1259,
+      "score": 0
+    },
+    {
+      "sequence": 4100224,
+      "expected": -2111,
+      "score": 0
+    },
+    {
+      "sequence": 4100225,
+      "expected": -2306,
+      "score": 0
+    },
+    {
+      "sequence": 4100226,
+      "expected": -2217,
+      "score": 0
+    },
+    {
+      "sequence": 4100227,
+      "expected": -2207,
+      "score": 0
+    },
+    {
+      "sequence": 4100228,
+      "expected": -2972,
+      "score": 0
+    },
+    {
+      "sequence": 4100229,
+      "expected": -844,
+      "score": 0
+    },
+    {
+      "sequence": 4100230,
+      "expected": -3201,
+      "score": 0
+    },
+    {
+      "sequence": 4100231,
+      "expected": -1127,
+      "score": 0
+    },
+    {
+      "sequence": 4100232,
+      "expected": 179,
+      "score": 0
+    },
+    {
+      "sequence": 4100233,
+      "expected": -364,
+      "score": 0
+    },
+    {
+      "sequence": 4100234,
+      "expected": -1071,
+      "score": 0
+    },
+    {
+      "sequence": 4100235,
+      "expected": -1423,
+      "score": 0
+    },
+    {
+      "sequence": 4100236,
+      "expected": 1338,
+      "score": 0
+    },
+    {
+      "sequence": 4100237,
+      "expected": -1676,
+      "score": 0
+    },
+    {
+      "sequence": 4100238,
+      "expected": -1620,
+      "score": 0
+    },
+    {
+      "sequence": 4100239,
+      "expected": -3556,
+      "score": 0
+    },
+    {
+      "sequence": 4100240,
+      "expected": -2403,
+      "score": 0
+    },
+    {
+      "sequence": 4100241,
+      "expected": -2626,
+      "score": 0
+    },
+    {
+      "sequence": 4100242,
+      "expected": -1220,
+      "score": 0
+    },
+    {
+      "sequence": 4100243,
+      "expected": -2736,
+      "score": 0
+    },
+    {
+      "sequence": 4100244,
+      "expected": -3203,
+      "score": 0
+    },
+    {
+      "sequence": 4100245,
+      "expected": -1238,
+      "score": 0
+    },
+    {
+      "sequence": 4100246,
+      "expected": -3228,
+      "score": 0
+    },
+    {
+      "sequence": 4100247,
+      "expected": -1151,
+      "score": 0
+    },
+    {
+      "sequence": 4100248,
+      "expected": 2,
+      "score": 0
+    },
+    {
+      "sequence": 4100249,
+      "expected": -1058,
+      "score": 0
+    },
+    {
+      "sequence": 4100250,
+      "expected": -315,
+      "score": 0
+    },
+    {
+      "sequence": 4100251,
+      "expected": -1261,
+      "score": 0
+    },
+    {
+      "sequence": 4100252,
+      "expected": -3372,
+      "score": 0
+    },
+    {
+      "sequence": 4100253,
+      "expected": -4602,
+      "score": 0
+    },
+    {
+      "sequence": 4100254,
+      "expected": -1722,
+      "score": 0
+    },
+    {
+      "sequence": 4100255,
+      "expected": -4290,
+      "score": 0
+    },
+    {
+      "sequence": 4100256,
+      "expected": -3332,
+      "score": 0
+    },
+    {
+      "sequence": 4100257,
+      "expected": -4144,
+      "score": 0
+    },
+    {
+      "sequence": 4100258,
+      "expected": -1731,
+      "score": 0
+    },
+    {
+      "sequence": 4100259,
+      "expected": -1740,
+      "score": 0
+    },
+    {
+      "sequence": 4100260,
+      "expected": -2231,
+      "score": 0
+    },
+    {
+      "sequence": 4100261,
+      "expected": -3549,
+      "score": 0
+    },
+    {
+      "sequence": 4100262,
+      "expected": -1796,
+      "score": 0
+    },
+    {
+      "sequence": 4100263,
+      "expected": -4376,
+      "score": 0
+    },
+    {
+      "sequence": 4100264,
+      "expected": -3350,
+      "score": 0
+    },
+    {
+      "sequence": 4100265,
+      "expected": -3672,
+      "score": 0
+    },
+    {
+      "sequence": 4100266,
+      "expected": -1891,
+      "score": 0
+    },
+    {
+      "sequence": 4100267,
+      "expected": -1792,
+      "score": 0
+    },
+    {
+      "sequence": 4100268,
+      "expected": -2038,
+      "score": 0
+    },
+    {
+      "sequence": 4100269,
+      "expected": -2109,
+      "score": 0
+    },
+    {
+      "sequence": 4100270,
+      "expected": -2425,
+      "score": 0
+    },
+    {
+      "sequence": 4100271,
+      "expected": -2674,
+      "score": 0
+    },
+    {
+      "sequence": 4100272,
+      "expected": -2401,
+      "score": 0
+    },
+    {
+      "sequence": 4100273,
+      "expected": -2303,
+      "score": 0
+    },
+    {
+      "sequence": 4100274,
+      "expected": -2128,
+      "score": 0
+    },
+    {
+      "sequence": 4100275,
+      "expected": -2732,
+      "score": 0
+    },
+    {
+      "sequence": 4100276,
+      "expected": -2650,
+      "score": 0
+    },
+    {
+      "sequence": 4100277,
+      "expected": -3007,
+      "score": 0
+    },
+    {
+      "sequence": 4100278,
+      "expected": -3233,
+      "score": 0
+    },
+    {
+      "sequence": 4100279,
+      "expected": -418,
+      "score": 0
+    },
+    {
+      "sequence": 4100280,
+      "expected": -3001,
+      "score": 0
+    },
+    {
+      "sequence": 4100281,
+      "expected": -2055,
+      "score": 0
+    },
+    {
+      "sequence": 4100282,
+      "expected": -3240,
+      "score": 0
+    },
+    {
+      "sequence": 4100283,
+      "expected": -3375,
+      "score": 0
+    },
+    {
+      "sequence": 4100284,
+      "expected": -3850,
+      "score": 0
+    },
+    {
+      "sequence": 4100285,
+      "expected": -2749,
+      "score": 0
+    },
+    {
+      "sequence": 4100286,
+      "expected": -2327,
+      "score": 0
+    },
+    {
+      "sequence": 4100287,
+      "expected": -3719,
+      "score": 0
+    },
+    {
+      "sequence": 4100288,
+      "expected": -3103,
+      "score": 0
+    },
+    {
+      "sequence": 4100289,
+      "expected": -3808,
+      "score": 0
+    },
+    {
+      "sequence": 4100290,
+      "expected": -937,
+      "score": 0
+    },
+    {
+      "sequence": 4100291,
+      "expected": -3272,
+      "score": 0
+    },
+    {
+      "sequence": 4100292,
+      "expected": -4050,
+      "score": 0
+    },
+    {
+      "sequence": 4100293,
+      "expected": -1010,
+      "score": 0
+    },
+    {
+      "sequence": 4100294,
+      "expected": -2582,
+      "score": 0
+    },
+    {
+      "sequence": 4100295,
+      "expected": -1025,
+      "score": 0
+    },
+    {
+      "sequence": 4100296,
+      "expected": -2018,
+      "score": 0
+    },
+    {
+      "sequence": 4100297,
+      "expected": -1976,
+      "score": 0
+    },
+    {
+      "sequence": 4100298,
+      "expected": -1724,
+      "score": 0
+    },
+    {
+      "sequence": 4100299,
+      "expected": -4288,
+      "score": 0
+    },
+    {
+      "sequence": 4100300,
+      "expected": -2054,
+      "score": 0
+    },
+    {
+      "sequence": 4100301,
+      "expected": -1564,
+      "score": 0
+    },
+    {
+      "sequence": 4100302,
+      "expected": -1648,
+      "score": 0
+    },
+    {
+      "sequence": 4100303,
+      "expected": -2181,
+      "score": 0
+    },
+    {
+      "sequence": 4100304,
+      "expected": -3229,
+      "score": 0
+    },
+    {
+      "sequence": 4100305,
+      "expected": -2724,
+      "score": 0
+    },
+    {
+      "sequence": 4100306,
+      "expected": -1169,
+      "score": 0
+    },
+    {
+      "sequence": 4100307,
+      "expected": -1506,
+      "score": 0
+    },
+    {
+      "sequence": 4100308,
+      "expected": -2008,
+      "score": 0
+    },
+    {
+      "sequence": 4100309,
+      "expected": -851,
+      "score": 0
+    },
+    {
+      "sequence": 4100310,
+      "expected": -2244,
+      "score": 0
+    },
+    {
+      "sequence": 4100311,
+      "expected": -2308,
+      "score": 0
+    },
+    {
+      "sequence": 4100312,
+      "expected": -2090,
+      "score": 0
+    },
+    {
+      "sequence": 4100313,
+      "expected": -2538,
+      "score": 0
+    },
+    {
+      "sequence": 4100314,
+      "expected": -1963,
+      "score": 0
+    },
+    {
+      "sequence": 4100315,
+      "expected": -2017,
+      "score": 0
+    },
+    {
+      "sequence": 4100316,
+      "expected": -1850,
+      "score": 0
+    },
+    {
+      "sequence": 4100317,
+      "expected": 362,
+      "score": 0
+    },
+    {
+      "sequence": 4100318,
+      "expected": -869,
+      "score": 0
+    },
+    {
+      "sequence": 4100319,
+      "expected": 786,
+      "score": 0
+    },
+    {
+      "sequence": 4100320,
+      "expected": -3853,
+      "score": 0
+    },
+    {
+      "sequence": 4100321,
+      "expected": -2755,
+      "score": 0
+    },
+    {
+      "sequence": 4100322,
+      "expected": -2645,
+      "score": 0
+    },
+    {
+      "sequence": 4100323,
+      "expected": -2179,
+      "score": 0
+    },
+    {
+      "sequence": 4100324,
+      "expected": -3772,
+      "score": 0
+    },
+    {
+      "sequence": 4100325,
+      "expected": -2294,
+      "score": 0
+    },
+    {
+      "sequence": 4100326,
+      "expected": -2860,
+      "score": 0
+    },
+    {
+      "sequence": 4100327,
+      "expected": -2748,
+      "score": 0
+    },
+    {
+      "sequence": 4100328,
+      "expected": -1339,
+      "score": 0
+    },
+    {
+      "sequence": 4100329,
+      "expected": -2754,
+      "score": 0
+    },
+    {
+      "sequence": 4100330,
+      "expected": -3674,
+      "score": 0
+    },
+    {
+      "sequence": 4100331,
+      "expected": -2012,
+      "score": 0
+    },
+    {
+      "sequence": 4100332,
+      "expected": -2794,
+      "score": 0
+    },
+    {
+      "sequence": 4100333,
+      "expected": -2954,
+      "score": 0
+    },
+    {
+      "sequence": 4100334,
+      "expected": -2761,
+      "score": 0
+    },
+    {
+      "sequence": 4100335,
+      "expected": -1574,
+      "score": 0
+    },
+    {
+      "sequence": 4100336,
+      "expected": -4098,
+      "score": 0
+    },
+    {
+      "sequence": 4100337,
+      "expected": -2215,
+      "score": 0
+    },
+    {
+      "sequence": 4100338,
+      "expected": -2693,
+      "score": 0
+    },
+    {
+      "sequence": 4100339,
+      "expected": -3072,
+      "score": 0
+    },
+    {
+      "sequence": 4100340,
+      "expected": -3267,
+      "score": 0
+    },
+    {
+      "sequence": 4100341,
+      "expected": -2590,
+      "score": 0
+    },
+    {
+      "sequence": 4100342,
+      "expected": -2699,
+      "score": 0
+    },
+    {
+      "sequence": 4100343,
+      "expected": -1442,
+      "score": 0
+    },
+    {
+      "sequence": 4100344,
+      "expected": -1243,
+      "score": 0
+    },
+    {
+      "sequence": 4100345,
+      "expected": -2188,
+      "score": 0
+    },
+    {
+      "sequence": 4100346,
+      "expected": 457,
+      "score": 0
+    },
+    {
+      "sequence": 4100347,
+      "expected": 498,
+      "score": 0
+    },
+    {
+      "sequence": 4100348,
+      "expected": 1324,
+      "score": 0
+    },
+    {
+      "sequence": 4100349,
+      "expected": 643,
+      "score": 0
+    },
+    {
+      "sequence": 4100350,
+      "expected": -825,
+      "score": 0
+    },
+    {
+      "sequence": 4100351,
+      "expected": -2951,
+      "score": 0
+    },
+    {
+      "sequence": 4100352,
+      "expected": 756,
+      "score": 0
+    },
+    {
+      "sequence": 4100353,
+      "expected": 1730,
+      "score": 0
+    },
+    {
+      "sequence": 4100354,
+      "expected": 1999,
+      "score": 0
+    },
+    {
+      "sequence": 4100355,
+      "expected": 2221,
+      "score": 0
+    },
+    {
+      "sequence": 4100356,
+      "expected": 1273,
+      "score": 0
+    },
+    {
+      "sequence": 4100357,
+      "expected": 1477,
+      "score": 0
+    },
+    {
+      "sequence": 4100358,
+      "expected": 1891,
+      "score": 0
+    },
+    {
+      "sequence": 4100359,
+      "expected": -1875,
+      "score": 0
+    },
+    {
+      "sequence": 4100360,
+      "expected": 543,
+      "score": 0
+    },
+    {
+      "sequence": 4100361,
+      "expected": 1201,
+      "score": 0
+    },
+    {
+      "sequence": 4100362,
+      "expected": -1520,
+      "score": 0
+    },
+    {
+      "sequence": 4100363,
+      "expected": -1726,
+      "score": 0
+    },
+    {
+      "sequence": 4100364,
+      "expected": 622,
+      "score": 0
+    },
+    {
+      "sequence": 4100365,
+      "expected": -936,
+      "score": 0
+    },
+    {
+      "sequence": 4100366,
+      "expected": 1522,
+      "score": 0
+    },
+    {
+      "sequence": 4100367,
+      "expected": -145,
+      "score": 0
+    },
+    {
+      "sequence": 4100368,
+      "expected": 2343,
+      "score": 0
+    },
+    {
+      "sequence": 4100369,
+      "expected": 2571,
+      "score": 0
+    },
+    {
+      "sequence": 4100370,
+      "expected": 2425,
+      "score": 0
+    },
+    {
+      "sequence": 4100371,
+      "expected": 2536,
+      "score": 0
+    },
+    {
+      "sequence": 4100372,
+      "expected": 2708,
+      "score": 0
+    },
+    {
+      "sequence": 4100373,
+      "expected": 2623,
+      "score": 0
+    },
+    {
+      "sequence": 4100374,
+      "expected": 2290,
+      "score": 0
+    },
+    {
+      "sequence": 4100375,
+      "expected": 2201,
+      "score": 0
+    },
+    {
+      "sequence": 4100376,
+      "expected": 2228,
+      "score": 0
+    },
+    {
+      "sequence": 4100377,
+      "expected": 2487,
+      "score": 0
+    },
+    {
+      "sequence": 4100378,
+      "expected": 2231,
+      "score": 0
+    },
+    {
+      "sequence": 4100379,
+      "expected": 1443,
+      "score": 0
+    },
+    {
+      "sequence": 4100380,
+      "expected": 1985,
+      "score": 0
+    },
+    {
+      "sequence": 4100381,
+      "expected": 2669,
+      "score": 0
+    },
+    {
+      "sequence": 4100382,
+      "expected": 2290,
+      "score": 0
+    },
+    {
+      "sequence": 4100383,
+      "expected": 2277,
+      "score": 0
+    },
+    {
+      "sequence": 4100384,
+      "expected": 2261,
+      "score": 0
+    },
+    {
+      "sequence": 4100385,
+      "expected": 1126,
+      "score": 0
+    },
+    {
+      "sequence": 4100386,
+      "expected": 1929,
+      "score": 0
+    },
+    {
+      "sequence": 4100387,
+      "expected": 2685,
+      "score": 0
+    },
+    {
+      "sequence": 4100388,
+      "expected": 2276,
+      "score": 0
+    },
+    {
+      "sequence": 4100389,
+      "expected": 2024,
+      "score": 0
+    },
+    {
+      "sequence": 4100390,
+      "expected": 2111,
+      "score": 0
+    },
+    {
+      "sequence": 4100391,
+      "expected": 2120,
+      "score": 0
+    },
+    {
+      "sequence": 4100392,
+      "expected": 1987,
+      "score": 0
+    },
+    {
+      "sequence": 4100393,
+      "expected": 1961,
+      "score": 0
+    },
+    {
+      "sequence": 4100394,
+      "expected": 1796,
+      "score": 0
+    },
+    {
+      "sequence": 4100395,
+      "expected": 1915,
+      "score": 0
+    },
+    {
+      "sequence": 4100396,
+      "expected": 1207,
+      "score": 0
+    },
+    {
+      "sequence": 4100397,
+      "expected": 1942,
+      "score": 0
+    },
+    {
+      "sequence": 4100398,
+      "expected": 1759,
+      "score": 0
+    },
+    {
+      "sequence": 4100399,
+      "expected": 2066,
+      "score": 0
+    },
+    {
+      "sequence": 4100400,
+      "expected": 2126,
+      "score": 0
+    },
+    {
+      "sequence": 4100401,
+      "expected": 2138,
+      "score": 0
+    },
+    {
+      "sequence": 4100402,
+      "expected": 2212,
+      "score": 0
+    },
+    {
+      "sequence": 4100403,
+      "expected": 2245,
+      "score": 0
+    },
+    {
+      "sequence": 4100404,
+      "expected": 1098,
+      "score": 0
+    },
+    {
+      "sequence": 4100405,
+      "expected": 1603,
+      "score": 0
+    },
+    {
+      "sequence": 4100406,
+      "expected": 1705,
+      "score": 0
+    },
+    {
+      "sequence": 4100407,
+      "expected": 2245,
+      "score": 0
+    },
+    {
+      "sequence": 4100408,
+      "expected": 1880,
+      "score": 0
+    },
+    {
+      "sequence": 4100409,
+      "expected": 921,
+      "score": 0
+    },
+    {
+      "sequence": 4100410,
+      "expected": 2197,
+      "score": 0
+    },
+    {
+      "sequence": 4100411,
+      "expected": 1899,
+      "score": 0
+    },
+    {
+      "sequence": 4100412,
+      "expected": 1830,
+      "score": 0
+    },
+    {
+      "sequence": 4100413,
+      "expected": 2298,
+      "score": 0
+    },
+    {
+      "sequence": 4100414,
+      "expected": 1133,
+      "score": 0
+    },
+    {
+      "sequence": 4100415,
+      "expected": 1811,
+      "score": 0
+    },
+    {
+      "sequence": 4100416,
+      "expected": 1473,
+      "score": 0
+    },
+    {
+      "sequence": 4100417,
+      "expected": 1942,
+      "score": 0
+    },
+    {
+      "sequence": 4100418,
+      "expected": 2447,
+      "score": 0
+    },
+    {
+      "sequence": 4100419,
+      "expected": 2051,
+      "score": 0
+    },
+    {
+      "sequence": 4100420,
+      "expected": 2026,
+      "score": 0
+    },
+    {
+      "sequence": 4100421,
+      "expected": 2349,
+      "score": 0
+    },
+    {
+      "sequence": 4100422,
+      "expected": 2165,
+      "score": 0
+    },
+    {
+      "sequence": 4100423,
+      "expected": 1179,
+      "score": 0
+    },
+    {
+      "sequence": 4100424,
+      "expected": 2296,
+      "score": 0
+    },
+    {
+      "sequence": 4100425,
+      "expected": 1651,
+      "score": 0
+    },
+    {
+      "sequence": 4100426,
+      "expected": 665,
+      "score": 0
+    },
+    {
+      "sequence": 4100427,
+      "expected": 1336,
+      "score": 0
+    },
+    {
+      "sequence": 4100428,
+      "expected": 219,
+      "score": 0
+    },
+    {
+      "sequence": 4100429,
+      "expected": -556,
+      "score": 0
+    },
+    {
+      "sequence": 4100430,
+      "expected": 1440,
+      "score": 0
+    },
+    {
+      "sequence": 4100431,
+      "expected": 1057,
+      "score": 0
+    },
+    {
+      "sequence": 4100432,
+      "expected": 1329,
+      "score": 0
+    },
+    {
+      "sequence": 4100433,
+      "expected": 1031,
+      "score": 0
+    },
+    {
+      "sequence": 4100434,
+      "expected": 819,
+      "score": 0
+    },
+    {
+      "sequence": 4100435,
+      "expected": 1844,
+      "score": 0
+    },
+    {
+      "sequence": 4100436,
+      "expected": 1830,
+      "score": 0
+    },
+    {
+      "sequence": 4100437,
+      "expected": 1543,
+      "score": 0
+    },
+    {
+      "sequence": 4100438,
+      "expected": 1196,
+      "score": 0
+    },
+    {
+      "sequence": 4100439,
+      "expected": 1543,
+      "score": 0
+    },
+    {
+      "sequence": 4100440,
+      "expected": -2802,
+      "score": 0
+    },
+    {
+      "sequence": 4100441,
+      "expected": 1209,
+      "score": 0
+    },
+    {
+      "sequence": 4100442,
+      "expected": 2128,
+      "score": 0
+    },
+    {
+      "sequence": 4100443,
+      "expected": 2291,
+      "score": 0
+    },
+    {
+      "sequence": 4100444,
+      "expected": 2378,
+      "score": 0
+    },
+    {
+      "sequence": 4100445,
+      "expected": 2148,
+      "score": 0
+    },
+    {
+      "sequence": 4100446,
+      "expected": 2159,
+      "score": 0
+    },
+    {
+      "sequence": 4100447,
+      "expected": 2447,
+      "score": 0
+    },
+    {
+      "sequence": 4100448,
+      "expected": 2344,
+      "score": 0
+    },
+    {
+      "sequence": 4100449,
+      "expected": 1432,
+      "score": 0
+    },
+    {
+      "sequence": 4100450,
+      "expected": 2267,
+      "score": 0
+    },
+    {
+      "sequence": 4100451,
+      "expected": 2569,
+      "score": 0
+    },
+    {
+      "sequence": 4100452,
+      "expected": 2168,
+      "score": 0
+    },
+    {
+      "sequence": 4100453,
+      "expected": 2149,
+      "score": 0
+    },
+    {
+      "sequence": 4100454,
+      "expected": 2324,
+      "score": 0
+    },
+    {
+      "sequence": 4100455,
+      "expected": 1896,
+      "score": 0
+    },
+    {
+      "sequence": 4100456,
+      "expected": 1327,
+      "score": 0
+    },
+    {
+      "sequence": 4100457,
+      "expected": 1885,
+      "score": 0
+    },
+    {
+      "sequence": 4100458,
+      "expected": -444,
+      "score": 0
+    },
+    {
+      "sequence": 4100459,
+      "expected": 1929,
+      "score": 0
+    },
+    {
+      "sequence": 4100460,
+      "expected": 1586,
+      "score": 0
+    },
+    {
+      "sequence": 4100461,
+      "expected": 1913,
+      "score": 0
+    },
+    {
+      "sequence": 4100462,
+      "expected": 1868,
+      "score": 0
+    },
+    {
+      "sequence": 4100463,
+      "expected": 2022,
+      "score": 0
+    },
+    {
+      "sequence": 4100464,
+      "expected": 1006,
+      "score": 0
+    },
+    {
+      "sequence": 4100465,
+      "expected": 2481,
+      "score": 0
+    },
+    {
+      "sequence": 4100466,
+      "expected": 2243,
+      "score": 0
+    },
+    {
+      "sequence": 4100467,
+      "expected": 2674,
+      "score": 0
+    },
+    {
+      "sequence": 4100468,
+      "expected": 2428,
+      "score": 0
+    },
+    {
+      "sequence": 4100469,
+      "expected": 1584,
+      "score": 0
+    },
+    {
+      "sequence": 4100470,
+      "expected": 1143,
+      "score": 0
+    },
+    {
+      "sequence": 4100471,
+      "expected": 2058,
+      "score": 0
+    },
+    {
+      "sequence": 4100472,
+      "expected": 1991,
+      "score": 0
+    },
+    {
+      "sequence": 4100473,
+      "expected": 607,
+      "score": 0
+    },
+    {
+      "sequence": 4100474,
+      "expected": 2420,
+      "score": 0
+    },
+    {
+      "sequence": 4100475,
+      "expected": 2068,
+      "score": 0
+    },
+    {
+      "sequence": 4100476,
+      "expected": 1852,
+      "score": 0
+    },
+    {
+      "sequence": 4100477,
+      "expected": 1046,
+      "score": 0
+    },
+    {
+      "sequence": 4100478,
+      "expected": 1891,
+      "score": 0
+    },
+    {
+      "sequence": 4100479,
+      "expected": 1001,
+      "score": 0
+    },
+    {
+      "sequence": 4100480,
+      "expected": 769,
+      "score": 0
+    },
+    {
+      "sequence": 4100481,
+      "expected": 2029,
+      "score": 0
+    },
+    {
+      "sequence": 4100482,
+      "expected": 2450,
+      "score": 0
+    },
+    {
+      "sequence": 4100483,
+      "expected": 2311,
+      "score": 0
+    },
+    {
+      "sequence": 4100484,
+      "expected": 1882,
+      "score": 0
+    },
+    {
+      "sequence": 4100485,
+      "expected": 2229,
+      "score": 0
+    },
+    {
+      "sequence": 4100486,
+      "expected": 2328,
+      "score": 0
+    },
+    {
+      "sequence": 4100487,
+      "expected": 2014,
+      "score": 0
+    },
+    {
+      "sequence": 4100488,
+      "expected": 2006,
+      "score": 0
+    },
+    {
+      "sequence": 4100489,
+      "expected": 2368,
+      "score": 0
+    },
+    {
+      "sequence": 4100490,
+      "expected": 2191,
+      "score": 0
+    },
+    {
+      "sequence": 4100491,
+      "expected": 1453,
+      "score": 0
+    },
+    {
+      "sequence": 4100492,
+      "expected": 2254,
+      "score": 0
+    },
+    {
+      "sequence": 4100493,
+      "expected": 2358,
+      "score": 0
+    },
+    {
+      "sequence": 4100494,
+      "expected": 1971,
+      "score": 0
+    },
+    {
+      "sequence": 4100495,
+      "expected": 1708,
+      "score": 0
+    },
+    {
+      "sequence": 4100496,
+      "expected": 1602,
+      "score": 0
+    },
+    {
+      "sequence": 4100497,
+      "expected": 1064,
+      "score": 0
+    },
+    {
+      "sequence": 4100498,
+      "expected": 746,
+      "score": 0
+    },
+    {
+      "sequence": 4100499,
+      "expected": 671,
+      "score": 0
+    },
+    {
+      "sequence": 4100500,
+      "expected": 1447,
+      "score": 0
+    },
+    {
+      "sequence": 4100501,
+      "expected": 1907,
+      "score": 0
+    },
+    {
+      "sequence": 4100502,
+      "expected": 143,
+      "score": 0
+    },
+    {
+      "sequence": 4100503,
+      "expected": -3115,
+      "score": 0
+    },
+    {
+      "sequence": 4100504,
+      "expected": 798,
+      "score": 0
+    },
+    {
+      "sequence": 4100505,
+      "expected": 580,
+      "score": 0
+    },
+    {
+      "sequence": 4100506,
+      "expected": 1527,
+      "score": 0
+    },
+    {
+      "sequence": 4100507,
+      "expected": 1874,
+      "score": 0
+    },
+    {
+      "sequence": 4100508,
+      "expected": 1223,
+      "score": 0
+    },
+    {
+      "sequence": 4100509,
+      "expected": 2434,
+      "score": 0
+    },
+    {
+      "sequence": 4100510,
+      "expected": 1498,
+      "score": 0
+    },
+    {
+      "sequence": 4100511,
+      "expected": 2520,
+      "score": 0
+    },
+    {
+      "sequence": 4100512,
+      "expected": 1986,
+      "score": 0
+    },
+    {
+      "sequence": 4100513,
+      "expected": 2287,
+      "score": 0
+    },
+    {
+      "sequence": 4100514,
+      "expected": 1303,
+      "score": 0
+    },
+    {
+      "sequence": 4100515,
+      "expected": 1895,
+      "score": 0
+    },
+    {
+      "sequence": 4100516,
+      "expected": 909,
+      "score": 0
+    },
+    {
+      "sequence": 4100517,
+      "expected": 1119,
+      "score": 0
+    },
+    {
+      "sequence": 4100518,
+      "expected": 1164,
+      "score": 0
+    },
+    {
+      "sequence": 4100519,
+      "expected": 1150,
+      "score": 0
+    },
+    {
+      "sequence": 4100520,
+      "expected": 1896,
+      "score": 0
+    },
+    {
+      "sequence": 4100521,
+      "expected": 1756,
+      "score": 0
+    },
+    {
+      "sequence": 4100522,
+      "expected": 1798,
+      "score": 0
+    },
+    {
+      "sequence": 4100523,
+      "expected": 1103,
+      "score": 0
+    },
+    {
+      "sequence": 4100524,
+      "expected": -508,
+      "score": 0
+    },
+    {
+      "sequence": 4100525,
+      "expected": 2116,
+      "score": 0
+    },
+    {
+      "sequence": 4100526,
+      "expected": 1748,
+      "score": 0
+    },
+    {
+      "sequence": 4100527,
+      "expected": 1798,
+      "score": 0
+    },
+    {
+      "sequence": 4100528,
+      "expected": 2047,
+      "score": 0
+    },
+    {
+      "sequence": 4100529,
+      "expected": 2014,
+      "score": 0
+    },
+    {
+      "sequence": 4100530,
+      "expected": 1732,
+      "score": 0
+    },
+    {
+      "sequence": 4100531,
+      "expected": -510,
+      "score": 0
+    },
+    {
+      "sequence": 4100532,
+      "expected": 1789,
+      "score": 0
+    },
+    {
+      "sequence": 4100533,
+      "expected": 1693,
+      "score": 0
+    },
+    {
+      "sequence": 4100534,
+      "expected": 1823,
+      "score": 0
+    },
+    {
+      "sequence": 4100535,
+      "expected": 1449,
+      "score": 0
+    },
+    {
+      "sequence": 4100536,
+      "expected": 2208,
+      "score": 0
+    },
+    {
+      "sequence": 4100537,
+      "expected": 1539,
+      "score": 0
+    },
+    {
+      "sequence": 4100538,
+      "expected": 2301,
+      "score": 0
+    },
+    {
+      "sequence": 4100539,
+      "expected": 2126,
+      "score": 0
+    },
+    {
+      "sequence": 4100540,
+      "expected": 2237,
+      "score": 0
+    },
+    {
+      "sequence": 4100541,
+      "expected": 247,
+      "score": 0
+    },
+    {
+      "sequence": 4100542,
+      "expected": 2061,
+      "score": 0
+    },
+    {
+      "sequence": 4100543,
+      "expected": 2241,
+      "score": 0
+    },
+    {
+      "sequence": 4100544,
+      "expected": 2215,
+      "score": 0
+    },
+    {
+      "sequence": 4100545,
+      "expected": 2319,
+      "score": 0
+    },
+    {
+      "sequence": 4100546,
+      "expected": 1756,
+      "score": 0
+    },
+    {
+      "sequence": 4100547,
+      "expected": 2051,
+      "score": 0
+    },
+    {
+      "sequence": 4100548,
+      "expected": 1978,
+      "score": 0
+    },
+    {
+      "sequence": 4100549,
+      "expected": 1830,
+      "score": 0
+    },
+    {
+      "sequence": 4100550,
+      "expected": 1980,
+      "score": 0
+    },
+    {
+      "sequence": 4100551,
+      "expected": 1787,
+      "score": 0
+    },
+    {
+      "sequence": 4100552,
+      "expected": 1360,
+      "score": 0
+    },
+    {
+      "sequence": 4100553,
+      "expected": 1932,
+      "score": 0
+    },
+    {
+      "sequence": 4100554,
+      "expected": 1959,
+      "score": 0
+    },
+    {
+      "sequence": 4100555,
+      "expected": 1657,
+      "score": 0
+    },
+    {
+      "sequence": 4100556,
+      "expected": 2180,
+      "score": 0
+    },
+    {
+      "sequence": 4100557,
+      "expected": 1816,
+      "score": 0
+    },
+    {
+      "sequence": 4100558,
+      "expected": 1641,
+      "score": 0
+    },
+    {
+      "sequence": 4100559,
+      "expected": 2230,
+      "score": 0
+    },
+    {
+      "sequence": 4100560,
+      "expected": 2214,
+      "score": 0
+    },
+    {
+      "sequence": 4100561,
+      "expected": 1617,
+      "score": 0
+    },
+    {
+      "sequence": 4100562,
+      "expected": 1993,
+      "score": 0
+    },
+    {
+      "sequence": 4100563,
+      "expected": 1708,
+      "score": 0
+    },
+    {
+      "sequence": 4100564,
+      "expected": 1843,
+      "score": 0
+    },
+    {
+      "sequence": 4100565,
+      "expected": 330,
+      "score": 0
+    },
+    {
+      "sequence": 4100566,
+      "expected": 1203,
+      "score": 0
+    },
+    {
+      "sequence": 4100567,
+      "expected": 2205,
+      "score": 0
+    },
+    {
+      "sequence": 4100568,
+      "expected": 2476,
+      "score": 0
+    },
+    {
+      "sequence": 4100569,
+      "expected": 1536,
+      "score": 0
+    },
+    {
+      "sequence": 4100570,
+      "expected": 2086,
+      "score": 0
+    },
+    {
+      "sequence": 4100571,
+      "expected": 2223,
+      "score": 0
+    },
+    {
+      "sequence": 4100572,
+      "expected": 2642,
+      "score": 0
+    },
+    {
+      "sequence": 4100573,
+      "expected": 2041,
+      "score": 0
+    },
+    {
+      "sequence": 4100574,
+      "expected": 2188,
+      "score": 0
+    },
+    {
+      "sequence": 4100575,
+      "expected": 1951,
+      "score": 0
+    },
+    {
+      "sequence": 4100576,
+      "expected": 2269,
+      "score": 0
+    },
+    {
+      "sequence": 4100577,
+      "expected": 2250,
+      "score": 0
+    },
+    {
+      "sequence": 4100578,
+      "expected": 1465,
+      "score": 0
+    },
+    {
+      "sequence": 4100579,
+      "expected": 2314,
+      "score": 0
+    },
+    {
+      "sequence": 4100580,
+      "expected": 1637,
+      "score": 0
+    },
+    {
+      "sequence": 4100581,
+      "expected": 1427,
+      "score": 0
+    },
+    {
+      "sequence": 4100582,
+      "expected": 2258,
+      "score": 0
+    },
+    {
+      "sequence": 4100583,
+      "expected": 2443,
+      "score": 0
+    },
+    {
+      "sequence": 4100584,
+      "expected": 2336,
+      "score": 0
+    },
+    {
+      "sequence": 4100585,
+      "expected": 1446,
+      "score": 0
+    },
+    {
+      "sequence": 4100586,
+      "expected": 1464,
+      "score": 0
+    },
+    {
+      "sequence": 4100587,
+      "expected": 417,
+      "score": 0
+    },
+    {
+      "sequence": 4100588,
+      "expected": 1221,
+      "score": 0
+    },
+    {
+      "sequence": 4100589,
+      "expected": 1601,
+      "score": 0
+    },
+    {
+      "sequence": 4100590,
+      "expected": 1976,
+      "score": 0
+    },
+    {
+      "sequence": 4100591,
+      "expected": 1945,
+      "score": 0
+    },
+    {
+      "sequence": 4100592,
+      "expected": 2157,
+      "score": 0
+    },
+    {
+      "sequence": 4100593,
+      "expected": 205,
+      "score": 0
+    },
+    {
+      "sequence": 4100594,
+      "expected": 1653,
+      "score": 0
+    },
+    {
+      "sequence": 4100595,
+      "expected": 1032,
+      "score": 0
+    },
+    {
+      "sequence": 4100596,
+      "expected": 1005,
+      "score": 0
+    },
+    {
+      "sequence": 4100597,
+      "expected": 2019,
+      "score": 0
+    },
+    {
+      "sequence": 4100598,
+      "expected": 2172,
+      "score": 0
+    },
+    {
+      "sequence": 4100599,
+      "expected": 892,
+      "score": 0
+    },
+    {
+      "sequence": 4100600,
+      "expected": 2118,
+      "score": 0
+    },
+    {
+      "sequence": 4100601,
+      "expected": 1258,
+      "score": 0
+    },
+    {
+      "sequence": 4100602,
+      "expected": 2252,
+      "score": 0
+    },
+    {
+      "sequence": 4100603,
+      "expected": 811,
+      "score": 0
+    },
+    {
+      "sequence": 4100604,
+      "expected": 2266,
+      "score": 0
+    },
+    {
+      "sequence": 4100605,
+      "expected": 1952,
+      "score": 0
+    },
+    {
+      "sequence": 4100606,
+      "expected": 1565,
+      "score": 0
+    },
+    {
+      "sequence": 4100607,
+      "expected": 606,
+      "score": 0
+    },
+    {
+      "sequence": 4100608,
+      "expected": 2108,
+      "score": 0
+    },
+    {
+      "sequence": 4100609,
+      "expected": 2137,
+      "score": 0
+    },
+    {
+      "sequence": 4100610,
+      "expected": 1162,
+      "score": 0
+    },
+    {
+      "sequence": 4100611,
+      "expected": 1963,
+      "score": 0
+    },
+    {
+      "sequence": 4100612,
+      "expected": 2396,
+      "score": 0
+    },
+    {
+      "sequence": 4100613,
+      "expected": 1980,
+      "score": 0
+    },
+    {
+      "sequence": 4100614,
+      "expected": 2271,
+      "score": 0
+    },
+    {
+      "sequence": 4100615,
+      "expected": 413,
+      "score": 0
+    },
+    {
+      "sequence": 4100616,
+      "expected": 1291,
+      "score": 0
+    },
+    {
+      "sequence": 4100617,
+      "expected": 886,
+      "score": 0
+    },
+    {
+      "sequence": 4100618,
+      "expected": 1324,
+      "score": 0
+    },
+    {
+      "sequence": 4100619,
+      "expected": 1564,
+      "score": 0
+    },
+    {
+      "sequence": 4100620,
+      "expected": 811,
+      "score": 0
+    },
+    {
+      "sequence": 4100621,
+      "expected": 2221,
+      "score": 0
+    },
+    {
+      "sequence": 4100622,
+      "expected": 2312,
+      "score": 0
+    },
+    {
+      "sequence": 4100623,
+      "expected": 1257,
+      "score": 0
+    },
+    {
+      "sequence": 4100624,
+      "expected": 392,
+      "score": 0
+    },
+    {
+      "sequence": 4100625,
+      "expected": 1791,
+      "score": 0
+    },
+    {
+      "sequence": 4100626,
+      "expected": 1507,
+      "score": 0
+    },
+    {
+      "sequence": 4100627,
+      "expected": 1794,
+      "score": 0
+    },
+    {
+      "sequence": 4100628,
+      "expected": 737,
+      "score": 0
+    },
+    {
+      "sequence": 4100629,
+      "expected": 974,
+      "score": 0
+    },
+    {
+      "sequence": 4100630,
+      "expected": 867,
+      "score": 0
+    },
+    {
+      "sequence": 4100631,
+      "expected": 1297,
+      "score": 0
+    },
+    {
+      "sequence": 4100632,
+      "expected": 2117,
+      "score": 0
+    },
+    {
+      "sequence": 4100633,
+      "expected": 1267,
+      "score": 0
+    },
+    {
+      "sequence": 4100634,
+      "expected": 1160,
+      "score": 0
+    },
+    {
+      "sequence": 4100635,
+      "expected": 2105,
+      "score": 0
+    },
+    {
+      "sequence": 4100636,
+      "expected": 1385,
+      "score": 0
+    },
+    {
+      "sequence": 4100637,
+      "expected": 2207,
+      "score": 0
+    },
+    {
+      "sequence": 4100638,
+      "expected": 1324,
+      "score": 0
+    },
+    {
+      "sequence": 4100639,
+      "expected": 2389,
+      "score": 0
+    },
+    {
+      "sequence": 4100640,
+      "expected": 2337,
+      "score": 0
+    },
+    {
+      "sequence": 4100641,
+      "expected": 1202,
+      "score": 0
+    },
+    {
+      "sequence": 4100642,
+      "expected": 1856,
+      "score": 0
+    },
+    {
+      "sequence": 4100643,
+      "expected": 2613,
+      "score": 0
+    },
+    {
+      "sequence": 4100644,
+      "expected": 2084,
+      "score": 0
+    },
+    {
+      "sequence": 4100645,
+      "expected": 2344,
+      "score": 0
+    },
+    {
+      "sequence": 4100646,
+      "expected": 1457,
+      "score": 0
+    },
+    {
+      "sequence": 4100647,
+      "expected": 2150,
+      "score": 0
+    },
+    {
+      "sequence": 4100648,
+      "expected": 1682,
+      "score": 0
+    },
+    {
+      "sequence": 4100649,
+      "expected": 2427,
+      "score": 0
+    },
+    {
+      "sequence": 4100650,
+      "expected": -2097,
+      "score": 0
+    },
+    {
+      "sequence": 4100651,
+      "expected": 1857,
+      "score": 0
+    },
+    {
+      "sequence": 4100652,
+      "expected": 2052,
+      "score": 0
+    },
+    {
+      "sequence": 4100653,
+      "expected": 2083,
+      "score": 0
+    },
+    {
+      "sequence": 4100654,
+      "expected": 1381,
+      "score": 0
+    },
+    {
+      "sequence": 4100655,
+      "expected": 2401,
+      "score": 0
+    },
+    {
+      "sequence": 4100656,
+      "expected": 496,
+      "score": 0
+    },
+    {
+      "sequence": 4100657,
+      "expected": 2111,
+      "score": 0
+    },
+    {
+      "sequence": 4100658,
+      "expected": 1938,
+      "score": 0
+    },
+    {
+      "sequence": 4100659,
+      "expected": 2128,
+      "score": 0
+    },
+    {
+      "sequence": 4100660,
+      "expected": 2045,
+      "score": 0
+    },
+    {
+      "sequence": 4100661,
+      "expected": 2175,
+      "score": 0
+    },
+    {
+      "sequence": 4100662,
+      "expected": 1774,
+      "score": 0
+    },
+    {
+      "sequence": 4100663,
+      "expected": 2608,
+      "score": 0
+    },
+    {
+      "sequence": 4100664,
+      "expected": 2248,
+      "score": 0
+    },
+    {
+      "sequence": 4100665,
+      "expected": 2415,
+      "score": 0
+    },
+    {
+      "sequence": 4100666,
+      "expected": 2193,
+      "score": 0
+    },
+    {
+      "sequence": 4100667,
+      "expected": 1937,
+      "score": 0
+    },
+    {
+      "sequence": 4100668,
+      "expected": 1591,
+      "score": 0
+    },
+    {
+      "sequence": 4100669,
+      "expected": 1885,
+      "score": 0
+    },
+    {
+      "sequence": 4100670,
+      "expected": 1838,
+      "score": 0
+    },
+    {
+      "sequence": 4100671,
+      "expected": 1456,
+      "score": 0
+    },
+    {
+      "sequence": 4100672,
+      "expected": 1058,
+      "score": 0
+    },
+    {
+      "sequence": 4100673,
+      "expected": 1711,
+      "score": 0
+    },
+    {
+      "sequence": 4100674,
+      "expected": 391,
+      "score": 0
+    },
+    {
+      "sequence": 4100675,
+      "expected": 1474,
+      "score": 0
+    },
+    {
+      "sequence": 4100676,
+      "expected": 1447,
+      "score": 0
+    },
+    {
+      "sequence": 4100677,
+      "expected": 957,
+      "score": 0
+    },
+    {
+      "sequence": 4100678,
+      "expected": -4514,
+      "score": 0
+    },
+    {
+      "sequence": 4100679,
+      "expected": -2068,
+      "score": 0
+    },
+    {
+      "sequence": 4100680,
+      "expected": -2445,
+      "score": 0
+    },
+    {
+      "sequence": 4100681,
+      "expected": -3432,
+      "score": 0
+    },
+    {
+      "sequence": 4100682,
+      "expected": -2786,
+      "score": 0
+    },
+    {
+      "sequence": 4100683,
+      "expected": -2421,
+      "score": 0
+    },
+    {
+      "sequence": 4100684,
+      "expected": -2649,
+      "score": 0
+    },
+    {
+      "sequence": 4100685,
+      "expected": -2857,
+      "score": 0
+    },
+    {
+      "sequence": 4100686,
+      "expected": -2703,
+      "score": 0
+    },
+    {
+      "sequence": 4100687,
+      "expected": -3292,
+      "score": 0
+    },
+    {
+      "sequence": 4100688,
+      "expected": -4082,
+      "score": 0
+    },
+    {
+      "sequence": 4100689,
+      "expected": -3206,
+      "score": 0
+    },
+    {
+      "sequence": 4100690,
+      "expected": -3585,
+      "score": 0
+    },
+    {
+      "sequence": 4100691,
+      "expected": -2180,
+      "score": 0
+    },
+    {
+      "sequence": 4100692,
+      "expected": -2706,
+      "score": 0
+    },
+    {
+      "sequence": 4100693,
+      "expected": -1212,
+      "score": 0
+    },
+    {
+      "sequence": 4100694,
+      "expected": -3504,
+      "score": 0
+    },
+    {
+      "sequence": 4100695,
+      "expected": -3007,
+      "score": 0
+    },
+    {
+      "sequence": 4100696,
+      "expected": -3618,
+      "score": 0
+    },
+    {
+      "sequence": 4100697,
+      "expected": -2824,
+      "score": 0
+    },
+    {
+      "sequence": 4100698,
+      "expected": -3242,
+      "score": 0
+    },
+    {
+      "sequence": 4100699,
+      "expected": -2897,
+      "score": 0
+    },
+    {
+      "sequence": 4100700,
+      "expected": -2720,
+      "score": 0
+    },
+    {
+      "sequence": 4100701,
+      "expected": -2437,
+      "score": 0
+    },
+    {
+      "sequence": 4100702,
+      "expected": -2811,
+      "score": 0
+    },
+    {
+      "sequence": 4100703,
+      "expected": -2954,
+      "score": 0
+    },
+    {
+      "sequence": 4100704,
+      "expected": -2920,
+      "score": 0
+    },
+    {
+      "sequence": 4100705,
+      "expected": -1295,
+      "score": 0
+    },
+    {
+      "sequence": 4100706,
+      "expected": -1866,
+      "score": 0
+    },
+    {
+      "sequence": 4100707,
+      "expected": -1762,
+      "score": 0
+    },
+    {
+      "sequence": 4100708,
+      "expected": -3062,
+      "score": 0
+    },
+    {
+      "sequence": 4100709,
+      "expected": -1657,
+      "score": 0
+    },
+    {
+      "sequence": 4100710,
+      "expected": -4089,
+      "score": 0
+    },
+    {
+      "sequence": 4100711,
+      "expected": -2055,
+      "score": 0
+    },
+    {
+      "sequence": 4100712,
+      "expected": -2987,
+      "score": 0
+    },
+    {
+      "sequence": 4100713,
+      "expected": -2234,
+      "score": 0
+    },
+    {
+      "sequence": 4100714,
+      "expected": -3152,
+      "score": 0
+    },
+    {
+      "sequence": 4100715,
+      "expected": -1926,
+      "score": 0
+    },
+    {
+      "sequence": 4100716,
+      "expected": 166,
+      "score": 0
+    },
+    {
+      "sequence": 4100717,
+      "expected": -952,
+      "score": 0
+    },
+    {
+      "sequence": 4100718,
+      "expected": -3068,
+      "score": 0
+    },
+    {
+      "sequence": 4100719,
+      "expected": -546,
+      "score": 0
+    },
+    {
+      "sequence": 4100720,
+      "expected": -2015,
+      "score": 0
+    },
+    {
+      "sequence": 4100721,
+      "expected": -2000,
+      "score": 0
+    },
+    {
+      "sequence": 4100722,
+      "expected": -2128,
+      "score": 0
+    },
+    {
+      "sequence": 4100723,
+      "expected": -1612,
+      "score": 0
+    },
+    {
+      "sequence": 4100724,
+      "expected": -1814,
+      "score": 0
+    },
+    {
+      "sequence": 4100725,
+      "expected": -3066,
+      "score": 0
+    },
+    {
+      "sequence": 4100726,
+      "expected": -2783,
+      "score": 0
+    },
+    {
+      "sequence": 4100727,
+      "expected": -3166,
+      "score": 0
+    },
+    {
+      "sequence": 4100728,
+      "expected": -1849,
+      "score": 0
+    },
+    {
+      "sequence": 4100729,
+      "expected": -2646,
+      "score": 0
+    },
+    {
+      "sequence": 4100730,
+      "expected": -3674,
+      "score": 0
+    },
+    {
+      "sequence": 4100731,
+      "expected": -5088,
+      "score": 0
+    },
+    {
+      "sequence": 4100732,
+      "expected": -2786,
+      "score": 0
+    },
+    {
+      "sequence": 4100733,
+      "expected": -2887,
+      "score": 0
+    },
+    {
+      "sequence": 4100734,
+      "expected": -2580,
+      "score": 0
+    },
+    {
+      "sequence": 4100735,
+      "expected": -2384,
+      "score": 0
+    },
+    {
+      "sequence": 4100736,
+      "expected": -3993,
+      "score": 0
+    },
+    {
+      "sequence": 4100737,
+      "expected": 1261,
+      "score": 0
+    },
+    {
+      "sequence": 4100738,
+      "expected": 485,
+      "score": 0
+    },
+    {
+      "sequence": 4100739,
+      "expected": -1033,
+      "score": 0
+    },
+    {
+      "sequence": 4100740,
+      "expected": -3021,
+      "score": 0
+    },
+    {
+      "sequence": 4100741,
+      "expected": 265,
+      "score": 0
+    },
+    {
+      "sequence": 4100742,
+      "expected": -2087,
+      "score": 0
+    },
+    {
+      "sequence": 4100743,
+      "expected": -1172,
+      "score": 0
+    },
+    {
+      "sequence": 4100744,
+      "expected": -3482,
+      "score": 0
+    },
+    {
+      "sequence": 4100745,
+      "expected": -666,
+      "score": 0
+    },
+    {
+      "sequence": 4100746,
+      "expected": -1346,
+      "score": 0
+    },
+    {
+      "sequence": 4100747,
+      "expected": -3586,
+      "score": 0
+    },
+    {
+      "sequence": 4100748,
+      "expected": 86,
+      "score": 0
+    },
+    {
+      "sequence": 4100749,
+      "expected": -494,
+      "score": 0
+    },
+    {
+      "sequence": 4100750,
+      "expected": -2159,
+      "score": 0
+    },
+    {
+      "sequence": 4100751,
+      "expected": 651,
+      "score": 0
+    },
+    {
+      "sequence": 4100752,
+      "expected": -3136,
+      "score": 0
+    },
+    {
+      "sequence": 4100753,
+      "expected": -2662,
+      "score": 0
+    },
+    {
+      "sequence": 4100754,
+      "expected": -569,
+      "score": 0
+    },
+    {
+      "sequence": 4100755,
+      "expected": -2128,
+      "score": 0
+    },
+    {
+      "sequence": 4100756,
+      "expected": -2644,
+      "score": 0
+    },
+    {
+      "sequence": 4100757,
+      "expected": -2728,
+      "score": 0
+    },
+    {
+      "sequence": 4100758,
+      "expected": -3431,
+      "score": 0
+    },
+    {
+      "sequence": 4100759,
+      "expected": -3569,
+      "score": 0
+    },
+    {
+      "sequence": 4100760,
+      "expected": -3715,
+      "score": 0
+    },
+    {
+      "sequence": 4100761,
+      "expected": -1413,
+      "score": 0
+    },
+    {
+      "sequence": 4100762,
+      "expected": -3405,
+      "score": 0
+    },
+    {
+      "sequence": 4100763,
+      "expected": -4224,
+      "score": 0
+    },
+    {
+      "sequence": 4100764,
+      "expected": -3218,
+      "score": 0
+    },
+    {
+      "sequence": 4100765,
+      "expected": -1682,
+      "score": 0
+    },
+    {
+      "sequence": 4100766,
+      "expected": -3341,
+      "score": 0
+    },
+    {
+      "sequence": 4100767,
+      "expected": -2426,
+      "score": 0
+    },
+    {
+      "sequence": 4100768,
+      "expected": -3349,
+      "score": 0
+    },
+    {
+      "sequence": 4100769,
+      "expected": -2576,
+      "score": 0
+    },
+    {
+      "sequence": 4100770,
+      "expected": -3126,
+      "score": 0
+    },
+    {
+      "sequence": 4100771,
+      "expected": -2562,
+      "score": 0
+    },
+    {
+      "sequence": 4100772,
+      "expected": -3838,
+      "score": 0
+    },
+    {
+      "sequence": 4100773,
+      "expected": -2677,
+      "score": 0
+    },
+    {
+      "sequence": 4100774,
+      "expected": -2654,
+      "score": 0
+    },
+    {
+      "sequence": 4100775,
+      "expected": -2943,
+      "score": 0
+    },
+    {
+      "sequence": 4100776,
+      "expected": -2155,
+      "score": 0
+    },
+    {
+      "sequence": 4100777,
+      "expected": -2999,
+      "score": 0
+    },
+    {
+      "sequence": 4100778,
+      "expected": -3149,
+      "score": 0
+    },
+    {
+      "sequence": 4100779,
+      "expected": -3101,
+      "score": 0
+    },
+    {
+      "sequence": 4100780,
+      "expected": -2348,
+      "score": 0
+    },
+    {
+      "sequence": 4100781,
+      "expected": -2947,
+      "score": 0
+    },
+    {
+      "sequence": 4100782,
+      "expected": -3633,
+      "score": 0
+    },
+    {
+      "sequence": 4100783,
+      "expected": -2745,
+      "score": 0
+    },
+    {
+      "sequence": 4100784,
+      "expected": -1972,
+      "score": 0
+    },
+    {
+      "sequence": 4100785,
+      "expected": -1655,
+      "score": 0
+    },
+    {
+      "sequence": 4100786,
+      "expected": -2848,
+      "score": 0
+    },
+    {
+      "sequence": 4100787,
+      "expected": -2336,
+      "score": 0
+    },
+    {
+      "sequence": 4100788,
+      "expected": -2707,
+      "score": 0
+    },
+    {
+      "sequence": 4100789,
+      "expected": -3563,
+      "score": 0
+    },
+    {
+      "sequence": 4100790,
+      "expected": -3137,
+      "score": 0
+    },
+    {
+      "sequence": 4100791,
+      "expected": -2740,
+      "score": 0
+    },
+    {
+      "sequence": 4100792,
+      "expected": -2988,
+      "score": 0
+    },
+    {
+      "sequence": 4100793,
+      "expected": -2964,
+      "score": 0
+    },
+    {
+      "sequence": 4100794,
+      "expected": -2526,
+      "score": 0
+    },
+    {
+      "sequence": 4100795,
+      "expected": -1971,
+      "score": 0
+    },
+    {
+      "sequence": 4100796,
+      "expected": -2815,
+      "score": 0
+    },
+    {
+      "sequence": 4100797,
+      "expected": -3719,
+      "score": 0
+    },
+    {
+      "sequence": 4100798,
+      "expected": -3123,
+      "score": 0
+    },
+    {
+      "sequence": 4100799,
+      "expected": -2325,
+      "score": 0
+    },
+    {
+      "sequence": 4100800,
+      "expected": -1680,
+      "score": 0
+    },
+    {
+      "sequence": 4100801,
+      "expected": -2789,
+      "score": 0
+    },
+    {
+      "sequence": 4100802,
+      "expected": -1540,
+      "score": 0
+    },
+    {
+      "sequence": 4100803,
+      "expected": -204,
+      "score": 0
+    },
+    {
+      "sequence": 4100804,
+      "expected": 1069,
+      "score": 0
+    },
+    {
+      "sequence": 4100805,
+      "expected": -1140,
+      "score": 0
+    },
+    {
+      "sequence": 4100806,
+      "expected": -111,
+      "score": 0
+    },
+    {
+      "sequence": 4100807,
+      "expected": -1737,
+      "score": 0
+    },
+    {
+      "sequence": 4100808,
+      "expected": -3533,
+      "score": 0
+    },
+    {
+      "sequence": 4100809,
+      "expected": -2861,
+      "score": 0
+    },
+    {
+      "sequence": 4100810,
+      "expected": -1952,
+      "score": 0
+    },
+    {
+      "sequence": 4100811,
+      "expected": -3812,
+      "score": 0
+    },
+    {
+      "sequence": 4100812,
+      "expected": -3251,
+      "score": 0
+    },
+    {
+      "sequence": 4100813,
+      "expected": -1703,
+      "score": 0
+    },
+    {
+      "sequence": 4100814,
+      "expected": -2226,
+      "score": 0
+    },
+    {
+      "sequence": 4100815,
+      "expected": -3180,
+      "score": 0
+    },
+    {
+      "sequence": 4100816,
+      "expected": -1366,
+      "score": 0
+    },
+    {
+      "sequence": 4100817,
+      "expected": -2406,
+      "score": 0
+    },
+    {
+      "sequence": 4100818,
+      "expected": -2561,
+      "score": 0
+    },
+    {
+      "sequence": 4100819,
+      "expected": -1973,
+      "score": 0
+    },
+    {
+      "sequence": 4100820,
+      "expected": 1798,
+      "score": 0
+    },
+    {
+      "sequence": 4100821,
+      "expected": -1580,
+      "score": 0
+    },
+    {
+      "sequence": 4100822,
+      "expected": -2013,
+      "score": 0
+    },
+    {
+      "sequence": 4100823,
+      "expected": -2778,
+      "score": 0
+    },
+    {
+      "sequence": 4100824,
+      "expected": -3398,
+      "score": 0
+    },
+    {
+      "sequence": 4100825,
+      "expected": -3258,
+      "score": 0
+    },
+    {
+      "sequence": 4100826,
+      "expected": -2479,
+      "score": 0
+    },
+    {
+      "sequence": 4100827,
+      "expected": -3414,
+      "score": 0
+    },
+    {
+      "sequence": 4100828,
+      "expected": -3133,
+      "score": 0
+    },
+    {
+      "sequence": 4100829,
+      "expected": -2360,
+      "score": 0
+    },
+    {
+      "sequence": 4100830,
+      "expected": -3247,
+      "score": 0
+    },
+    {
+      "sequence": 4100831,
+      "expected": -3258,
+      "score": 0
+    },
+    {
+      "sequence": 4100832,
+      "expected": -3234,
+      "score": 0
+    },
+    {
+      "sequence": 4100833,
+      "expected": -2923,
+      "score": 0
+    },
+    {
+      "sequence": 4100834,
+      "expected": -3164,
+      "score": 0
+    },
+    {
+      "sequence": 4100835,
+      "expected": -4068,
+      "score": 0
+    },
+    {
+      "sequence": 4100836,
+      "expected": -1848,
+      "score": 0
+    },
+    {
+      "sequence": 4100837,
+      "expected": -5030,
+      "score": 0
+    },
+    {
+      "sequence": 4100838,
+      "expected": -2235,
+      "score": 0
+    },
+    {
+      "sequence": 4100839,
+      "expected": -5029,
+      "score": 0
+    },
+    {
+      "sequence": 4100840,
+      "expected": -2104,
+      "score": 0
+    },
+    {
+      "sequence": 4100841,
+      "expected": 2431,
+      "score": 0
+    },
+    {
+      "sequence": 4100842,
+      "expected": -1835,
+      "score": 0
+    },
+    {
+      "sequence": 4100843,
+      "expected": 1941,
+      "score": 0
+    },
+    {
+      "sequence": 4100844,
+      "expected": -2648,
+      "score": 0
+    },
+    {
+      "sequence": 4100845,
+      "expected": -120,
+      "score": 0
+    },
+    {
+      "sequence": 4100846,
+      "expected": -1265,
+      "score": 0
+    },
+    {
+      "sequence": 4100847,
+      "expected": 2309,
+      "score": 0
+    },
+    {
+      "sequence": 4100848,
+      "expected": 2503,
+      "score": 0
+    },
+    {
+      "sequence": 4100849,
+      "expected": 2348,
+      "score": 0
+    },
+    {
+      "sequence": 4100850,
+      "expected": 2126,
+      "score": 0
+    },
+    {
+      "sequence": 4100851,
+      "expected": 1989,
+      "score": 0
+    },
+    {
+      "sequence": 4100852,
+      "expected": 1802,
+      "score": 0
+    },
+    {
+      "sequence": 4100853,
+      "expected": 1161,
+      "score": 0
+    },
+    {
+      "sequence": 4100854,
+      "expected": 1769,
+      "score": 0
+    },
+    {
+      "sequence": 4100855,
+      "expected": 1493,
+      "score": 0
+    },
+    {
+      "sequence": 4100856,
+      "expected": -2099,
+      "score": 0
+    },
+    {
+      "sequence": 4100857,
+      "expected": -3021,
+      "score": 0
+    },
+    {
+      "sequence": 4100858,
+      "expected": -2470,
+      "score": 0
+    },
+    {
+      "sequence": 4100859,
+      "expected": -2248,
+      "score": 0
+    },
+    {
+      "sequence": 4100860,
+      "expected": -2139,
+      "score": 0
+    },
+    {
+      "sequence": 4100861,
+      "expected": -3642,
+      "score": 0
+    },
+    {
+      "sequence": 4100862,
+      "expected": -4434,
+      "score": 0
+    },
+    {
+      "sequence": 4100863,
+      "expected": 2242,
+      "score": 0
+    },
+    {
+      "sequence": 4100864,
+      "expected": -70,
+      "score": 0
+    },
+    {
+      "sequence": 4100865,
+      "expected": -2361,
+      "score": 0
+    },
+    {
+      "sequence": 4100866,
+      "expected": -3735,
+      "score": 0
+    },
+    {
+      "sequence": 4100867,
+      "expected": -1751,
+      "score": 0
+    },
+    {
+      "sequence": 4100868,
+      "expected": -3372,
+      "score": 0
+    },
+    {
+      "sequence": 4100869,
+      "expected": -3078,
+      "score": 0
+    },
+    {
+      "sequence": 4100870,
+      "expected": -1903,
+      "score": 0
+    },
+    {
+      "sequence": 4100871,
+      "expected": -3444,
+      "score": 0
+    },
+    {
+      "sequence": 4100872,
+      "expected": -1442,
+      "score": 0
+    },
+    {
+      "sequence": 4100873,
+      "expected": -2678,
+      "score": 0
+    },
+    {
+      "sequence": 4100874,
+      "expected": -2282,
+      "score": 0
+    },
+    {
+      "sequence": 4100875,
+      "expected": -2244,
+      "score": 0
+    },
+    {
+      "sequence": 4100876,
+      "expected": -2138,
+      "score": 0
+    },
+    {
+      "sequence": 4100877,
+      "expected": -2923,
+      "score": 0
+    },
+    {
+      "sequence": 4100878,
+      "expected": -2692,
+      "score": 0
+    },
+    {
+      "sequence": 4100879,
+      "expected": -2994,
+      "score": 0
+    },
+    {
+      "sequence": 4100880,
+      "expected": -504,
+      "score": 0
+    },
+    {
+      "sequence": 4100881,
+      "expected": -2130,
+      "score": 0
+    },
+    {
+      "sequence": 4100882,
+      "expected": -1877,
+      "score": 0
+    },
+    {
+      "sequence": 4100883,
+      "expected": -1744,
+      "score": 0
+    },
+    {
+      "sequence": 4100884,
+      "expected": -1954,
+      "score": 0
+    },
+    {
+      "sequence": 4100885,
+      "expected": 192,
+      "score": 0
+    },
+    {
+      "sequence": 4100886,
+      "expected": -2189,
+      "score": 0
+    },
+    {
+      "sequence": 4100887,
+      "expected": -2268,
+      "score": 0
+    },
+    {
+      "sequence": 4100888,
+      "expected": -2850,
+      "score": 0
+    },
+    {
+      "sequence": 4100889,
+      "expected": -1429,
+      "score": 0
+    },
+    {
+      "sequence": 4100890,
+      "expected": -2682,
+      "score": 0
+    },
+    {
+      "sequence": 4100891,
+      "expected": -2973,
+      "score": 0
+    },
+    {
+      "sequence": 4100892,
+      "expected": 2260,
+      "score": 0
+    },
+    {
+      "sequence": 4100893,
+      "expected": 1607,
+      "score": 0
+    },
+    {
+      "sequence": 4100894,
+      "expected": 1838,
+      "score": 0
+    },
+    {
+      "sequence": 4100895,
+      "expected": 1652,
+      "score": 0
+    },
+    {
+      "sequence": 4100896,
+      "expected": 1864,
+      "score": 0
+    },
+    {
+      "sequence": 4100897,
+      "expected": -1869,
+      "score": 0
+    },
+    {
+      "sequence": 4100898,
+      "expected": -2610,
+      "score": 0
+    },
+    {
+      "sequence": 4100899,
+      "expected": 779,
+      "score": 0
+    },
+    {
+      "sequence": 4100900,
+      "expected": 2144,
+      "score": 0
+    },
+    {
+      "sequence": 4100901,
+      "expected": 1027,
+      "score": 0
+    },
+    {
+      "sequence": 4100902,
+      "expected": -1501,
+      "score": 0
+    },
+    {
+      "sequence": 4100903,
+      "expected": 1668,
+      "score": 0
+    },
+    {
+      "sequence": 4100904,
+      "expected": 2037,
+      "score": 0
+    },
+    {
+      "sequence": 4100905,
+      "expected": -1613,
+      "score": 0
+    },
+    {
+      "sequence": 4100906,
+      "expected": 2193,
+      "score": 0
+    },
+    {
+      "sequence": 4100907,
+      "expected": 1855,
+      "score": 0
+    },
+    {
+      "sequence": 4100908,
+      "expected": 2048,
+      "score": 0
+    },
+    {
+      "sequence": 4100909,
+      "expected": 1782,
+      "score": 0
+    },
+    {
+      "sequence": 4100910,
+      "expected": 2325,
+      "score": 0
+    },
+    {
+      "sequence": 4100911,
+      "expected": 1004,
+      "score": 0
+    },
+    {
+      "sequence": 4100912,
+      "expected": 1786,
+      "score": 0
+    },
+    {
+      "sequence": 4100913,
+      "expected": -3162,
+      "score": 0
+    },
+    {
+      "sequence": 4100914,
+      "expected": -3159,
+      "score": 0
+    },
+    {
+      "sequence": 4100915,
+      "expected": -4014,
+      "score": 0
+    },
+    {
+      "sequence": 4100916,
+      "expected": -945,
+      "score": 0
+    },
+    {
+      "sequence": 4100917,
+      "expected": 709,
+      "score": 0
+    },
+    {
+      "sequence": 4100918,
+      "expected": 1237,
+      "score": 0
+    },
+    {
+      "sequence": 4100919,
+      "expected": 241,
+      "score": 0
+    },
+    {
+      "sequence": 4100920,
+      "expected": -1976,
+      "score": 0
+    },
+    {
+      "sequence": 4100921,
+      "expected": -2833,
+      "score": 0
+    },
+    {
+      "sequence": 4100922,
+      "expected": -3590,
+      "score": 0
+    },
+    {
+      "sequence": 4100923,
+      "expected": -3090,
+      "score": 0
+    },
+    {
+      "sequence": 4100924,
+      "expected": -2384,
+      "score": 0
+    },
+    {
+      "sequence": 4100925,
+      "expected": -3053,
+      "score": 0
+    },
+    {
+      "sequence": 4100926,
+      "expected": -2840,
+      "score": 0
+    },
+    {
+      "sequence": 4100927,
+      "expected": -2728,
+      "score": 0
+    },
+    {
+      "sequence": 4100928,
+      "expected": -2931,
+      "score": 0
+    },
+    {
+      "sequence": 4100929,
+      "expected": -3168,
+      "score": 0
+    },
+    {
+      "sequence": 4100930,
+      "expected": -3035,
+      "score": 0
+    },
+    {
+      "sequence": 4100931,
+      "expected": -1990,
+      "score": 0
+    },
+    {
+      "sequence": 4100932,
+      "expected": -1743,
+      "score": 0
+    },
+    {
+      "sequence": 4100933,
+      "expected": -2775,
+      "score": 0
+    },
+    {
+      "sequence": 4100934,
+      "expected": -1143,
+      "score": 0
+    },
+    {
+      "sequence": 4100935,
+      "expected": -2724,
+      "score": 0
+    },
+    {
+      "sequence": 4100936,
+      "expected": -4343,
+      "score": 0
+    },
+    {
+      "sequence": 4100937,
+      "expected": -2637,
+      "score": 0
+    },
+    {
+      "sequence": 4100938,
+      "expected": -3058,
+      "score": 0
+    },
+    {
+      "sequence": 4100939,
+      "expected": -2690,
+      "score": 0
+    },
+    {
+      "sequence": 4100940,
+      "expected": -2367,
+      "score": 0
+    },
+    {
+      "sequence": 4100941,
+      "expected": -3119,
+      "score": 0
+    },
+    {
+      "sequence": 4100942,
+      "expected": -2914,
+      "score": 0
+    },
+    {
+      "sequence": 4100943,
+      "expected": -2578,
+      "score": 0
+    },
+    {
+      "sequence": 4100944,
+      "expected": -3073,
+      "score": 0
+    },
+    {
+      "sequence": 4100945,
+      "expected": -4484,
+      "score": 0
+    },
+    {
+      "sequence": 4100946,
+      "expected": -3476,
+      "score": 0
+    },
+    {
+      "sequence": 4100947,
+      "expected": -3018,
+      "score": 0
+    },
+    {
+      "sequence": 4100948,
+      "expected": -3157,
+      "score": 0
+    },
+    {
+      "sequence": 4100949,
+      "expected": -2719,
+      "score": 0
+    },
+    {
+      "sequence": 4100950,
+      "expected": -4543,
+      "score": 0
+    },
+    {
+      "sequence": 4100951,
+      "expected": -2506,
+      "score": 0
+    },
+    {
+      "sequence": 4100952,
+      "expected": -2646,
+      "score": 0
+    },
+    {
+      "sequence": 4100953,
+      "expected": -2308,
+      "score": 0
+    },
+    {
+      "sequence": 4100954,
+      "expected": -2855,
+      "score": 0
+    },
+    {
+      "sequence": 4100955,
+      "expected": -2648,
+      "score": 0
+    },
+    {
+      "sequence": 4100956,
+      "expected": -1962,
+      "score": 0
+    },
+    {
+      "sequence": 4100957,
+      "expected": -4315,
+      "score": 0
+    },
+    {
+      "sequence": 4100958,
+      "expected": -3652,
+      "score": 0
+    },
+    {
+      "sequence": 4100959,
+      "expected": -5337,
+      "score": 0
+    },
+    {
+      "sequence": 4100960,
+      "expected": -5282,
+      "score": 0
+    },
+    {
+      "sequence": 4100961,
+      "expected": -4830,
+      "score": 0
+    },
+    {
+      "sequence": 4100962,
+      "expected": -3950,
+      "score": 0
+    },
+    {
+      "sequence": 4100963,
+      "expected": -2436,
+      "score": 0
+    },
+    {
+      "sequence": 4100964,
+      "expected": 1492,
+      "score": 0
+    },
+    {
+      "sequence": 4100965,
+      "expected": 2199,
+      "score": 0
+    },
+    {
+      "sequence": 4100966,
+      "expected": 2105,
+      "score": 0
+    },
+    {
+      "sequence": 4100967,
+      "expected": 2457,
+      "score": 0
+    },
+    {
+      "sequence": 4100968,
+      "expected": 1846,
+      "score": 0
+    },
+    {
+      "sequence": 4100969,
+      "expected": 859,
+      "score": 0
+    },
+    {
+      "sequence": 4100970,
+      "expected": 1545,
+      "score": 0
+    },
+    {
+      "sequence": 4100971,
+      "expected": 2102,
+      "score": 0
+    },
+    {
+      "sequence": 4100972,
+      "expected": 2012,
+      "score": 0
+    },
+    {
+      "sequence": 4100973,
+      "expected": 1913,
+      "score": 0
+    },
+    {
+      "sequence": 4100974,
+      "expected": 1957,
+      "score": 0
+    },
+    {
+      "sequence": 4100975,
+      "expected": 800,
+      "score": 0
+    },
+    {
+      "sequence": 4100976,
+      "expected": -1700,
+      "score": 0
+    },
+    {
+      "sequence": 4100977,
+      "expected": 2038,
+      "score": 0
+    },
+    {
+      "sequence": 4100978,
+      "expected": 1686,
+      "score": 0
+    },
+    {
+      "sequence": 4100979,
+      "expected": 1782,
+      "score": 0
+    },
+    {
+      "sequence": 4100980,
+      "expected": 1476,
+      "score": 0
+    },
+    {
+      "sequence": 4100981,
+      "expected": 1892,
+      "score": 0
+    },
+    {
+      "sequence": 4100982,
+      "expected": 1623,
+      "score": 0
+    },
+    {
+      "sequence": 4100983,
+      "expected": 882,
+      "score": 0
+    },
+    {
+      "sequence": 4100984,
+      "expected": 1384,
+      "score": 0
+    },
+    {
+      "sequence": 4100985,
+      "expected": 1500,
+      "score": 0
+    },
+    {
+      "sequence": 4100986,
+      "expected": 1997,
+      "score": 0
+    },
+    {
+      "sequence": 4100987,
+      "expected": 2124,
+      "score": 0
+    },
+    {
+      "sequence": 4100988,
+      "expected": -2940,
+      "score": 0
+    },
+    {
+      "sequence": 4100989,
+      "expected": 1509,
+      "score": 0
+    },
+    {
+      "sequence": 4100990,
+      "expected": 1366,
+      "score": 0
+    },
+    {
+      "sequence": 4100991,
+      "expected": -1886,
+      "score": 0
+    },
+    {
+      "sequence": 4100992,
+      "expected": 1315,
+      "score": 0
+    },
+    {
+      "sequence": 4100993,
+      "expected": 1796,
+      "score": 0
+    },
+    {
+      "sequence": 4100994,
+      "expected": 1623,
+      "score": 0
+    },
+    {
+      "sequence": 4100995,
+      "expected": 896,
+      "score": 0
+    },
+    {
+      "sequence": 4100996,
+      "expected": 1285,
+      "score": 0
+    },
+    {
+      "sequence": 4100997,
+      "expected": 1911,
+      "score": 0
+    },
+    {
+      "sequence": 4100998,
+      "expected": -1552,
+      "score": 0
+    },
+    {
+      "sequence": 4100999,
+      "expected": -1552,
+      "score": 0
+    }
+  ],
+  "unrelated_replies": 0,
+  "error": null,
+  "batch_size": 32,
+  "split": "test",
+  "manifest": "genomic-dataset-pipeline\\artifacts\\model_v4_batch_seed_7\\export_manifest.json",
+  "first_sequence": 4100000,
+  "completed_seconds": null,
+  "completed_variants_per_second": null,
+  "timing_scope": "first batch send to last host-captured reply; includes waits between batches; excludes preparation/capture startup"
+}

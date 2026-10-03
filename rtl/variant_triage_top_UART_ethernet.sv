@@ -3,7 +3,9 @@ module variant_triage_top_UART_ethernet #(
     parameter integer BAUD_RATE        = 115_200,
     parameter integer FEATURE_NUMBER   = 16,
     parameter integer HIDDEN_NUMBER    = 8,
-    parameter integer HIDDEN_MAC_LANES = 4
+    parameter integer HIDDEN_MAC_LANES = 4,
+    parameter integer PHY_RESET_CYCLES = 2_500_000,
+    parameter integer STARTUP_CYCLES = 150_000_000
 ) (
     input  logic       clk,
     input  logic       reset,
@@ -17,14 +19,14 @@ module variant_triage_top_UART_ethernet #(
 
     output logic [1:0] rmii_txd,
     output logic       rmii_tx_en,
+    input  logic [1:0] rmii_rxd,
+    input  logic       rmii_crs_dv,
+    input  logic       rmii_rx_er,
 
     output logic [3:0] LED
 );
 
     `include "model_parameters.svh"
-
-    localparam logic [27:0] PHY_RESET_CYCLES = 28'd2_500_000;
-    localparam logic [27:0] STARTUP_CYCLES   = 28'd150_000_000;
 
     localparam logic [7:0] PROTOCOL_VERSION = 8'h01;
     localparam logic [7:0] MESSAGE_RESULT   = 8'h01;
@@ -44,6 +46,20 @@ module variant_triage_top_UART_ethernet #(
 
     logic [7:0] packet [0:FEATURE_NUMBER - 1];
     logic       packet_valid;
+    logic [7:0] classifier_features [0:FEATURE_NUMBER-1];
+    logic core_start, request_inflight;
+    logic [31:0] active_sequence, uart_sequence;
+    logic clk_rx_50MHz, rx_reset, system_reset;
+    (* ASYNC_REG = "TRUE" *) logic [1:0] rx_reset_sync = 2'b11;
+    (* ASYNC_REG = "TRUE" *) logic [1:0] system_reset_sync = 2'b11;
+    logic [7:0] rx_data;
+    logic rx_valid, rx_last, rx_ready, rx_good, rx_bad, rx_overflow;
+    logic [7:0] request_features [0:15];
+    logic [31:0] request_sequence;
+    logic request_valid, request_ready, request_mailbox_ready;
+    logic [159:0] request_bundle, classifier_request;
+    logic classifier_request_valid, classifier_request_ready;
+    logic [63:0] ethernet_result;
 
     logic               core_busy;
     logic               core_done;
@@ -120,7 +136,7 @@ module variant_triage_top_UART_ethernet #(
         .PACKET_BYTE_NUMBER(FEATURE_NUMBER)
     ) UART_packet_RX_inst (
         .clk         (clk),
-        .reset       (reset),
+        .reset       (system_reset),
         .rx          (rx),
         .packet      (packet),
         .packet_valid(packet_valid)
@@ -149,9 +165,9 @@ module variant_triage_top_UART_ethernet #(
         )
     ) variant_triage_core_inst (
         .clk    (clk),
-        .reset  (reset),
-        .start  (packet_valid),
-        .feature(packet),
+        .reset  (system_reset),
+        .start  (core_start),
+        .feature(classifier_features),
         .busy   (core_busy),
         .done   (core_done),
         .score  (core_score)
@@ -167,7 +183,7 @@ module variant_triage_top_UART_ethernet #(
         .DATA_NUMBER(1)
     ) UART_response_TX_inst (
         .clk   (clk),
-        .reset (reset),
+        .reset (system_reset),
         .tx    (tx),
         .data32(response),
         .send  (core_done),
@@ -179,17 +195,23 @@ module variant_triage_top_UART_ethernet #(
      *
      * clk_out1: 50 MHz, 0 degrees, PHY reference clock
      * clk_out2: 50 MHz, 180 degrees, MAC transmit clock
+     * clk_out3: 50 MHz, 36 degrees, MAC receive clock
      */
 
     clk_wiz_ethernet clock_generator (
         .clk_out1(clk_phy_50MHz),
         .clk_out2(clk_mac_50MHz),
+        .clk_out3(clk_rx_50MHz),
         .reset   (reset),
         .locked  (clock_locked),
         .clk_in1 (clk)
     );
 
-    assign PHY_ref_clk = clk_phy_50MHz;
+    ODDR #(.DDR_CLK_EDGE("SAME_EDGE"), .INIT(1'b0), .SRTYPE("SYNC"))
+    PHY_clock_forward (
+        .C(clk_phy_50MHz), .CE(1'b1), .D1(1'b1), .D2(1'b0),
+        .Q(PHY_ref_clk), .R(1'b0), .S(1'b0)
+    );
 
     /*
      * Asynchronously assert the Ethernet reset when the external
@@ -199,6 +221,69 @@ module variant_triage_top_UART_ethernet #(
 
     assign reset_request = reset || !clock_locked;
     assign ethernet_reset = reset_sync_reg[1];
+    assign system_reset = system_reset_sync[1];
+    assign rx_reset = rx_reset_sync[1];
+
+    always_ff @(posedge clk or posedge reset_request) begin
+        if (reset_request) system_reset_sync <= 2'b11;
+        else system_reset_sync <= {system_reset_sync[0], 1'b0};
+    end
+    // Release RX only after the PHY's reset interval has completed.
+    wire rx_reset_request = reset_request || !PHY_reset_n;
+    always_ff @(posedge clk_rx_50MHz or posedge rx_reset_request) begin
+        if (rx_reset_request) rx_reset_sync <= 2'b11;
+        else rx_reset_sync <= {rx_reset_sync[0], 1'b0};
+    end
+
+    ethernet_RX receiver (
+        .clk(clk_rx_50MHz), .reset(rx_reset),
+        .rmii_rxd(rmii_rxd), .rmii_crs_dv(rmii_crs_dv), .rmii_rx_er(rmii_rx_er),
+        .data_out(rx_data), .valid_out(rx_valid), .last_out(rx_last), .ready_in(rx_ready),
+        .good_frame_out(rx_good), .bad_frame_out(rx_bad), .overflow_out(rx_overflow)
+    );
+    ethernet_request_RX request_parser (
+        .clk(clk_rx_50MHz), .reset(rx_reset),
+        .data_in(rx_data), .valid_in(rx_valid), .last_in(rx_last), .ready_out(rx_ready),
+        .request_valid(request_valid), .request_ready(request_ready),
+        .sequence_out(request_sequence), .features_out(request_features)
+    );
+    assign request_bundle[159:128] = request_sequence;
+    for (genvar i=0; i<16; i++) begin : request_pack
+        assign request_bundle[i*8 +: 8] = request_features[i];
+    end
+    assign request_ready = request_mailbox_ready;
+    score_clock_domain_crosser #(.DATA_WIDTH(160)) request_mailbox (
+        .source_clk(clk_rx_50MHz), .source_reset(rx_reset),
+        .source_data(request_bundle), .source_send(request_valid), .source_ready(request_mailbox_ready),
+        .destination_clk(clk), .destination_reset(system_reset),
+        .destination_data(classifier_request), .destination_valid(classifier_request_valid),
+        .destination_ready(classifier_request_ready)
+    );
+
+    // One inference at a time. UART has priority when both inputs arrive.
+    // Reserve result-mailbox and UART-response capacity before launching.
+    assign classifier_request_ready = !request_inflight && !core_busy &&
+        score_source_ready && !response_busy && !packet_valid;
+    assign core_start = !request_inflight && !core_busy && score_source_ready &&
+        !response_busy && (packet_valid || classifier_request_valid);
+    always_comb begin
+        for (int i=0; i<FEATURE_NUMBER; i++)
+            classifier_features[i] = packet_valid ? packet[i] : classifier_request[i*8 +: 8];
+    end
+    always_ff @(posedge clk or posedge system_reset) begin
+        if (system_reset) begin
+            request_inflight <= 0;
+            active_sequence <= 0;
+            uart_sequence <= 0;
+        end else begin
+            if (core_done) request_inflight <= 0;
+            if (core_start) begin
+                request_inflight <= 1;
+                active_sequence <= packet_valid ? uart_sequence : classifier_request[159:128];
+                if (packet_valid) uart_sequence <= uart_sequence + 1'b1;
+            end
+        end
+    end
 
     always_ff @(posedge clk_mac_50MHz or posedge reset_request) begin
         if (reset_request)
@@ -216,20 +301,21 @@ module variant_triage_top_UART_ethernet #(
      */
 
     score_clock_domain_crosser #(
-        .DATA_WIDTH(32)
+        .DATA_WIDTH(64)
     ) score_clock_domain_crosser_inst (
         .source_clk        (clk),
-        .source_reset      (reset),
-        .source_data       (core_score),
+        .source_reset      (system_reset),
+        .source_data       ({active_sequence, core_score}),
         .source_send       (core_done),
         .source_ready      (score_source_ready),
 
         .destination_clk   (clk_mac_50MHz),
         .destination_reset (ethernet_reset),
-        .destination_data  (ethernet_score),
+        .destination_data  (ethernet_result),
         .destination_valid (ethernet_score_valid),
         .destination_ready (ethernet_score_consumed)
     );
+    assign ethernet_score = ethernet_result[31:0];
 
     /*
      * Result frame format after EtherType 0x88B5:
@@ -434,6 +520,7 @@ module variant_triage_top_UART_ethernet #(
                     !TX_busy
                 ) begin
                     packet_score_next = ethernet_score;
+                    sequence_next     = ethernet_result[63:32];
                     index_next        = '0;
                     state_next        = send_frame;
                 end
@@ -456,7 +543,6 @@ module variant_triage_top_UART_ethernet #(
             wait_result: begin
                 if (TX_done) begin
                     ethernet_score_consumed = 1'b1;
-                    sequence_next = sequence_reg + 1'b1;
                     sent_next     = !sent_reg;
                     state_next    = wait_score;
                 end else if (TX_underflow) begin

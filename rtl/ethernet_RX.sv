@@ -23,9 +23,10 @@ module ethernet_RX #(
 
     state_t state_reg;
     logic [COUNT_WIDTH-1:0] count_reg, read_reg, length_reg;
-    logic [7:0] frame_mem [0:MAX_FRAME_BYTES-1];
-    logic [7:0] rx_data;
-    logic rx_valid, rx_start, rx_end, rx_error;
+    (* ram_style = "block" *) logic [7:0] frame_mem [0:MAX_FRAME_BYTES-1];
+    logic [COUNT_WIDTH-1:0] next_read;
+    (* mark_debug = "true" *) logic [7:0] rx_data;
+    (* mark_debug = "true" *) logic rx_valid, rx_start, rx_end, rx_error;
     logic [31:0] crc_value;
     logic frame_error_reg;
     logic discard_to_idle_reg;
@@ -44,7 +45,15 @@ module ethernet_RX #(
         .crc_out(crc_value)
     );
 
-    assign data_out = frame_mem[read_reg];
+    // Synchronous simple dual-port RAM. Prefetch the following byte on a
+    // transfer, keeping the output stable during backpressure without bubbles.
+    assign next_read = (state_reg == capture) ? '0 :
+        read_reg + ((valid_out && ready_in && !last_out) ? 1'b1 : 1'b0);
+    always_ff @(posedge clk) begin
+        if (!reset && state_reg == capture && rx_valid && count_reg < MAX_FRAME_BYTES)
+            frame_mem[count_reg] <= rx_data;
+        data_out <= frame_mem[next_read];
+    end
     assign valid_out = (state_reg == deliver);
     assign last_out = valid_out && (read_reg == length_reg - 1'b1);
 
@@ -74,7 +83,6 @@ module ethernet_RX #(
                 capture: begin
                     if (rx_valid) begin
                         if (count_reg < MAX_FRAME_BYTES) begin
-                            frame_mem[count_reg] <= rx_data;
                             count_reg <= count_reg + 1'b1;
                         end else begin
                             frame_error_reg <= 1'b1;

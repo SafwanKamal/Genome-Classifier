@@ -137,6 +137,21 @@ def create_backend(
     if args.backend == "numpy":
         return numpy_backend
 
+    if args.backend in {"ethernet", "compare-ethernet"}:
+        # Scapy is needed only when an Ethernet backend is selected.
+        from software.variantgate.backends.ethernet_backend import EthernetBackend
+        from software.decode_ethernet_result import DEFAULT_ROUTING_THRESHOLD
+        threshold = DEFAULT_ROUTING_THRESHOLD
+        if args.routing_policy is not None:
+            policy = load_routing_policy(args.routing_policy)
+            if policy.model_manifest_sha256 != manifest.sha256:
+                raise ValueError("Routing policy and model manifest identify different models")
+            threshold = policy.threshold
+        candidate = EthernetBackend(args.interface, args.timeout, args.sequence, threshold)
+        if args.backend == "ethernet":
+            return candidate
+        return ComparisonBackend(candidate=candidate, reference=numpy_backend)
+
     if not args.port:
         raise ValueError(
             f"--port is required for the {args.backend} backend"
@@ -256,8 +271,8 @@ def run_triage(args: argparse.Namespace) -> None:
         "total_backend_latency_seconds": total_latency_ns / 1_000_000_000,
         "mean_backend_latency_us": float(scores_frame["latency_us"].mean()),
         "complete_run_time_seconds": (end_ns - start_ns) / 1_000_000_000,
-        "bit_exact_comparison": args.backend == "compare",
-        "bit_exact_mismatches": 0 if args.backend == "compare" else None,
+        "bit_exact_comparison": args.backend in {"compare", "compare-ethernet"},
+        "bit_exact_mismatches": 0 if args.backend in {"compare", "compare-ethernet"} else None,
     }
 
     if routing_policy is not None:
@@ -304,6 +319,12 @@ def run_triage(args: argparse.Namespace) -> None:
         },
         "backend": {
             "name": backend.name,
+            "ethernet_interface": (
+                args.interface if args.backend in {"ethernet", "compare-ethernet"} else None
+            ),
+            "first_sequence": (
+                args.sequence if args.backend in {"ethernet", "compare-ethernet"} else None
+            ),
             "serial_port": (
                 args.port if args.backend in {"uart", "compare"} else None
             ),
@@ -314,7 +335,7 @@ def run_triage(args: argparse.Namespace) -> None:
             ),
             "timeout_seconds": (
                 args.timeout
-                if args.backend in {"uart", "compare"}
+                if args.backend in {"uart", "compare", "ethernet", "compare-ethernet"}
                 else None
             ),
         },
@@ -384,10 +405,13 @@ def build_parser() -> argparse.ArgumentParser:
     )
     triage_parser.add_argument(
         "--backend",
-        choices=["numpy", "uart", "compare"],
+        choices=["numpy", "uart", "compare", "ethernet", "compare-ethernet"],
         default="numpy",
     )
     triage_parser.add_argument("--port")
+    triage_parser.add_argument("--interface", help="Ethernet adapter name, e.g. Ethernet")
+    triage_parser.add_argument("--sequence", type=int, default=2_000_000,
+                               help="First Ethernet request sequence")
     triage_parser.add_argument("--baud-rate", type=int, default=115_200)
     triage_parser.add_argument("--timeout", type=float, default=2.0)
     triage_parser.add_argument("--split", default=None)

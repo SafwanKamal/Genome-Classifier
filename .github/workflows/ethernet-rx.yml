@@ -6,6 +6,8 @@ on:
       - 'rtl/ethernet_RX.sv'
       - 'rtl/ethernet_CRC32.sv'
       - 'simulation/ethernet_RX_tb.sv'
+      - 'rtl/ethernet_request_RX.sv'
+      - 'simulation/ethernet_request_RX_tb.sv'
       - 'rtl/ethernet_RX_test_top.sv'
       - 'software/send_ethernet_RX_test.py'
       - '.github/workflows/ethernet-rx.yml'
@@ -15,6 +17,8 @@ on:
       - 'rtl/ethernet_RX.sv'
       - 'rtl/ethernet_CRC32.sv'
       - 'simulation/ethernet_RX_tb.sv'
+      - 'rtl/ethernet_request_RX.sv'
+      - 'simulation/ethernet_request_RX_tb.sv'
       - 'rtl/ethernet_RX_test_top.sv'
       - 'software/send_ethernet_RX_test.py'
       - '.github/workflows/ethernet-rx.yml'
@@ -32,6 +36,11 @@ jobs:
             rtl/rmii_RX.sv rtl/ethernet_CRC32.sv rtl/ethernet_RX.sv \
             simulation/ethernet_RX_tb.sv
           vvp /tmp/ethernet_RX_tb.vvp
+      - name: Simulate RX01 request parser
+        run: |
+          iverilog -g2012 -s ethernet_request_RX_tb -o /tmp/ethernet_request_RX_tb.vvp \
+            rtl/ethernet_request_RX.sv simulation/ethernet_request_RX_tb.sv
+          vvp /tmp/ethernet_request_RX_tb.vvp
       - name: Check known test-frame bytes
         run: |
           python software/send_ethernet_RX_test.py \

@@ -1,0 +1,63 @@
+{
+  "format_version": 1,
+  "policy_name": "validation_pathogenic_recall_gate",
+  "created_at": "2026-10-01T07:36:18.474291+00:00",
+  "purpose": "Allocate deep evidence review while preserving a validation-set pathogenic-recall target. This policy does not change the model's score >= 0 classification rule.",
+  "rule": {
+    "deep_review": "score >= threshold",
+    "light_review": "score < threshold",
+    "threshold": -1914
+  },
+  "selection": {
+    "split": "validation",
+    "target_pathogenic_recall": 0.995,
+    "achieved_pathogenic_recall": 0.9950994522917267,
+    "variant_number": 28293,
+    "pathogenic_number": 6938,
+    "benign_number": 21355,
+    "deep_review_number": 13226,
+    "light_review_number": 15067,
+    "deep_review_fraction": 0.4674654508182236,
+    "light_review_fraction": 0.5325345491817765,
+    "routing_confusion_matrix": {
+      "deep_pathogenic": 6904,
+      "light_pathogenic": 34,
+      "deep_benign": 6322,
+      "light_benign": 15033
+    }
+  },
+  "model": {
+    "export_manifest_path": "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\genomic-dataset-pipeline\\artifacts\\model_v3_h256_seed_7\\fpga_export\\export_manifest.json",
+    "export_manifest_sha256": "b4d3b3be04e15ec6c37fa9a16c7b3e290af0d3d5002f49ef5a4b57e9fd97265c",
+    "source_model_sha256": "0779f4354cb375cf7668996dae77b2a74e05615f963586121c67cb2efeb94449",
+    "architecture": "16-256-1",
+    "classification_rule": "folded_score >= 0"
+  },
+  "inputs": {
+    "scores": {
+      "path": "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\runs\\model_v3_validation\\scores.parquet",
+      "sha256": "5c5cecdf6c2936c75577a26a261f7cb9a9052106fa162b015a78c31aaca2c5e9"
+    },
+    "dataset": {
+      "path": "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\genomic-dataset-pipeline\\data\\processed\\variants_model_int8.parquet",
+      "sha256": "b4318b4c61544204b3157f217258ca2fe2695aff753bf133553a1a41502c3633"
+    },
+    "run_manifest": {
+      "path": "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\runs\\model_v3_validation\\run_manifest.json",
+      "sha256": "2bf81a2f7b60941fb62b89e5ca58bdeaf04833e57f7d169ce959bf7c7b7c810b",
+      "backend": "numpy"
+    }
+  },
+  "selection_command": [
+    "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\software\\variantgate\\select_routing_threshold.py",
+    "--scores",
+    "runs/model_v3_validation/scores.parquet",
+    "--dataset",
+    "genomic-dataset-pipeline/data/processed/variants_model_int8.parquet",
+    "--manifest",
+    "genomic-dataset-pipeline/artifacts/model_v3_h256_seed_7/fpga_export/export_manifest.json",
+    "--output",
+    "reports/checkpoint_v3/routing_policy.json"
+  ],
+  "locked_test_policy": "Test results may be reported after this policy is frozen but must not be used to modify the threshold or routing design."
+}

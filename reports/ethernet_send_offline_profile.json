@@ -1,0 +1,26 @@
+{
+  "kind": "offline; fake socket serializes packets but never injects them",
+  "scapy_version": "2.7.0",
+  "requests_per_run": 1000,
+  "seconds": {
+    "Scapy loop with sleep(0)": [
+      0.03510560002177954,
+      0.03267099999357015,
+      0.06045809999341145,
+      0.03319430002011359,
+      0.03569509997032583
+    ],
+    "Scapy loop without sleep": [
+      0.03271689999382943,
+      0.03177350002806634,
+      0.03001420001965016,
+      0.03034180001122877,
+      0.030307999986689538
+    ]
+  },
+  "median_seconds": {
+    "Scapy loop with sleep(0)": 0.03510560002177954,
+    "Scapy loop without sleep": 0.03034180001122877
+  },
+  "scope": "Scapy __gen_send with a fake socket that serializes packets; excludes real socket setup/injection, concurrent capture, NIC, and FPGA"
+}

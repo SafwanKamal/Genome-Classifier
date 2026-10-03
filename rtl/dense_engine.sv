@@ -146,10 +146,8 @@ module dense_engine #(
         end
     end
 
-    // This generate block is necessary to scope the FPGA DSPs to only the product generation.
-    // Otherwise, the synthesis tool will use LUTs for multiplication. Or,
-    // if dsp identifiers are used at the top of the module,
-    // synthesis tool will infer unnecessary DSPs for the MAC operation, which is not what we want.
+    // Target each multiplier with use_dsp; broad module-level placement also
+    // encourages unrelated arithmetic to use DSPs. See docs/fpga_synthesis.md.
     generate
         for (genvar lane = 0; lane < MAC_LANES; lane++) begin
             : product_generation
@@ -265,4 +263,4 @@ module dense_engine #(
     assign busy = (state_reg != IDLE);
     assign done = (state_reg == OUTPUT);
     assign output_data = output_data_reg;
-endmodule 
+endmodule

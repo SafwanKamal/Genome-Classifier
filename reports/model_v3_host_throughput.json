@@ -1,0 +1,99 @@
+{
+  "architecture": "16-256-1",
+  "manifest_sha256": "b4d3b3be04e15ec6c37fa9a16c7b3e290af0d3d5002f49ef5a4b57e9fd97265c",
+  "split": "validation",
+  "count": 28293,
+  "all_scores_bit_exact": true,
+  "timing_scope": "prepared features to scores; excludes input/output I/O",
+  "results": [
+    {
+      "backend": "scalar_int64",
+      "seconds": [
+        0.6854995000176132,
+        0.7758770000073127,
+        0.7941646999679506,
+        0.7765312999836169,
+        0.7556853999849409
+      ],
+      "variants_per_second": 36465.831568319896
+    },
+    {
+      "backend": "batched_float32",
+      "threads": 1,
+      "batch_size": 1,
+      "seconds": [
+        0.5180362000246532,
+        0.5070570000098087,
+        0.5233467000070959,
+        0.5446282000048086,
+        0.523877099971287
+      ],
+      "variants_per_second": 54061.67651313438
+    },
+    {
+      "backend": "batched_float32",
+      "threads": 1,
+      "batch_size": 64,
+      "seconds": [
+        0.020078099973034114,
+        0.01994219998596236,
+        0.020042499992996454,
+        0.019178400048986077,
+        0.023084300046321005
+      ],
+      "variants_per_second": 1411650.2437264093
+    },
+    {
+      "backend": "batched_float32",
+      "threads": 1,
+      "batch_size": 1024,
+      "seconds": [
+        0.10280250001233071,
+        0.10150900000007823,
+        0.1034230999648571,
+        0.10557120002340525,
+        0.09973889996763319
+      ],
+      "variants_per_second": 275217.0423540904
+    },
+    {
+      "backend": "batched_float32",
+      "threads": 4,
+      "batch_size": 1,
+      "seconds": [
+        0.5086840000003576,
+        0.5184945000219159,
+        0.5678390000248328,
+        0.5057500000111759,
+        0.5178226999705657
+      ],
+      "variants_per_second": 54638.392642130675
+    },
+    {
+      "backend": "batched_float32",
+      "threads": 4,
+      "batch_size": 64,
+      "seconds": [
+        0.019087099994067103,
+        0.018617100024130195,
+        0.01848620001692325,
+        0.018464499968104064,
+        0.019610100018326193
+      ],
+      "variants_per_second": 1519731.8574497947
+    },
+    {
+      "backend": "batched_float32",
+      "threads": 4,
+      "batch_size": 1024,
+      "seconds": [
+        0.0999252000474371,
+        0.09749100002227351,
+        0.09689450002042577,
+        0.0964494000072591,
+        0.09703219996299595
+      ],
+      "variants_per_second": 291583.6187450122
+    }
+  ]
+}

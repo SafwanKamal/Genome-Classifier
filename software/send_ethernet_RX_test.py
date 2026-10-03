@@ -19,10 +19,12 @@ def parse_mac(value: str) -> bytes:
         raise ValueError("MAC contains a non-hex byte") from exc
 
 
-def build_frame(source_mac: str, sequence: int) -> bytes:
+def build_frame(source_mac: str, sequence: int, features: bytes = FEATURES) -> bytes:
     if not 0 <= sequence <= 0xFFFFFFFF:
         raise ValueError("sequence must fit in 32 bits")
-    payload = b"RX01" + sequence.to_bytes(4, "big") + FEATURES
+    if len(features) != 16:
+        raise ValueError("request must contain exactly 16 feature bytes")
+    payload = b"RX01" + sequence.to_bytes(4, "big") + features
     payload += bytes(46 - len(payload))
     frame = DESTINATION + parse_mac(source_mac) + ETHERTYPE.to_bytes(2, "big") + payload
     assert len(frame) == 60  # The NIC appends the 4-byte Ethernet FCS on the wire.

@@ -1,0 +1,16 @@
+{
+  "requested": 32,
+  "received": 32,
+  "correct": 32,
+  "missing": 0,
+  "mismatches": [],
+  "unrelated_replies": 0,
+  "error": null,
+  "batch_size": 32,
+  "split": "test",
+  "manifest": "genomic-dataset-pipeline\\artifacts\\model_v4_batch_seed_7\\export_manifest.json",
+  "first_sequence": 6000000,
+  "completed_seconds": 0.0011854999465867877,
+  "completed_variants_per_second": 26992.831245697027,
+  "timing_scope": "first batch send to last host-captured reply; includes waits between batches; excludes preparation/capture startup"
+}

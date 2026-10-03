@@ -1,0 +1,88 @@
+{
+  "architecture": "16-256-256-1",
+  "split": "test",
+  "count": 27477,
+  "all_pytorch_integer_and_batched_scores_exact": true,
+  "manifest_sha256": "58e6a8c63be6dc7421931bb3d2460476e2148e47ac9b2e8e804c354eeef8e9ad",
+  "checkpoint_sha256": "4e38790e7c10ed13d385b4bf8cea792cab24b1ea349cfecf0bdc591d4bc06211",
+  "average_precision": 0.9772639867183096,
+  "roc_auc": 0.9892850951669904,
+  "f1": 0.9277967523518486,
+  "routing_recall": 0.9957937747866843,
+  "nonzero_middle_weights": 44719,
+  "host_timings": [
+    {
+      "threads": 1,
+      "batch_size": 32,
+      "seconds": [
+        0.08262669999385253,
+        0.08326109999325126,
+        0.08261470001889393,
+        0.08832490001805127,
+        0.08271230000536889
+      ],
+      "completed_variants_per_second": 332199.68491042394
+    },
+    {
+      "threads": 1,
+      "batch_size": 64,
+      "seconds": [
+        0.06397970003308728,
+        0.06319100002292544,
+        0.06322290003299713,
+        0.06326579995220527,
+        0.06300959998043254
+      ],
+      "completed_variants_per_second": 434605.1823889647
+    },
+    {
+      "threads": 1,
+      "batch_size": 1024,
+      "seconds": [
+        0.11038880003616214,
+        0.09995440003694966,
+        0.10929530003340915,
+        0.10333600000012666,
+        0.09786849998636171
+      ],
+      "completed_variants_per_second": 265899.58968768216
+    },
+    {
+      "threads": 4,
+      "batch_size": 32,
+      "seconds": [
+        0.09573450003517792,
+        0.09298959997249767,
+        0.09254059998784214,
+        0.09301239997148514,
+        0.09659189998637885
+      ],
+      "completed_variants_per_second": 295412.22469717625
+    },
+    {
+      "threads": 4,
+      "batch_size": 64,
+      "seconds": [
+        0.06385670002782717,
+        0.0683458999847062,
+        0.06684270000550896,
+        0.06541729997843504,
+        0.06588010000996292
+      ],
+      "completed_variants_per_second": 417075.8695849689
+    },
+    {
+      "threads": 4,
+      "batch_size": 1024,
+      "seconds": [
+        0.08792390004964545,
+        0.090945300005842,
+        0.08125419996213168,
+        0.0829086999874562,
+        0.08202450000680983
+      ],
+      "completed_variants_per_second": 331412.7468426977
+    }
+  ],
+  "timing_scope": "prepared features to scores; excludes file I/O; five warmed repetitions"
+}

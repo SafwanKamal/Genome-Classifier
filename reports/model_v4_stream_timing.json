@@ -1,0 +1,79 @@
+{
+  "received": 27477,
+  "correct": 27477,
+  "duplicates": 0,
+  "unrelated_replies": 0,
+  "mismatches": [],
+  "error": null,
+  "completed_seconds": 0.48294929997064173,
+  "requested": 27477,
+  "missing": 0,
+  "batch_size": 32,
+  "window": 2,
+  "split": "test",
+  "manifest": "genomic-dataset-pipeline\\artifacts\\model_v4_batch_seed_7\\export_manifest.json",
+  "first_sequence": 6300000,
+  "completed_variants_per_second": 56894.170882265105,
+  "timing_scope": "first send to last correct host-captured reply; excludes preparation/capture startup",
+  "host_timing": {
+    "send_call": {
+      "samples": 859,
+      "total_seconds": 0.07845710043329746,
+      "median_us": 89.69998452812433,
+      "p95_us": 132.24001741036767,
+      "max_us": 301.4000249095261
+    },
+    "queue_wait": {
+      "samples": 859,
+      "total_seconds": 0.39285799977369606,
+      "median_us": 709.7999914549291,
+      "p95_us": 990.050024120137,
+      "max_us": 2191.399980802089
+    },
+    "send_to_reply": {
+      "samples": 859,
+      "total_seconds": 0.8716115995775908,
+      "median_us": 1006.0000349767506,
+      "p95_us": 1101.150002796203,
+      "max_us": 2236.599975731224
+    },
+    "reply_to_dequeue": {
+      "samples": 859,
+      "total_seconds": 0.08597220032243058,
+      "median_us": 109.09995762631297,
+      "p95_us": 168.8200049102306,
+      "max_us": 1359.0999878942966
+    },
+    "reply_to_refill": {
+      "samples": 857,
+      "total_seconds": 0.0932382004102692,
+      "median_us": 118.59997175633907,
+      "p95_us": 178.29996068030593,
+      "max_us": 1369.7000104002655
+    },
+    "callback_decode": {
+      "samples": 859,
+      "total_seconds": 0.018216400523670018,
+      "median_us": 20.099978428333998,
+      "p95_us": 30.90000245720148,
+      "max_us": 52.59999306872487
+    },
+    "send_spacing": {
+      "samples": 858,
+      "total_seconds": 0.4820897000026889,
+      "median_us": 539.7000059019774,
+      "p95_us": 1086.4000068977475,
+      "max_us": 2277.6999976485968
+    },
+    "reply_spacing": {
+      "samples": 858,
+      "total_seconds": 0.48165690002497286,
+      "median_us": 828.4000214189291,
+      "p95_us": 1109.6300091594458,
+      "max_us": 1721.6000123880804
+    },
+    "observer_loop_seconds": 0.4830695000127889,
+    "main_thread_other_seconds": 0.011754399805795401,
+    "scope": "Host wall-clock observations, not FPGA or wire timestamps. Queue waits include hardware, network and capture delay. Callback timing excludes Scapy dissection before callback. Other main-thread time includes validation, orchestration, scheduling and measurement. Durations overlap; do not add latency/callback totals to send/wait totals."
+  }
+}

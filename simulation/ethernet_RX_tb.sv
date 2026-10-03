@@ -11,9 +11,24 @@ module ethernet_RX_tb;
     integer output_count = 0, output_frames = 0, seed_expected = 0;
     integer length_expected = 0;
     logic check_output = 0;
+    logic alternate_stalls = 0, was_stalled = 0;
+    logic [7:0] stalled_data;
+    logic stalled_last;
 
     ethernet_RX dut (.*);
     always #10 clk = ~clk;
+    always @(negedge clk) if (alternate_stalls) ready_in = !ready_in;
+    always @(posedge clk) begin
+        if (reset) was_stalled <= 0;
+        else begin
+            if (was_stalled && valid_out &&
+                (data_out !== stalled_data || last_out !== stalled_last))
+                $fatal(1, "output changed under backpressure");
+            was_stalled <= valid_out && !ready_in;
+            stalled_data <= data_out;
+            stalled_last <= last_out;
+        end
+    end
 
     function automatic logic [7:0] payload(input integer index, seed);
         if (index < 6) payload = 8'hFF;
@@ -49,13 +64,17 @@ module ethernet_RX_tb;
     // With the Ethernet minimum, length is at least 60 before FCS.
     task automatic send_frame(
         input integer length, seed,
-        input logic corrupt_fcs, phy_error, bad_preamble, toggle_dv
+        input logic corrupt_fcs, phy_error, bad_preamble, toggle_dv,
+        input integer leading_zeros = 0, preamble_bytes = 7,
+        input logic carrier_error = 0
     );
         logic [31:0] crc;
         logic [7:0] byte_value;
         crc = 32'hFFFFFFFF;
+        for (integer i = 0; i < leading_zeros; i = i + 1)
+            dibit(0, 1, carrier_error && i == 0);
         send_byte(bad_preamble ? 8'h54 : 8'h55, 0);
-        repeat (6) send_byte(8'h55, 0);
+        repeat (preamble_bytes - 1) send_byte(8'h55, 0);
         send_byte(8'hD5, 0);
 
         for (integer i = 0; i < length; i = i + 1) begin
@@ -151,7 +170,61 @@ module ethernet_RX_tb;
         if (output_count != 60)
             $fatal(1, "held output corrupted");
 
-        $display("all ethernet_RX tests passed");
+        // Reproduce the board's six leading 00 dibits, then exercise every
+        // dibit alignment and several shortened whole-byte preambles.
+        for (integer lead = 0; lead <= 9; lead = lead + 1) begin
+            output_count = 0;
+            seed_expected = 60 + lead;
+            check_output = 1;
+            send_frame(60, seed_expected, 0, 0, 0, 0, lead, (lead % 3) + 1);
+            wait (output_frames == 5 + lead);
+            if (good_count != 5 + lead || output_count != 60)
+                $fatal(1, "leading-zero frame failed: %0d", lead);
+        end
+        // An error during carrier acquisition must not disappear when data starts.
+        send_frame(60, 90, 0, 0, 0, 0, 6, 7, 1);
+        if (good_count != 14 || bad_count != 3)
+            $fatal(1, "carrier error was ignored");
+        // False carrier without preamble must reset cleanly for the next frame.
+        repeat (6) dibit(0, 1, 0);
+        repeat (4) dibit(0, 0, 0);
+        output_count = 0;
+        seed_expected = 92;
+        check_output = 1;
+        send_frame(60, 92, 0, 0, 0, 0, 6);
+        wait (output_frames == 15);
+        if (good_count != 15 || output_count != 60)
+            $fatal(1, "false-carrier recovery failed");
+        output_count = 0;
+        seed_expected = 100;
+        check_output = 1;
+        alternate_stalls = 1;
+        send_frame(60, 100, 0, 0, 0, 0, 6);
+        wait (output_frames == 16);
+        @(negedge clk);
+        alternate_stalls = 0;
+        ready_in = 1;
+        if (good_count != 16 || output_count != 60)
+            $fatal(1, "intermittent backpressure failed");
+        send_frame(1515, 101, 0, 0, 0, 0, 6);
+        if (good_count != 16 || bad_count != 4)
+            $fatal(1, "oversized frame accepted");
+        // RAM is not reset; control must invalidate the held frame on reset.
+        ready_in = 0;
+        send_frame(60, 102, 0, 0, 0, 0, 6);
+        if (!valid_out || good_count != 17) $fatal(1, "reset test setup failed");
+        reset = 1;
+        repeat (4) @(negedge clk);
+        reset = 0;
+        ready_in = 1;
+        output_count = 0;
+        seed_expected = 103;
+        check_output = 1;
+        send_frame(60, 103, 0, 0, 0, 0, 6);
+        wait (output_frames == 17);
+        if (good_count != 18 || output_count != 60)
+            $fatal(1, "reset recovery failed");
+        $display("all ethernet_RX tests passed (leading zeros, synchronous RAM, stalls, reset)");
         $finish;
     end
 

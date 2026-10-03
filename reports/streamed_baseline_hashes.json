@@ -1,0 +1,38 @@
+[
+  {
+    "Path": "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\rtl\\batch_model_core.sv",
+    "Hash": "2AD7D0DD89DE788735F871574B82B082B7493AB6A6196FE963AD7BCD41428BB8"
+  },
+  {
+    "Path": "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\rtl\\variant_triage_top_ethernet.sv",
+    "Hash": "CDADCD8B4FB7B2A31B7B081A383BB47FAF2211C27604315007E4CFA3DD57D97D"
+  },
+  {
+    "Path": "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\rtl\\ethernet_batch_request_RX.sv",
+    "Hash": "9C2F280C922EEBA99FBAC1152DD9D0FADEE053B72655D3CFF6182E9908B08D44"
+  },
+  {
+    "Path": "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\rtl\\ethernet_batch_result.sv",
+    "Hash": "5B5589EBB0FD41F5E6144D9846C22839D8E46F6496B989B20C17F5C60DAC383E"
+  },
+  {
+    "Path": "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\rtl\\ethernet_RX.sv",
+    "Hash": "CF3813070181B1FCA1CBD241DEF732D37886FE5E09DD8066E45B8AD3A3C67D77"
+  },
+  {
+    "Path": "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\rtl\\dense_engine.sv",
+    "Hash": "6E1546AB5FF86AADB871806C6BEC2AD5E93391EFE8268A574C284367825CEECB"
+  },
+  {
+    "Path": "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\software\\ethernet_batch_rate.py",
+    "Hash": "4E955CC4B5E1F7C73D2E08CF05704DA694132552E4AD66E26A1617250E250317"
+  },
+  {
+    "Path": "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\scripts\\build_model_v4_batch.tcl",
+    "Hash": "61F7B8BB1AEFC95856243F012E0B0543F174997797D806913EC79D438F62ABE2"
+  },
+  {
+    "Path": "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\scripts\\build_variant_triage_ethernet_only.tcl",
+    "Hash": "EF1E307BC36A4502F35EF0D45B5FDD8EEEEB7FBDC3D3BC3EC0D0E2673EEE9177"
+  }
+]

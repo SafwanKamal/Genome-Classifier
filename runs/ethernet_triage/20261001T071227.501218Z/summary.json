@@ -1,0 +1,27 @@
+{
+  "status": "pass",
+  "variant_number": 27477,
+  "backend": "compare:fpga_ethernet:numpy",
+  "architecture": "16-8-1",
+  "classification_rule": "folded_score >= 0",
+  "score_min": -1362,
+  "score_max": 631,
+  "prediction_counts": {
+    "0": 19294,
+    "1": 8183
+  },
+  "total_backend_latency_seconds": 25.5217581,
+  "mean_backend_latency_us": 928.8407795610874,
+  "complete_run_time_seconds": 28.3811295,
+  "bit_exact_comparison": true,
+  "bit_exact_mismatches": 0,
+  "routing": {
+    "policy_name": "validation_pathogenic_recall_gate",
+    "threshold": -276,
+    "route_counts": {
+      "light_review": 14023,
+      "deep_review": 13454
+    },
+    "deep_review_fraction": 0.4896458856498162
+  }
+}

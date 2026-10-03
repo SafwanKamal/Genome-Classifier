@@ -1,0 +1,18 @@
+{
+  "requested": 27477,
+  "received_unique": 27477,
+  "correct_unique": 27477,
+  "missing_sequences": [],
+  "duplicates": 0,
+  "out_of_order": 0,
+  "unrelated_replies": 0,
+  "mismatches": [],
+  "captured_at_utc": "2026-10-01T06:32:38.800530+00:00",
+  "interface": "Ethernet",
+  "vectors": "build\\ethernet_v2_full_test.mem",
+  "first_sequence": 1000000,
+  "interval_seconds": 0.0,
+  "capture_tail_seconds": 2.0,
+  "send_call_seconds": 6.691177400003653,
+  "host_send_call_requests_per_second": 4106.452176859785
+}

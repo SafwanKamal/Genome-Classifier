@@ -1,6 +1,7 @@
 # Nexys 4 DDR / Nexys A7-100T standalone raw receive test.
 set_property -dict {PACKAGE_PIN E3 IOSTANDARD LVCMOS33} [get_ports clk_100MHz]
-create_clock -name board_clk -period 10.000 [get_ports clk_100MHz]
+# clk_wiz_ethernet defines the 10 ns input clock on clk_100MHz. Reuse that
+# definition so the IP's generated-clock constraints keep their reference.
 set_property -dict {PACKAGE_PIN N17 IOSTANDARD LVCMOS33} [get_ports reset]
 set_property -dict {PACKAGE_PIN D5 IOSTANDARD LVCMOS33} [get_ports PHY_ref_clk]
 set_property -dict {PACKAGE_PIN B3 IOSTANDARD LVCMOS33} [get_ports PHY_reset_n]
@@ -19,13 +20,21 @@ set_property -dict {PACKAGE_PIN J13 IOSTANDARD LVCMOS33} [get_ports {LED[2]}]
 set_property -dict {PACKAGE_PIN N14 IOSTANDARD LVCMOS33} [get_ports {LED[3]}]
 
 set_property BITSTREAM.CONFIG.UNUSEDPIN Pullnone [current_design]
-create_generated_clock -name PHY_clk -source [get_pins clock_generator/clk_out1] \
+create_generated_clock -name PHY_clk -source [get_pins PHY_clock_forward/C] \
     -divide_by 1 [get_ports PHY_ref_clk]
 # PHY output is clocked by REF_CLK; allow up to 14 ns plus 1 ns board skew.
 set_input_delay -clock PHY_clk -max 15.000 \
     [get_ports {rmii_crs_dv rmii_rx_er rmii_rxd[*]}]
 set_input_delay -clock PHY_clk -min 2.000 \
     [get_ports {rmii_crs_dv rmii_rx_er rmii_rxd[*]}]
+# REF_CLK launches symbol n at 0 ns; RX captures it at 22 ns, not at 2 ns
+# before the PHY's 15 ns maximum output delay. Both clocks have a 20 ns period.
+# Select that capture edge for setup. For this positively shifted clock, leave
+# hold at capture 22 ns against the NEXT symbol launched at 20 ns. Applying the
+# usual same-phase N-1 hold adjustment would incorrectly move capture to 2 ns.
+# No internal paths are relaxed.
+set_multicycle_path 2 -setup -end -from [get_ports {rmii_crs_dv rmii_rx_er rmii_rxd[*]}]
+set_multicycle_path 0 -hold -end -from [get_ports {rmii_crs_dv rmii_rx_er rmii_rxd[*]}]
 set_false_path -from [get_ports reset]
 set_false_path -to [get_ports {LED[*] PHY_reset_n PHY_MDC PHY_MDIO rmii_txd[*] rmii_tx_en}]
 set_property CFGBVS VCCO [current_design]

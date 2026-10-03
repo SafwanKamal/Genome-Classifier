@@ -1,0 +1,50 @@
+{
+  "status": "pass",
+  "kind": "Host-only offline V2 benchmark; no network or UART access",
+  "python": "3.12.13 (main, May 10 2026, 19:35:37) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.5.3",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "variants": 27477,
+  "model_manifest_sha256": "617cb98a99fc3b64e8e9aafa33311df989664db2fd893d29cf9a405587963077",
+  "method": "Same VariantGate score_records loop, five warmed repetitions, no input/output I/O inside timing. All scores checked against the saved physical Ethernet run after timing.",
+  "runs": [
+    {
+      "scoring_loop_seconds": 0.42496390000451356,
+      "sum_compute_latency_seconds": 0.2913538,
+      "mean_compute_latency_us": 10.60355206172435,
+      "variants_per_second": 64657.25676865297
+    },
+    {
+      "scoring_loop_seconds": 0.3665200999821536,
+      "sum_compute_latency_seconds": 0.2865459,
+      "mean_compute_latency_us": 10.428572988317503,
+      "variants_per_second": 74967.23918098323
+    },
+    {
+      "scoring_loop_seconds": 0.3518406000221148,
+      "sum_compute_latency_seconds": 0.2753374,
+      "mean_compute_latency_us": 10.020649998180295,
+      "variants_per_second": 78095.02370753388
+    },
+    {
+      "scoring_loop_seconds": 0.46407640003599226,
+      "sum_compute_latency_seconds": 0.2944225,
+      "mean_compute_latency_us": 10.715234559813661,
+      "variants_per_second": 59207.9235183452
+    },
+    {
+      "scoring_loop_seconds": 0.370166499982588,
+      "sum_compute_latency_seconds": 0.2912325,
+      "mean_compute_latency_us": 10.599137460421444,
+      "variants_per_second": 74228.75922400452
+    }
+  ],
+  "median_host_scoring_loop_seconds": 0.370166499982588,
+  "median_host_mean_compute_latency_us": 10.599137460421444,
+  "host_scoring_loop_variants_per_second": 74228.75922400452,
+  "ethernet_comparison_cli_seconds": 28.3811295,
+  "ethernet_mean_round_trip_us": 928.8407795610874,
+  "ethernet_cli_vs_host_loop_time_ratio": 76.67125334500827,
+  "ethernet_round_trip_vs_host_compute_ratio": 87.63361953078724,
+  "scope": "Ethernet run includes host NumPy comparison and backend startup/cleanup; Ethernet latency includes host transport/capture. FPGA compute-only latency was not measured."
+}

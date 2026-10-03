@@ -7,15 +7,17 @@ module ethernet_RX_test_top (
     output logic       PHY_reset_n,
     output logic       PHY_MDC,
     inout  wire        PHY_MDIO,
-    input  logic [1:0] rmii_rxd,
-    input  logic       rmii_crs_dv,
-    input  logic       rmii_rx_er,
+    input logic [1:0] rmii_rxd,
+    input logic       rmii_crs_dv,
+    input logic       rmii_rx_er,
     output logic [1:0] rmii_txd,
     output logic       rmii_tx_en,
     output logic [3:0] LED
 );
-    logic clk_phy_50MHz, unused_mac_clk, clock_locked;
-    logic reset_request, rx_reset;
+    (* keep = "true" *) logic clk_phy_50MHz;
+    logic clk_phy_ref_50MHz, clock_locked;
+    logic reset_request;
+    (* mark_debug = "true" *) logic rx_reset;
     (* ASYNC_REG = "TRUE" *) logic [1:0] reset_sync_reg = 2'b11;
     logic [21:0] reset_timer_reg;
     // Vivado Set Up Debug can attach an ILA to these nets after synthesis.
@@ -25,11 +27,19 @@ module ethernet_RX_test_top (
     logic good_seen_reg, bad_seen_reg, overflow_seen_reg;
 
     clk_wiz_ethernet clock_generator (
-        .clk_out1(clk_phy_50MHz),
-        .clk_out2(unused_mac_clk),
+        .clk_out1(clk_phy_ref_50MHz),
+        .clk_out2(clk_phy_50MHz),
         .reset(reset), .locked(clock_locked), .clk_in1(clk_100MHz)
     );
-    assign PHY_ref_clk = clk_phy_50MHz;
+    // Forward the clock through its dedicated output register instead of
+    // fabric routing, reducing skew between PHY REF_CLK and RX input flops.
+    ODDR #(.DDR_CLK_EDGE("SAME_EDGE"), .INIT(1'b0), .SRTYPE("SYNC"))
+    PHY_clock_forward (
+        .C(clk_phy_ref_50MHz), .CE(1'b1), .D1(1'b1), .D2(1'b0),
+        .Q(PHY_ref_clk), .R(1'b0), .S(1'b0)
+    );
+    // RX test Clocking Wizard: out1 = 50 MHz/0 degrees, out2 = 50 MHz/36
+    // degrees (2 ns later). This centers sampling in the PHY data-valid window.
     assign reset_request = reset || !clock_locked;
     assign rx_reset = reset_sync_reg[1];
     assign PHY_MDC = 1'b0;

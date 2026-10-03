@@ -1,0 +1,97 @@
+{
+  "received": 27477,
+  "correct": 27477,
+  "duplicates": 0,
+  "unrelated_replies": 0,
+  "mismatches": [],
+  "error": null,
+  "completed_seconds": 0.46885339997243136,
+  "requested": 27477,
+  "missing": 0,
+  "batch_size": 32,
+  "window": 2,
+  "split": "test",
+  "manifest": "genomic-dataset-pipeline\\artifacts\\model_v4_batch_seed_7\\export_manifest.json",
+  "first_sequence": 6500000,
+  "completed_variants_per_second": 58604.672594068106,
+  "timing_scope": "first send to last correct host-captured reply; excludes preparation/capture startup",
+  "host_timing": {
+    "send_call": {
+      "samples": 859,
+      "total_seconds": 0.07271950028371066,
+      "median_us": 81.1999780125916,
+      "p95_us": 114.09999569877982,
+      "max_us": 1023.5999943688512
+    },
+    "queue_wait": {
+      "samples": 859,
+      "total_seconds": 0.3856884987326339,
+      "median_us": 19.400031305849552,
+      "p95_us": 976.440036902204,
+      "max_us": 1139.800006058067
+    },
+    "send_to_reply": {
+      "samples": 859,
+      "total_seconds": 0.847996799624525,
+      "median_us": 979.4000070542097,
+      "p95_us": 1068.3999862521885,
+      "max_us": 1250.2000317908823
+    },
+    "reply_to_dequeue": {
+      "samples": 859,
+      "total_seconds": 0.08287510060472414,
+      "median_us": 101.90001921728253,
+      "p95_us": 151.09998639672995,
+      "max_us": 1065.19996188581
+    },
+    "reply_to_refill": {
+      "samples": 857,
+      "total_seconds": 0.08946100034518167,
+      "median_us": 109.30001735687256,
+      "p95_us": 159.71999382600188,
+      "max_us": 1076.6999912448227
+    },
+    "callback_decode": {
+      "samples": 859,
+      "total_seconds": 0.01644539984408766,
+      "median_us": 18.000020645558834,
+      "p95_us": 28.99999381043017,
+      "max_us": 58.800040278583765
+    },
+    "send_spacing": {
+      "samples": 858,
+      "total_seconds": 0.467922100040596,
+      "median_us": 516.500003868714,
+      "p95_us": 1063.6750084813684,
+      "max_us": 1241.9999693520367
+    },
+    "reply_spacing": {
+      "samples": 858,
+      "total_seconds": 0.4676088999840431,
+      "median_us": 510.50001638941467,
+      "p95_us": 1074.2999729700387,
+      "max_us": 1275.6999931298196
+    },
+    "capture_to_callback": {
+      "samples": 859,
+      "total_seconds": 0.11247086524963379,
+      "median_us": 123.50082397460938,
+      "p95_us": 230.12161254882807,
+      "max_us": 405.7884216308594,
+      "min_us": 51.25999450683594,
+      "negative_samples": 0,
+      "timestamp_unavailable": 0
+    },
+    "capture_spacing": {
+      "samples": 858,
+      "total_seconds": 0.46770310401916504,
+      "median_us": 475.4066467285156,
+      "p95_us": 1184.1654777526855,
+      "max_us": 1365.9000396728516
+    },
+    "capture_callback_clock": "GetSystemTimePreciseAsFileTime",
+    "observer_loop_seconds": 0.46907390002161264,
+    "main_thread_other_seconds": 0.010665901005268097,
+    "scope": "Host wall-clock observations, not FPGA or wire timestamps. Queue waits include hardware, network and capture delay. Callback timing excludes Scapy dissection before callback. Other main-thread time includes validation, orchestration, scheduling and measurement. Capture-to-callback compares packet.time with precise wall time at callback entry; includes capture delivery, scheduling and pre-callback Scapy work. Capture timestamp location depends on the driver and is not an FPGA timestamp. Negative samples may indicate timestamp clock mismatch; wall-clock adjustments can affect this measurement. Durations overlap; do not add latency/callback totals to send/wait totals."
+  }
+}

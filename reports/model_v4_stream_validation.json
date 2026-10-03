@@ -1,0 +1,92 @@
+{
+  "date": "2026-10-02",
+  "model": "16-256-256-1 V4, unchanged",
+  "core_clock_hz": 100000000,
+  "original_cycles": 1844,
+  "streamed_cycles": 617,
+  "cycle_speedup": 2.988654781199352,
+  "compute_ceiling_variants_per_second": 162074.55429497568,
+  "core_synthesis": {
+    "setup_slack_ns": 2.162,
+    "scope": "core-only synthesized internal timing; full top routing unverified",
+    "hold_slack_ns": 0.152,
+    "registers": 11625,
+    "dsp": 128,
+    "lut": 22653,
+    "bram_tiles": 16.5
+  },
+  "theoretical": {
+    "wire_ceiling_batch32_variants_per_second": 714285.7142857143,
+    "variants_per_second_at_200mhz": 686813.1868131869,
+    "macs_per_variant": 69888,
+    "dsp_available": 240,
+    "variants_per_second_at_100mhz": 343406.5934065934,
+    "assumptions": "one useful MAC/DSP/clock; no scheduling overhead",
+    "variants_per_second_at_150mhz": 515109.8901098901
+  },
+  "tests": {
+    "dry_run_frames": 859,
+    "core_golden_vectors": 1000,
+    "dry_run_variants": 27477,
+    "variantgate_tests": 42,
+    "ethernet_exact_scores": 75,
+    "software_tests": 17
+  },
+  "physical_throughput_measured": false,
+  "bitstream_generated": false,
+  "preserved_baselines": [
+    {
+      "file": "rtl\\batch_model_core.sv",
+      "sha256": "2AD7D0DD89DE788735F871574B82B082B7493AB6A6196FE963AD7BCD41428BB8",
+      "unchanged": true
+    },
+    {
+      "file": "rtl\\variant_triage_top_ethernet.sv",
+      "sha256": "CDADCD8B4FB7B2A31B7B081A383BB47FAF2211C27604315007E4CFA3DD57D97D",
+      "unchanged": true
+    },
+    {
+      "file": "rtl\\ethernet_batch_request_RX.sv",
+      "sha256": "9C2F280C922EEBA99FBAC1152DD9D0FADEE053B72655D3CFF6182E9908B08D44",
+      "unchanged": true
+    },
+    {
+      "file": "rtl\\ethernet_batch_result.sv",
+      "sha256": "5B5589EBB0FD41F5E6144D9846C22839D8E46F6496B989B20C17F5C60DAC383E",
+      "unchanged": true
+    },
+    {
+      "file": "rtl\\ethernet_RX.sv",
+      "sha256": "CF3813070181B1FCA1CBD241DEF732D37886FE5E09DD8066E45B8AD3A3C67D77",
+      "unchanged": true
+    },
+    {
+      "file": "rtl\\dense_engine.sv",
+      "sha256": "6E1546AB5FF86AADB871806C6BEC2AD5E93391EFE8268A574C284367825CEECB",
+      "unchanged": true
+    },
+    {
+      "file": "software\\ethernet_batch_rate.py",
+      "sha256": "4E955CC4B5E1F7C73D2E08CF05704DA694132552E4AD66E26A1617250E250317",
+      "unchanged": true
+    },
+    {
+      "file": "scripts\\build_model_v4_batch.tcl",
+      "sha256": "61F7B8BB1AEFC95856243F012E0B0543F174997797D806913EC79D438F62ABE2",
+      "unchanged": true
+    },
+    {
+      "file": "scripts\\build_variant_triage_ethernet_only.tcl",
+      "sha256": "EF1E307BC36A4502F35EF0D45B5FDD8EEEEB7FBDC3D3BC3EC0D0E2673EEE9177",
+      "unchanged": true
+    }
+  ],
+  "reply_counter_fix": {
+    "original_worst_slack_ns": -4.025,
+    "clock_period_ns": 20,
+    "ethernet_simulation_exact_scores": 75,
+    "change": "registered record/field counters replace division and modulo",
+    "original_data_delay_ns": 23.624,
+    "routed_timing_verified": false
+  }
+}

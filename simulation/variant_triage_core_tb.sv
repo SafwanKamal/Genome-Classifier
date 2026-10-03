@@ -3,14 +3,14 @@
 module variant_triage_core_tb;
 
     localparam integer FEATURE_NUMBER   = 16;
-    localparam integer HIDDEN_NUMBER    = 8;
-    localparam integer HIDDEN_MAC_LANES = 4;
-    localparam integer TEST_NUMBER      = 1000;
+    parameter integer HIDDEN_NUMBER    = 8;
+    parameter integer HIDDEN_MAC_LANES = 4;
+    parameter integer TEST_NUMBER      = 1000;
 
     localparam integer VECTOR_WIDTH =
         FEATURE_NUMBER * 8 + 32;
 
-    localparam integer MAXIMUM_CYCLES = 200;
+    parameter integer MAXIMUM_CYCLES = 200;
 
     parameter string VECTOR_FILE =
         "model_v2_h8_core_vectors.mem";
@@ -290,7 +290,7 @@ module variant_triage_core_tb;
 
 
         $display(
-            "PASS: all %0d V2 core tests matched",
+            "PASS: all %0d core tests matched",
             passed_test_number
         );
 

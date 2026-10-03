@@ -1,0 +1,60 @@
+{
+  "format_version": 1,
+  "tool": "variantgate",
+  "started_at": "2026-10-01T07:35:01.167805+00:00",
+  "completed_at": "2026-10-01T07:35:02.060845+00:00",
+  "input": {
+    "path": "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\genomic-dataset-pipeline\\data\\processed\\variants_model_int8.parquet",
+    "sha256": "b4318b4c61544204b3157f217258ca2fe2695aff753bf133553a1a41502c3633",
+    "split": "validation",
+    "limit": null,
+    "variant_number": 28293
+  },
+  "model": {
+    "export_manifest_path": "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\genomic-dataset-pipeline\\artifacts\\model_v3_h256_seed_7\\fpga_export\\export_manifest.json",
+    "export_manifest_sha256": "b4d3b3be04e15ec6c37fa9a16c7b3e290af0d3d5002f49ef5a4b57e9fd97265c",
+    "source_model_sha256": "0779f4354cb375cf7668996dae77b2a74e05615f963586121c67cb2efeb94449",
+    "architecture": "16-256-1",
+    "feature_order": [
+      "gnomad_popmax_rarity",
+      "cadd_phred",
+      "revel_score",
+      "alphamissense_score",
+      "esm1b_deleteriousness",
+      "sift_deleterious",
+      "polyphen2_hvar",
+      "mpc_score",
+      "phylop_100way",
+      "phastcons_100way",
+      "gerp_rs",
+      "grantham_distance",
+      "blosum62_unfavorability",
+      "gnomad_moeuf_intolerance",
+      "gnomad_loeuf_intolerance",
+      "interpro_domain_hit"
+    ],
+    "qshift": 4,
+    "folded_output_bias": -427,
+    "original_validation_threshold": 426,
+    "classification_rule": "folded_score >= 0"
+  },
+  "backend": {
+    "name": "numpy",
+    "ethernet_interface": null,
+    "first_sequence": null,
+    "serial_port": null,
+    "baud_rate": null,
+    "timeout_seconds": null
+  },
+  "routing_policy": null,
+  "outputs": {
+    "scores": {
+      "path": "scores.parquet",
+      "sha256": "5c5cecdf6c2936c75577a26a261f7cb9a9052106fa162b015a78c31aaca2c5e9"
+    },
+    "summary": {
+      "path": "summary.json",
+      "sha256": "88aec92e2dfafd138e66ba9a784b27a522bed93ee810b44058a6ed455af5be12"
+    }
+  }
+}
