@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-03",
+  "top": "variant_triage_top_ethernet_200",
+  "target_core_clock_mhz": 200,
+  "original_rtl_modified": false,
+  "saved_baseline_hashes_matched": 9,
+  "core_simulation": {
+    "golden_vectors": 1000,
+    "matched": 1000,
+    "cycles_per_variant": 635
+  },
+  "ethernet_simulation": {
+    "exact_scores": 75,
+    "batch_sizes": [
+      32,
+      32,
+      3,
+      1,
+      7
+    ],
+    "queued_start_spacing_cycles_min": 652,
+    "queued_start_spacing_cycles_max": 653,
+    "queued_start_spacing_cycles_mean": 652.015873015873
+  },
+  "core_only_synthesis": {
+    "period_ns": 5,
+    "setup_wns_ns": 0.444,
+    "hold_whs_ns": 0.079,
+    "dsp": 128,
+    "lut": 4849,
+    "registers": 8022,
+    "bram_tiles": 16.5
+  },
+  "project_setup_verified": true,
+  "full_design_routed_timing_verified": false,
+  "bitstream_generated": false,
+  "physical_throughput_measured": false
+}

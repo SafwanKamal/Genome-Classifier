@@ -230,6 +230,19 @@ measurements have no negative or missing timestamps. Assuming the same FPGA
 bitstream and link configuration, this demonstrates a substantial limitation
 in the original host/interface path. It does not isolate the USB adapter,
 driver, CPU or scheduler individually because the whole desktop changed.
+Negotiating 100 Mb/s establishes the rate of bits on the Ethernet link;
+it does not guarantee equal application completion latency on different
+interfaces. NIC/driver buffering, USB transfer scheduling on the original
+adapter, Windows thread wakeups and Python/Npcap processing can differ.
+Interrupt moderation trades fewer CPU interrupts for additional response
+latency, as explained in
+[Microsoft's adapter performance guidance](https://learn.microsoft.com/en-us/windows-hardware/drivers/network/performance-in-network-adapters).
+These are possible mechanisms, not identified individual causes in these runs.
+With only two batches outstanding, delayed host delivery or refill can leave
+the FPGA without queued work even when the link can transmit faster.
+To isolate the interface, compare two adapters on the same host using the
+same FPGA bitstream, model, batch/window and capture software, with repeated
+runs. Comparing different PCs changes CPU and scheduling as well as interface.
 The second result is about 80.1% of simulated queued capacity (159,236/s).
 The 434,605/s CPU baseline was measured on the original host; a fair desktop
 comparison needs that desktop's own CPU benchmark. Current 128-DSP/100 MHz
@@ -241,6 +254,15 @@ The standalone CPU benchmark for the second desktop is now available as
 `software/benchmark_v4_cpu.py`; see [CPU benchmark commands and timing scope](benchmark_v4_cpu.md).
 It needs only the synced manifest and feature Parquet file, and can compare
 its median host throughput directly with that desktop's FPGA JSON.
+
+The second-desktop CPU result is now available in
+`reports/model_v4_cpu_desktop.json`: all scores exact, best median 768,944/s
+at batch 64/four BLAS threads, versus FPGA 127,499/s (CPU 6.031× faster).
+See [the measured comparison](benchmark_v4_cpu.md#second-desktop-result--october-3).
+This supersedes the original-host 434,605/s figure as the parity target on
+that desktop. The current 32-record wire ceiling (714,286/s) is below this
+target, so increasing core clock/DSP utilization alone cannot establish
+end-to-end parity with this protocol. No FPGA or model files changed.
 
 | Check | Result |
 |---|---|
@@ -272,6 +294,11 @@ not board-level timing closure. No bitstream was generated and no physical
 packets were sent by the assistant; the physical runs above were user-run.
 
 ## Build and physical test commands
+
+The same-PC adapter experiment is deferred. Planned core-clock/DSP/transport
+improvements and the energy measurement method are documented separately in
+[throughput and energy next steps](accelerator_next_steps.md). No energy
+efficiency advantage has been measured or claimed.
 
 ### Physical failure diagnosed October 3
 
