@@ -1,0 +1,197 @@
+{
+  "architecture": "16-256-256-1",
+  "split": "test",
+  "count": 27477,
+  "manifest": "genomic-dataset-pipeline\\artifacts\\model_v4_batch_seed_7\\export_manifest.json",
+  "manifest_sha256": "58e6a8c63be6dc7421931bb3d2460476e2148e47ac9b2e8e804c354eeef8e9ad",
+  "feature_sha256": "545194ea0e57d00679ce26d0759055fc5b1b9cb5e567af06e2d546c96cfc80bf",
+  "scores_sha256": "e4b58d08f4ea141404ad30100b6231720f375e6a54ae9f0bce49205ad4c24e3b",
+  "machine": {
+    "hostname": "SafwanPC",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+    "logical_processors": 20,
+    "python": "3.12.12",
+    "numpy": "2.5.3"
+  },
+  "preparation_seconds": 0.10385300000052666,
+  "integer_reference_seconds": 0.7452709999997751,
+  "repetitions": 5,
+  "warmups_per_configuration": 1,
+  "all_scores_exact": true,
+  "results": [
+    {
+      "batch_size": 32,
+      "threads": 1,
+      "seconds": [
+        0.0656687000009697,
+        0.06558519999816781,
+        0.0653636999995797,
+        0.06535939999957918,
+        0.06530990000101156
+      ],
+      "median_seconds": 0.0653636999995797,
+      "completed_variants_per_second": 420370.9398362804,
+      "all_scores_exact": true,
+      "threadpools": [
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "C:\\Users\\Safwan\\AppData\\Local\\uv\\cache\\archive-v0\\l6qonhB2NqWtEapN1klYz\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-ed4f167a5330424524f45258e7ca2c8d.dll",
+          "version": "0.3.34.106.0",
+          "threading_layer": "pthreads",
+          "architecture": "Haswell"
+        }
+      ]
+    },
+    {
+      "batch_size": 64,
+      "threads": 1,
+      "seconds": [
+        0.04758920000313083,
+        0.0477178000001004,
+        0.04738149999684538,
+        0.04767780000111088,
+        0.04736580000098911
+      ],
+      "median_seconds": 0.04758920000313083,
+      "completed_variants_per_second": 577378.9010572216,
+      "all_scores_exact": true,
+      "threadpools": [
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "C:\\Users\\Safwan\\AppData\\Local\\uv\\cache\\archive-v0\\l6qonhB2NqWtEapN1klYz\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-ed4f167a5330424524f45258e7ca2c8d.dll",
+          "version": "0.3.34.106.0",
+          "threading_layer": "pthreads",
+          "architecture": "Haswell"
+        }
+      ]
+    },
+    {
+      "batch_size": 1024,
+      "threads": 1,
+      "seconds": [
+        0.09829460000037216,
+        0.09750050000002375,
+        0.09630950000064331,
+        0.09747150000112015,
+        0.09841260000030161
+      ],
+      "median_seconds": 0.09750050000002375,
+      "completed_variants_per_second": 281813.93941562664,
+      "all_scores_exact": true,
+      "threadpools": [
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "C:\\Users\\Safwan\\AppData\\Local\\uv\\cache\\archive-v0\\l6qonhB2NqWtEapN1klYz\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-ed4f167a5330424524f45258e7ca2c8d.dll",
+          "version": "0.3.34.106.0",
+          "threading_layer": "pthreads",
+          "architecture": "Haswell"
+        }
+      ]
+    },
+    {
+      "batch_size": 32,
+      "threads": 4,
+      "seconds": [
+        0.054025400000682566,
+        0.054366600001230836,
+        0.05484419999993406,
+        0.05414609999934328,
+        0.05424270000003162
+      ],
+      "median_seconds": 0.05424270000003162,
+      "completed_variants_per_second": 506556.6426447058,
+      "all_scores_exact": true,
+      "threadpools": [
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 4,
+          "prefix": "libscipy_openblas",
+          "filepath": "C:\\Users\\Safwan\\AppData\\Local\\uv\\cache\\archive-v0\\l6qonhB2NqWtEapN1klYz\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-ed4f167a5330424524f45258e7ca2c8d.dll",
+          "version": "0.3.34.106.0",
+          "threading_layer": "pthreads",
+          "architecture": "Haswell"
+        }
+      ]
+    },
+    {
+      "batch_size": 64,
+      "threads": 4,
+      "seconds": [
+        0.03573340000002645,
+        0.03614659999948344,
+        0.035720200001378544,
+        0.03596789999937755,
+        0.035410699998465134
+      ],
+      "median_seconds": 0.03573340000002645,
+      "completed_variants_per_second": 768944.460923944,
+      "all_scores_exact": true,
+      "threadpools": [
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 4,
+          "prefix": "libscipy_openblas",
+          "filepath": "C:\\Users\\Safwan\\AppData\\Local\\uv\\cache\\archive-v0\\l6qonhB2NqWtEapN1klYz\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-ed4f167a5330424524f45258e7ca2c8d.dll",
+          "version": "0.3.34.106.0",
+          "threading_layer": "pthreads",
+          "architecture": "Haswell"
+        }
+      ]
+    },
+    {
+      "batch_size": 1024,
+      "threads": 4,
+      "seconds": [
+        0.0787878000010096,
+        0.07905290000053355,
+        0.07900710000103572,
+        0.07809000000270316,
+        0.07781469999827095
+      ],
+      "median_seconds": 0.0787878000010096,
+      "completed_variants_per_second": 348746.8872039568,
+      "all_scores_exact": true,
+      "threadpools": [
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 4,
+          "prefix": "libscipy_openblas",
+          "filepath": "C:\\Users\\Safwan\\AppData\\Local\\uv\\cache\\archive-v0\\l6qonhB2NqWtEapN1klYz\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-ed4f167a5330424524f45258e7ca2c8d.dll",
+          "version": "0.3.34.106.0",
+          "threading_layer": "pthreads",
+          "architecture": "Haswell"
+        }
+      ]
+    }
+  ],
+  "best_configuration": {
+    "batch_size": 64,
+    "threads": 4,
+    "median_seconds": 0.03573340000002645,
+    "completed_variants_per_second": 768944.460923944
+  },
+  "timing_scope": "Prepared float32 features to all integer scores, including batch orchestration; excludes file loading, feature conversion, integer reference, warmup and score validation. Rates use median warmed time, not fastest repetition. No Ethernet or FPGA calls.",
+  "fpga_comparison": {
+    "fpga_completed_variants_per_second": 127498.86547052702,
+    "cpu_completed_variants_per_second": 768944.460923944,
+    "cpu_over_fpga": 6.030990613808209,
+    "fpga_over_cpu": 0.1658102398154057,
+    "fpga_batch_size": 32,
+    "fpga_window": 2,
+    "scope": "CPU prepared-feature inference versus FPGA host-observed request/reply completion; both exclude preparation. Run both on the same host and frozen model. The FPGA report does not record a model hash or host identity, so those cannot be verified here.",
+    "report": "reports\\model_v4_capture_precise_timing.json"
+  }
+}
