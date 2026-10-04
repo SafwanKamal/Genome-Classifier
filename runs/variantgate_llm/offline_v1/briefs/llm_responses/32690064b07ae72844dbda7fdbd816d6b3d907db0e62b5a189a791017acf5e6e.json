@@ -1,0 +1,22 @@
+{
+  "key": "32690064b07ae72844dbda7fdbd816d6b3d907db0e62b5a189a791017acf5e6e",
+  "sha256": "50ca3c7167a8c3c8c51c4a3bb56c051ab55a5f273c65f57a2b7a7b163c708479",
+  "receipt": {
+    "data": {
+      "source_id": "clinvar:9625ed4eee12cc0da583",
+      "claims": [
+        {
+          "statement": "{\"canonical_spdi\": [\"NC_000001.11:119:A:G\"], \"genes\": [{\"symbol\": \"VGTEST20\"}], \"germline_classification\": {\"description\": \"Uncertain significance\", \"review_status\": \"synthetic fixture\", \"traits\": []}, \"title\": \"NM_TEST20.1(VGTEST20):c.123A>G (p.Arg41Gly)\", \"variation_id\": 10020}",
+          "quote": "{\"canonical_spdi\": [\"NC_000001.11:119:A:G\"], \"genes\": [{\"symbol\": \"VGTEST20\"}], \"germline_classification\": {\"description\": \"Uncertain significance\", \"review_status\": \"synthetic fixture\", \"traits\": []}, \"title\": \"NM_TEST20.1(VGTEST20):c.123A>G (p.Arg41Gly)\", \"variation_id\": 10020}",
+          "scope": "exact_variant",
+          "finding_type": "database_statement"
+        }
+      ],
+      "limitations": []
+    },
+    "usage": {},
+    "response_id": null,
+    "latency_seconds": 0.0,
+    "actual_model": "verbatim-control-v1"
+  }
+}

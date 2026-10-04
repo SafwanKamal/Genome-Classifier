@@ -1,0 +1,111 @@
+{
+  "purpose": "Single synthetic literature diagnostic; excludes ClinVar extraction, not a complete brief",
+  "package_sha256": "e34d9fc645c3299ece0673682ca17c7d7580119dda0a1d1b4adfcf95c922b478",
+  "source": {
+    "identity_scope": "exact_variant",
+    "kind": "pubmed:90000001",
+    "matched_identifiers": [
+      "R41G"
+    ],
+    "memberships": [
+      "direct_pubmed",
+      "pubmed"
+    ],
+    "pmid": "90000001",
+    "provenance": {
+      "abstract_provenance": {
+        "origin": "synthetic_fixture"
+      },
+      "raw_summary_sha256": null,
+      "retrieved_at": null,
+      "summary_provenance": null
+    },
+    "retrieval_relevance": {
+      "tier": "synthetic"
+    },
+    "source_id": "pubmed:90000001:79f6765effdb730a9557",
+    "text": "The VGTEST01 NM_900000001.1 R41G variant reduced activity in a synthetic laboratory assay.",
+    "text_sha256": "79f6765effdb730a95578572372b16c088b202dc3a33c7c5c4330e91e8cf8f84",
+    "title": "Synthetic source; not a real paper",
+    "truncated": false,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/90000001/"
+  },
+  "backend": {
+    "provider": "local",
+    "model": "variantgate-medgemma:1.5-4b-q4km",
+    "base_url": "http://127.0.0.1:11434/v1",
+    "max_output_tokens": 1024,
+    "prompt_format": "schema-in-prompt-v1",
+    "temperature": 0
+  },
+  "requires_human_review": true,
+  "extraction_receipt": {
+    "data": {
+      "source_id": "pubmed:90000001:79f6765effdb730a9557",
+      "claims": [
+        {
+          "statement": "The VGTEST01 NM_900000001.1 R41G variant reduced activity in a synthetic laboratory assay.",
+          "quote": "The VGTEST01 NM_900000001.1 R41G variant reduced activity in a synthetic laboratory assay.",
+          "scope": "exact_variant",
+          "finding_type": "functional"
+        }
+      ],
+      "limitations": [
+        "abstract_only"
+      ]
+    },
+    "usage": {
+      "prompt_tokens": 1005,
+      "completion_tokens": 135,
+      "total_tokens": 1140
+    },
+    "response_id": "chatcmpl-411",
+    "actual_model": "variantgate-medgemma:1.5-4b-q4km",
+    "latency_seconds": 26.517618200043216
+  },
+  "validated_extraction": {
+    "source_id": "pubmed:90000001:79f6765effdb730a9557",
+    "claims": [
+      {
+        "statement": "The VGTEST01 NM_900000001.1 R41G variant reduced activity in a synthetic laboratory assay.",
+        "quote": "The VGTEST01 NM_900000001.1 R41G variant reduced activity in a synthetic laboratory assay.",
+        "scope": "exact_variant",
+        "finding_type": "functional",
+        "source_id": "pubmed:90000001:79f6765effdb730a9557",
+        "quote_start": 0,
+        "quote_end": 90,
+        "claim_id": "claim:2d3396c28c79eb199f4e948a",
+        "validation": "mechanical_checks_passed",
+        "semantic_support": "requires_human_review"
+      }
+    ],
+    "limitations": [
+      "abstract_only"
+    ],
+    "requires_human_review": true
+  },
+  "synthesis_receipt": {
+    "data": {
+      "database_statements": [
+        "The VGTEST01 NM_900000001.1 R41G variant reduced activity in a synthetic laboratory assay."
+      ],
+      "variant_findings": [
+        "The VGTEST01 NM_900000001.1 R41G variant reduced activity in a synthetic laboratory assay."
+      ],
+      "gene_context": [
+        "The VGTEST01 NM_900000001.1 R41G variant reduced activity in a synthetic laboratory assay."
+      ],
+      "unresolved": []
+    },
+    "usage": {
+      "prompt_tokens": 390,
+      "completion_tokens": 120,
+      "total_tokens": 510
+    },
+    "response_id": "chatcmpl-748",
+    "actual_model": "variantgate-medgemma:1.5-4b-q4km",
+    "latency_seconds": 17.569010199978948
+  },
+  "status": "failed",
+  "error": "Synthesis must retain every accepted claim exactly once"
+}

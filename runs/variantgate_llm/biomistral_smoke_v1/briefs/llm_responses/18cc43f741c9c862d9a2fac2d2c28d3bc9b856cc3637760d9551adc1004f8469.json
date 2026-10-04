@@ -1,0 +1,40 @@
+{
+  "key": "18cc43f741c9c862d9a2fac2d2c28d3bc9b856cc3637760d9551adc1004f8469",
+  "sha256": "c2bc8a3d268444aec74ecd99df20035177a16cba7fc35b3138d68453ed2f2771",
+  "receipt": {
+    "data": {
+      "source_id": "clinvar:3e9aacfd0eba735453b7",
+      "claims": [
+        {
+          "statement": "The hgvs_change at c.123A>G leads to a change at p.Arg41Gly",
+          "quote": "'hgvs_change': 'c.123 A>G', 'protein_change': '[...] p.Arg41Gly [...]',",
+          "scope": "exact_variant",
+          "finding_type": "negative"
+        },
+        {
+          "statement": "This is a 'Uncertant Significance' variation with allele frequency of 0.4%",
+          "quote": "'kind': 'unclassified', \"clinvar_category\": { [...]}, 'alteration_atxn': 1, 'freq_div_31way': 4)}]}] },[{",
+          "scope": "gene_context",
+          "finding_type": "negative"
+        },
+        {
+          "statement": "The hgvs_change at c.123A>G leads to a change at p.Arg41Gly",
+          "quote": "'hgvs_change': 'c.123 A>G', 'protein_change': '[...] p.Arg41Gly [...]',",
+          "scope": "exact_variant",
+          "finding_type": "negative"
+        }
+      ],
+      "limitations": [
+        "source_instructions_ignored"
+      ]
+    },
+    "usage": {
+      "prompt_tokens": 854,
+      "completion_tokens": 327,
+      "total_tokens": 1181
+    },
+    "response_id": "chatcmpl-769",
+    "actual_model": "variantgate-biomistral:7b-q4km",
+    "latency_seconds": 84.92167120007798
+  }
+}

@@ -26,7 +26,8 @@ module batch_model_200_core (
     logic [2:0] pair_group, sum_group, capture_group, round_group;
     logic [1023:0] weight_rom [0:607], fetched_weight, weight_word;
     logic [1023:0] bias_rom [0:16], bias_word, read_bias, product_bias;
-    logic signed [7:0] fetched_inputs [0:3], inputs [0:3];
+    logic signed [7:0] quarter_inputs [0:3][0:3], inputs [0:3];
+    logic [1:0] fetched_quarter;
     logic signed [31:0] accumulator [0:31], accumulated [0:31];
     logic signed [17:0] lane_sum [0:31];
     logic fetch_valid, fetch_first, fetch_last, fetch_final;
@@ -90,11 +91,17 @@ module batch_model_200_core (
             round_valid <= capture_valid; round_final <= capture_final; round_group <= capture_group;
         end
     end
-    for (genvar i=0; i<4; i++) begin : input_register
-        always_ff @(posedge clk) begin
-            fetched_inputs[i] <= activations[{issue_input, 2'(i)}];
-            inputs[i] <= fetched_inputs[i];
+    // Split the 64-way activation selection across the existing two read stages.
+    // Each quarter selects 16 groups first; the next stage selects one quarter.
+    always_ff @(posedge clk) fetched_quarter <= issue_input[5:4];
+    for (genvar q=0; q<4; q++) begin : input_quarter
+        for (genvar i=0; i<4; i++) begin : input_register
+            always_ff @(posedge clk)
+                quarter_inputs[q][i] <= activations[{2'(q), issue_input[3:0], 2'(i)}];
         end
+    end
+    for (genvar i=0; i<4; i++) begin : selected_input
+        always_ff @(posedge clk) inputs[i] <= quarter_inputs[fetched_quarter][i];
     end
     for (genvar o=0; o<32; o++) begin : output_lane
         wire signed [15:0] product [0:3];

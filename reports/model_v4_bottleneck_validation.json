@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-03",
+  "revision": "quarter_activation_selector_and_raw_host_capture",
+  "top": "variant_triage_top_ethernet_200",
+  "target_core_clock_mhz": 200,
+  "baseline_hashes_matched": 9,
+  "baseline_hashes_checked": 9,
+  "core_simulation": {
+    "golden_vectors": 1000,
+    "matched": 1000,
+    "cycles_per_variant": 635
+  },
+  "core_only_synthesis": {
+    "period_ns": 5,
+    "setup_wns_ns": 0.357,
+    "hold_whs_ns": 0.079,
+    "dsp": 128,
+    "lut": 5003,
+    "registers": 8123,
+    "bram_tiles": 16.5,
+    "quarter_register_bits_retained": 128
+  },
+  "window_four_simulation": {
+    "variants": 2000,
+    "exact_scores": 2000,
+    "replies": 98,
+    "maximum_outstanding_batches": 4,
+    "rx_and_parser_both_banks_full_observed": true,
+    "rx_backpressure_cycles": 249864,
+    "receiver_overflow_observed": false,
+    "error_led_observed": false,
+    "scope": "behavioral clocks, not routed timing"
+  },
+  "host_software_tests": {
+    "ethernet_batch_tests_passed": 22,
+    "new_fast_tests": 9,
+    "dry_run_count": 33,
+    "dry_run_window": 4
+  },
+  "old_full_200_routed_timing": {
+    "setup_wns_ns": -0.812,
+    "failing_setup_endpoints": 1666
+  },
+  "revised_full_routed_timing": "pending user implementation",
+  "physical_benchmark_of_revision": null,
+  "live_packets_sent_by_assistant": false,
+  "bitstream_generated_by_assistant": false
+}

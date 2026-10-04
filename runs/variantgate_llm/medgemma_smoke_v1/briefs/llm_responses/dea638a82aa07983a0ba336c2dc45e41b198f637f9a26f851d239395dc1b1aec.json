@@ -1,0 +1,28 @@
+{
+  "key": "dea638a82aa07983a0ba336c2dc45e41b198f637f9a26f851d239395dc1b1aec",
+  "sha256": "67379493bf41faf1cf44b1de92bd77672b3172d414b24ff2655bfc787c94679a",
+  "receipt": {
+    "data": {
+      "source_id": "clinvar:3e9aacfd0eba735453b7",
+      "claims": [
+        {
+          "statement": "The variant c.123A>G in VGTEST01 is associated with uncertain significance.",
+          "quote": "The variant c.123A>G in VGTEST01 is associated with uncertain significance.",
+          "scope": "exact_variant",
+          "finding_type": "functional"
+        }
+      ],
+      "limitations": [
+        "abstract_only"
+      ]
+    },
+    "usage": {
+      "prompt_tokens": 971,
+      "completion_tokens": 111,
+      "total_tokens": 1082
+    },
+    "response_id": "chatcmpl-494",
+    "actual_model": "variantgate-medgemma:1.5-4b-q4km",
+    "latency_seconds": 36.89679319993593
+  }
+}

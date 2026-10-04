@@ -1,0 +1,16 @@
+{
+  "format_version": 1,
+  "input": {
+    "path": "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\runs\\evidence\\reconciled_phase4_smoke\\reconciled_evidence.jsonl",
+    "sha256": "91c7ef8265ee1e0edf256cd081347657e4834cad7b98fbfb9f2dfaecda34a4fa"
+  },
+  "outputs": {
+    "evidence": {
+      "path": "archived_evidence.jsonl",
+      "sha256": "b9eec8c243391ee76c32d6a5618aa93b76325c0e6c0fa4a7bd721d5e07869858"
+    },
+    "audit": {
+      "sha256": "0b83b39799c33fa27c6a65ff717c4f35b5e8e52ee076488c4d7140c1f58c12ed"
+    }
+  }
+}

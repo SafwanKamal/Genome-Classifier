@@ -1,0 +1,28 @@
+{
+  "key": "afc6568f71024775c8be427117168a513876bf8ae8f25fbe63abc352d5293268",
+  "sha256": "f5e1cc4eb33aa3703fda01b19dfeaffcfcee0319a8e277d340a061ed9690f126",
+  "receipt": {
+    "data": {
+      "source_id": "pubmed:90000018:81c5f2e7dd22cb99e7ee",
+      "claims": [
+        {
+          "statement": "The VGTEST18 gene participates in signaling in this synthetic experiment.",
+          "quote": "The VGTEST18 gene participates in signaling in this synthetic experiment.",
+          "scope": "gene_context",
+          "finding_type": "functional"
+        }
+      ],
+      "limitations": [
+        "source_instructions_ignored"
+      ]
+    },
+    "usage": {
+      "prompt_tokens": 980,
+      "completion_tokens": 103,
+      "total_tokens": 1083
+    },
+    "response_id": "chatcmpl-61",
+    "actual_model": "variantgate-medgemma:1.5-4b-q4km",
+    "latency_seconds": 19.763936799950898
+  }
+}

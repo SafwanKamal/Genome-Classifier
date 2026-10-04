@@ -1,0 +1,38 @@
+{
+  "key": "ad4c57cba33d53f2ba87f578d10993ecfe8f90ccca9115149f7e1b20bc39e702",
+  "sha256": "73573ae80044e440766e6431956989720443ce40225453cc0ea2348aa7889615",
+  "receipt": {
+    "data": {
+      "source_id": "pubmed:90000019",
+      "claims": [
+        {
+          "statement": "The VGTEST19 NM_900000019.1 R41G variant reduced activity in a synthetic laboratory assay.",
+          "quote": "The VGTEST19 NM_900000019.1 R41G variant reduced activity in a synthetic laboratory assay.",
+          "scope": "exact_variant",
+          "finding_type": "functional"
+        },
+        {
+          "statement": "A second synthetic VGTEST19 NM_900000019.1 R41G assay found no difference from reference.",
+          "quote": "A second synthetic VGTEST19 NM_900000019.1 R41G assay found no difference from reference.",
+          "scope": "exact_variant",
+          "finding_type": "negative"
+        }
+      ],
+      "limitations": [
+        "abstract_only",
+        "no_exact_variant_evidence",
+        "insufficient_information",
+        "conflicting_findings",
+        "source_instructions_ignored"
+      ]
+    },
+    "usage": {
+      "prompt_tokens": 1028,
+      "completion_tokens": 266,
+      "total_tokens": 1294
+    },
+    "response_id": "chatcmpl-897",
+    "actual_model": "variantgate-medgemma:1.5-4b-q4km",
+    "latency_seconds": 34.188660499989055
+  }
+}

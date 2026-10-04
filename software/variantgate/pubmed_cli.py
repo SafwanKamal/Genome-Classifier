@@ -84,6 +84,8 @@ def run_collect(args: argparse.Namespace) -> None:
         )
     )
     articles = client.fetch_articles(unique_pmids)
+    include_abstracts = getattr(args, "with_abstracts", False)
+    abstracts = client.fetch_abstracts(unique_pmids) if include_abstracts else {}
     evidence_records: list[dict[str, object]] = []
 
     for clinvar_record, variation_id in zip(
@@ -116,6 +118,12 @@ def run_collect(args: argparse.Namespace) -> None:
                     "articles": [
                         {
                             **article_record["article"],
+                            **(abstracts[str(article_record["article"]["pmid"])]["content"]
+                               if include_abstracts else {}),
+                            **({"abstract_provenance": {
+                                key: abstracts[str(article_record["article"]["pmid"])].get(key)
+                                for key in ("retrieved_at", "request_url", "cache_hit", "raw_record_sha256")
+                            }} if include_abstracts else {}),
                             "retrieved_at": article_record["retrieved_at"],
                             "request_url": article_record["request_url"],
                             "cache_hit": article_record["cache_hit"],
@@ -205,6 +213,7 @@ def run_collect(args: argparse.Namespace) -> None:
             "link_batch_size": args.link_batch_size,
             "summary_batch_size": args.summary_batch_size,
             "refresh": args.refresh,
+            "include_abstracts": include_abstracts,
             "request_attempt_number": client.request_attempt_number,
             "successful_request_number": client.successful_request_number,
         },
@@ -248,6 +257,8 @@ def build_parser() -> argparse.ArgumentParser:
     collect_parser.add_argument("--timeout", type=float, default=30.0)
     collect_parser.add_argument("--retries", type=int, default=4)
     collect_parser.add_argument("--refresh", action="store_true")
+    collect_parser.add_argument("--with-abstracts", action="store_true",
+                                help="Also fetch linked article abstracts for grounded extraction")
     collect_parser.add_argument("--progress-every", type=int, default=100)
     collect_parser.add_argument(
         "--cache-dir",

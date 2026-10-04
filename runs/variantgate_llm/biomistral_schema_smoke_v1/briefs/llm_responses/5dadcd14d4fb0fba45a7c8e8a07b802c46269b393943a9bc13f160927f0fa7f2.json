@@ -1,0 +1,28 @@
+{
+  "key": "5dadcd14d4fb0fba45a7c8e8a07b802c46269b393943a9bc13f160927f0fa7f2",
+  "sha256": "34e051f3cd0874eee3a998a3d5f70b1a6dc03c6785ba119344b1d0957d0e4343",
+  "receipt": {
+    "data": {
+      "source_id": "clinvar:3e9aacfd0eba735453b7",
+      "claims": [
+        {
+          "statement": "VGTEST01 is associated with NM_900000001.1(VGTEST01):c.123A>G (p.Arg41Gly)",
+          "quote": "NM_900000001.1(VGTEST01):c.123A>G (p.Arg41Gly)",
+          "scope": "gene_context",
+          "finding_type": "association"
+        }
+      ],
+      "limitations": [
+        "abstract_only"
+      ]
+    },
+    "usage": {
+      "prompt_tokens": 1095,
+      "completion_tokens": 155,
+      "total_tokens": 1250
+    },
+    "response_id": "chatcmpl-769",
+    "actual_model": "variantgate-biomistral:7b-q4km",
+    "latency_seconds": 67.78225459996611
+  }
+}

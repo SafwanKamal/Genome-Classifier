@@ -1,0 +1,28 @@
+{
+  "key": "92394bfb51ef367f2b643b2efbbc24ec25b1b6efc081df92f6e6c24da81ff882",
+  "sha256": "fb18127f27d874ed8d3aee65d1aebf443d852c32228f0e2fda7bc404a96f834b",
+  "receipt": {
+    "data": {
+      "source_id": "clinvar:204789f714d76ff3d871",
+      "claims": [
+        {
+          "statement": "The variation c.123A>G in VGTEST03 has uncertain significance.",
+          "quote": "The variation c.123A>G in VGTEST03 has uncertain significance.",
+          "scope": "exact_variant",
+          "finding_type": "functional"
+        }
+      ],
+      "limitations": [
+        "abstract_only"
+      ]
+    },
+    "usage": {
+      "prompt_tokens": 976,
+      "completion_tokens": 111,
+      "total_tokens": 1087
+    },
+    "response_id": "chatcmpl-962",
+    "actual_model": "variantgate-medgemma:1.5-4b-q4km",
+    "latency_seconds": 18.848228899994865
+  }
+}

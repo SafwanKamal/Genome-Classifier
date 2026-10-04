@@ -1,0 +1,214 @@
+[
+  {
+    "subject": {
+      "clinvar_variation_id": 4233276,
+      "gene": "NOC2L",
+      "variant_key": "1:944719:T:G"
+    },
+    "identity": {
+      "status": "blocked",
+      "method": null,
+      "issues": [
+        "clinvar_gene_mismatch",
+        "clinvar_coordinate_mismatch"
+      ],
+      "source_genes": [
+        "CPEB2"
+      ],
+      "assembly": "GRCh38",
+      "requires_human_review": true
+    },
+    "expert_annotation_status": "pending",
+    "origin": "archived_smoke_run_not_independent_validation"
+  },
+  {
+    "subject": {
+      "clinvar_variation_id": 731516,
+      "gene": "AGRN",
+      "variant_key": "1:1043440:C:T"
+    },
+    "identity": {
+      "status": "blocked",
+      "method": null,
+      "issues": [
+        "clinvar_gene_mismatch",
+        "clinvar_coordinate_mismatch"
+      ],
+      "source_genes": [
+        "CLRN1"
+      ],
+      "assembly": "GRCh38",
+      "requires_human_review": true
+    },
+    "expert_annotation_status": "pending",
+    "origin": "archived_smoke_run_not_independent_validation"
+  },
+  {
+    "subject": {
+      "clinvar_variation_id": 1454283,
+      "gene": "AGRN",
+      "variant_key": "1:1049795:G:A"
+    },
+    "identity": {
+      "status": "blocked",
+      "method": null,
+      "issues": [
+        "clinvar_gene_mismatch",
+        "clinvar_coordinate_mismatch"
+      ],
+      "source_genes": [
+        "FGD4"
+      ],
+      "assembly": "GRCh38",
+      "requires_human_review": true
+    },
+    "expert_annotation_status": "pending",
+    "origin": "archived_smoke_run_not_independent_validation"
+  },
+  {
+    "subject": {
+      "clinvar_variation_id": 244113,
+      "gene": "AGRN",
+      "variant_key": "1:1050473:G:A"
+    },
+    "identity": {
+      "status": "blocked",
+      "method": null,
+      "issues": [
+        "variant_identity_unverified"
+      ],
+      "source_genes": [],
+      "assembly": "GRCh38",
+      "requires_human_review": true
+    },
+    "expert_annotation_status": "pending",
+    "origin": "archived_smoke_run_not_independent_validation"
+  },
+  {
+    "subject": {
+      "clinvar_variation_id": 608899,
+      "gene": "AGRN",
+      "variant_key": "1:1051275:T:C"
+    },
+    "identity": {
+      "status": "blocked",
+      "method": null,
+      "issues": [
+        "variant_identity_unverified"
+      ],
+      "source_genes": [],
+      "assembly": "GRCh38",
+      "requires_human_review": true
+    },
+    "expert_annotation_status": "pending",
+    "origin": "archived_smoke_run_not_independent_validation"
+  },
+  {
+    "subject": {
+      "clinvar_variation_id": 1109245,
+      "gene": "AGRN",
+      "variant_key": "1:1051618:G:C"
+    },
+    "identity": {
+      "status": "blocked",
+      "method": null,
+      "issues": [
+        "clinvar_gene_mismatch",
+        "clinvar_coordinate_mismatch"
+      ],
+      "source_genes": [
+        "SMARCAL1"
+      ],
+      "assembly": "GRCh38",
+      "requires_human_review": true
+    },
+    "expert_annotation_status": "pending",
+    "origin": "archived_smoke_run_not_independent_validation"
+  },
+  {
+    "subject": {
+      "clinvar_variation_id": 623584,
+      "gene": "AGRN",
+      "variant_key": "1:1053823:T:C"
+    },
+    "identity": {
+      "status": "blocked",
+      "method": null,
+      "issues": [
+        "variant_identity_unverified"
+      ],
+      "source_genes": [],
+      "assembly": "GRCh38",
+      "requires_human_review": true
+    },
+    "expert_annotation_status": "pending",
+    "origin": "archived_smoke_run_not_independent_validation"
+  },
+  {
+    "subject": {
+      "clinvar_variation_id": 3683654,
+      "gene": "INTS11",
+      "variant_key": "1:1312089:C:T"
+    },
+    "identity": {
+      "status": "blocked",
+      "method": null,
+      "issues": [
+        "clinvar_gene_mismatch",
+        "clinvar_coordinate_mismatch"
+      ],
+      "source_genes": [
+        "EGFR"
+      ],
+      "assembly": "GRCh38",
+      "requires_human_review": true
+    },
+    "expert_annotation_status": "pending",
+    "origin": "archived_smoke_run_not_independent_validation"
+  },
+  {
+    "subject": {
+      "clinvar_variation_id": 2671964,
+      "gene": "INTS11",
+      "variant_key": "1:1321072:C:A"
+    },
+    "identity": {
+      "status": "blocked",
+      "method": null,
+      "issues": [
+        "clinvar_gene_mismatch",
+        "clinvar_coordinate_mismatch"
+      ],
+      "source_genes": [
+        "ADGRL1",
+        "ADGRL1-AS1"
+      ],
+      "assembly": "GRCh38",
+      "requires_human_review": true
+    },
+    "expert_annotation_status": "pending",
+    "origin": "archived_smoke_run_not_independent_validation"
+  },
+  {
+    "subject": {
+      "clinvar_variation_id": 2202680,
+      "gene": "CPTP",
+      "variant_key": "1:1327303:G:A"
+    },
+    "identity": {
+      "status": "blocked",
+      "method": null,
+      "issues": [
+        "clinvar_gene_mismatch",
+        "clinvar_coordinate_mismatch"
+      ],
+      "source_genes": [
+        "ADAR"
+      ],
+      "assembly": "GRCh38",
+      "requires_human_review": true
+    },
+    "expert_annotation_status": "pending",
+    "origin": "archived_smoke_run_not_independent_validation"
+  }
+]

@@ -1,0 +1,28 @@
+{
+  "key": "713402f4fc989fd4b5eb71d9d2fba0808d8efcba60e386d9751f66606f02082a",
+  "sha256": "5b16fed7a2386b35c56a57d62cb10f7271161f65dc301ad4f984568596307a73",
+  "receipt": {
+    "data": {
+      "source_id": "clinvar:204789f714d76ff3d871",
+      "claims": [
+        {
+          "statement": "NM_900000003.1(VGTEST03):c.123A>G (p.Arg41Gly)",
+          "quote": "{\"canonical_spdi\": [\"NC_000001.11:102:A:G\"]} genes:[{ \"symbol\":\"VGTEST03\"}] germline_classification:{ \"description\":\"uncertain_significance\",\"review_status\":\"synthetic fixture\\",
+          "scope": "gene_context",
+          "finding_type": "negative"
+        }
+      ],
+      "limitations": [
+        "no_exact_variant_evidence"
+      ]
+    },
+    "usage": {
+      "prompt_tokens": 856,
+      "completion_tokens": 201,
+      "total_tokens": 1057
+    },
+    "response_id": "chatcmpl-217",
+    "actual_model": "variantgate-biomistral:7b-q4km",
+    "latency_seconds": 55.60030610009562
+  }
+}

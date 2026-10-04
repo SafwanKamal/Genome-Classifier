@@ -1,0 +1,29 @@
+{
+  "status": "failed",
+  "requested_variants": 1,
+  "brief_number": 0,
+  "blocked_identity_number": 0,
+  "failed_variant_number": 1,
+  "elapsed_seconds": 67.80249440006446,
+  "backend": {
+    "provider": "local",
+    "model": "variantgate-biomistral:7b-q4km",
+    "base_url": "http://127.0.0.1:11434/v1",
+    "max_output_tokens": 768,
+    "prompt_format": "schema-in-prompt-v1",
+    "temperature": 0
+  },
+  "prompt_version": "variantgate-extraction-v1",
+  "offline_control": false,
+  "requires_human_review": true,
+  "accounting": {
+    "new_generation_calls": 1,
+    "unique_responses": 1,
+    "provider_latency_seconds_for_used_responses": 67.78225459996611,
+    "input_tokens": 1095,
+    "output_tokens": 155,
+    "estimated_cost_usd": null,
+    "pricing_source": null,
+    "usage_scope": "Responses used by this run, including reused cached responses; HTTP retries and uncertain failed deliveries may incur additional cost."
+  }
+}

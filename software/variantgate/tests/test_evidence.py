@@ -44,6 +44,17 @@ class IdentifierTest(unittest.TestCase):
 
 
 class ClinVarNormalizationTest(unittest.TestCase):
+    def test_rejects_source_uid_different_from_requested_id(self) -> None:
+        summary = ClinVarSummary(
+            variation_id=100,
+            retrieved_at="2026-01-01",
+            request_url="https://example.invalid",
+            cached=False,
+            raw_summary={"uid": "200"},
+        )
+        with self.assertRaisesRegex(ValueError, "source UID"):
+            normalize_summary(summary)
+
     def test_normalizes_clinvar_summary(self) -> None:
         summary = ClinVarSummary(
             variation_id=65533,

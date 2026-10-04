@@ -1,0 +1,19 @@
+{
+  "created_at_utc": "2026-10-04T02:27:04.8622503Z",
+  "original_model": "google/medgemma-1.5-4b-it",
+  "original_revision": "91850547d9f0b2fdd21aa7c5f4f3d1a8a52c243b",
+  "original_access_verified": true,
+  "quantization_publisher": "unsloth",
+  "quantization_repository": "unsloth/medgemma-1.5-4b-it-GGUF",
+  "quantization_revision": "3855f948626b7ae42bccd082757f15078c53e758",
+  "weight_sha256": "b31becdf4f39561800505514cce67681604fe449d04dd35c8c92fd7848c6d7bd",
+  "weight_bytes": 2489894976,
+  "model": "variantgate-medgemma:1.5-4b-q4km",
+  "model_digest": "833b325d40d536d3ade6f18744f220444e79707b1b6256dc9fff1563bbe8873d",
+  "ollama_version": "0.6.2",
+  "parameters": "seed                           42\nstop                           \"<end_of_turn>\"\ntemperature                    0\nnum_ctx                        4096\nnum_predict                    1024",
+  "template": "{{- $system := \"\" -}}\n{{- range .Messages }}\n{{- if eq .Role \"system\" }}{{- $system = .Content }}\n{{- else if eq .Role \"user\" }}<start_of_turn>user\n{{ if $system }}{{ $system }}\n\n{{ $system = \"\" }}{{ end }}{{ .Content }}<end_of_turn>\n{{ else if eq .Role \"assistant\" }}<start_of_turn>model\n{{ .Content }}<end_of_turn>\n{{ end }}\n{{- end }}<start_of_turn>model\n",
+  "profile_sha256": "992ccb945a4163623e54092197d1ac565f66e153237eaab4c5224dd096990d0c",
+  "experiment": "Text extraction only; vision projector not downloaded",
+  "license": "Health AI Developer Foundations terms accepted by user"
+}

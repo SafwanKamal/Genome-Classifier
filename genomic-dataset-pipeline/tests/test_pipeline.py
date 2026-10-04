@@ -73,6 +73,20 @@ def test_parse_clinvar_filters_labels_review_and_consequence() -> None:
     assert frame["review_stars"].tolist() == [1, 2]
 
 
+def test_clinvar_allele_id_is_not_variation_id(tmp_path) -> None:
+    source = tmp_path / "ids.vcf"
+    source.write_text(
+        "##fileformat=VCFv4.2\n"
+        "#CHROM\tPOS\tID\tREF\tALT\tQUAL\tFILTER\tINFO\n"
+        "1\t100\t12345\tA\tG\t.\tPASS\tALLELEID=98765;CLNSIG=Pathogenic;"
+        "CLNREVSTAT=criteria_provided,_single_submitter;GENEINFO=GENEA:1;MC=SO:0001583\n",
+        encoding="utf-8",
+    )
+    frame = parse_vcf(source)
+    assert frame.loc[0, "variation_id"] == "12345"
+    assert frame.loc[0, "allele_id"] == "98765"
+
+
 def test_annotation_join_rejects_ambiguous_rows() -> None:
     base = pd.DataFrame({"variant_key": ["1:1:A:G"], "label": [1], "gene": ["A"]})
     annotation = pd.DataFrame({"variant_key": ["1:1:A:G"], "score": [0.5]})

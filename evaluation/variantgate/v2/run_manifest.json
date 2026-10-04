@@ -1,0 +1,16 @@
+{
+  "format_version": 1,
+  "tool": "variantgate_synthetic_freeze",
+  "assembly": "GRCh38",
+  "boundary": "Invented test findings, genes and identifiers. Not clinical evidence or LLM quality validation.",
+  "outputs": {
+    "evidence": {
+      "path": "synthetic_evidence.jsonl",
+      "sha256": "52c8b0b626371d656bf6c6f2abb06eda2b623517c15ccebb64e7d1ecd85a15ac"
+    },
+    "cases": {
+      "path": "synthetic_cases.jsonl",
+      "sha256": "3f3e8fb3a5c7cb556a85c907f552f444540c22aa7a42e09aa6674b8a9b336ecb"
+    }
+  }
+}

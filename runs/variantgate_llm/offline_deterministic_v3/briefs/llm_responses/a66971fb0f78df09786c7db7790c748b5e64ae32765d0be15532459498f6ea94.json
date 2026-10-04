@@ -1,0 +1,24 @@
+{
+  "key": "a66971fb0f78df09786c7db7790c748b5e64ae32765d0be15532459498f6ea94",
+  "sha256": "39c89a21ed4efd3eb1be71d1cd2429863fa9d089cb368a422c70e9caadd7627b",
+  "receipt": {
+    "data": {
+      "source_id": "pubmed:90000003:243742040e11b8d54f29",
+      "claims": [
+        {
+          "statement": "The VGTEST03 NM_900000003.1 R41G variant reduced activity in a synthetic laboratory assay. A second synthetic VGTEST03 NM_900000003.1 R41G assay found no difference from reference.",
+          "quote": "The VGTEST03 NM_900000003.1 R41G variant reduced activity in a synthetic laboratory assay. A second synthetic VGTEST03 NM_900000003.1 R41G assay found no difference from reference.",
+          "scope": "exact_variant",
+          "finding_type": "background"
+        }
+      ],
+      "limitations": [
+        "abstract_only"
+      ]
+    },
+    "usage": {},
+    "response_id": null,
+    "latency_seconds": 0.0,
+    "actual_model": "verbatim-control-v1"
+  }
+}

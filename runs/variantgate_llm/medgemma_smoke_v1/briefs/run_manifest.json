@@ -1,0 +1,31 @@
+{
+  "format_version": 1,
+  "tool": "variantgate_briefs",
+  "prompt_version": "variantgate-extraction-v1",
+  "input_records_sha256": "865c4ca6cfa14ae4fba6f3360a3cf58edbf6a29c9a1315f8039dc00b851de4c9",
+  "backend": {
+    "provider": "local",
+    "model": "variantgate-medgemma:1.5-4b-q4km",
+    "base_url": "http://127.0.0.1:11434/v1",
+    "max_output_tokens": 1024,
+    "prompt_format": "schema-in-prompt-v1",
+    "temperature": 0
+  },
+  "outputs": {
+    "evidence_packages.jsonl": {
+      "sha256": "f6d5a9fba07c140d31a76386c68250675a45c13034390acfa556b337ebb27b0d"
+    },
+    "variant_briefs.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "failures.jsonl": {
+      "sha256": "3bf5b13b92442d6cacdec98be2192a19808dd6a22d6bd7a180f930e592154a37"
+    },
+    "report.md": {
+      "sha256": "7c2dfd4039aa6876e6ce9df9c960aa390c96a672da5a6513ea11cc71d4dae64c"
+    },
+    "summary.json": {
+      "sha256": "196daf39be5bccc4754c930103702aa1402b52ffedf4b069e3b25c87c3d6028c"
+    }
+  }
+}

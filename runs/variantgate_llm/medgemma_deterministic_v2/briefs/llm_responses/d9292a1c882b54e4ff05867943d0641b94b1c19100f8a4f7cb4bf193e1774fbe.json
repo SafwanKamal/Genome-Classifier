@@ -1,0 +1,28 @@
+{
+  "key": "d9292a1c882b54e4ff05867943d0641b94b1c19100f8a4f7cb4bf193e1774fbe",
+  "sha256": "f3336515efeb6e1c36f92e000be88d240c549b3e28d0287b57bd4def5e9941b8",
+  "receipt": {
+    "data": {
+      "source_id": "pubmed:90000010",
+      "claims": [
+        {
+          "statement": "The VGTEST10 gene participates in signaling in this synthetic experiment.",
+          "quote": "The VGTEST10 gene participates in signaling in this synthetic experiment.",
+          "scope": "gene_context",
+          "finding_type": "functional"
+        }
+      ],
+      "limitations": [
+        "abstract_only"
+      ]
+    },
+    "usage": {
+      "prompt_tokens": 985,
+      "completion_tokens": 87,
+      "total_tokens": 1072
+    },
+    "response_id": "chatcmpl-508",
+    "actual_model": "variantgate-medgemma:1.5-4b-q4km",
+    "latency_seconds": 18.928716799942777
+  }
+}

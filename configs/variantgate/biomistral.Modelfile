@@ -1,0 +1,8 @@
+FROM hf.co/BioMistral/BioMistral-7B-GGUF:Q4_K_M
+
+# Keep the first experiment within BioMistral's published 2048-token length.
+# Use short fixtures; do not send whole papers to this profile.
+PARAMETER num_ctx 2048
+PARAMETER num_predict 768
+PARAMETER temperature 0
+PARAMETER seed 42

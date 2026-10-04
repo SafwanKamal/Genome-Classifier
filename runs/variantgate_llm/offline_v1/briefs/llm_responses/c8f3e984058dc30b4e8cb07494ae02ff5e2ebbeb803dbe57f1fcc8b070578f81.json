@@ -1,0 +1,20 @@
+{
+  "key": "c8f3e984058dc30b4e8cb07494ae02ff5e2ebbeb803dbe57f1fcc8b070578f81",
+  "sha256": "f1431d64224cf31d7365011223401e9d87d7908ea9ad2ef9b0b6daf78e83e4c8",
+  "receipt": {
+    "data": {
+      "database_statements": [
+        "claim:e0eac7da6608fb6835669064"
+      ],
+      "variant_findings": [
+        "claim:4603671cc39878170067fbe5"
+      ],
+      "gene_context": [],
+      "unresolved": []
+    },
+    "usage": {},
+    "response_id": null,
+    "latency_seconds": 0.0,
+    "actual_model": "verbatim-control-v1"
+  }
+}

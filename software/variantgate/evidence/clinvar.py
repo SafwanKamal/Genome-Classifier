@@ -289,6 +289,10 @@ def normalize_summary(summary: ClinVarSummary) -> dict[str, object]:
         }
 
     raw = summary.raw_summary
+    source_uid = str(raw.get("uid") or "")
+    source_variation_id = int(source_uid) if source_uid.isdigit() else None
+    if source_variation_id is not None and source_variation_id != summary.variation_id:
+        raise ValueError("ClinVar source UID does not match the requested Variation ID")
     germline = raw.get("germline_classification") or {}
     variation_set = raw.get("variation_set") or []
     canonical_spdi: list[str] = []
@@ -326,6 +330,7 @@ def normalize_summary(summary: ClinVarSummary) -> dict[str, object]:
     return {
         "status": "found",
         "variation_id": summary.variation_id,
+        "source_variation_id": source_variation_id,
         "accession": raw.get("accession"),
         "accession_version": raw.get("accession_version"),
         "title": raw.get("title"),

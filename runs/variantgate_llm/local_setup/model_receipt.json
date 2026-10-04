@@ -1,0 +1,14 @@
+{
+  "created_at_utc": "2026-10-04T01:45:59.1840264Z",
+  "source": "https://huggingface.co/BioMistral/BioMistral-7B-GGUF",
+  "source_revision": "de8c2dfcead24fd23ccb33f6ca5ff015e9ecdb4b",
+  "weight_sha256": "0fc1397c3eb2ba46904540accce468479c17aaabe4c51f06665fddc1babef75d",
+  "model": "variantgate-biomistral:7b-q4km",
+  "model_digest": "429813eef1ed1471a0aa835145472d5339366a0094a5d243ae352d5eee22c354",
+  "ollama_version": "0.6.2",
+  "parameters": "num_ctx                        2048\nnum_predict                    768\nseed                           42\nstop                           \"<|im_start|>\"\nstop                           \"<|im_end|>\"\ntemperature                    0",
+  "cpu": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics",
+  "usable_ram_bytes": 14806552576,
+  "license": "Apache-2.0",
+  "purpose": "Short research extraction fixtures; no clinical validation"
+}

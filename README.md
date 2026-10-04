@@ -123,6 +123,19 @@ The routing threshold is separate from the classifier's `score >= 0` decision co
 - reconciliation of model output, ClinVar, linked literature, and direct-search literature;
 - JSON/JSONL outputs, manifests, and Markdown report generation.
 
+The evidence-to-brief prototype now adds structured extraction through an OpenAI
+or local LLM endpoint, source/quote/identifier validation, bounded claim
+organization, and a resumable CPU-to-report command. An offline verbatim backend
+and frozen synthetic evaluation fixtures support testing without API credentials.
+See [`docs/variantgate_llm_pipeline.md`](docs/variantgate_llm_pipeline.md) for
+commands, verification scope, and the remaining live evaluation work.
+
+This work identified a legacy metadata bug: the ClinVar parser used `ALLELEID`
+as `variation_id`. Future imports preserve the VCF Variation ID and Allele ID
+separately. Existing datasets need an identifier-only repair from their source
+VCF before new evidence runs; the new pipeline blocks mismatched source identity.
+Frozen model inputs and historical artifacts have not been rewritten.
+
 The evidence workflow is designed to preserve provenance and disagreement. It reports missing, uncertain, or conflicting evidence rather than silently converting it into a definitive answer.
 
 ## FPGA implementation

@@ -1,0 +1,27 @@
+{
+  "format_version": 1,
+  "tool": "variantgate_briefs",
+  "prompt_version": "variantgate-extraction-v1",
+  "input_records_sha256": "80a14e7b7f650ffb5dd5fbd79618c2ca929dc2e3b0bc2886db92b40fca77c4b9",
+  "backend": {
+    "provider": "extractive",
+    "model": "verbatim-control-v1"
+  },
+  "outputs": {
+    "evidence_packages.jsonl": {
+      "sha256": "f0f6a208b408f2b51883e7453545fe435190513b52a95be7674d525b10b9d01e"
+    },
+    "variant_briefs.jsonl": {
+      "sha256": "fde9f860c46277397d2fd36972cbe7f3d88a239a0b84b720478d08502274de1d"
+    },
+    "failures.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "report.md": {
+      "sha256": "632e8fe91941558d3fe20646a629921487ee5221c98e1ff9079e81636f5d4599"
+    },
+    "summary.json": {
+      "sha256": "65eea988f30959ca7273543fe107094be5bb91c1a521b101470be34820370521"
+    }
+  }
+}

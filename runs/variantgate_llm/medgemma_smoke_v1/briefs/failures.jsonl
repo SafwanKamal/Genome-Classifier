@@ -1,0 +1,3 @@
+{"error_type": "ValueError", "message": "Supporting quote is missing, too short, or not verbatim", "variant_key": "1:101:A:G"}
+{"error_type": "ValueError", "message": "Supporting quote is missing, too short, or not verbatim", "variant_key": "1:102:A:G"}
+{"error_type": "ValueError", "message": "Supporting quote is missing, too short, or not verbatim", "variant_key": "1:103:A:G"}

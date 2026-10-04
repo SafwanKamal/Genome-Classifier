@@ -1,0 +1,31 @@
+{
+  "format_version": 1,
+  "tool": "variantgate_briefs",
+  "prompt_version": "variantgate-extraction-v1",
+  "input_records_sha256": "735850911112423047419fc8960a9b5bdf9e26c1c2a591b5dacf74d70e2677d7",
+  "backend": {
+    "provider": "local",
+    "model": "variantgate-biomistral:7b-q4km",
+    "base_url": "http://127.0.0.1:11434/v1",
+    "max_output_tokens": 768,
+    "prompt_format": "schema-in-prompt-v1",
+    "temperature": 0
+  },
+  "outputs": {
+    "evidence_packages.jsonl": {
+      "sha256": "455ff81afb45c11866b0192d5628d9d4c028073e9f7831c2f3dd4497e7951006"
+    },
+    "variant_briefs.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "failures.jsonl": {
+      "sha256": "a720f0995ddc4d43d12ce372335bbf6a3ef9e2a2fb733d1c767aa1a709ab3a47"
+    },
+    "report.md": {
+      "sha256": "7c2dfd4039aa6876e6ce9df9c960aa390c96a672da5a6513ea11cc71d4dae64c"
+    },
+    "summary.json": {
+      "sha256": "8b8c9a6ecc4912cf663fe152dda2d248b0231e50ed36e8f9977c84bc4a9d0235"
+    }
+  }
+}

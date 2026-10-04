@@ -1,0 +1,129 @@
+{
+  "purpose": "Diagnostics of original responses only; no rejected response is accepted or rewritten",
+  "response_count": 12,
+  "source_id_matches": 2,
+  "responses_with_all_verbatim_quotes": 12,
+  "semantic_support_accuracy": null,
+  "responses": [
+    {
+      "variant_key": "1:101:A:G",
+      "package_sha256": "e34d9fc645c3299ece0673682ca17c7d7580119dda0a1d1b4adfcf95c922b478",
+      "receipt_sha256": "7890c38218181745bed7fa3f6eb3d00fc851c1dfd67da925b751a7de12ba2ab6",
+      "expected_source_id": "pubmed:90000001:79f6765effdb730a9557",
+      "returned_source_id": "pubmed:90000001:79f6765effdb730a9557",
+      "source_id_match": true,
+      "all_quotes_verbatim": true,
+      "claim_count": 1
+    },
+    {
+      "variant_key": "1:102:A:G",
+      "package_sha256": "6f82904bdc72827da5bf404ba2e1d862ea9204fd1ee7af6532266edd5ca83c6b",
+      "receipt_sha256": "83e01eaf504b89488588a27a7ad922f24932cd78db7294a1bf774c2811ee041e",
+      "expected_source_id": "pubmed:90000002:6da21a598e32fc0f6bbf",
+      "returned_source_id": "pubmed:90000002",
+      "source_id_match": false,
+      "all_quotes_verbatim": true,
+      "claim_count": 1
+    },
+    {
+      "variant_key": "1:103:A:G",
+      "package_sha256": "6befc476ed25778d39fd30124b43e795266c6025457d50625d17c322c0d99361",
+      "receipt_sha256": "95840afe233bca7cbc4ac6c827158fd251f637b94bc29ecdc7a163cc4fe71d94",
+      "expected_source_id": "pubmed:90000003:243742040e11b8d54f29",
+      "returned_source_id": "pubmed:90000003",
+      "source_id_match": false,
+      "all_quotes_verbatim": true,
+      "claim_count": 2
+    },
+    {
+      "variant_key": "1:108:A:G",
+      "package_sha256": "97639d29fd548f4af34f5448b137319924739b433080bb25c3b3578f02087efb",
+      "receipt_sha256": "7937fe88b7ac9eb8bb8aadd24b5f699277af6a3e7784f85f99a672694ed0fec0",
+      "expected_source_id": "pubmed:90000008:b5d18f59d48e74ffa990",
+      "returned_source_id": "pubmed:90000008",
+      "source_id_match": false,
+      "all_quotes_verbatim": true,
+      "claim_count": 1
+    },
+    {
+      "variant_key": "1:109:A:G",
+      "package_sha256": "9c59f9ee462f8b775156bc6a4f2458ec76656a4167047a4a648b30177a013849",
+      "receipt_sha256": "e943776430a9d48cd5e43767a6b21de1a0944b192cf21471a65f50a727c3f375",
+      "expected_source_id": "pubmed:90000009:507111f043f41dba3297",
+      "returned_source_id": "pubmed:90000009",
+      "source_id_match": false,
+      "all_quotes_verbatim": true,
+      "claim_count": 1
+    },
+    {
+      "variant_key": "1:110:A:G",
+      "package_sha256": "7960f2ce97df312c10d28f6c7a1ba671dec0401f2fe101d6aa009e519a3bb1f0",
+      "receipt_sha256": "f3336515efeb6e1c36f92e000be88d240c549b3e28d0287b57bd4def5e9941b8",
+      "expected_source_id": "pubmed:90000010:e49f8623920453a9ee01",
+      "returned_source_id": "pubmed:90000010",
+      "source_id_match": false,
+      "all_quotes_verbatim": true,
+      "claim_count": 1
+    },
+    {
+      "variant_key": "1:111:A:G",
+      "package_sha256": "06f49e05fc347b52acb22a172d3f0ff33eace81c68c1e478109b8f7966afeced",
+      "receipt_sha256": "ffe6aae43d01ed7a84367c14ec485ff0ef557de369baf8ff4be7a29a66c52ac6",
+      "expected_source_id": "pubmed:90000011:c0f1763e3b2001413642",
+      "returned_source_id": "pubmed:90000011",
+      "source_id_match": false,
+      "all_quotes_verbatim": true,
+      "claim_count": 2
+    },
+    {
+      "variant_key": "1:116:A:G",
+      "package_sha256": "6bf25e8abb4432341ca5d713af0037d69dd9f9bb3597c7c6a0ae5aeb772b2143",
+      "receipt_sha256": "f60a025fad1ff9a3132254f48415fadf7d8bdc274cc472ac7e4cba36c12ed121",
+      "expected_source_id": "pubmed:90000016:65b72c9c10ccca096368",
+      "returned_source_id": "pubmed:90000016",
+      "source_id_match": false,
+      "all_quotes_verbatim": true,
+      "claim_count": 1
+    },
+    {
+      "variant_key": "1:117:A:G",
+      "package_sha256": "bb7ff8ea26b1a659412d18d5796753013cd0f9147f9ebe6ec60b2eb982afffcd",
+      "receipt_sha256": "a75bea86c6ea8520d569c9c8a4bb713ec2552395b3ab7038cfc1366ecd6c43e8",
+      "expected_source_id": "pubmed:90000017:9a8a7ba45d60eec7c3f7",
+      "returned_source_id": "pubmed:90000017",
+      "source_id_match": false,
+      "all_quotes_verbatim": true,
+      "claim_count": 1
+    },
+    {
+      "variant_key": "1:118:A:G",
+      "package_sha256": "4c3490f0f239b1eac0125ee711b220e7688c30b788f7ac10bcfc711fe6823cea",
+      "receipt_sha256": "f5e1cc4eb33aa3703fda01b19dfeaffcfcee0319a8e277d340a061ed9690f126",
+      "expected_source_id": "pubmed:90000018:81c5f2e7dd22cb99e7ee",
+      "returned_source_id": "pubmed:90000018:81c5f2e7dd22cb99e7ee",
+      "source_id_match": true,
+      "all_quotes_verbatim": true,
+      "claim_count": 1
+    },
+    {
+      "variant_key": "1:119:A:G",
+      "package_sha256": "0757123ca6a186e3919aa34fa6317133dfa4462ebc8da3fca6652b4051c1af83",
+      "receipt_sha256": "73573ae80044e440766e6431956989720443ce40225453cc0ea2348aa7889615",
+      "expected_source_id": "pubmed:90000019:cf7787a4bc8eeec419c2",
+      "returned_source_id": "pubmed:90000019",
+      "source_id_match": false,
+      "all_quotes_verbatim": true,
+      "claim_count": 2
+    },
+    {
+      "variant_key": "1:124:A:G",
+      "package_sha256": "dc862d75da6ee54c8cf75b7e38d556772810a88c63b60680ea26fd4c97e98627",
+      "receipt_sha256": "e97d226c7611888ab6ad1f9db74b44aa2f4830999504e28ee7ec5840b57f7a3e",
+      "expected_source_id": "pubmed:90000024:28f680d8c25951e4b1e5",
+      "returned_source_id": "pubmed:90000024",
+      "source_id_match": false,
+      "all_quotes_verbatim": true,
+      "claim_count": 1
+    }
+  ]
+}

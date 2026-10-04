@@ -12,3 +12,7 @@ cd $model_dir
 synth_design -top batch_model_200_core -part xc7a100tcsg324-1
 report_utilization -file [file join $repo_dir reports model_v4_200_core_utilization.rpt]
 report_timing_summary -file [file join $repo_dir reports model_v4_200_core_synthesis_timing.rpt]
+set quarter_registers [get_cells -hier -filter {NAME =~ *quarter_inputs* && REF_NAME =~ FD*}]
+puts "Activation quarter registers retained: [llength $quarter_registers]"
+report_timing -from $quarter_registers -max_paths 5 \
+    -file [file join $repo_dir reports model_v4_200_activation_selection_timing.rpt]

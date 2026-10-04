@@ -1,0 +1,21 @@
+# Text-only GGUF from Unsloth; setup replaces this with a verified local path.
+FROM hf.co/unsloth/medgemma-1.5-4b-it-GGUF:Q4_K_M
+# Gemma 3 puts the system instruction at the start of the first user turn.
+# The installed Ollama 0.6.2 does not autodetect this GGUF's chat template.
+TEMPLATE """{{- $system := "" -}}
+{{- range .Messages }}
+{{- if eq .Role "system" }}{{- $system = .Content }}
+{{- else if eq .Role "user" }}<start_of_turn>user
+{{ if $system }}{{ $system }}
+
+{{ $system = "" }}{{ end }}{{ .Content }}<end_of_turn>
+{{ else if eq .Role "assistant" }}<start_of_turn>model
+{{ .Content }}<end_of_turn>
+{{ end }}
+{{- end }}<start_of_turn>model
+"""
+PARAMETER stop "<end_of_turn>"
+PARAMETER num_ctx 4096
+PARAMETER num_predict 1024
+PARAMETER temperature 0
+PARAMETER seed 42

@@ -1,0 +1,24 @@
+{
+  "status": "attention_required",
+  "requested_variants": 10,
+  "brief_number": 10,
+  "blocked_identity_number": 10,
+  "failed_variant_number": 0,
+  "elapsed_seconds": 0.01803410006687045,
+  "backend": {
+    "provider": "extractive",
+    "model": "verbatim-control-v1"
+  },
+  "prompt_version": "variantgate-extraction-v1",
+  "offline_control": true,
+  "requires_human_review": true,
+  "accounting": {
+    "new_generation_calls": 0,
+    "unique_responses": 0,
+    "input_tokens": null,
+    "output_tokens": null,
+    "estimated_cost_usd": null,
+    "pricing_source": null,
+    "usage_scope": "Responses used by this run, including reused cached responses; HTTP retries and uncertain failed deliveries may incur additional cost."
+  }
+}

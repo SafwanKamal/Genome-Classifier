@@ -1,0 +1,28 @@
+{
+  "key": "7174b93e0adddd8bb4a78c409b8ed6012a461f098bbc7ff5e04f2fcf5263eaed",
+  "sha256": "e97d226c7611888ab6ad1f9db74b44aa2f4830999504e28ee7ec5840b57f7a3e",
+  "receipt": {
+    "data": {
+      "source_id": "pubmed:90000024",
+      "claims": [
+        {
+          "statement": "The VGTEST24 NM_900000024.1 R41G variant reduced activity in a synthetic laboratory assay.",
+          "quote": "The VGTEST24 NM_900000024.1 R41G variant reduced activity in a synthetic laboratory assay.",
+          "scope": "exact_variant",
+          "finding_type": "functional"
+        }
+      ],
+      "limitations": [
+        "abstract_only"
+      ]
+    },
+    "usage": {
+      "prompt_tokens": 1021,
+      "completion_tokens": 117,
+      "total_tokens": 1138
+    },
+    "response_id": "chatcmpl-940",
+    "actual_model": "variantgate-medgemma:1.5-4b-q4km",
+    "latency_seconds": 22.560601700097322
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "format_version": 1,
+  "tool": "variantgate_pipeline",
+  "configuration": {
+    "inputs": {
+      "reconciled": {
+        "path": "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\evaluation\\variantgate\\v2\\archived_evidence.jsonl",
+        "sha256": "b9eec8c243391ee76c32d6a5618aa93b76325c0e6c0fa4a7bd721d5e07869858"
+      },
+      "evidence_manifest": {
+        "path": "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\evaluation\\variantgate\\v2\\archived_manifest.json",
+        "sha256": "2fc55bcf5fa1b410a9c195b41709fcf2ac1413aafca68ac3cf2957e1d8fd9e4d"
+      }
+    },
+    "backend": {
+      "provider": "extractive",
+      "model": "verbatim-control-v1"
+    },
+    "options": {
+      "assembly": "GRCh38",
+      "split": null,
+      "limit": 10,
+      "route": "deep_review",
+      "variation_id_column": null,
+      "max_articles": 12,
+      "max_passage_chars": 16000,
+      "max_queries_per_variant": 4,
+      "max_results_per_query": 20,
+      "cache_dir": "cache\\variantgate",
+      "email": null
+    },
+    "prompts_sha256": "d48d05028c8d70e1ff6748f0fa7dd89b66b47e7ae3a845f3976acc7bee36f6d4",
+    "code_sha256": {
+      "__init__.py": "1801cea384cda36c79ee8158aaa3e68281dc8da47b528aa40362af44c0e2bcc7",
+      "backends\\__init__.py": "4da40c11ef9f987bc127a9dd944a786f26b6dce4d74b5174895a505abb042893",
+      "backends\\base.py": "69e0c1402f5fa25e4be25ac63ccc9e617a255b6c34f6b6529964c583018c872d",
+      "backends\\compare_backend.py": "d3d8f77c202bcd5adf554691b7e887cd1e4005de7e9ead5f46541b9b5e4a83c5",
+      "backends\\ethernet_backend.py": "0bcc65843664e269d39b10ae72ae1f2785e5946ea38a54baa0f7c1382fe2e5ed",
+      "backends\\numpy_backend.py": "274d1700904ab873fea410fc969dbe35814a2268ecaae96919e1f68a4f927b5a",
+      "backends\\uart_backend.py": "6ba79fddc1be45a8e2bdbbc18bde87575acd79b14433ffaf213686e10bfc8261",
+      "brief_pipeline.py": "7d4a79c3816e7fe3e4a080c5cd2008d51a58402cc37d3481f506feaf6ade25eb",
+      "cli.py": "d8a373cc82ce4c7e6df4fdc4435111820471b54dcb0ddd8d9d166a0e6bf29117",
+      "direct_pubmed_cli.py": "3622613caf288de676daf0e7b8f29f583fe7d19bfe7cd5193c1c0683adc258b8",
+      "evaluation_cli.py": "b705cba701c465db7a4ad8b1214c60e497ce00812c20c73d0673e52896bbd2ab",
+      "evidence\\__init__.py": "8b297fcf200a0213c2c2e29a41836bcf38e24cbb5ad2d93fe3a34aabe0c74ad2",
+      "evidence\\clinvar.py": "c53ef8d1f2e9a1f934e4cd62419e5ec3ee9ae40f0643cbe5579787cb4fd1369c",
+      "evidence\\direct_pubmed.py": "bc846342d38b3128595b1fbc1065ae09e22908bdc02fb3c72601c702eb3e9af5",
+      "evidence\\identifiers.py": "99825e268beb56270a67e6025a4d97319a2e482864de2c31f14e3acc8e345f88",
+      "evidence\\pubmed.py": "0aa8913bdec3adb66586c84b7726a9f750e0d4e82b09affe25ec9f425d7223f8",
+      "evidence_cli.py": "a7b30c7ff1c2e6270868f10a4b0eaebfaf1d75ae96cfec7260ccac7b0b85f8fe",
+      "grounding.py": "2682242c47819a8bf9f9b16c673bb1df54708f72ce694b7b4c72ba16b248205d",
+      "identifier_audit_cli.py": "624cea6d8a96946f4a99cdfffaad000922de60a0831e8ed580d9df419545b8fe",
+      "llm.py": "65fd17a65db575461c20d1ae655123aa6f3e728d276beeb3fc0c1ec91ce99d15",
+      "manifest.py": "e210da5e46c5ad1f9995fe8f4288a15b4fac17e4a5bae6addcb83728b1d41ad6",
+      "pipeline_cli.py": "99b04bc1b499528faccc05dd889acc6712e264418ad748b0d9bad2fbfcfab815",
+      "pubmed_cli.py": "9cf9a82587a91d94f09018e8e6b82a80f31c5e0f6b8eb16f0aaadbe90eebcaf7",
+      "reconcile_cli.py": "f36a69b99daeed32a158023516fdde2e24107758eecdeca9f682b9422dde0b66",
+      "repair_identifiers_cli.py": "e9e86c721ef22a26eb5a78d9f988eacf3ccb6df2da0e138f797627e7cfa63876",
+      "report_cli.py": "174cd81ebbac2206eeb0ed5f1201abb32585d4edaf389bf38633c465e43d64b1",
+      "reports.py": "0a66c4bef43ab7ab20ab55ed65c9a5de34ee99470316fafcdd9f3218f815c780",
+      "routing.py": "f12dcc4ab14ace28dd8f480130d0ec1331a5741619106002c6166b13c18a6c0e",
+      "schemas.py": "2d5586a0d9c079111d898d526e67261f6f48b6f0f5dcad340822d8acf931a8c6",
+      "select_routing_threshold.py": "a952b4c9e26d17871243c1736b370ef807c0d8e022fe476f86778ed1617c26b1"
+    }
+  },
+  "state_sha256": "68e5b269bbda1dca340238ad118e5723622828b57842735eda31a3bd4d3e0a53",
+  "outputs": {
+    "evidence_packages.jsonl": {
+      "path": "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\runs\\variantgate_llm\\archived_identity_v2\\briefs\\evidence_packages.jsonl",
+      "sha256": "f0f6a208b408f2b51883e7453545fe435190513b52a95be7674d525b10b9d01e"
+    },
+    "variant_briefs.jsonl": {
+      "path": "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\runs\\variantgate_llm\\archived_identity_v2\\briefs\\variant_briefs.jsonl",
+      "sha256": "fde9f860c46277397d2fd36972cbe7f3d88a239a0b84b720478d08502274de1d"
+    },
+    "failures.jsonl": {
+      "path": "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\runs\\variantgate_llm\\archived_identity_v2\\briefs\\failures.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "report.md": {
+      "path": "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\runs\\variantgate_llm\\archived_identity_v2\\briefs\\report.md",
+      "sha256": "632e8fe91941558d3fe20646a629921487ee5221c98e1ff9079e81636f5d4599"
+    },
+    "summary.json": {
+      "path": "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\runs\\variantgate_llm\\archived_identity_v2\\briefs\\summary.json",
+      "sha256": "65eea988f30959ca7273543fe107094be5bb91c1a521b101470be34820370521"
+    },
+    "run_manifest.json": {
+      "path": "C:\\Users\\user\\OneDrive - Texas Tech University\\Desktop\\Code\\FPGA Project\\Genome Classifier\\runs\\variantgate_llm\\archived_identity_v2\\briefs\\run_manifest.json",
+      "sha256": "188bc94f284bad25a06b905d021da0682af60ef48748be634aee8c9944330188"
+    }
+  }
+}

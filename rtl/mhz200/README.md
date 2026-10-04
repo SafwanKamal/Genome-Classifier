@@ -87,3 +87,74 @@ by 0.180 ns on the BRAM-to-DSP path; the added matched register stage resolves
 that failure in synthesis. These estimates exclude the full Ethernet top and
 physical routing.
 The full routed timing report remains the acceptance criterion for 200 MHz.
+
+## User board tests, October 3, 2026
+
+The user supplied these reports after programming the new design:
+
+| Report | Correct / requested | Completion time | Variants/s |
+|---|---|---|---|
+| `reports/model_v4_200_smoke.json` (window 1) | 100 / 100 | 1.7065 ms | 58,599 |
+| `reports/model_v4_200_full_timing.json` (window 2, instrumentation) | 27,477 / 27,477 | 193.9651 ms | 141,660 |
+| `reports/model_v4_200_full.json` (window 2, no instrumentation) | 27,477 / 27,477 | 178.6501 ms | 153,803 |
+
+All three have zero missing results, duplicates and mismatches, and no error.
+Against the previous desktop instrumented result of 127,499 variants/s,
+the instrumented new run improves by **11.1%**. The uninstrumented run is
+**20.6%** above that previous result, but instrumentation differs; do not
+attribute that entire difference to the hardware change. These are single
+runs, and the reports do not record host/NIC identity or FPGA clock identity.
+Keep the same desktop/adapter and repeat both designs without instrumentation
+to establish a median speedup.
+
+The new instrumented run has median send-to-reply latency **420.2 us**,
+send-call duration **70.4 us**, capture-to-callback delay **74.9 us**, and
+reply-to-refill delay **27.8 us**. Send calls occupy about 32.0% and queue waits
+62.9% of the completion interval. Queue waits include hardware, transport and
+host capture; they do not isolate FPGA compute. The 153,803/s result is about
+50.1% of the simulated queued compute ceiling. Doubling the target clock has
+not doubled end-to-end throughput. The recorded CPU baseline remains about
+5.0 times faster than this uninstrumented FPGA run.
+
+Three further uninstrumented full-cohort runs (`model_v4_200_full_1.json`,
+`model_v4_200_full_2.json`, `model_v4_200_full_3.json` in `reports`) each return
+27,477/27,477 correct, with zero missing, duplicates, mismatches or errors.
+Rates are **155,245**, **141,080** and **154,051 variants/s**, respectively.
+The median is **154,051/s** (178.3629 ms), about 50.2% of the simulated queued
+compute ceiling; the range spans 9.2% of the median. It is 20.8% above the
+previous instrumented desktop result, with the same instrumentation caveat
+as above. The CPU baseline is about 4.99 times faster than this median.
+
+## Activation-selector revision and raw host transport
+
+The original full routed 200 MHz build subsequently reports **-0.812 ns setup
+slack and 1,666 failing endpoints**, despite the board tests above passing.
+The critical path is activation selection into DSP inputs. The updated core
+splits that selection across its existing two read cycles: a registered
+16-way selection in each of four quarters, followed by a 4-way quarter
+selection. Weights, model, cycle count and 128 DSPs remain unchanged.
+
+All 128 quarter-selection registers survive synthesis without retention
+attributes. The revised core passes 1,000 golden vectors in 635 cycles.
+Core-only synthesis has +0.357 ns setup and +0.079 ns hold slack, with 5,003
+LUTs, 8,123 registers and 16.5 BRAM tiles. These replace the earlier core-only
+synthesis resource/timing figures above. **Full routed timing of this revision
+is still pending; the previous routed report describes the old selector.**
+
+The new `simulation/ethernet_batch_200_window_tb.sv` tests a strict four-credit
+host over 2,000 variants in 98 full/mixed batches, including consecutive
+single-record requests. It fills both parser and both RX banks by initially
+holding classifier acceptance, then exercises sustained reply-credit refill
+and bank wrap. All scores, sequences, flags and reply CRCs pass, with no
+receiver overflow or error LED. The test's reply receiver uses two banks to
+handle minimum-gap replies while decoding the preceding packet. Existing
+production RX/request/result storage is unchanged. Run it with
+`scripts/test_ethernet_batch_200_window.tcl`.
+
+`software/ethernet_batch_stream_rate_fast.py` is a separate host experiment:
+raw-byte capture, credit refill before golden-score checking, and windows
+1, 2 or 4 (default 2). It preserves mandatory score/flag validation and adds
+host/NIC/backend/model identity plus a user-supplied design label to reports.
+The original host benchmark remains unchanged. See the
+[implementation report](../../docs/bottleneck_implementation_report.md) for
+files, validation scope, Vivado acceptance and user-run commands.

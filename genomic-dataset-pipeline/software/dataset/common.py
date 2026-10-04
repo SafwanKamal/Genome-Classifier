@@ -13,6 +13,7 @@ META_COLUMNS = [
     "ref",
     "alt",
     "variation_id",
+    "allele_id",
     "gene",
     "label",
     "clinical_significance",
@@ -63,4 +64,3 @@ def require_columns(frame: pd.DataFrame, columns: list[str], source: str) -> Non
     missing = sorted(set(columns) - set(frame.columns))
     if missing:
         raise ValueError(f"{source} is missing required columns: {', '.join(missing)}")
-

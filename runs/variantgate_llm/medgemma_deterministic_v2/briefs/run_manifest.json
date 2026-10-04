@@ -1,0 +1,32 @@
+{
+  "format_version": 1,
+  "tool": "variantgate_briefs",
+  "prompt_version": "variantgate-extraction-v1",
+  "pipeline_version": "deterministic-database-and-grouping-v2",
+  "input_records_sha256": "07963ce45e9bd840898efc424293e18a6b225fac5fb4261401a55ea4a8627fa1",
+  "backend": {
+    "provider": "local",
+    "model": "variantgate-medgemma:1.5-4b-q4km",
+    "base_url": "http://127.0.0.1:11434/v1",
+    "max_output_tokens": 1024,
+    "prompt_format": "schema-in-prompt-v1",
+    "temperature": 0
+  },
+  "outputs": {
+    "evidence_packages.jsonl": {
+      "sha256": "36f6a76cbedf955e4da18b2747102cb51f4ddaec3b6e98803e4f57cd2c8440a3"
+    },
+    "variant_briefs.jsonl": {
+      "sha256": "6b7a306a9ec22eb78fe7386cefaf159307bea0b9e873b1fa5a396a5d1006a8a9"
+    },
+    "failures.jsonl": {
+      "sha256": "0aaf2671fb474f3b17504685be4376feb24b06c26213d9d441f5e73abe8db93d"
+    },
+    "report.md": {
+      "sha256": "276e5b734aad858bd420e95d3c35d322f7f75fbd27687e574d222d6471f761b9"
+    },
+    "summary.json": {
+      "sha256": "6a087a98c1448e9e6772d31b6ccdbbb9f5e3fee1e2b8d3ee5dbd0b79ac7aaced"
+    }
+  }
+}

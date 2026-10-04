@@ -1,0 +1,28 @@
+{
+  "key": "d3f1c91605427c8a52c3964603bbd705f11dcfb143edae6dd738f44ed8b8f095",
+  "sha256": "370865415033592922d2e71ac8eb2ac6976ba0f50da3934367c48ba4ff096372",
+  "receipt": {
+    "data": {
+      "source_id": "clinvar:b8dfe7264cb6d965cbef",
+      "claims": [
+        {
+          "statement": "The p.Arg41Gly (CAG>CGG), 3' UTR variation of VGTEST02 is pathogenic, as found in 6 patients and absent in population databases",
+          "quote": "The p.Arg41Gly (CAG>CGG), 3' UTR variation of VGTEST02 is pathogenic, as found in 6 patients and absent in population databases ",
+          "scope": "exact_variant",
+          "finding_type": "association"
+        }
+      ],
+      "limitations": [
+        "conflicting_findings"
+      ]
+    },
+    "usage": {
+      "prompt_tokens": 853,
+      "completion_tokens": 170,
+      "total_tokens": 1023
+    },
+    "response_id": "chatcmpl-40",
+    "actual_model": "variantgate-biomistral:7b-q4km",
+    "latency_seconds": 47.30009999999311
+  }
+}

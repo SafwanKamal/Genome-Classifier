@@ -1,0 +1,30 @@
+{
+  "status": "failed",
+  "requested_variants": 24,
+  "brief_number": 14,
+  "blocked_identity_number": 6,
+  "failed_variant_number": 10,
+  "elapsed_seconds": 296.41974549996667,
+  "backend": {
+    "provider": "local",
+    "model": "variantgate-medgemma:1.5-4b-q4km",
+    "base_url": "http://127.0.0.1:11434/v1",
+    "max_output_tokens": 1024,
+    "prompt_format": "schema-in-prompt-v1",
+    "temperature": 0
+  },
+  "prompt_version": "variantgate-extraction-v1",
+  "pipeline_version": "deterministic-database-and-grouping-v2",
+  "offline_control": false,
+  "requires_human_review": true,
+  "accounting": {
+    "new_generation_calls": 12,
+    "unique_responses": 12,
+    "provider_latency_seconds_for_used_responses": 296.1330103002256,
+    "input_tokens": 12104,
+    "output_tokens": 1677,
+    "estimated_cost_usd": null,
+    "pricing_source": null,
+    "usage_scope": "Responses used by this run, including reused cached responses; HTTP retries and uncertain failed deliveries may incur additional cost."
+  }
+}

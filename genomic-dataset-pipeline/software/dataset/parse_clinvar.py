@@ -113,13 +113,18 @@ def rows_from_vcf(path: Path, min_review_stars: int = 1) -> Iterator[dict[str, o
                 if gene is None:
                     continue
                 pos = int(pos_text)
+                # ClinVar VCF column 3 is Variation ID; INFO/ALLELEID is a
+                # separate namespace and must never be used for ESummary IDs.
+                if not record_id.isdigit() or int(record_id) <= 0:
+                    raise ValueError(f"Invalid ClinVar Variation ID at line {line_number}")
                 yield {
                     "variant_key": make_variant_key(chrom, pos, ref, alt),
                     "chrom": normalize_chrom(chrom),
                     "pos": pos,
                     "ref": ref.upper(),
                     "alt": alt.upper(),
-                    "variation_id": info.get("ALLELEID") or info.get("CLNVID") or record_id,
+                    "variation_id": record_id,
+                    "allele_id": info.get("ALLELEID"),
                     "gene": gene,
                     "label": label,
                     "clinical_significance": significance,

@@ -1,0 +1,215 @@
+{
+  "status": "pass",
+  "case_number": 24,
+  "backend": {
+    "provider": "extractive",
+    "model": "verbatim-control-v1"
+  },
+  "offline_control": true,
+  "identity_checks_passed": 24,
+  "scope_checks_passed": 24,
+  "reference_findings_covered": 3,
+  "reference_finding_number": 15,
+  "reference_finding_coverage": 0.2,
+  "semantic_support_accuracy": null,
+  "reviewer_usefulness": null,
+  "interpretation": "Status tests identity and scope guards only. Quote/type coverage is a proxy; expert adjudication of semantic support and usefulness remains required. Synthetic fixtures cannot establish real-world LLM or clinical quality.",
+  "inputs": {
+    "cases_sha256": "3f3e8fb3a5c7cb556a85c907f552f444540c22aa7a42e09aa6674b8a9b336ecb",
+    "briefs_sha256": "87ab198e7e57e26bbf64147cda886234b84bea0e105a2f1fbd07158f0e69b59e"
+  },
+  "cases": [
+    {
+      "case_id": "synthetic-01",
+      "identity_check_passed": true,
+      "scope_check_passed": true,
+      "brief_present": true,
+      "reference_findings_covered": 0,
+      "reference_finding_number": 1
+    },
+    {
+      "case_id": "synthetic-02",
+      "identity_check_passed": true,
+      "scope_check_passed": true,
+      "brief_present": true,
+      "reference_findings_covered": 1,
+      "reference_finding_number": 1
+    },
+    {
+      "case_id": "synthetic-03",
+      "identity_check_passed": true,
+      "scope_check_passed": true,
+      "brief_present": true,
+      "reference_findings_covered": 0,
+      "reference_finding_number": 2
+    },
+    {
+      "case_id": "synthetic-04",
+      "identity_check_passed": true,
+      "scope_check_passed": true,
+      "brief_present": true,
+      "reference_findings_covered": 0,
+      "reference_finding_number": 0
+    },
+    {
+      "case_id": "synthetic-05",
+      "identity_check_passed": true,
+      "scope_check_passed": true,
+      "brief_present": true,
+      "reference_findings_covered": 0,
+      "reference_finding_number": 0
+    },
+    {
+      "case_id": "synthetic-06",
+      "identity_check_passed": true,
+      "scope_check_passed": true,
+      "brief_present": true,
+      "reference_findings_covered": 0,
+      "reference_finding_number": 0
+    },
+    {
+      "case_id": "synthetic-07",
+      "identity_check_passed": true,
+      "scope_check_passed": true,
+      "brief_present": true,
+      "reference_findings_covered": 0,
+      "reference_finding_number": 0
+    },
+    {
+      "case_id": "synthetic-08",
+      "identity_check_passed": true,
+      "scope_check_passed": true,
+      "brief_present": true,
+      "reference_findings_covered": 0,
+      "reference_finding_number": 1
+    },
+    {
+      "case_id": "synthetic-09",
+      "identity_check_passed": true,
+      "scope_check_passed": true,
+      "brief_present": true,
+      "reference_findings_covered": 0,
+      "reference_finding_number": 1
+    },
+    {
+      "case_id": "synthetic-10",
+      "identity_check_passed": true,
+      "scope_check_passed": true,
+      "brief_present": true,
+      "reference_findings_covered": 1,
+      "reference_finding_number": 1
+    },
+    {
+      "case_id": "synthetic-11",
+      "identity_check_passed": true,
+      "scope_check_passed": true,
+      "brief_present": true,
+      "reference_findings_covered": 0,
+      "reference_finding_number": 2
+    },
+    {
+      "case_id": "synthetic-12",
+      "identity_check_passed": true,
+      "scope_check_passed": true,
+      "brief_present": true,
+      "reference_findings_covered": 0,
+      "reference_finding_number": 0
+    },
+    {
+      "case_id": "synthetic-13",
+      "identity_check_passed": true,
+      "scope_check_passed": true,
+      "brief_present": true,
+      "reference_findings_covered": 0,
+      "reference_finding_number": 0
+    },
+    {
+      "case_id": "synthetic-14",
+      "identity_check_passed": true,
+      "scope_check_passed": true,
+      "brief_present": true,
+      "reference_findings_covered": 0,
+      "reference_finding_number": 0
+    },
+    {
+      "case_id": "synthetic-15",
+      "identity_check_passed": true,
+      "scope_check_passed": true,
+      "brief_present": true,
+      "reference_findings_covered": 0,
+      "reference_finding_number": 0
+    },
+    {
+      "case_id": "synthetic-16",
+      "identity_check_passed": true,
+      "scope_check_passed": true,
+      "brief_present": true,
+      "reference_findings_covered": 0,
+      "reference_finding_number": 1
+    },
+    {
+      "case_id": "synthetic-17",
+      "identity_check_passed": true,
+      "scope_check_passed": true,
+      "brief_present": true,
+      "reference_findings_covered": 0,
+      "reference_finding_number": 1
+    },
+    {
+      "case_id": "synthetic-18",
+      "identity_check_passed": true,
+      "scope_check_passed": true,
+      "brief_present": true,
+      "reference_findings_covered": 1,
+      "reference_finding_number": 1
+    },
+    {
+      "case_id": "synthetic-19",
+      "identity_check_passed": true,
+      "scope_check_passed": true,
+      "brief_present": true,
+      "reference_findings_covered": 0,
+      "reference_finding_number": 2
+    },
+    {
+      "case_id": "synthetic-20",
+      "identity_check_passed": true,
+      "scope_check_passed": true,
+      "brief_present": true,
+      "reference_findings_covered": 0,
+      "reference_finding_number": 0
+    },
+    {
+      "case_id": "synthetic-21",
+      "identity_check_passed": true,
+      "scope_check_passed": true,
+      "brief_present": true,
+      "reference_findings_covered": 0,
+      "reference_finding_number": 0
+    },
+    {
+      "case_id": "synthetic-22",
+      "identity_check_passed": true,
+      "scope_check_passed": true,
+      "brief_present": true,
+      "reference_findings_covered": 0,
+      "reference_finding_number": 0
+    },
+    {
+      "case_id": "synthetic-23",
+      "identity_check_passed": true,
+      "scope_check_passed": true,
+      "brief_present": true,
+      "reference_findings_covered": 0,
+      "reference_finding_number": 0
+    },
+    {
+      "case_id": "synthetic-24",
+      "identity_check_passed": true,
+      "scope_check_passed": true,
+      "brief_present": true,
+      "reference_findings_covered": 0,
+      "reference_finding_number": 1
+    }
+  ]
+}

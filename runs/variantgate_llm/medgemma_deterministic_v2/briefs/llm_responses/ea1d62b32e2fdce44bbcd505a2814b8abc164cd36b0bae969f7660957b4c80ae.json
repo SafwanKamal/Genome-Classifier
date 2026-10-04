@@ -1,0 +1,28 @@
+{
+  "key": "ea1d62b32e2fdce44bbcd505a2814b8abc164cd36b0bae969f7660957b4c80ae",
+  "sha256": "7937fe88b7ac9eb8bb8aadd24b5f699277af6a3e7784f85f99a672694ed0fec0",
+  "receipt": {
+    "data": {
+      "source_id": "pubmed:90000008",
+      "claims": [
+        {
+          "statement": "The VGTEST08 NM_900000008.1 R41G variant reduced activity in a synthetic laboratory assay.",
+          "quote": "The VGTEST08 NM_900000008.1 R41G variant reduced activity in a synthetic laboratory assay.",
+          "scope": "exact_variant",
+          "finding_type": "functional"
+        }
+      ],
+      "limitations": [
+        "abstract_only"
+      ]
+    },
+    "usage": {
+      "prompt_tokens": 1011,
+      "completion_tokens": 117,
+      "total_tokens": 1128
+    },
+    "response_id": "chatcmpl-805",
+    "actual_model": "variantgate-medgemma:1.5-4b-q4km",
+    "latency_seconds": 20.24010180006735
+  }
+}

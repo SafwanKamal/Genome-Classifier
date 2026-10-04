@@ -1,0 +1,22 @@
+{
+  "key": "1e8d0cc7bd1963f6c777f13ebbfda08ef5c502abe673b91b11fa3373508db12d",
+  "sha256": "a6ff5321d9e2e1181150ac1e728751a7bede11fd9613ab80c0c7918ab174d71f",
+  "receipt": {
+    "data": {
+      "source_id": "clinvar:0abe5180e104abe72eec",
+      "claims": [
+        {
+          "statement": "{\"canonical_spdi\": [\"NC_000001.11:101:A:G\"], \"genes\": [{\"symbol\": \"VGTEST02\"}], \"germline_classification\": {\"description\": \"Uncertain significance\", \"review_status\": \"synthetic fixture\", \"traits\": []}, \"title\": \"NM_TEST2.1(VGTEST02):c.123A>G (p.Arg41Gly)\", \"variation_id\": 10002}",
+          "quote": "{\"canonical_spdi\": [\"NC_000001.11:101:A:G\"], \"genes\": [{\"symbol\": \"VGTEST02\"}], \"germline_classification\": {\"description\": \"Uncertain significance\", \"review_status\": \"synthetic fixture\", \"traits\": []}, \"title\": \"NM_TEST2.1(VGTEST02):c.123A>G (p.Arg41Gly)\", \"variation_id\": 10002}",
+          "scope": "exact_variant",
+          "finding_type": "database_statement"
+        }
+      ],
+      "limitations": []
+    },
+    "usage": {},
+    "response_id": null,
+    "latency_seconds": 0.0,
+    "actual_model": "verbatim-control-v1"
+  }
+}

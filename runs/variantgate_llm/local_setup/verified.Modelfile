@@ -1,0 +1,9 @@
+FROM "C:/Users/user/AppData/Local/VariantGate/models/biomistral-7b-q4km.gguf"
+
+# Keep the first experiment within BioMistral's published 2048-token length.
+# Use short fixtures; do not send whole papers to this profile.
+PARAMETER num_ctx 2048
+PARAMETER num_predict 768
+PARAMETER temperature 0
+PARAMETER seed 42
+

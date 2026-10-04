@@ -1,0 +1,24 @@
+{
+  "key": "9e5039fef0ef0e7f00aba9e0073e9c6e9c799cdb0ffb4538c211a075129f2a01",
+  "sha256": "8dd02e5e097d6c3a66d09f46cecc2c8ff3aa8b0b64ee279cfb56198382834d3a",
+  "receipt": {
+    "data": {
+      "source_id": "pubmed:90000002:6da21a598e32fc0f6bbf",
+      "claims": [
+        {
+          "statement": "The VGTEST02 gene participates in signaling in this synthetic experiment.",
+          "quote": "The VGTEST02 gene participates in signaling in this synthetic experiment.",
+          "scope": "gene_context",
+          "finding_type": "background"
+        }
+      ],
+      "limitations": [
+        "abstract_only"
+      ]
+    },
+    "usage": {},
+    "response_id": null,
+    "latency_seconds": 0.0,
+    "actual_model": "verbatim-control-v1"
+  }
+}

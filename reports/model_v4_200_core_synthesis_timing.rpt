@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
-| Date         : Sat Oct  3 04:37:01 2026
+| Date         : Sat Oct  3 17:55:07 2026
 | Host         : SafwanLenovo running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -file {C:/Users/user/OneDrive - Texas Tech University/Desktop/Code/FPGA Project/Genome Classifier/reports/model_v4_200_core_synthesis_timing.rpt}
 | Design       : batch_model_200_core
@@ -138,7 +138,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-      0.444        0.000                      0                22828        0.079        0.000                      0                22828        1.116        0.000                       0                  8316  
+      0.357        0.000                      0                24493        0.079        0.000                      0                24493        1.116        0.000                       0                  8417  
 
 
 All user specified timing constraints are met.
@@ -161,7 +161,7 @@ clk    {0.000 2.500}        5.000           200.000
 
 Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-clk                 0.444        0.000                      0                22828        0.079        0.000                      0                22828        1.116        0.000                       0                  8316  
+clk                 0.357        0.000                      0                24493        0.079        0.000                      0                24493        1.116        0.000                       0                  8417  
 
 
 ------------------------------------------------------------------------------------------------
@@ -192,7 +192,7 @@ Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing 
 From Clock:  clk
   To Clock:  clk
 
-Setup :            0  Failing Endpoints,  Worst Slack        0.444ns,  Total Violation        0.000ns
+Setup :            0  Failing Endpoints,  Worst Slack        0.357ns,  Total Violation        0.000ns
 Hold  :            0  Failing Endpoints,  Worst Slack        0.079ns,  Total Violation        0.000ns
 PW    :            0  Failing Endpoints,  Worst Slack        1.116ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
@@ -200,16 +200,16 @@ PW    :            0  Failing Endpoints,  Worst Slack        1.116ns,  Total Vio
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             0.444ns  (required time - arrival time)
-  Source:                 activations_reg[220][7]/C
+Slack (MET) :             0.357ns  (required time - arrival time)
+  Source:                 layer_reg[0]/C
                             (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
-  Destination:            output_lane[0].input_lane[0].multiplied_reg/A[10]
-                            (rising edge-triggered cell DSP48E1 clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            output_lane[0].rounded_reg[0][27]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
   Path Group:             clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            5.000ns  (clk rise@5.000ns - clk rise@0.000ns)
-  Data Path Delay:        4.014ns  (logic 1.437ns (35.801%)  route 2.577ns (64.199%))
-  Logic Levels:           4  (LUT6=2 MUXF7=1 MUXF8=1)
+  Data Path Delay:        4.507ns  (logic 2.775ns (61.571%)  route 1.732ns (38.429%))
+  Logic Levels:           11  (CARRY4=8 LUT2=2 LUT3=1)
   Clock Path Skew:        -0.145ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    2.130ns = ( 7.130 - 5.000 ) 
     Source Clock Delay      (SCD):    2.454ns
@@ -228,20 +228,42 @@ Slack (MET) :             0.444ns  (required time - arrival time)
                          IBUF (Prop_ibuf_I_O)         0.971     0.971 r  clk_IBUF_inst/O
                          net (fo=1, unplaced)         0.803     1.774    clk_IBUF
                          BUFG (Prop_bufg_I_O)         0.096     1.870 r  clk_IBUF_BUFG_inst/O
-                         net (fo=8315, unplaced)      0.584     2.454    clk_IBUF_BUFG
-                         FDRE                                         r  activations_reg[220][7]/C
+                         net (fo=8416, unplaced)      0.584     2.454    clk_IBUF_BUFG
+                         FDRE                                         r  layer_reg[0]/C
   -------------------------------------------------------------------    -------------------
-                         FDRE (Prop_fdre_C_Q)         0.478     2.932 r  activations_reg[220][7]/Q
-                         net (fo=1, unplaced)         0.965     3.897    activations_reg[220][7]
-                         LUT6 (Prop_lut6_I0_O)        0.295     4.192 r  output_lane[11].input_lane[0].multiplied_reg_i_108/O
-                         net (fo=1, unplaced)         0.000     4.192    output_lane[11].input_lane[0].multiplied_reg_i_108_n_0
-                         MUXF7 (Prop_muxf7_I1_O)      0.247     4.439 r  output_lane[11].input_lane[0].multiplied_reg_i_43/O
-                         net (fo=1, unplaced)         0.000     4.439    output_lane[11].input_lane[0].multiplied_reg_i_43_n_0
-                         MUXF8 (Prop_muxf8_I0_O)      0.098     4.537 r  output_lane[11].input_lane[0].multiplied_reg_i_11/O
-                         net (fo=74, unplaced)        0.809     5.346    output_lane[11].input_lane[0].multiplied_reg_i_11_n_0
-                         LUT6 (Prop_lut6_I0_O)        0.319     5.665 r  output_lane[0].input_lane[0].multiplied_reg_i_2/O
-                         net (fo=10, unplaced)        0.803     6.468    output_lane[0].input_lane[0].multiplied_reg_i_2_n_0
-                         DSP48E1                                      r  output_lane[0].input_lane[0].multiplied_reg/A[10]
+                         FDRE (Prop_fdre_C_Q)         0.478     2.932 r  layer_reg[0]/Q
+                         net (fo=80, unplaced)        0.564     3.496    layer_reg_n_0_[0]
+                         LUT2 (Prop_lut2_I0_O)        0.295     3.791 r  output_lane[17].rounded[17][27]_i_2/O
+                         net (fo=92, unplaced)        0.546     4.337    output_lane[17].rounded[17][27]_i_2_n_0
+                         LUT2 (Prop_lut2_I1_O)        0.124     4.461 r  output_lane[0].rounded[0][1]_i_4/O
+                         net (fo=1, unplaced)         0.000     4.461    output_lane[0].rounded[0][1]_i_4_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     4.994 r  output_lane[0].rounded_reg[0][1]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     4.994    output_lane[0].rounded_reg[0][1]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.111 r  output_lane[0].rounded_reg[0][5]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     5.111    output_lane[0].rounded_reg[0][5]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.228 r  output_lane[0].rounded_reg[0][9]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     5.228    output_lane[0].rounded_reg[0][9]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.345 r  output_lane[0].rounded_reg[0][13]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     5.345    output_lane[0].rounded_reg[0][13]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.462 r  output_lane[0].rounded_reg[0][17]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     5.462    output_lane[0].rounded_reg[0][17]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.579 r  output_lane[0].rounded_reg[0][21]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     5.579    output_lane[0].rounded_reg[0][21]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.696 r  output_lane[0].rounded_reg[0][32]_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     5.696    output_lane[0].rounded_reg[0][32]_i_2_n_0
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.337     6.033 r  output_lane[0].rounded_reg[0][32]_i_1/O[1]
+                         net (fo=2, unplaced)         0.622     6.655    output_lane[0].rounded_reg[0][32]_i_1_n_6
+                         LUT3 (Prop_lut3_I0_O)        0.306     6.961 r  output_lane[0].rounded[0][27]_i_1/O
+                         net (fo=1, unplaced)         0.000     6.961    output_lane[0].rounded[0][27]_i_1_n_0
+                         FDRE                                         r  output_lane[0].rounded_reg[0][27]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk rise edge)        5.000     5.000 r  
@@ -250,17 +272,16 @@ Slack (MET) :             0.444ns  (required time - arrival time)
                          IBUF (Prop_ibuf_I_O)         0.838     5.838 r  clk_IBUF_inst/O
                          net (fo=1, unplaced)         0.763     6.600    clk_IBUF
                          BUFG (Prop_bufg_I_O)         0.091     6.691 r  clk_IBUF_BUFG_inst/O
-                         net (fo=8315, unplaced)      0.439     7.130    clk_IBUF_BUFG
-                         DSP48E1                                      r  output_lane[0].input_lane[0].multiplied_reg/CLK
+                         net (fo=8416, unplaced)      0.439     7.130    clk_IBUF_BUFG
+                         FDRE                                         r  output_lane[0].rounded_reg[0][27]/C
                          clock pessimism              0.179     7.309    
                          clock uncertainty           -0.035     7.274    
-                         DSP48E1 (Setup_dsp48e1_CLK_A[10])
-                                                     -0.362     6.912    output_lane[0].input_lane[0].multiplied_reg
+                         FDRE (Setup_fdre_C_D)        0.044     7.318    output_lane[0].rounded_reg[0][27]
   -------------------------------------------------------------------
-                         required time                          6.912    
-                         arrival time                          -6.468    
+                         required time                          7.318    
+                         arrival time                          -6.961    
   -------------------------------------------------------------------
-                         slack                                  0.444    
+                         slack                                  0.357    
 
 
 
@@ -269,9 +290,9 @@ Slack (MET) :             0.444ns  (required time - arrival time)
 Min Delay Paths
 --------------------------------------------------------------------------------------
 Slack (MET) :             0.079ns  (arrival time - required time)
-  Source:                 bias_word_reg[1022]/C
+  Source:                 bias_word_reg[1023]/C
                             (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
-  Destination:            pair_bias_reg[1022]_srl3/D
+  Destination:            pair_bias_reg[1023]_srl3/D
                             (rising edge-triggered cell SRL16E clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
   Path Group:             clk
   Path Type:              Hold (Min at Fast Process Corner)
@@ -291,12 +312,12 @@ Slack (MET) :             0.079ns  (arrival time - required time)
                          IBUF (Prop_ibuf_I_O)         0.200     0.200 r  clk_IBUF_inst/O
                          net (fo=1, unplaced)         0.338     0.539    clk_IBUF
                          BUFG (Prop_bufg_I_O)         0.026     0.565 r  clk_IBUF_BUFG_inst/O
-                         net (fo=8315, unplaced)      0.114     0.679    clk_IBUF_BUFG
-                         FDRE                                         r  bias_word_reg[1022]/C
+                         net (fo=8416, unplaced)      0.114     0.679    clk_IBUF_BUFG
+                         FDRE                                         r  bias_word_reg[1023]/C
   -------------------------------------------------------------------    -------------------
-                         FDRE (Prop_fdre_C_Q)         0.147     0.826 r  bias_word_reg[1022]/Q
-                         net (fo=1, unplaced)         0.141     0.966    bias_word[1022]
-                         SRL16E                                       r  pair_bias_reg[1022]_srl3/D
+                         FDRE (Prop_fdre_C_Q)         0.147     0.826 r  bias_word_reg[1023]/Q
+                         net (fo=1, unplaced)         0.141     0.966    bias_word[1023]
+                         SRL16E                                       r  pair_bias_reg[1023]_srl3/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk rise edge)        0.000     0.000 r  
@@ -305,11 +326,11 @@ Slack (MET) :             0.079ns  (arrival time - required time)
                          IBUF (Prop_ibuf_I_O)         0.389     0.389 r  clk_IBUF_inst/O
                          net (fo=1, unplaced)         0.356     0.745    clk_IBUF
                          BUFG (Prop_bufg_I_O)         0.029     0.774 r  clk_IBUF_BUFG_inst/O
-                         net (fo=8315, unplaced)      0.259     1.033    clk_IBUF_BUFG
-                         SRL16E                                       r  pair_bias_reg[1022]_srl3/CLK
+                         net (fo=8416, unplaced)      0.259     1.033    clk_IBUF_BUFG
+                         SRL16E                                       r  pair_bias_reg[1023]_srl3/CLK
                          clock pessimism             -0.210     0.824    
                          SRL16E (Hold_srl16e_CLK_D)
-                                                      0.064     0.888    pair_bias_reg[1022]_srl3
+                                                      0.064     0.888    pair_bias_reg[1023]_srl3
   -------------------------------------------------------------------
                          required time                         -0.888    
                          arrival time                           0.966    
