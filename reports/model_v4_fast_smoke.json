@@ -1,0 +1,32 @@
+{
+  "received": 100,
+  "correct": 100,
+  "duplicates": 0,
+  "unrelated_replies": 0,
+  "mismatches": [],
+  "error": null,
+  "completed_seconds": 0.000774600004660897,
+  "requested": 100,
+  "missing": 0,
+  "batch_size": 32,
+  "window": 2,
+  "split": "test",
+  "manifest": "genomic-dataset-pipeline\\artifacts\\model_v4_batch_seed_7\\export_manifest.json",
+  "first_sequence": 9000000,
+  "completed_variants_per_second": 129098.88897273868,
+  "timing_scope": "first send to last decoded host-captured reply; golden checks overlap transfer, final validation and preparation/startup excluded; rate published only if all scores correct",
+  "identity": {
+    "hostname": "SafwanPC",
+    "python": "3.12.12",
+    "scapy": "2.8.0",
+    "interface_requested": "Ethernet",
+    "interface_name": "Ethernet",
+    "interface_description": "Intel(R) Ethernet Connection (17) I219-V",
+    "interface_network_name": "\\Device\\NPF_{ED71CF07-8751-48DB-A61E-3075C4A3014F}",
+    "capture_backend": "L2pcapListenSocket",
+    "sender_backend": "L2pcapSocket",
+    "design_label": "v4-200-quarter-mux",
+    "manifest_sha256": "58e6a8c63be6dc7421931bb3d2460476e2148e47ac9b2e8e804c354eeef8e9ad",
+    "input_sha256": "b4318b4c61544204b3157f217258ca2fe2695aff753bf133553a1a41502c3633"
+  }
+}
